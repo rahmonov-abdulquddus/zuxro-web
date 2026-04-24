@@ -56,6 +56,14 @@
         "Zavod": "Kusum Healthcare"
     },
     {
+        "Nomi": "8",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 66000.0,
+        "Srok": 5.2028,
+        "Zavod": "SPEY MEDICAL"
+    },
+    {
         "Nomi": "9",
         "Pachka": 0.0,
         "Dona": 15.0,
@@ -206,6 +214,14 @@
         "Sotish_narxi": 51000.0,
         "Srok": 9.2028,
         "Zavod": "Gm pharmaceuticals ltd"
+    },
+    {
+        "Nomi": "28",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 36000.0,
+        "Srok": 8.2026,
+        "Zavod": "Минскинтеркапс"
     },
     {
         "Nomi": "29",
@@ -677,6 +693,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 21000.0,
         "Srok": 9.2026,
+        "Zavod": "God Gift Laboratory"
+    },
+    {
+        "Nomi": "88",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 21000.0,
+        "Srok": 5.2026,
         "Zavod": "God Gift Laboratory"
     },
     {
@@ -1176,6 +1200,14 @@
         "Zavod": "Lek Pharmaceuticals"
     },
     {
+        "Nomi": "151",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 42000.0,
+        "Srok": 9.2028,
+        "Zavod": "Lek Pharmaceuticals"
+    },
+    {
         "Nomi": "152",
         "Pachka": 125.0,
         "Dona": 0.0,
@@ -1397,6 +1429,14 @@
         "Dona": 3.0,
         "Sotish_narxi": 7500.0,
         "Srok": 12.2027,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "180",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 7500.0,
+        "Srok": 12.2028,
         "Zavod": "Radiks"
     },
     {
@@ -1984,6 +2024,14 @@
         "Zavod": "Марбиофарм"
     },
     {
+        "Nomi": "254",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 2000.0,
+        "Srok": 12.2027,
+        "Zavod": "Марбиофарм"
+    },
+    {
         "Nomi": "255",
         "Pachka": 15.0,
         "Dona": 0.0,
@@ -2392,6 +2440,14 @@
         "Zavod": "Уралбиофарм"
     },
     {
+        "Nomi": "306",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 3000.0,
+        "Srok": 3.2029,
+        "Zavod": "Уралбиофарм"
+    },
+    {
         "Nomi": "307",
         "Pachka": 3.0,
         "Dona": 0.0,
@@ -2680,6 +2736,14 @@
         "Zavod": "Danhson-BG"
     },
     {
+        "Nomi": "343",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 12000.0,
+        "Srok": 3.203,
+        "Zavod": "Danhson-BG"
+    },
+    {
         "Nomi": "344",
         "Pachka": 19.0,
         "Dona": 0.0,
@@ -2749,6 +2813,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 53000.0,
         "Srok": 5.2027,
+        "Zavod": "Serene Healthcare"
+    },
+    {
+        "Nomi": "353",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 53000.0,
+        "Srok": 11.2027,
         "Zavod": "Serene Healthcare"
     },
     {
@@ -3472,11 +3544,35 @@
         "Zavod": "Isshaan Healthcare"
     },
     {
+        "Nomi": "444",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 70000.0,
+        "Srok": 5.2029,
+        "Zavod": "Isshaan Healthcare"
+    },
+    {
+        "Nomi": "445",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 70000.0,
+        "Srok": 6.2029,
+        "Zavod": "Isshaan Healthcare"
+    },
+    {
         "Nomi": "446",
         "Pachka": 43.0,
         "Dona": 43.0,
         "Sotish_narxi": 70000.0,
         "Srok": 10.2029,
+        "Zavod": "Isshaan Healthcare"
+    },
+    {
+        "Nomi": "447",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 70000.0,
+        "Srok": 6.2029,
         "Zavod": "Isshaan Healthcare"
     },
     {
@@ -3790,6 +3886,14 @@
         "Sotish_narxi": 50000.0,
         "Srok": 12.2027,
         "Zavod": "Jurabek Laboratories"
+    },
+    {
+        "Nomi": "487",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 3000.0,
+        "Srok": 11.2028,
+        "Zavod": "Dentafill Plyus"
     },
     {
         "Nomi": "488",
@@ -4200,6 +4304,14 @@
         "Zavod": "Гедеон Рихтер"
     },
     {
+        "Nomi": "539",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 108000.0,
+        "Srok": 9.2029,
+        "Zavod": "Гедеон Рихтер"
+    },
+    {
         "Nomi": "540",
         "Pachka": 3.0,
         "Dona": 10.0,
@@ -4357,6 +4469,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 1.2028,
+        "Zavod": "ТИАМИН ГИДРОХЛОРИД"
+    },
+    {
+        "Nomi": "560",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 2.2027,
         "Zavod": "ТИАМИН ГИДРОХЛОРИД"
     },
     {
@@ -4984,6 +5104,14 @@
         "Zavod": "S.C. Rompharm Company"
     },
     {
+        "Nomi": "639",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 40000.0,
+        "Srok": 11.2028,
+        "Zavod": "MERRYMED FARM"
+    },
+    {
         "Nomi": "640",
         "Pachka": 3.0,
         "Dona": 3.0,
@@ -5076,6 +5204,14 @@
         "Pachka": 13.0,
         "Dona": 0.0,
         "Sotish_narxi": 16000.0,
+        "Srok": 10.2026,
+        "Zavod": "Combitic Global Caplet Pvt Ltd"
+    },
+    {
+        "Nomi": "652",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 16500.0,
         "Srok": 10.2026,
         "Zavod": "Combitic Global Caplet Pvt Ltd"
     },
@@ -5252,6 +5388,14 @@
         "Pachka": 15.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
+        "Srok": 10.2028,
+        "Zavod": "Dentafill Plyus"
+    },
+    {
+        "Nomi": "675",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
         "Srok": 10.2028,
         "Zavod": "Dentafill Plyus"
     },
@@ -5608,6 +5752,14 @@
         "Zavod": "Россия"
     },
     {
+        "Nomi": "720",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 52000.0,
+        "Srok": 12.2027,
+        "Zavod": "World Medicine Ilac San. ve Tic."
+    },
+    {
         "Nomi": "721",
         "Pachka": 1.0,
         "Dona": 0.0,
@@ -5856,6 +6008,14 @@
         "Zavod": "Dentafill Plyus"
     },
     {
+        "Nomi": "752",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 13000.0,
+        "Srok": 10.2027,
+        "Zavod": "Dentafill Plyus"
+    },
+    {
         "Nomi": "753",
         "Pachka": 1.0,
         "Dona": 11.0,
@@ -5941,6 +6101,14 @@
         "Dona": 10.0,
         "Sotish_narxi": 30000.0,
         "Srok": 3.2028,
+        "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "764",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 27000.0,
+        "Srok": 10.2027,
         "Zavod": "Фармак"
     },
     {
@@ -6261,6 +6429,14 @@
         "Dona": 4.0,
         "Sotish_narxi": 55000.0,
         "Srok": 9.2028,
+        "Zavod": "Berlin-Chemie AG"
+    },
+    {
+        "Nomi": "805",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 55000.0,
+        "Srok": 5.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
@@ -7200,12 +7376,28 @@
         "Zavod": "Синтез"
     },
     {
+        "Nomi": "923",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 15000.0,
+        "Srok": 4.2028,
+        "Zavod": "Синтез"
+    },
+    {
         "Nomi": "924",
         "Pachka": 2.0,
         "Dona": 10.0,
         "Sotish_narxi": 14000.0,
         "Srok": 7.2028,
         "Zavod": "Синтез"
+    },
+    {
+        "Nomi": "925",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 37000.0,
+        "Srok": 11.2027,
+        "Zavod": "Medana Pharma"
     },
     {
         "Nomi": "926",
@@ -7317,6 +7509,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 3.2028,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "940",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 1.2028,
         "Zavod": "Radiks"
     },
     {
@@ -7478,6 +7678,14 @@
         "Sotish_narxi": 23000.0,
         "Srok": 1.2028,
         "Zavod": "Алтайвитамины"
+    },
+    {
+        "Nomi": "961",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 20000.0,
+        "Srok": 1.2027,
+        "Zavod": "УКРФАРМЭКСПОРТ"
     },
     {
         "Nomi": "962",
@@ -7672,6 +7880,14 @@
         "Zavod": "Herbion Pakistan"
     },
     {
+        "Nomi": "986",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 25000.0,
+        "Srok": 8.2026,
+        "Zavod": "Herbion Pakistan"
+    },
+    {
         "Nomi": "987",
         "Pachka": 28.0,
         "Dona": 2.0,
@@ -7685,6 +7901,14 @@
         "Dona": 2.0,
         "Sotish_narxi": 22500.0,
         "Srok": 8.2026,
+        "Zavod": "Herbion Pakistan"
+    },
+    {
+        "Nomi": "989",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 40000.0,
+        "Srok": 12.2026,
         "Zavod": "Herbion Pakistan"
     },
     {
@@ -7800,6 +8024,14 @@
         "Zavod": "Gm pharmaceuticals ltd"
     },
     {
+        "Nomi": "1 004",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 136000.0,
+        "Srok": 8.2029,
+        "Zavod": "Pro. Med. CS Praha"
+    },
+    {
         "Nomi": "1 005",
         "Pachka": 0.0,
         "Dona": 15.0,
@@ -7909,6 +8141,14 @@
         "Dona": 75.0,
         "Sotish_narxi": 60000.0,
         "Srok": 7.2028,
+        "Zavod": "Berlin-Chemie AG"
+    },
+    {
+        "Nomi": "1 019",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 60000.0,
+        "Srok": 4.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
@@ -8258,6 +8498,14 @@
     {
         "Nomi": "1 063",
         "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 4000.0,
+        "Srok": 12.203,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "1 064",
+        "Pachka": 0.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 12.203,
@@ -9680,6 +9928,14 @@
         "Zavod": "Юрия-Фарм"
     },
     {
+        "Nomi": "1 242",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 73000.0,
+        "Srok": 11.2026,
+        "Zavod": "Юрия-Фарм"
+    },
+    {
         "Nomi": "1 243",
         "Pachka": 2.0,
         "Dona": 0.0,
@@ -9797,6 +10053,14 @@
         "Dona": 80.0,
         "Sotish_narxi": 70000.0,
         "Srok": 2.2028,
+        "Zavod": "Avison Pharmaceuticals Pvt Ltd"
+    },
+    {
+        "Nomi": "1 258",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 80000.0,
+        "Srok": 4.2028,
         "Zavod": "Avison Pharmaceuticals Pvt Ltd"
     },
     {
@@ -9950,6 +10214,14 @@
         "Sotish_narxi": 810000.0,
         "Srok": 7.2028,
         "Zavod": "Sanofi-Aventis"
+    },
+    {
+        "Nomi": "1 278",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 57000.0,
+        "Srok": 4.2027,
+        "Zavod": "Юрия-Фарм"
     },
     {
         "Nomi": "1 279",
@@ -10568,11 +10840,27 @@
         "Zavod": "VITALLY"
     },
     {
+        "Nomi": "1 356",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 43000.0,
+        "Srok": 6.2027,
+        "Zavod": "Gm pharmaceuticals ltd"
+    },
+    {
         "Nomi": "1 357",
         "Pachka": 3.0,
         "Dona": 5.0,
         "Sotish_narxi": 43000.0,
         "Srok": 9.2027,
+        "Zavod": "Gm pharmaceuticals ltd"
+    },
+    {
+        "Nomi": "1 358",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 45000.0,
+        "Srok": 6.2027,
         "Zavod": "Gm pharmaceuticals ltd"
     },
     {
@@ -10832,6 +11120,14 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
+        "Nomi": "1 391",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 87000.0,
+        "Srok": 6.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
         "Nomi": "1 392",
         "Pachka": 0.0,
         "Dona": 2.0,
@@ -10932,6 +11228,14 @@
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 84000.0,
+        "Srok": 11.2027,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "1 405",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 39000.0,
         "Srok": 11.2027,
         "Zavod": "<>"
     },
@@ -11157,6 +11461,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 1000.0,
         "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "1 434",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 1000.0,
+        "Srok": 11.2029,
         "Zavod": "<>"
     },
     {
@@ -11528,6 +11840,14 @@
         "Zavod": "Menarini international Operations Luxembourg"
     },
     {
+        "Nomi": "1 481",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 46000.0,
+        "Srok": 3.2028,
+        "Zavod": "Berlin-Chemie AG"
+    },
+    {
         "Nomi": "1 482",
         "Pachka": 8.0,
         "Dona": 15.0,
@@ -11677,6 +11997,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 2.2028,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "1 501",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 1.2028,
         "Zavod": "Radiks"
     },
     {
@@ -11888,6 +12216,22 @@
         "Zavod": "Unique Pharmaceutical Laboratories"
     },
     {
+        "Nomi": "1 528",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 9000.0,
+        "Srok": 3.2028,
+        "Zavod": "Unique Pharmaceutical Laboratories"
+    },
+    {
+        "Nomi": "1 529",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 9000.0,
+        "Srok": 2.2028,
+        "Zavod": "Unique Pharmaceutical Laboratories"
+    },
+    {
         "Nomi": "1 530",
         "Pachka": 49.0,
         "Dona": 0.0,
@@ -11909,6 +12253,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 2.2028,
+        "Zavod": "SAMARKAND-ENGLAND ECO-MEDICAL"
+    },
+    {
+        "Nomi": "1 533",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 11.2027,
         "Zavod": "SAMARKAND-ENGLAND ECO-MEDICAL"
     },
     {
@@ -11990,6 +12342,14 @@
         "Sotish_narxi": 12000.0,
         "Srok": 12.2028,
         "Zavod": "Dentafill Plyus"
+    },
+    {
+        "Nomi": "1 544",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 25000.0,
+        "Srok": 6.2028,
+        "Zavod": "Berlin-Chemie AG"
     },
     {
         "Nomi": "1 545",
@@ -12245,6 +12605,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 1.2028,
+        "Zavod": "Вифитех"
+    },
+    {
+        "Nomi": "1 577",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 4000.0,
+        "Srok": 12.2027,
         "Zavod": "Вифитех"
     },
     {
@@ -12592,6 +12960,14 @@
         "Zavod": "Jurabek Laboratories"
     },
     {
+        "Nomi": "1 621",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 8000.0,
+        "Srok": 10.2028,
+        "Zavod": "Jurabek Laboratories"
+    },
+    {
         "Nomi": "1 622",
         "Pachka": 33.0,
         "Dona": 0.0,
@@ -12664,11 +13040,35 @@
         "Zavod": "Radiks"
     },
     {
+        "Nomi": "1 631",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 12.2027,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "1 632",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 4.2028,
+        "Zavod": "Radiks"
+    },
+    {
         "Nomi": "1 633",
         "Pachka": 109.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 4.2028,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "1 634",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 11.2027,
         "Zavod": "Radiks"
     },
     {
@@ -12733,6 +13133,14 @@
         "Dona": 5.0,
         "Sotish_narxi": 64400.0,
         "Srok": 1.2028,
+        "Zavod": "Menarini international Operations Luxembourg"
+    },
+    {
+        "Nomi": "1 643",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 70000.0,
+        "Srok": 6.2027,
         "Zavod": "Menarini international Operations Luxembourg"
     },
     {
@@ -13029,6 +13437,14 @@
         "Dona": 3.0,
         "Sotish_narxi": 16000.0,
         "Srok": 6.2028,
+        "Zavod": "Combitic Global Caplet"
+    },
+    {
+        "Nomi": "1 681",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 16000.0,
+        "Srok": 5.2028,
         "Zavod": "Combitic Global Caplet"
     },
     {
@@ -13453,6 +13869,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 84000.0,
         "Srok": 11.2027,
+        "Zavod": "NOVUGEN PHARMA MCHJ XK"
+    },
+    {
+        "Nomi": "1 735",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 84000.0,
+        "Srok": 10.2027,
         "Zavod": "NOVUGEN PHARMA MCHJ XK"
     },
     {
@@ -14368,6 +14792,14 @@
         "Zavod": "\"TEMUR MED FARM\" MCHJ"
     },
     {
+        "Nomi": "1 850",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 1000.0,
+        "Srok": 3.2028,
+        "Zavod": "Узбекистан"
+    },
+    {
         "Nomi": "1 851",
         "Pachka": 947.0,
         "Dona": 0.0,
@@ -15120,6 +15552,14 @@
         "Zavod": "Laboratoire Innotech International"
     },
     {
+        "Nomi": "1 945",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 150000.0,
+        "Srok": 3.2027,
+        "Zavod": "Laboratoire Innotech International"
+    },
+    {
         "Nomi": "1 946",
         "Pachka": 62.0,
         "Dona": 0.0,
@@ -15864,6 +16304,14 @@
         "Zavod": "SAMARKAND-ENGLAND ECO-MEDICAL"
     },
     {
+        "Nomi": "2 039",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 60000.0,
+        "Srok": 3.2027,
+        "Zavod": "Юрия-Фарм"
+    },
+    {
         "Nomi": "2 040",
         "Pachka": 47.0,
         "Dona": 0.0,
@@ -15894,6 +16342,14 @@
         "Sotish_narxi": 12000.0,
         "Srok": 9.2028,
         "Zavod": "Dentafill Plyus"
+    },
+    {
+        "Nomi": "2 044",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 30000.0,
+        "Srok": 10.2028,
+        "Zavod": "TEMUR MED FARM"
     },
     {
         "Nomi": "2 045",
@@ -16142,6 +16598,14 @@
         "Sotish_narxi": 5000.0,
         "Srok": 2.2028,
         "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "2 076",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 9.2028,
+        "Zavod": "RIVER MED PHARM MCHJ"
     },
     {
         "Nomi": "2 077",
@@ -16856,6 +17320,14 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
+        "Nomi": "2 166",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 7000.0,
+        "Srok": 10.2027,
+        "Zavod": "MERRYMED FARM"
+    },
+    {
         "Nomi": "2 167",
         "Pachka": 26.0,
         "Dona": 0.0,
@@ -16869,6 +17341,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 86000.0,
         "Srok": 11.2027,
+        "Zavod": "Serene Healthcare"
+    },
+    {
+        "Nomi": "2 169",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 68000.0,
+        "Srok": 7.2027,
         "Zavod": "Serene Healthcare"
     },
     {
@@ -17006,6 +17486,14 @@
         "Sotish_narxi": 232500.0,
         "Srok": 2.2027,
         "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "2 187",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 7000.0,
+        "Srok": 5.203,
+        "Zavod": "Radiks"
     },
     {
         "Nomi": "2 188",
@@ -17264,6 +17752,14 @@
         "Zavod": "Nobel Pharmsanoat"
     },
     {
+        "Nomi": "2 220",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 23800.0,
+        "Srok": 8.2027,
+        "Zavod": "Nobel Pharmsanoat"
+    },
+    {
         "Nomi": "2 221",
         "Pachka": 219.0,
         "Dona": 0.0,
@@ -17376,6 +17872,14 @@
         "Zavod": "<>"
     },
     {
+        "Nomi": "2 235",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -145856.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
         "Nomi": "2 236",
         "Pachka": 28.0,
         "Dona": 0.0,
@@ -17406,6 +17910,14 @@
         "Sotish_narxi": 40000.0,
         "Srok": 1.2027,
         "Zavod": "IPSEN PHARMA"
+    },
+    {
+        "Nomi": "2 240",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 58000.0,
+        "Srok": 8.203,
+        "Zavod": "STADA Arzneimittel"
     },
     {
         "Nomi": "2 241",
@@ -17542,6 +18054,14 @@
         "Sotish_narxi": 85000.0,
         "Srok": 2.2028,
         "Zavod": "EGIS Pharmaceuticals"
+    },
+    {
+        "Nomi": "2 258",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 48000.0,
+        "Srok": 8.2028,
+        "Zavod": "ООО TEMUR MED FARM"
     },
     {
         "Nomi": "2 259",
@@ -18184,6 +18704,14 @@
         "Zavod": "Теймурова"
     },
     {
+        "Nomi": "2 339",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 58000.0,
+        "Srok": 10.2027,
+        "Zavod": "Anfarm Hellas"
+    },
+    {
         "Nomi": "2 340",
         "Pachka": 0.0,
         "Dona": 14.0,
@@ -18704,6 +19232,14 @@
         "Zavod": "Borshagovskiy XFZ"
     },
     {
+        "Nomi": "2 405",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 75000.0,
+        "Srok": 9.2027,
+        "Zavod": "Юрия-Фарм"
+    },
+    {
         "Nomi": "2 406",
         "Pachka": 8.0,
         "Dona": 0.0,
@@ -18862,6 +19398,238 @@
         "Sotish_narxi": 19000.0,
         "Srok": 6.2028,
         "Zavod": "S.C. Rompharm Company"
+    },
+    {
+        "Nomi": "2 426",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -223491.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 427",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -12489.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 428",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -20077.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 429",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -25006.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 430",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -18693.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 431",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -64053.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 432",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -51694.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 433",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -119037.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 434",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -139558.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 435",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -32796.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 436",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -51819.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 437",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -72105.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 438",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -41820.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 439",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -12276.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 440",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -62378.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 441",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -33578.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 442",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -38631.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 443",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -57966.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 444",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -22891.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 445",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 35000.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 446",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -64550.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 447",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -74548.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 448",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -38732.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 449",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -50884.0,
+        "Srok": 3.2026,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 450",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -79104.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 451",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -30648.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 452",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -48061.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 453",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 100000.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 454",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -3094.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
     },
     {
         "Nomi": "2 455",
@@ -19928,6 +20696,22 @@
         "Zavod": "Abbott Laboratories GmbH"
     },
     {
+        "Nomi": "2 588",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -163671.0,
+        "Srok": 3.2026,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 589",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": -163671.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
         "Nomi": "2 590",
         "Pachka": 8.0,
         "Dona": 0.0,
@@ -20008,6 +20792,14 @@
         "Zavod": "Zambon"
     },
     {
+        "Nomi": "2 600",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 9.2027,
+        "Zavod": "UKRFARMEXPORT LLC."
+    },
+    {
         "Nomi": "2 601",
         "Pachka": 25.0,
         "Dona": 0.0,
@@ -20038,6 +20830,14 @@
         "Sotish_narxi": 7000.0,
         "Srok": 2.2027,
         "Zavod": "Астрафарм"
+    },
+    {
+        "Nomi": "2 605",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 7.2027,
+        "Zavod": "RIVER MED PHARM MCHJ"
     },
     {
         "Nomi": "2 606",
@@ -20232,6 +21032,14 @@
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
+        "Nomi": "2 630",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 65000.0,
+        "Srok": 7.2028,
+        "Zavod": "World Medicine Ilac San. ve Tic."
+    },
+    {
         "Nomi": "2 631",
         "Pachka": 1.0,
         "Dona": 0.0,
@@ -20392,6 +21200,14 @@
         "Zavod": "Navbahor Sanoat"
     },
     {
+        "Nomi": "2 651",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 20000.0,
+        "Srok": 12.2027,
+        "Zavod": "Zunnur SERVIS FARM"
+    },
+    {
         "Nomi": "2 652",
         "Pachka": 35.0,
         "Dona": 60.0,
@@ -20509,6 +21325,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 25000.0,
         "Srok": 10.2029,
+        "Zavod": "Kusum Healthcare"
+    },
+    {
+        "Nomi": "2 667",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 22000.0,
+        "Srok": 5.2028,
         "Zavod": "Kusum Healthcare"
     },
     {
@@ -20712,6 +21536,14 @@
         "Zavod": "SPEY MEDICAL"
     },
     {
+        "Nomi": "2 693",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 28000.0,
+        "Srok": 4.2027,
+        "Zavod": "Medana Pharma"
+    },
+    {
         "Nomi": "2 694",
         "Pachka": 2.0,
         "Dona": 0.0,
@@ -20722,6 +21554,14 @@
     {
         "Nomi": "2 695",
         "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 8000.0,
+        "Srok": 6.2028,
+        "Zavod": "Dentafill Plyus"
+    },
+    {
+        "Nomi": "2 696",
+        "Pachka": 0.0,
         "Dona": 0.0,
         "Sotish_narxi": 8000.0,
         "Srok": 6.2028,
@@ -21120,6 +21960,14 @@
         "Zavod": "<>"
     },
     {
+        "Nomi": "2 746",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 11.203,
+        "Zavod": "Radiks"
+    },
+    {
         "Nomi": "2 747",
         "Pachka": 3.0,
         "Dona": 0.0,
@@ -21496,6 +22344,22 @@
         "Zavod": "<>"
     },
     {
+        "Nomi": "2 794",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 500.0,
+        "Srok": 9.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 795",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 500.0,
+        "Srok": 1.2031,
+        "Zavod": "<>"
+    },
+    {
         "Nomi": "2 796",
         "Pachka": 782.0,
         "Dona": 0.0,
@@ -21549,6 +22413,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 1500.0,
         "Srok": 11.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "2 803",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 500.0,
+        "Srok": 1.2031,
         "Zavod": "<>"
     },
     {
@@ -22368,6 +23240,14 @@
         "Zavod": "Опелла Хелскеа"
     },
     {
+        "Nomi": "2 906",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 171000.0,
+        "Srok": 5.2028,
+        "Zavod": "A.NATTERMANN CIE GMBH"
+    },
+    {
         "Nomi": "2 907",
         "Pachka": 1.0,
         "Dona": 6.0,
@@ -22526,5 +23406,13 @@
         "Sotish_narxi": 60000.0,
         "Srok": 10.2027,
         "Zavod": "REMEDY GROUP MCHJ"
+    },
+    {
+        "Nomi": "Жами",
+        "Pachka": 0.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 0.0,
+        "Srok": NaN,
+        "Zavod": NaN
     }
 ]
