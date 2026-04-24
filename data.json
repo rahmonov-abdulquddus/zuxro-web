@@ -18,7 +18,7 @@
     {
         "Nomi": "L-лизина эсцинат 5мл  №10",
         "Pachka": 5.0,
-        "Dona": 5.0,
+        "Dona": 1.0,
         "Sotish_narxi": 220000.0,
         "Srok": 10.2027,
         "Zavod": "Галичфарм"
@@ -50,7 +50,7 @@
     {
         "Nomi": "L-цет таб.5мг№100",
         "Pachka": 3.0,
-        "Dona": 56.0,
+        "Dona": 47.0,
         "Sotish_narxi": 250000.0,
         "Srok": 6.2028,
         "Zavod": "Kusum Healthcare"
@@ -58,24 +58,24 @@
     {
         "Nomi": "Автория таб. 25мг  №30",
         "Pachka": 0.0,
-        "Dona": 15.0,
+        "Dona": 5.0,
         "Sotish_narxi": 63000.0,
         "Srok": 9.2028,
         "Zavod": "SPEY MEDICAL"
     },
     {
         "Nomi": "Адаптол 300мг капс №20",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 86000.0,
+        "Pachka": 0.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 90000.0,
         "Srok": 9.2028,
         "Zavod": "Олайнфарм"
     },
     {
         "Nomi": "Адаптол 300мг капс №20",
-        "Pachka": 0.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 90000.0,
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 86000.0,
         "Srok": 9.2028,
         "Zavod": "Олайнфарм"
     },
@@ -94,14 +94,6 @@
         "Sotish_narxi": 136000.0,
         "Srok": 6.2028,
         "Zavod": "Олайнфарм"
-    },
-    {
-        "Nomi": "Аджисепт паст ананас №24",
-        "Pachka": 0.0,
-        "Dona": 11.0,
-        "Sotish_narxi": 40800.0,
-        "Srok": 6.2028,
-        "Zavod": "Agio Pharmaceuticals"
     },
     {
         "Nomi": "Аджисепт паст малина №24(120 орг)",
@@ -137,8 +129,8 @@
     },
     {
         "Nomi": "Аджисепт паст. апельсин  №24",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 18.0,
         "Sotish_narxi": 40800.0,
         "Srok": 12.2027,
         "Zavod": "Agio Pharmaceuticals"
@@ -193,18 +185,18 @@
     },
     {
         "Nomi": "Адипин 5мг таб №30",
-        "Pachka": 1.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 51000.0,
-        "Srok": 7.2028,
-        "Zavod": "Gm pharmaceuticals ltd"
-    },
-    {
-        "Nomi": "Адипин 5мг таб №30",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 51000.0,
         "Srok": 9.2028,
+        "Zavod": "Gm pharmaceuticals ltd"
+    },
+    {
+        "Nomi": "Адипин 5мг таб №30",
+        "Pachka": 1.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 51000.0,
+        "Srok": 7.2028,
         "Zavod": "Gm pharmaceuticals ltd"
     },
     {
@@ -234,7 +226,7 @@
     {
         "Nomi": "Аевит-лик капс №50",
         "Pachka": 18.0,
-        "Dona": 30.0,
+        "Dona": 20.0,
         "Sotish_narxi": 25000.0,
         "Srok": 4.2028,
         "Zavod": "Lekinterkaps"
@@ -313,14 +305,6 @@
     },
     {
         "Nomi": "Азитромицин таб.250мг№6",
-        "Pachka": 19.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 11.2028,
-        "Zavod": "Dentafill Plyus"
-    },
-    {
-        "Nomi": "Азитромицин таб.250мг№6",
         "Pachka": 50.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
@@ -328,8 +312,16 @@
         "Zavod": "Dentafill Plyus"
     },
     {
+        "Nomi": "Азитромицин таб.250мг№6",
+        "Pachka": 19.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 11.2028,
+        "Zavod": "Dentafill Plyus"
+    },
+    {
         "Nomi": "Азитромицин таб.500мг№3",
-        "Pachka": 160.0,
+        "Pachka": 157.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 11.2028,
@@ -369,7 +361,7 @@
     },
     {
         "Nomi": "Аквадетрим витамин д3 капли 10мл №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 50000.0,
         "Srok": 3.2028,
@@ -456,14 +448,6 @@
         "Zavod": "ROMPHARM NS"
     },
     {
-        "Nomi": "Акридоферон р-р 125мг/мл 2мл амп №5",
-        "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 120000.0,
-        "Srok": 12.2028,
-        "Zavod": "S.C. Rompharm Company"
-    },
-    {
         "Nomi": "Аксант капс.№60",
         "Pachka": 1.0,
         "Dona": 25.0,
@@ -481,18 +465,18 @@
     },
     {
         "Nomi": "Аксобон р-р для инф. 50 мл №1",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 85000.0,
-        "Srok": 2.2028,
-        "Zavod": "TEMUR MED FARM"
-    },
-    {
-        "Nomi": "Аксобон р-р для инф. 50 мл №1",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 85000.0,
         "Srok": 12.2027,
+        "Zavod": "TEMUR MED FARM"
+    },
+    {
+        "Nomi": "Аксобон р-р для инф. 50 мл №1",
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 85000.0,
+        "Srok": 2.2028,
         "Zavod": "TEMUR MED FARM"
     },
     {
@@ -553,17 +537,17 @@
     },
     {
         "Nomi": "Албендазол таб. 400мг №10",
-        "Pachka": 0.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 16000.0,
+        "Pachka": 9.0,
+        "Dona": 7.0,
+        "Sotish_narxi": 15000.0,
         "Srok": 11.2026,
         "Zavod": "NAVBAHOR SANOAT MCHJ"
     },
     {
         "Nomi": "Албендазол таб. 400мг №10",
-        "Pachka": 9.0,
-        "Dona": 7.0,
-        "Sotish_narxi": 15000.0,
+        "Pachka": 0.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 16000.0,
         "Srok": 11.2026,
         "Zavod": "NAVBAHOR SANOAT MCHJ"
     },
@@ -593,17 +577,17 @@
     },
     {
         "Nomi": "Аллервей экспрес №10",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 31000.0,
+        "Pachka": 0.0,
+        "Dona": 8.0,
+        "Sotish_narxi": 30000.0,
         "Srok": 4.2027,
         "Zavod": "Dr.Reddy's Laboratories"
     },
     {
         "Nomi": "Аллервей экспрес №10",
-        "Pachka": 0.0,
-        "Dona": 8.0,
-        "Sotish_narxi": 30000.0,
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 31000.0,
         "Srok": 4.2027,
         "Zavod": "Dr.Reddy's Laboratories"
     },
@@ -633,7 +617,7 @@
     },
     {
         "Nomi": "Аллохол таб. №50",
-        "Pachka": 14.0,
+        "Pachka": 12.0,
         "Dona": 0.0,
         "Sotish_narxi": 25000.0,
         "Srok": 8.2029,
@@ -681,8 +665,8 @@
     },
     {
         "Nomi": "Алтикам лиоф.пор.+раств.20мг№3 теноксикам",
-        "Pachka": 5.0,
-        "Dona": 0.0,
+        "Pachka": 4.0,
+        "Dona": 1.0,
         "Sotish_narxi": 159000.0,
         "Srok": 7.2026,
         "Zavod": "Rotapharm"
@@ -706,7 +690,7 @@
     {
         "Nomi": "Алчеба таб 10мг n30 №30",
         "Pachka": 1.0,
-        "Dona": 10.0,
+        "Dona": 13.0,
         "Sotish_narxi": 255000.0,
         "Srok": 11.2027,
         "Zavod": "Helba Pharmaceuticals"
@@ -714,7 +698,7 @@
     {
         "Nomi": "Алчеба таб 10мг n30 №30",
         "Pachka": 1.0,
-        "Dona": 13.0,
+        "Dona": 10.0,
         "Sotish_narxi": 255000.0,
         "Srok": 11.2027,
         "Zavod": "Helba Pharmaceuticals"
@@ -809,17 +793,17 @@
     },
     {
         "Nomi": "Амбро сироп 15мг/мл 100мл №1",
-        "Pachka": 1.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 29000.0,
+        "Sotish_narxi": 28000.0,
         "Srok": 8.2027,
         "Zavod": "Химфарм"
     },
     {
         "Nomi": "Амбро сироп 15мг/мл 100мл №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 28000.0,
+        "Sotish_narxi": 29000.0,
         "Srok": 8.2027,
         "Zavod": "Химфарм"
     },
@@ -985,18 +969,18 @@
     },
     {
         "Nomi": "Амитриптилин таб 10мг №50 (гриндекс)",
-        "Pachka": 4.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 20000.0,
-        "Srok": 9.2029,
-        "Zavod": "Гриндекс"
-    },
-    {
-        "Nomi": "Амитриптилин таб 10мг №50 (гриндекс)",
         "Pachka": 3.0,
         "Dona": 7.0,
         "Sotish_narxi": 20000.0,
         "Srok": 6.2029,
+        "Zavod": "Гриндекс"
+    },
+    {
+        "Nomi": "Амитриптилин таб 10мг №50 (гриндекс)",
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 20000.0,
+        "Srok": 9.2029,
         "Zavod": "Гриндекс"
     },
     {
@@ -1010,7 +994,7 @@
     {
         "Nomi": "Амитриптилин таб. 25мг №50",
         "Pachka": 0.0,
-        "Dona": 20.0,
+        "Dona": 10.0,
         "Sotish_narxi": 20000.0,
         "Srok": 3.2029,
         "Zavod": "Гриндекс"
@@ -1033,26 +1017,10 @@
     },
     {
         "Nomi": "Амлесса 4мг/5мг таб №30.",
-        "Pachka": 3.0,
-        "Dona": 0.0,
+        "Pachka": 2.0,
+        "Dona": 20.0,
         "Sotish_narxi": 48000.0,
         "Srok": 3.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Амлесса 8мг/10мг  №30",
-        "Pachka": 0.0,
-        "Dona": 9.0,
-        "Sotish_narxi": 108000.0,
-        "Srok": 10.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Амлесса 8мг/10мг  №30",
-        "Pachka": 2.0,
-        "Dona": 9.0,
-        "Sotish_narxi": 108000.0,
-        "Srok": 6.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -1061,6 +1029,22 @@
         "Dona": 0.0,
         "Sotish_narxi": 108000.0,
         "Srok": 1.2029,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Амлесса 8мг/10мг  №30",
+        "Pachka": 1.0,
+        "Dona": 29.0,
+        "Sotish_narxi": 108000.0,
+        "Srok": 6.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Амлесса 8мг/10мг  №30",
+        "Pachka": 0.0,
+        "Dona": 9.0,
+        "Sotish_narxi": 108000.0,
+        "Srok": 10.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -1129,7 +1113,7 @@
     },
     {
         "Nomi": "Амлорус 5мг таб №30",
-        "Pachka": 15.0,
+        "Pachka": 14.0,
         "Dona": 0.0,
         "Sotish_narxi": 10500.0,
         "Srok": 9.2028,
@@ -1145,18 +1129,18 @@
     },
     {
         "Nomi": "Аммиак р-р 10% 10мл (znf) №1",
-        "Pachka": 30.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 8.2027,
-        "Zavod": "Зиннур"
-    },
-    {
-        "Nomi": "Аммиак р-р 10% 10мл (znf) №1",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
         "Srok": 1.2027,
+        "Zavod": "Зиннур"
+    },
+    {
+        "Nomi": "Аммиак р-р 10% 10мл (znf) №1",
+        "Pachka": 30.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 8.2027,
         "Zavod": "Зиннур"
     },
     {
@@ -1210,14 +1194,14 @@
     {
         "Nomi": "Амоксициллин таб. 250мг №20",
         "Pachka": 15.0,
-        "Dona": 10.0,
+        "Dona": 0.0,
         "Sotish_narxi": 12000.0,
         "Srok": 10.2027,
         "Zavod": "Radiks"
     },
     {
         "Nomi": "Амоксициллин таб. df 0,5г  №10",
-        "Pachka": 160.0,
+        "Pachka": 159.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 11.2027,
@@ -1266,17 +1250,17 @@
     {
         "Nomi": "Ампициллин пор. д/приг инъек. р-ра 500мг  №50",
         "Pachka": 0.0,
-        "Dona": 49.0,
-        "Sotish_narxi": 190000.0,
-        "Srok": 5.2028,
+        "Dona": 44.0,
+        "Sotish_narxi": 200000.0,
+        "Srok": 8.2027,
         "Zavod": "Dentafill Plyus"
     },
     {
         "Nomi": "Ампициллин пор. д/приг инъек. р-ра 500мг  №50",
         "Pachka": 0.0,
-        "Dona": 44.0,
-        "Sotish_narxi": 200000.0,
-        "Srok": 8.2027,
+        "Dona": 49.0,
+        "Sotish_narxi": 190000.0,
+        "Srok": 5.2028,
         "Zavod": "Dentafill Plyus"
     },
     {
@@ -1321,6 +1305,14 @@
     },
     {
         "Nomi": "Амприлан 2,5мг таб №30",
+        "Pachka": 5.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 36000.0,
+        "Srok": 10.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Амприлан 2,5мг таб №30",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 42000.0,
@@ -1328,10 +1320,10 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
-        "Nomi": "Амприлан 2,5мг таб №30",
+        "Nomi": "Амприлан таб. 5мг  №30",
         "Pachka": 5.0,
         "Dona": 0.0,
-        "Sotish_narxi": 36000.0,
+        "Sotish_narxi": 45000.0,
         "Srok": 10.2028,
         "Zavod": "KRKA Novo mesto"
     },
@@ -1341,14 +1333,6 @@
         "Dona": 25.0,
         "Sotish_narxi": 45000.0,
         "Srok": 6.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Амприлан таб. 5мг  №30",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 45000.0,
-        "Srok": 10.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -1385,8 +1369,8 @@
     },
     {
         "Nomi": "Анальгин 50% 2мл №10",
-        "Pachka": 82.0,
-        "Dona": 6.0,
+        "Pachka": 81.0,
+        "Dona": 7.0,
         "Sotish_narxi": 15000.0,
         "Srok": 2.2028,
         "Zavod": "NANO PHARMACEUTICALS"
@@ -1409,18 +1393,18 @@
     },
     {
         "Nomi": "Анальгин р-р д.инф 50% 2мл  №10",
-        "Pachka": 25.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 15000.0,
-        "Srok": 11.2027,
-        "Zavod": "Bayan Medical MCHJ"
-    },
-    {
-        "Nomi": "Анальгин р-р д.инф 50% 2мл  №10",
         "Pachka": 119.0,
         "Dona": 9.0,
         "Sotish_narxi": 15000.0,
         "Srok": 3.2028,
+        "Zavod": "Bayan Medical MCHJ"
+    },
+    {
+        "Nomi": "Анальгин р-р д.инф 50% 2мл  №10",
+        "Pachka": 25.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 15000.0,
+        "Srok": 11.2027,
         "Zavod": "Bayan Medical MCHJ"
     },
     {
@@ -1433,18 +1417,18 @@
     },
     {
         "Nomi": "Анальгин таб. 0,5г №10",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 4000.0,
-        "Srok": 2.203,
-        "Zavod": "Ирбитский химфармзавод"
-    },
-    {
-        "Nomi": "Анальгин таб. 0,5г №10",
         "Pachka": 75.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 10.2029,
+        "Zavod": "Ирбитский химфармзавод"
+    },
+    {
+        "Nomi": "Анальгин таб. 0,5г №10",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 4000.0,
+        "Srok": 2.203,
         "Zavod": "Ирбитский химфармзавод"
     },
     {
@@ -1489,8 +1473,8 @@
     },
     {
         "Nomi": "Анаферон таб дет/к №20",
-        "Pachka": 18.0,
-        "Dona": 4.0,
+        "Pachka": 17.0,
+        "Dona": 18.0,
         "Sotish_narxi": 44000.0,
         "Srok": 12.2028,
         "Zavod": "Материа медика холдинг"
@@ -1569,17 +1553,17 @@
     },
     {
         "Nomi": "Анзибел иммуно+zn таб. №30",
-        "Pachka": 8.0,
-        "Dona": 25.0,
-        "Sotish_narxi": 51000.0,
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 45000.0,
         "Srok": 6.2026,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
         "Nomi": "Анзибел иммуно+zn таб. №30",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 45000.0,
+        "Pachka": 8.0,
+        "Dona": 25.0,
+        "Sotish_narxi": 51000.0,
         "Srok": 6.2026,
         "Zavod": "Nobel Pharmsanoat"
     },
@@ -1594,7 +1578,7 @@
     {
         "Nomi": "Анзибел паст №30 (классик)",
         "Pachka": 2.0,
-        "Dona": 28.0,
+        "Dona": 18.0,
         "Sotish_narxi": 54000.0,
         "Srok": 1.2028,
         "Zavod": "Nobel Pharmsanoat"
@@ -1673,10 +1657,10 @@
     },
     {
         "Nomi": "Антигриппин таб. №10",
-        "Pachka": 4.0,
+        "Pachka": 25.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
-        "Srok": 11.2027,
+        "Srok": 1.2028,
         "Zavod": "ZIYO NUR FARM"
     },
     {
@@ -1689,10 +1673,10 @@
     },
     {
         "Nomi": "Антигриппин таб. №10",
-        "Pachka": 25.0,
+        "Pachka": 4.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
-        "Srok": 1.2028,
+        "Srok": 11.2027,
         "Zavod": "ZIYO NUR FARM"
     },
     {
@@ -1753,18 +1737,18 @@
     },
     {
         "Nomi": "Апдропс 0,5% 5мл гл капли №1",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 63000.0,
-        "Srok": 8.2027,
-        "Zavod": "Ajanta Pharma Ltd"
-    },
-    {
-        "Nomi": "Апдропс 0,5% 5мл гл капли №1",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 63000.0,
         "Srok": 9.2027,
+        "Zavod": "Ajanta Pharma Ltd"
+    },
+    {
+        "Nomi": "Апдропс 0,5% 5мл гл капли №1",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 63000.0,
+        "Srok": 8.2027,
         "Zavod": "Ajanta Pharma Ltd"
     },
     {
@@ -1785,17 +1769,17 @@
     },
     {
         "Nomi": "Априд таб 375мг №10",
-        "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 55000.0,
+        "Pachka": 1.0,
+        "Dona": 6.0,
+        "Sotish_narxi": 56000.0,
         "Srok": 7.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
         "Nomi": "Априд таб 375мг №10",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 56000.0,
+        "Pachka": 0.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 55000.0,
         "Srok": 7.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
@@ -1841,14 +1825,6 @@
     },
     {
         "Nomi": "Артоксан гель 1% 45г №1",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 67000.0,
-        "Srok": 11.2027,
-        "Zavod": "World Medicine Ilac San. ve Tic."
-    },
-    {
-        "Nomi": "Артоксан гель 1% 45г №1",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 70000.0,
@@ -1856,17 +1832,17 @@
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
-        "Nomi": "Артоксан лиоф 20мг №3",
-        "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 147000.0,
-        "Srok": 7.2028,
+        "Nomi": "Артоксан гель 1% 45г №1",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 67000.0,
+        "Srok": 11.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
         "Nomi": "Артоксан лиоф.пор.+раствор.20мг№3 теноксикам",
-        "Pachka": 6.0,
-        "Dona": 0.0,
+        "Pachka": 3.0,
+        "Dona": 1.0,
         "Sotish_narxi": 144000.0,
         "Srok": 7.2028,
         "Zavod": "Rotapharm"
@@ -1985,18 +1961,18 @@
     },
     {
         "Nomi": "Аскорбинка с глюкозой +кальций №1",
-        "Pachka": 15.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 2000.0,
-        "Srok": 11.2026,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Аскорбинка с глюкозой +кальций №1",
         "Pachka": 31.0,
         "Dona": 0.0,
         "Sotish_narxi": 2000.0,
         "Srok": 12.2026,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Аскорбинка с глюкозой +кальций №1",
+        "Pachka": 15.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 2000.0,
+        "Srok": 11.2026,
         "Zavod": "<>"
     },
     {
@@ -2017,14 +1993,6 @@
     },
     {
         "Nomi": "Аскорбиновая к-та амп.5% 2мл№10",
-        "Pachka": 120.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 3.2027,
-        "Zavod": "Bayan Medical MCHJ"
-    },
-    {
-        "Nomi": "Аскорбиновая к-та амп.5% 2мл№10",
         "Pachka": 13.0,
         "Dona": 7.0,
         "Sotish_narxi": 10000.0,
@@ -2032,9 +2000,17 @@
         "Zavod": "Bayan Medical MCHJ"
     },
     {
+        "Nomi": "Аскорбиновая к-та амп.5% 2мл№10",
+        "Pachka": 120.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 3.2027,
+        "Zavod": "Bayan Medical MCHJ"
+    },
+    {
         "Nomi": "Аскорбиновая к-та амп.5%.2мл№5",
-        "Pachka": 167.0,
-        "Dona": 1.0,
+        "Pachka": 158.0,
+        "Dona": 2.0,
         "Sotish_narxi": 5000.0,
         "Srok": 7.2027,
         "Zavod": "Dentafill Plyus"
@@ -2153,16 +2129,16 @@
     },
     {
         "Nomi": "Аспан 40мг таб №28",
-        "Pachka": 4.0,
-        "Dona": 0.0,
+        "Pachka": 0.0,
+        "Dona": 1.0,
         "Sotish_narxi": 67200.0,
         "Srok": 11.2026,
         "Zavod": "ASFARMA Medikal Dental Urunler Ilac San. Tic."
     },
     {
         "Nomi": "Аспан 40мг таб №28",
-        "Pachka": 0.0,
-        "Dona": 1.0,
+        "Pachka": 4.0,
+        "Dona": 0.0,
         "Sotish_narxi": 67200.0,
         "Srok": 11.2026,
         "Zavod": "ASFARMA Medikal Dental Urunler Ilac San. Tic."
@@ -2409,8 +2385,8 @@
     },
     {
         "Nomi": "Ацетилсалициловая кислота таб. 0,5г №50",
-        "Pachka": 14.0,
-        "Dona": 0.0,
+        "Pachka": 13.0,
+        "Dona": 20.0,
         "Sotish_narxi": 10000.0,
         "Srok": 12.2029,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -2433,18 +2409,18 @@
     },
     {
         "Nomi": "Ацикловир мазь 5% 10г №1",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 6000.0,
-        "Srok": 3.2028,
-        "Zavod": "USOLE-SIBIRSKIY XIMIKO-FARMATEVTICHESKIY ZAVOD"
-    },
-    {
-        "Nomi": "Ацикловир мазь 5% 10г №1",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 9.2028,
+        "Zavod": "USOLE-SIBIRSKIY XIMIKO-FARMATEVTICHESKIY ZAVOD"
+    },
+    {
+        "Nomi": "Ацикловир мазь 5% 10г №1",
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 3.2028,
         "Zavod": "USOLE-SIBIRSKIY XIMIKO-FARMATEVTICHESKIY ZAVOD"
     },
     {
@@ -2512,14 +2488,6 @@
         "Zavod": "Geksal"
     },
     {
-        "Nomi": "Ацц 100мг №20",
-        "Pachka": 0.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 56000.0,
-        "Srok": 10.2026,
-        "Zavod": "Geksal"
-    },
-    {
         "Nomi": "Ацц 200 пор. для приг. раст-ра 3г №20",
         "Pachka": 7.0,
         "Dona": 12.0,
@@ -2569,18 +2537,18 @@
     },
     {
         "Nomi": "Бад черника форте с витамин и цинком таб. 0,25г №50",
-        "Pachka": 0.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 85000.0,
-        "Srok": 4.2028,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Бад черника форте с витамин и цинком таб. 0,25г №50",
         "Pachka": 1.0,
         "Dona": 10.0,
         "Sotish_narxi": 80000.0,
         "Srok": 9.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Бад черника форте с витамин и цинком таб. 0,25г №50",
+        "Pachka": 0.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 85000.0,
+        "Srok": 4.2028,
         "Zavod": "<>"
     },
     {
@@ -2673,7 +2641,7 @@
     },
     {
         "Nomi": "Бальзам \"золотая звезда\" мазь 4г №1",
-        "Pachka": 7.0,
+        "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 12000.0,
         "Srok": 6.203,
@@ -2745,7 +2713,7 @@
     },
     {
         "Nomi": "Белкосер р-р д/инф. 200мл !!! №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 53000.0,
         "Srok": 5.2027,
@@ -2761,7 +2729,7 @@
     },
     {
         "Nomi": "Белкосер р-р для инфуз. 100мл №1",
-        "Pachka": 10.0,
+        "Pachka": 8.0,
         "Dona": 0.0,
         "Sotish_narxi": 41000.0,
         "Srok": 10.2027,
@@ -2809,7 +2777,7 @@
     },
     {
         "Nomi": "Бепантен мазь 5% 30г №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 75000.0,
         "Srok": 1.2028,
@@ -2830,14 +2798,6 @@
         "Sotish_narxi": 234000.0,
         "Srok": 4.2028,
         "Zavod": "Berlin-Chemie AG"
-    },
-    {
-        "Nomi": "Беродуал инголяцсия 20мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 115000.0,
-        "Srok": 7.2028,
-        "Zavod": "Италия"
     },
     {
         "Nomi": "Бетадерм мазь 15г №1",
@@ -2922,7 +2882,7 @@
     {
         "Nomi": "Бетаспан депо сусп. д/ин. 1мл  №5",
         "Pachka": 1.0,
-        "Dona": 1.0,
+        "Dona": 0.0,
         "Sotish_narxi": 230000.0,
         "Srok": 9.2027,
         "Zavod": "Фармак"
@@ -2953,18 +2913,18 @@
     },
     {
         "Nomi": "Бинт 7/14 марл не стер №1",
-        "Pachka": 134.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 3000.0,
-        "Srok": 3.2028,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Бинт 7/14 марл не стер №1",
         "Pachka": 164.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 1.2035,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Бинт 7/14 марл не стер №1",
+        "Pachka": 134.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 3000.0,
+        "Srok": 3.2028,
         "Zavod": "<>"
     },
     {
@@ -2993,18 +2953,18 @@
     },
     {
         "Nomi": "Бинт марл. мед. стерильн. 7м 14см по ts №1",
-        "Pachka": 34.0,
+        "Pachka": 36.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
-        "Srok": 3.2028,
+        "Srok": 12.2029,
         "Zavod": "<>"
     },
     {
         "Nomi": "Бинт марл. мед. стерильн. 7м 14см по ts №1",
-        "Pachka": 40.0,
+        "Pachka": 34.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
-        "Srok": 12.2029,
+        "Srok": 3.2028,
         "Zavod": "<>"
     },
     {
@@ -3025,7 +2985,7 @@
     },
     {
         "Nomi": "Бинт тканний стерил 7*14см №1",
-        "Pachka": 29.0,
+        "Pachka": 27.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 1.203,
@@ -3057,6 +3017,14 @@
     },
     {
         "Nomi": "Бинт эластич. 100mm*3m№1 ultra",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 15000.0,
+        "Srok": 6.203,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Бинт эластич. 100mm*3m№1 ultra",
         "Pachka": 7.0,
         "Dona": 0.0,
         "Sotish_narxi": 16000.0,
@@ -3068,14 +3036,6 @@
         "Pachka": 21.0,
         "Dona": 0.0,
         "Sotish_narxi": 16000.0,
-        "Srok": 6.203,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Бинт эластич. 100mm*3m№1 ultra",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 15000.0,
         "Srok": 6.203,
         "Zavod": "<>"
     },
@@ -3121,7 +3081,7 @@
     },
     {
         "Nomi": "Био водорода перекси р-р 3% 100мл №1",
-        "Pachka": 62.0,
+        "Pachka": 57.0,
         "Dona": 0.0,
         "Sotish_narxi": 2000.0,
         "Srok": 8.2027,
@@ -3169,7 +3129,7 @@
     },
     {
         "Nomi": "Бисакодил  супп 0,01г №10",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 3.0,
         "Sotish_narxi": 9000.0,
         "Srok": 4.2028,
@@ -3289,15 +3249,15 @@
     },
     {
         "Nomi": "Бифидус пак. №10",
-        "Pachka": 4.0,
-        "Dona": 5.0,
+        "Pachka": 3.0,
+        "Dona": 9.0,
         "Sotish_narxi": 70000.0,
         "Srok": 1.2028,
         "Zavod": "Узбекистан*"
     },
     {
         "Nomi": "Бифилакс бэби саше  №10",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 2.0,
         "Sotish_narxi": 45000.0,
         "Srok": 12.2027,
@@ -3345,18 +3305,18 @@
     },
     {
         "Nomi": "Бифолак-цинкум пор №10",
-        "Pachka": 2.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 70000.0,
-        "Srok": 11.2027,
-        "Zavod": "BIOTACT"
-    },
-    {
-        "Nomi": "Бифолак-цинкум пор №10",
         "Pachka": 0.0,
         "Dona": 7.0,
         "Sotish_narxi": 70000.0,
         "Srok": 12.2027,
+        "Zavod": "BIOTACT"
+    },
+    {
+        "Nomi": "Бифолак-цинкум пор №10",
+        "Pachka": 1.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 70000.0,
+        "Srok": 11.2027,
         "Zavod": "BIOTACT"
     },
     {
@@ -3394,17 +3354,17 @@
     {
         "Nomi": "Блокиум b12 лиоф. р-р д/ин. 3мл  №5",
         "Pachka": 0.0,
-        "Dona": 1.0,
+        "Dona": 2.0,
         "Sotish_narxi": 490000.0,
-        "Srok": 2.2027,
+        "Srok": 6.2027,
         "Zavod": "LABORATORIOS CASASCO SAIC"
     },
     {
         "Nomi": "Блокиум b12 лиоф. р-р д/ин. 3мл  №5",
         "Pachka": 0.0,
-        "Dona": 2.0,
+        "Dona": 1.0,
         "Sotish_narxi": 490000.0,
-        "Srok": 6.2027,
+        "Srok": 2.2027,
         "Zavod": "LABORATORIOS CASASCO SAIC"
     },
     {
@@ -3457,7 +3417,7 @@
     },
     {
         "Nomi": "Болнол релакс  гель 30г №1",
-        "Pachka": 7.0,
+        "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 30000.0,
         "Srok": 4.2028,
@@ -3473,8 +3433,8 @@
     },
     {
         "Nomi": "Болнол таб №100",
-        "Pachka": 43.0,
-        "Dona": 43.0,
+        "Pachka": 42.0,
+        "Dona": 33.0,
         "Sotish_narxi": 70000.0,
         "Srok": 10.2029,
         "Zavod": "Isshaan Healthcare"
@@ -3546,26 +3506,18 @@
     {
         "Nomi": "Бризези 10мг таб №30",
         "Pachka": 0.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 144000.0,
-        "Srok": 8.2027,
-        "Zavod": "MSN Laboratories"
-    },
-    {
-        "Nomi": "Бризези 10мг таб №30",
-        "Pachka": 0.0,
         "Dona": 8.0,
         "Sotish_narxi": 141000.0,
         "Srok": 8.2027,
         "Zavod": "MSN Laboratories"
     },
     {
-        "Nomi": "Бриллиант зелённий 20 мл №1",
-        "Pachka": 22.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 3000.0,
-        "Srok": 9.2027,
-        "Zavod": "Radiks"
+        "Nomi": "Бризези 10мг таб №30",
+        "Pachka": 0.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 144000.0,
+        "Srok": 8.2027,
+        "Zavod": "MSN Laboratories"
     },
     {
         "Nomi": "Бриллиант зелённий 20 мл №1",
@@ -3573,6 +3525,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 1.2028,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "Бриллиант зелённий 20 мл №1",
+        "Pachka": 22.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 3000.0,
+        "Srok": 9.2027,
         "Zavod": "Radiks"
     },
     {
@@ -3634,7 +3594,7 @@
     {
         "Nomi": "Бромгексин 8мг №50 таб борисовский",
         "Pachka": 21.0,
-        "Dona": 30.0,
+        "Dona": 10.0,
         "Sotish_narxi": 10000.0,
         "Srok": 4.2028,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -3681,18 +3641,18 @@
     },
     {
         "Nomi": "Бронхомунал  капс 7мг №10",
-        "Pachka": 0.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 130000.0,
-        "Srok": 2.2029,
-        "Zavod": "Lek Pharmaceuticals"
-    },
-    {
-        "Nomi": "Бронхомунал  капс 7мг №10",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 130000.0,
         "Srok": 3.2029,
+        "Zavod": "Lek Pharmaceuticals"
+    },
+    {
+        "Nomi": "Бронхомунал  капс 7мг №10",
+        "Pachka": 0.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 130000.0,
+        "Srok": 2.2029,
         "Zavod": "Lek Pharmaceuticals"
     },
     {
@@ -3721,18 +3681,18 @@
     },
     {
         "Nomi": "Бруфен рапид таб 200мг №10",
-        "Pachka": 1.0,
-        "Dona": 8.0,
-        "Sotish_narxi": 24000.0,
-        "Srok": 7.2027,
-        "Zavod": "Abbott Laboratories GmbH"
-    },
-    {
-        "Nomi": "Бруфен рапид таб 200мг №10",
         "Pachka": 0.0,
         "Dona": 4.0,
         "Sotish_narxi": 23000.0,
         "Srok": 9.2027,
+        "Zavod": "Abbott Laboratories GmbH"
+    },
+    {
+        "Nomi": "Бруфен рапид таб 200мг №10",
+        "Pachka": 1.0,
+        "Dona": 8.0,
+        "Sotish_narxi": 24000.0,
+        "Srok": 7.2027,
         "Zavod": "Abbott Laboratories GmbH"
     },
     {
@@ -3801,7 +3761,7 @@
     },
     {
         "Nomi": "Вазелин мед.20г.№1",
-        "Pachka": 24.0,
+        "Pachka": 22.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 2.2029,
@@ -3833,8 +3793,8 @@
     },
     {
         "Nomi": "Валам таб 5мг/80мг №28 Амлодипин+Валсартан",
-        "Pachka": 1.0,
-        "Dona": 0.0,
+        "Pachka": 0.0,
+        "Dona": 24.0,
         "Sotish_narxi": 78400.0,
         "Srok": 11.2027,
         "Zavod": "CCL Pharmaceuticals FZ LLC"
@@ -3858,7 +3818,7 @@
     {
         "Nomi": "Валерианы экстракт таб №50",
         "Pachka": 10.0,
-        "Dona": 10.0,
+        "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 9.2027,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -3873,16 +3833,16 @@
     },
     {
         "Nomi": "Валерианы экстракт таб. 20мг  №50",
-        "Pachka": 4.0,
-        "Dona": 20.0,
+        "Pachka": 30.0,
+        "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 6.2027,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
     },
     {
         "Nomi": "Валерианы экстракт таб. 20мг  №50",
-        "Pachka": 30.0,
-        "Dona": 0.0,
+        "Pachka": 4.0,
+        "Dona": 20.0,
         "Sotish_narxi": 10000.0,
         "Srok": 6.2027,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -3913,18 +3873,26 @@
     },
     {
         "Nomi": "Валодип 5мг/80мг таб №30",
-        "Pachka": 4.0,
-        "Dona": 0.0,
+        "Pachka": 2.0,
+        "Dona": 10.0,
         "Sotish_narxi": 78000.0,
         "Srok": 11.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
         "Nomi": "Валодип таб. 10мг/160мг №30",
-        "Pachka": 7.0,
-        "Dona": 12.0,
+        "Pachka": 6.0,
+        "Dona": 9.0,
         "Sotish_narxi": 120000.0,
         "Srok": 10.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Валодип таб. 5мг/160мг  №30",
+        "Pachka": 0.0,
+        "Dona": 28.0,
+        "Sotish_narxi": 102000.0,
+        "Srok": 5.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -3936,11 +3904,11 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
-        "Nomi": "Валодип таб. 5мг/160мг  №30",
+        "Nomi": "Валсакор н 160мг/12,5мг №28",
         "Pachka": 0.0,
-        "Dona": 28.0,
-        "Sotish_narxi": 102000.0,
-        "Srok": 5.2028,
+        "Dona": 18.0,
+        "Sotish_narxi": 95200.0,
+        "Srok": 4.203,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -3956,14 +3924,6 @@
         "Pachka": 0.0,
         "Dona": 6.0,
         "Sotish_narxi": 100800.0,
-        "Srok": 4.203,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Валсакор н 160мг/12,5мг №28",
-        "Pachka": 0.0,
-        "Dona": 18.0,
-        "Sotish_narxi": 95200.0,
         "Srok": 4.203,
         "Zavod": "KRKA Novo mesto"
     },
@@ -4024,14 +3984,6 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
-        "Nomi": "Вальсакор таб. 160мг №28",
-        "Pachka": 0.0,
-        "Dona": 21.0,
-        "Sotish_narxi": 65800.0,
-        "Srok": 11.2029,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
         "Nomi": "Вамелан капс.  №30",
         "Pachka": 5.0,
         "Dona": 0.0,
@@ -4081,18 +4033,18 @@
     },
     {
         "Nomi": "Вата гигро гиг. н/с \"cotton club\" 250г №1",
-        "Pachka": 31.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 20000.0,
-        "Srok": 3.2028,
-        "Zavod": "Узбекистан*"
-    },
-    {
-        "Nomi": "Вата гигро гиг. н/с \"cotton club\" 250г №1",
         "Pachka": 11.0,
         "Dona": 0.0,
         "Sotish_narxi": 20000.0,
         "Srok": 10.2028,
+        "Zavod": "Узбекистан*"
+    },
+    {
+        "Nomi": "Вата гигро гиг. н/с \"cotton club\" 250г №1",
+        "Pachka": 31.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 20000.0,
+        "Srok": 3.2028,
         "Zavod": "Узбекистан*"
     },
     {
@@ -4113,7 +4065,7 @@
     },
     {
         "Nomi": "Вата мед н/с 25г ",
-        "Pachka": 103.0,
+        "Pachka": 97.0,
         "Dona": 0.0,
         "Sotish_narxi": 2000.0,
         "Srok": 4.203,
@@ -4177,18 +4129,18 @@
     },
     {
         "Nomi": "Верона капс №60",
-        "Pachka": 1.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 114000.0,
-        "Srok": 5.2028,
-        "Zavod": "Herbion Pakistan"
-    },
-    {
-        "Nomi": "Верона капс №60",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 132000.0,
         "Srok": 1.2028,
+        "Zavod": "Herbion Pakistan"
+    },
+    {
+        "Nomi": "Верона капс №60",
+        "Pachka": 1.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 114000.0,
+        "Srok": 5.2028,
         "Zavod": "Herbion Pakistan"
     },
     {
@@ -4305,16 +4257,16 @@
     },
     {
         "Nomi": "Витамин b комплекс mr 2 мл. №10",
-        "Pachka": 5.0,
-        "Dona": 9.0,
+        "Pachka": 8.0,
+        "Dona": 4.0,
         "Sotish_narxi": 20000.0,
         "Srok": 1.2028,
         "Zavod": "MERRYMED FARM"
     },
     {
         "Nomi": "Витамин b комплекс mr 2 мл. №10",
-        "Pachka": 8.0,
-        "Dona": 8.0,
+        "Pachka": 5.0,
+        "Dona": 9.0,
         "Sotish_narxi": 20000.0,
         "Srok": 1.2028,
         "Zavod": "MERRYMED FARM"
@@ -4329,7 +4281,7 @@
     },
     {
         "Nomi": "Витамин а \"lik\" 33000ме  №20",
-        "Pachka": 20.0,
+        "Pachka": 19.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 9.2026,
@@ -4473,8 +4425,8 @@
     },
     {
         "Nomi": "Виферон 500 000ме свечи №10",
-        "Pachka": 3.0,
-        "Dona": 0.0,
+        "Pachka": 2.0,
+        "Dona": 5.0,
         "Sotish_narxi": 100000.0,
         "Srok": 12.2027,
         "Zavod": "Ферон"
@@ -4531,14 +4483,6 @@
         "Nomi": "Вольтарен эмульгель гель 1% 20г №1",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 32000.0,
-        "Srok": 8.2027,
-        "Zavod": "Glaxo Smith Kline Consumer Healthcare"
-    },
-    {
-        "Nomi": "Вольтарен эмульгель гель 1% 20г №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
         "Sotish_narxi": 45000.0,
         "Srok": 8.2028,
         "Zavod": "Glaxo Smith Kline Consumer Healthcare"
@@ -4549,6 +4493,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 35000.0,
         "Srok": 8.2028,
+        "Zavod": "Glaxo Smith Kline Consumer Healthcare"
+    },
+    {
+        "Nomi": "Вольтарен эмульгель гель 1% 20г №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 32000.0,
+        "Srok": 8.2027,
         "Zavod": "Glaxo Smith Kline Consumer Healthcare"
     },
     {
@@ -4584,14 +4536,6 @@
         "Zavod": "Isshaan Healthcare"
     },
     {
-        "Nomi": "Враггрипп-кид капли внутр.15мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 29000.0,
-        "Srok": 3.2028,
-        "Zavod": "Isshaan Healthcare"
-    },
-    {
         "Nomi": "Врагдиарея Суспензия 60мл",
         "Pachka": 1.0,
         "Dona": 0.0,
@@ -4609,8 +4553,8 @@
     },
     {
         "Nomi": "Галавит 50мг супп №5",
-        "Pachka": 2.0,
-        "Dona": 1.0,
+        "Pachka": 1.0,
+        "Dona": 3.0,
         "Sotish_narxi": 117500.0,
         "Srok": 4.2028,
         "Zavod": "СЭЛВИМ"
@@ -4625,8 +4569,8 @@
     },
     {
         "Nomi": "Гельминтокс 125мг №6 таб.",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 3.0,
         "Sotish_narxi": 42000.0,
         "Srok": 10.2027,
         "Zavod": "Laboratoire Innotech International"
@@ -4641,18 +4585,18 @@
     },
     {
         "Nomi": "Гельминтокс 250мг №3 таб.",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 28500.0,
-        "Srok": 1.2028,
-        "Zavod": "Laboratoire Innotech International"
-    },
-    {
-        "Nomi": "Гельминтокс 250мг №3 таб.",
         "Pachka": 0.0,
         "Dona": 2.0,
         "Sotish_narxi": 39000.0,
         "Srok": 9.2027,
+        "Zavod": "Laboratoire Innotech International"
+    },
+    {
+        "Nomi": "Гельминтокс 250мг №3 таб.",
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 28500.0,
+        "Srok": 1.2028,
         "Zavod": "Laboratoire Innotech International"
     },
     {
@@ -4689,18 +4633,18 @@
     },
     {
         "Nomi": "Гематоген 30г кокос №1",
-        "Pachka": 7.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 3000.0,
-        "Srok": 11.2026,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Гематоген 30г кокос №1",
         "Pachka": 10.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Гематоген 30г кокос №1",
+        "Pachka": 7.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 3000.0,
+        "Srok": 11.2026,
         "Zavod": "<>"
     },
     {
@@ -4713,18 +4657,18 @@
     },
     {
         "Nomi": "Гематоген 30г шоколад №1",
-        "Pachka": 10.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 3000.0,
-        "Srok": 11.2026,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Гематоген 30г шоколад №1",
         "Pachka": 20.0,
         "Dona": 0.0,
         "Sotish_narxi": 3500.0,
         "Srok": 4.2027,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Гематоген 30г шоколад №1",
+        "Pachka": 10.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 3000.0,
+        "Srok": 11.2026,
         "Zavod": "<>"
     },
     {
@@ -4777,8 +4721,8 @@
     },
     {
         "Nomi": "Гентамицин-к 80мг/2мл №10",
-        "Pachka": 2.0,
-        "Dona": 3.0,
+        "Pachka": 1.0,
+        "Dona": 7.0,
         "Sotish_narxi": 75000.0,
         "Srok": 6.203,
         "Zavod": "KRKA Novo mesto"
@@ -4809,14 +4753,6 @@
     },
     {
         "Nomi": "Гепарин р-р д/ин. 5000ме/мл 1мл №5",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 50000.0,
-        "Srok": 2.2028,
-        "Zavod": "ООО RADIKS"
-    },
-    {
-        "Nomi": "Гепарин р-р д/ин. 5000ме/мл 1мл №5",
         "Pachka": 0.0,
         "Dona": 4.0,
         "Sotish_narxi": 60000.0,
@@ -4824,27 +4760,27 @@
         "Zavod": "ООО RADIKS"
     },
     {
+        "Nomi": "Гепарин р-р д/ин. 5000ме/мл 1мл №5",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 50000.0,
+        "Srok": 2.2028,
+        "Zavod": "ООО RADIKS"
+    },
+    {
         "Nomi": "Гепарин-индар 5000ме 5мл №5",
         "Pachka": 0.0,
-        "Dona": 4.0,
+        "Dona": 3.0,
         "Sotish_narxi": 225000.0,
         "Srok": 11.2028,
         "Zavod": "ИНДАР"
     },
     {
         "Nomi": "Гепариновая мазь 25г",
-        "Pachka": 57.0,
+        "Pachka": 55.0,
         "Dona": 0.0,
         "Sotish_narxi": 14000.0,
         "Srok": 2.2029,
-        "Zavod": "Belmedpreparaty RUE"
-    },
-    {
-        "Nomi": "Гепариновая мазь 25г",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 14000.0,
-        "Srok": 1.2029,
         "Zavod": "Belmedpreparaty RUE"
     },
     {
@@ -4907,16 +4843,16 @@
         "Nomi": "Гербион сироп  первоцвета 150мл №1",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 47000.0,
-        "Srok": 7.2028,
+        "Sotish_narxi": 49000.0,
+        "Srok": 9.2027,
         "Zavod": "KRKA Novo mesto"
     },
     {
         "Nomi": "Гербион сироп  первоцвета 150мл №1",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 49000.0,
-        "Srok": 9.2027,
+        "Sotish_narxi": 47000.0,
+        "Srok": 7.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -4993,16 +4929,16 @@
     },
     {
         "Nomi": "Гидрокортизона-мер  2мл №10",
-        "Pachka": 2.0,
-        "Dona": 5.0,
+        "Pachka": 5.0,
+        "Dona": 0.0,
         "Sotish_narxi": 35000.0,
         "Srok": 12.2028,
         "Zavod": "MERRYMED FARM"
     },
     {
         "Nomi": "Гидрокортизона-мер  2мл №10",
-        "Pachka": 5.0,
-        "Dona": 6.0,
+        "Pachka": 2.0,
+        "Dona": 5.0,
         "Sotish_narxi": 35000.0,
         "Srok": 12.2028,
         "Zavod": "MERRYMED FARM"
@@ -5066,14 +5002,14 @@
     {
         "Nomi": "Гликламин-м №30",
         "Pachka": 8.0,
-        "Dona": 16.0,
+        "Dona": 6.0,
         "Sotish_narxi": 75000.0,
         "Srok": 3.2028,
         "Zavod": "BioMatrix Healthcare"
     },
     {
         "Nomi": "Глистогон плюс таб. №1(левомизол+альбендазол)",
-        "Pachka": 13.0,
+        "Pachka": 12.0,
         "Dona": 0.0,
         "Sotish_narxi": 16000.0,
         "Srok": 10.2026,
@@ -5113,7 +5049,7 @@
     },
     {
         "Nomi": "Глицерин медицин.90мл№1",
-        "Pachka": 59.0,
+        "Pachka": 58.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 12.2028,
@@ -5130,7 +5066,7 @@
     {
         "Nomi": "Глицерин супп. рект. 2,11г №10",
         "Pachka": 4.0,
-        "Dona": 9.0,
+        "Dona": 4.0,
         "Sotish_narxi": 40000.0,
         "Srok": 3.2027,
         "Zavod": "Нижфарм"
@@ -5201,7 +5137,7 @@
     },
     {
         "Nomi": "Глюкоза 5% р-р.инф.200мл №1",
-        "Pachka": 128.0,
+        "Pachka": 125.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 3.2028,
@@ -5209,7 +5145,7 @@
     },
     {
         "Nomi": "Глюкоза 5%.100мл №1",
-        "Pachka": 124.0,
+        "Pachka": 122.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 9.2028,
@@ -5298,17 +5234,17 @@
     {
         "Nomi": "Глюкофаж таб. 500мг №60",
         "Pachka": 1.0,
-        "Dona": 0.0,
+        "Dona": 42.0,
         "Sotish_narxi": 72000.0,
-        "Srok": 5.2029,
+        "Srok": 12.2028,
         "Zavod": "Acino Pharma GmbH"
     },
     {
         "Nomi": "Глюкофаж таб. 500мг №60",
         "Pachka": 1.0,
-        "Dona": 42.0,
+        "Dona": 0.0,
         "Sotish_narxi": 72000.0,
-        "Srok": 12.2028,
+        "Srok": 5.2029,
         "Zavod": "Acino Pharma GmbH"
     },
     {
@@ -5337,18 +5273,18 @@
     },
     {
         "Nomi": "Горчичник-пакет дет. (эконом) №10",
-        "Pachka": 13.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 6000.0,
-        "Srok": 2.2028,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Горчичник-пакет дет. (эконом) №10",
         "Pachka": 20.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 1.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Горчичник-пакет дет. (эконом) №10",
+        "Pachka": 13.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 2.2028,
         "Zavod": "<>"
     },
     {
@@ -5410,7 +5346,7 @@
     {
         "Nomi": "Грандаксин таб. 50мг. №60",
         "Pachka": 2.0,
-        "Dona": 30.0,
+        "Dona": 20.0,
         "Sotish_narxi": 162000.0,
         "Srok": 6.203,
         "Zavod": "EGIS Pharmaceuticals"
@@ -5441,14 +5377,6 @@
     },
     {
         "Nomi": "Гропивирин таб 500мг №50",
-        "Pachka": 1.0,
-        "Dona": 9.0,
-        "Sotish_narxi": 160000.0,
-        "Srok": 6.2027,
-        "Zavod": "Фармак"
-    },
-    {
-        "Nomi": "Гропивирин таб 500мг №50",
         "Pachka": 0.0,
         "Dona": 10.0,
         "Sotish_narxi": 150000.0,
@@ -5456,9 +5384,17 @@
         "Zavod": "Фармак"
     },
     {
+        "Nomi": "Гропивирин таб 500мг №50",
+        "Pachka": 1.0,
+        "Dona": 9.0,
+        "Sotish_narxi": 160000.0,
+        "Srok": 6.2027,
+        "Zavod": "Фармак"
+    },
+    {
         "Nomi": "Гроприносин таб.500мг№50",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 40.0,
         "Sotish_narxi": 185000.0,
         "Srok": 6.2028,
         "Zavod": "Гедеон Рихтер"
@@ -5482,7 +5418,7 @@
     {
         "Nomi": "Д-вит ламира таб. п/о 5 000 ме №30",
         "Pachka": 1.0,
-        "Dona": 15.0,
+        "Dona": 0.0,
         "Sotish_narxi": 162000.0,
         "Srok": 10.2028,
         "Zavod": "Lamyra"
@@ -5521,18 +5457,18 @@
     },
     {
         "Nomi": "Дапа таб. покр.обол. 5мг №14",
-        "Pachka": 0.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 67200.0,
-        "Srok": 12.2026,
-        "Zavod": "Hilton Pharma"
-    },
-    {
-        "Nomi": "Дапа таб. покр.обол. 5мг №14",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 67200.0,
         "Srok": 2.2027,
+        "Zavod": "Hilton Pharma"
+    },
+    {
+        "Nomi": "Дапа таб. покр.обол. 5мг №14",
+        "Pachka": 0.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 67200.0,
+        "Srok": 12.2026,
         "Zavod": "Hilton Pharma"
     },
     {
@@ -5617,8 +5553,8 @@
     },
     {
         "Nomi": "Дебара таб №20",
-        "Pachka": 2.0,
-        "Dona": 5.0,
+        "Pachka": 1.0,
+        "Dona": 13.0,
         "Sotish_narxi": 60000.0,
         "Srok": 12.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
@@ -5690,7 +5626,7 @@
     {
         "Nomi": "Дексаметазон  4мг/1мл  №25 (крка)",
         "Pachka": 5.0,
-        "Dona": 6.0,
+        "Dona": 1.0,
         "Sotish_narxi": 75000.0,
         "Srok": 10.203,
         "Zavod": "KRKA Novo mesto"
@@ -5721,6 +5657,14 @@
     },
     {
         "Nomi": "Дексаметазон таб. 0,5мг №10",
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 25000.0,
+        "Srok": 11.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Дексаметазон таб. 0,5мг №10",
         "Pachka": 0.0,
         "Dona": 6.0,
         "Sotish_narxi": 25000.0,
@@ -5728,12 +5672,12 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
-        "Nomi": "Дексаметазон таб. 0,5мг №10",
-        "Pachka": 4.0,
+        "Nomi": "Дексаметазон таб. 0,5мг №50",
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 25000.0,
-        "Srok": 11.2028,
-        "Zavod": "KRKA Novo mesto"
+        "Sotish_narxi": 20000.0,
+        "Srok": 12.2029,
+        "Zavod": "UKRFARMEXPORT"
     },
     {
         "Nomi": "Дексаметазон таб. 0,5мг №50",
@@ -5752,17 +5696,9 @@
         "Zavod": "UKRFARMEXPORT"
     },
     {
-        "Nomi": "Дексаметазон таб. 0,5мг №50",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 20000.0,
-        "Srok": 12.2029,
-        "Zavod": "UKRFARMEXPORT"
-    },
-    {
         "Nomi": "Дексаметазон-аджио амп.4мг/мл.1мл№25",
         "Pachka": 12.0,
-        "Dona": 10.0,
+        "Dona": 2.0,
         "Sotish_narxi": 37500.0,
         "Srok": 10.2027,
         "Zavod": "Agio Pharmaceuticals"
@@ -5785,7 +5721,7 @@
     },
     {
         "Nomi": "Декстол\" сусп.гл/уш. 10 мл. №1",
-        "Pachka": 5.0,
+        "Pachka": 10.0,
         "Dona": 0.0,
         "Sotish_narxi": 57000.0,
         "Srok": 5.2027,
@@ -5793,7 +5729,7 @@
     },
     {
         "Nomi": "Декстол\" сусп.гл/уш. 10 мл. №1",
-        "Pachka": 10.0,
+        "Pachka": 5.0,
         "Dona": 0.0,
         "Sotish_narxi": 57000.0,
         "Srok": 5.2027,
@@ -5817,17 +5753,17 @@
     },
     {
         "Nomi": "Демотон-д р-р №1",
-        "Pachka": 4.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 102000.0,
+        "Sotish_narxi": 136000.0,
         "Srok": 6.2028,
         "Zavod": "Demo Pharmaceuticals "
     },
     {
         "Nomi": "Демотон-д р-р №1",
-        "Pachka": 2.0,
+        "Pachka": 4.0,
         "Dona": 0.0,
-        "Sotish_narxi": 136000.0,
+        "Sotish_narxi": 102000.0,
         "Srok": 6.2028,
         "Zavod": "Demo Pharmaceuticals "
     },
@@ -5890,17 +5826,17 @@
     {
         "Nomi": "Деслозед-5 табл.5мг№10",
         "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 39000.0,
-        "Srok": 4.2028,
+        "Dona": 5.0,
+        "Sotish_narxi": 41000.0,
+        "Srok": 11.2027,
         "Zavod": "Zota Healthcare"
     },
     {
         "Nomi": "Деслозед-5 табл.5мг№10",
         "Pachka": 1.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 41000.0,
-        "Srok": 11.2027,
+        "Dona": 0.0,
+        "Sotish_narxi": 39000.0,
+        "Srok": 4.2028,
         "Zavod": "Zota Healthcare"
     },
     {
@@ -5969,6 +5905,14 @@
     },
     {
         "Nomi": "Диазолин драже 0,05 №20",
+        "Pachka": 20.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 16000.0,
+        "Srok": 3.2029,
+        "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "Диазолин драже 0,05 №20",
         "Pachka": 1.0,
         "Dona": 5.0,
         "Sotish_narxi": 16000.0,
@@ -5984,14 +5928,6 @@
         "Zavod": "Фармак"
     },
     {
-        "Nomi": "Диазолин драже 0,05 №20",
-        "Pachka": 20.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 16000.0,
-        "Srok": 3.2029,
-        "Zavod": "Фармак"
-    },
-    {
         "Nomi": "Диазолин драже 0,1 №20",
         "Pachka": 14.0,
         "Dona": 15.0,
@@ -6001,7 +5937,7 @@
     },
     {
         "Nomi": "Диазолин таб.0.1мг№10",
-        "Pachka": 9.0,
+        "Pachka": 7.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 11.2028,
@@ -6017,7 +5953,7 @@
     },
     {
         "Nomi": "Диазолин таб.0.5мг№10",
-        "Pachka": 49.0,
+        "Pachka": 48.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 8.2028,
@@ -6201,17 +6137,17 @@
     },
     {
         "Nomi": "Дибазол таб.0.02г. №30",
-        "Pachka": 9.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 7500.0,
+        "Pachka": 0.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 9000.0,
         "Srok": 1.2029,
         "Zavod": "Samo"
     },
     {
         "Nomi": "Дибазол таб.0.02г. №30",
-        "Pachka": 0.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 9000.0,
+        "Pachka": 9.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 7500.0,
         "Srok": 1.2029,
         "Zavod": "Samo"
     },
@@ -6250,7 +6186,7 @@
     {
         "Nomi": "Дидсикон (дицинон) 250мг/2мл №10",
         "Pachka": 2.0,
-        "Dona": 5.0,
+        "Dona": 2.0,
         "Sotish_narxi": 25000.0,
         "Srok": 12.2028,
         "Zavod": "MERRYMED FARM"
@@ -6289,8 +6225,8 @@
     },
     {
         "Nomi": "Дикловит капс. №30",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 20.0,
         "Sotish_narxi": 63000.0,
         "Srok": 8.2027,
         "Zavod": "Bausch Health"
@@ -6329,7 +6265,7 @@
     },
     {
         "Nomi": "Диклофенак натрия мазь 1% 30 г №1",
-        "Pachka": 13.0,
+        "Pachka": 11.0,
         "Dona": 0.0,
         "Sotish_narxi": 13000.0,
         "Srok": 1.2028,
@@ -6337,8 +6273,8 @@
     },
     {
         "Nomi": "Диклофенак р-р 3мл №5",
-        "Pachka": 12.0,
-        "Dona": 0.0,
+        "Pachka": 10.0,
+        "Dona": 1.0,
         "Sotish_narxi": 10000.0,
         "Srok": 12.2026,
         "Zavod": "Belmedpreparaty RUE"
@@ -6401,7 +6337,7 @@
     },
     {
         "Nomi": "Димедрол р-р 1% д/ин 1 мл №5",
-        "Pachka": 243.0,
+        "Pachka": 241.0,
         "Dona": 2.0,
         "Sotish_narxi": 5000.0,
         "Srok": 1.2029,
@@ -6417,18 +6353,18 @@
     },
     {
         "Nomi": "Димексид 50мл№1 НОВИНКА",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 17000.0,
-        "Srok": 7.2028,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Димексид 50мл№1 НОВИНКА",
         "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 15000.0,
         "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Димексид 50мл№1 НОВИНКА",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 17000.0,
+        "Srok": 7.2028,
         "Zavod": "<>"
     },
     {
@@ -6454,14 +6390,6 @@
         "Sotish_narxi": 90000.0,
         "Srok": 8.2029,
         "Zavod": "TROIKAA PHARMACEUTICALS"
-    },
-    {
-        "Nomi": "Диоксидин 10мл №10",
-        "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 75000.0,
-        "Srok": 4.2027,
-        "Zavod": "Фармак"
     },
     {
         "Nomi": "Диоксидин 10мл №10",
@@ -6497,17 +6425,17 @@
     },
     {
         "Nomi": "Дипроспан сусп. в амп. 1мл №5",
-        "Pachka": 1.0,
+        "Pachka": 0.0,
         "Dona": 2.0,
-        "Sotish_narxi": 285000.0,
+        "Sotish_narxi": 315000.0,
         "Srok": 3.2027,
         "Zavod": "Schering-Plough Central East AG"
     },
     {
         "Nomi": "Дипроспан сусп. в амп. 1мл №5",
-        "Pachka": 0.0,
+        "Pachka": 1.0,
         "Dona": 2.0,
-        "Sotish_narxi": 315000.0,
+        "Sotish_narxi": 285000.0,
         "Srok": 3.2027,
         "Zavod": "Schering-Plough Central East AG"
     },
@@ -6521,18 +6449,18 @@
     },
     {
         "Nomi": "Дистрептаза супп. рект.  №6",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 234000.0,
-        "Srok": 4.2028,
-        "Zavod": "Biomed-Lublin"
-    },
-    {
-        "Nomi": "Дистрептаза супп. рект.  №6",
         "Pachka": 1.0,
         "Dona": 1.0,
         "Sotish_narxi": 240000.0,
         "Srok": 3.2028,
+        "Zavod": "Biomed-Lublin"
+    },
+    {
+        "Nomi": "Дистрептаза супп. рект.  №6",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 234000.0,
+        "Srok": 4.2028,
         "Zavod": "Biomed-Lublin"
     },
     {
@@ -6649,7 +6577,7 @@
     },
     {
         "Nomi": "Дриптан 5мг таб №30",
-        "Pachka": 1.0,
+        "Pachka": 0.0,
         "Dona": 10.0,
         "Sotish_narxi": 144000.0,
         "Srok": 7.2028,
@@ -6713,7 +6641,7 @@
     },
     {
         "Nomi": "Дюфалак сироп 667мг 200мл №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 75000.0,
         "Srok": 3.2028,
@@ -6770,7 +6698,7 @@
     {
         "Nomi": "Железофер №5  железа III 20мг/мл ампула 5мл",
         "Pachka": 2.0,
-        "Dona": 3.0,
+        "Dona": 2.0,
         "Sotish_narxi": 300000.0,
         "Srok": 9.2027,
         "Zavod": "Affordmed Foundation"
@@ -6817,14 +6745,6 @@
     },
     {
         "Nomi": "Звездочка ноз спрей наз. 0,1% 15мл №1",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 28000.0,
-        "Srok": 11.2028,
-        "Zavod": "Danson-BG"
-    },
-    {
-        "Nomi": "Звездочка ноз спрей наз. 0,1% 15мл №1",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 23000.0,
@@ -6832,12 +6752,12 @@
         "Zavod": "Danson-BG"
     },
     {
-        "Nomi": "Звездочка флю пор №10",
-        "Pachka": 2.0,
+        "Nomi": "Звездочка ноз спрей наз. 0,1% 15мл №1",
+        "Pachka": 3.0,
         "Dona": 0.0,
-        "Sotish_narxi": 60000.0,
-        "Srok": 8.2028,
-        "Zavod": "DANHSON - BG"
+        "Sotish_narxi": 28000.0,
+        "Srok": 11.2028,
+        "Zavod": "Danson-BG"
     },
     {
         "Nomi": "Звездочка флю пор №10",
@@ -6848,9 +6768,9 @@
         "Zavod": "DANHSON - BG"
     },
     {
-        "Nomi": "Звездочка Флю пор. д/пр. внутрь малина 15г №10",
-        "Pachka": 1.0,
-        "Dona": 6.0,
+        "Nomi": "Звездочка флю пор №10",
+        "Pachka": 2.0,
+        "Dona": 0.0,
         "Sotish_narxi": 60000.0,
         "Srok": 8.2028,
         "Zavod": "DANHSON - BG"
@@ -6864,6 +6784,14 @@
         "Zavod": "DANHSON - BG"
     },
     {
+        "Nomi": "Звездочка Флю пор. д/пр. внутрь малина 15г №10",
+        "Pachka": 1.0,
+        "Dona": 6.0,
+        "Sotish_narxi": 60000.0,
+        "Srok": 8.2028,
+        "Zavod": "DANHSON - BG"
+    },
+    {
         "Nomi": "Зедпар гель 30 г №1",
         "Pachka": 4.0,
         "Dona": 0.0,
@@ -6873,8 +6801,8 @@
     },
     {
         "Nomi": "Зедпар форте таб. №100",
-        "Pachka": 5.0,
-        "Dona": 10.0,
+        "Pachka": 4.0,
+        "Dona": 90.0,
         "Sotish_narxi": 80000.0,
         "Srok": 5.2028,
         "Zavod": "Combitic Global Caplet"
@@ -6930,16 +6858,8 @@
     {
         "Nomi": "Зефексал 120мг таб №20",
         "Pachka": 2.0,
-        "Dona": 8.0,
+        "Dona": 5.0,
         "Sotish_narxi": 72000.0,
-        "Srok": 3.2027,
-        "Zavod": "Ali Raif Ilac San."
-    },
-    {
-        "Nomi": "Зефексал 180мг таб №20",
-        "Pachka": 0.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 86000.0,
         "Srok": 3.2027,
         "Zavod": "Ali Raif Ilac San."
     },
@@ -6948,6 +6868,14 @@
         "Pachka": 0.0,
         "Dona": 15.0,
         "Sotish_narxi": 82000.0,
+        "Srok": 3.2027,
+        "Zavod": "Ali Raif Ilac San."
+    },
+    {
+        "Nomi": "Зефексал 180мг таб №20",
+        "Pachka": 0.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 86000.0,
         "Srok": 3.2027,
         "Zavod": "Ali Raif Ilac San."
     },
@@ -6977,7 +6905,7 @@
     },
     {
         "Nomi": "Зиромин суспензия 30мл №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 55000.0,
         "Srok": 6.2028,
@@ -7001,18 +6929,18 @@
     },
     {
         "Nomi": "Зитмак таб.250мг №6",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 33000.0,
-        "Srok": 12.2029,
-        "Zavod": "Nobel Pharmsanoat MCHJ XK"
-    },
-    {
-        "Nomi": "Зитмак таб.250мг №6",
         "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 34800.0,
         "Srok": 8.2028,
+        "Zavod": "Nobel Pharmsanoat MCHJ XK"
+    },
+    {
+        "Nomi": "Зитмак таб.250мг №6",
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 33000.0,
+        "Srok": 12.2029,
         "Zavod": "Nobel Pharmsanoat MCHJ XK"
     },
     {
@@ -7121,8 +7049,8 @@
     },
     {
         "Nomi": "Ибуклин беби сусп 5мл №12пакетик",
-        "Pachka": 5.0,
-        "Dona": 0.0,
+        "Pachka": 4.0,
+        "Dona": 8.0,
         "Sotish_narxi": 66000.0,
         "Srok": 6.2029,
         "Zavod": "Dr.Reddy's Laboratories"
@@ -7145,7 +7073,7 @@
     },
     {
         "Nomi": "Ибуклин юниор таб. 100мг/125мг №20",
-        "Pachka": 4.0,
+        "Pachka": 3.0,
         "Dona": 10.0,
         "Sotish_narxi": 22000.0,
         "Srok": 8.2029,
@@ -7170,7 +7098,7 @@
     {
         "Nomi": "Ибупрофен  0,2г таб №50",
         "Pachka": 0.0,
-        "Dona": 30.0,
+        "Dona": 20.0,
         "Sotish_narxi": 20000.0,
         "Srok": 5.2028,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -7193,18 +7121,18 @@
     },
     {
         "Nomi": "Ибупрофен-акос 400мг таб №20",
-        "Pachka": 11.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 14000.0,
-        "Srok": 6.2028,
-        "Zavod": "Синтез"
-    },
-    {
-        "Nomi": "Ибупрофен-акос 400мг таб №20",
         "Pachka": 2.0,
         "Dona": 10.0,
         "Sotish_narxi": 14000.0,
         "Srok": 7.2028,
+        "Zavod": "Синтез"
+    },
+    {
+        "Nomi": "Ибупрофен-акос 400мг таб №20",
+        "Pachka": 9.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 14000.0,
+        "Srok": 6.2028,
         "Zavod": "Синтез"
     },
     {
@@ -7217,7 +7145,7 @@
     },
     {
         "Nomi": "Ибуфен-д сусп. 100 мг/5мл 120 мл №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 49000.0,
         "Srok": 9.2028,
@@ -7233,18 +7161,18 @@
     },
     {
         "Nomi": "Иглы для шприцев-ручек 31G (0,25*5mm) KD Penofine",
-        "Pachka": 27.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 1000.0,
-        "Srok": 8.2029,
-        "Zavod": "Санофи авентис"
-    },
-    {
-        "Nomi": "Иглы для шприцев-ручек 31G (0,25*5mm) KD Penofine",
         "Pachka": 100.0,
         "Dona": 0.0,
         "Sotish_narxi": 1000.0,
         "Srok": 3.2028,
+        "Zavod": "Санофи авентис"
+    },
+    {
+        "Nomi": "Иглы для шприцев-ручек 31G (0,25*5mm) KD Penofine",
+        "Pachka": 27.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 1000.0,
+        "Srok": 8.2029,
         "Zavod": "Санофи авентис"
     },
     {
@@ -7268,14 +7196,6 @@
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 80000.0,
-        "Srok": 4.2027,
-        "Zavod": "Mediofarm"
-    },
-    {
-        "Nomi": "Изикол baby  20мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 80000.0,
         "Srok": 1.2027,
         "Zavod": "Mediofarm"
     },
@@ -7288,6 +7208,14 @@
         "Zavod": "Mediofarm"
     },
     {
+        "Nomi": "Изикол baby  20мл №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 80000.0,
+        "Srok": 4.2027,
+        "Zavod": "Mediofarm"
+    },
+    {
         "Nomi": "Изониазид табл. 200мг №10х5",
         "Pachka": 3.0,
         "Dona": 10.0,
@@ -7297,18 +7225,18 @@
     },
     {
         "Nomi": "Изотоник раствор для инфузий 200мл №1",
-        "Pachka": 125.0,
+        "Pachka": 13.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
-        "Srok": 2.2028,
+        "Srok": 1.2028,
         "Zavod": "Radiks"
     },
     {
         "Nomi": "Изотоник раствор для инфузий 200мл №1",
-        "Pachka": 19.0,
+        "Pachka": 125.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
-        "Srok": 1.2028,
+        "Srok": 2.2028,
         "Zavod": "Radiks"
     },
     {
@@ -7410,7 +7338,15 @@
     {
         "Nomi": "Имудон таб №40",
         "Pachka": 8.0,
-        "Dona": 28.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 128000.0,
+        "Srok": 7.2027,
+        "Zavod": "Фармстандарт-Томскхимфарм"
+    },
+    {
+        "Nomi": "Имудон таб.  №40",
+        "Pachka": 8.0,
+        "Dona": 0.0,
         "Sotish_narxi": 128000.0,
         "Srok": 7.2027,
         "Zavod": "Фармстандарт-Томскхимфарм"
@@ -7421,14 +7357,6 @@
         "Dona": 32.0,
         "Sotish_narxi": 128000.0,
         "Srok": 5.2027,
-        "Zavod": "Фармстандарт-Томскхимфарм"
-    },
-    {
-        "Nomi": "Имудон таб.  №40",
-        "Pachka": 8.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 128000.0,
-        "Srok": 7.2027,
         "Zavod": "Фармстандарт-Томскхимфарм"
     },
     {
@@ -7688,14 +7616,6 @@
         "Zavod": "Herbion Pakistan"
     },
     {
-        "Nomi": "Интеллан сироп 90мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 41000.0,
-        "Srok": 11.2027,
-        "Zavod": "Herbion Pakistan"
-    },
-    {
         "Nomi": "Интоксол р-р 100мл №1",
         "Pachka": 22.0,
         "Dona": 0.0,
@@ -7713,17 +7633,17 @@
     },
     {
         "Nomi": "Инфлюцид а таб №40",
-        "Pachka": 2.0,
-        "Dona": 25.0,
-        "Sotish_narxi": 84000.0,
+        "Pachka": 1.0,
+        "Dona": 26.0,
+        "Sotish_narxi": 80000.0,
         "Srok": 8.2028,
         "Zavod": "Alpen Pharma"
     },
     {
         "Nomi": "Инфлюцид а таб №40",
-        "Pachka": 1.0,
-        "Dona": 26.0,
-        "Sotish_narxi": 80000.0,
+        "Pachka": 2.0,
+        "Dona": 25.0,
+        "Sotish_narxi": 84000.0,
         "Srok": 8.2028,
         "Zavod": "Alpen Pharma"
     },
@@ -7849,7 +7769,7 @@
     },
     {
         "Nomi": "ЙОД  25МЛ №1 (№100)",
-        "Pachka": 99.0,
+        "Pachka": 98.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 1.2028,
@@ -7906,17 +7826,9 @@
     {
         "Nomi": "Йодомарин 200мг №100",
         "Pachka": 7.0,
-        "Dona": 75.0,
+        "Dona": 25.0,
         "Sotish_narxi": 60000.0,
         "Srok": 7.2028,
-        "Zavod": "Berlin-Chemie AG"
-    },
-    {
-        "Nomi": "Йодомарин-100мг таб  №100",
-        "Pachka": 6.0,
-        "Dona": 14.0,
-        "Sotish_narxi": 35000.0,
-        "Srok": 1.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
@@ -7925,6 +7837,14 @@
         "Dona": 45.0,
         "Sotish_narxi": 35000.0,
         "Srok": 4.2028,
+        "Zavod": "Berlin-Chemie AG"
+    },
+    {
+        "Nomi": "Йодомарин-100мг таб  №100",
+        "Pachka": 5.0,
+        "Dona": 14.0,
+        "Sotish_narxi": 35000.0,
+        "Srok": 1.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
@@ -7938,7 +7858,7 @@
     {
         "Nomi": "Йодофол таб. 200мкг/400мкг  №60",
         "Pachka": 2.0,
-        "Dona": 30.0,
+        "Dona": 20.0,
         "Sotish_narxi": 120000.0,
         "Srok": 6.2028,
         "Zavod": "World Medicine"
@@ -7993,17 +7913,17 @@
     },
     {
         "Nomi": "Каднил таб 75мг №28",
-        "Pachka": 0.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 98000.0,
+        "Pachka": 7.0,
+        "Dona": 18.0,
+        "Sotish_narxi": 39200.0,
         "Srok": 3.2028,
         "Zavod": "BioMatrix Healthcare"
     },
     {
         "Nomi": "Каднил таб 75мг №28",
-        "Pachka": 7.0,
-        "Dona": 18.0,
-        "Sotish_narxi": 39200.0,
+        "Pachka": 0.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 98000.0,
         "Srok": 3.2028,
         "Zavod": "BioMatrix Healthcare"
     },
@@ -8033,18 +7953,18 @@
     },
     {
         "Nomi": "Калия хлорид амп.4%.10мл№10",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 3.2027,
-        "Zavod": "Jurabek Laboratories MCHJ QK"
-    },
-    {
-        "Nomi": "Калия хлорид амп.4%.10мл№10",
         "Pachka": 4.0,
         "Dona": 2.0,
         "Sotish_narxi": 15000.0,
         "Srok": 1.2028,
+        "Zavod": "Jurabek Laboratories MCHJ QK"
+    },
+    {
+        "Nomi": "Калия хлорид амп.4%.10мл№10",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 3.2027,
         "Zavod": "Jurabek Laboratories MCHJ QK"
     },
     {
@@ -8098,7 +8018,7 @@
     {
         "Nomi": "Кальций д3 форте таб  №120 (никомед)",
         "Pachka": 2.0,
-        "Dona": 60.0,
+        "Dona": 50.0,
         "Sotish_narxi": 216000.0,
         "Srok": 4.2027,
         "Zavod": "Nijfarm AJ"
@@ -8130,7 +8050,7 @@
     {
         "Nomi": "Кальций-д3 никомед 500мг/200ме №100",
         "Pachka": 5.0,
-        "Dona": 41.0,
+        "Dona": 26.0,
         "Sotish_narxi": 140000.0,
         "Srok": 2.2028,
         "Zavod": "Takeda"
@@ -8154,7 +8074,7 @@
     {
         "Nomi": "Кальция глюконат амп 10% 10мл №10",
         "Pachka": 14.0,
-        "Dona": 6.0,
+        "Dona": 1.0,
         "Sotish_narxi": 15000.0,
         "Srok": 3.2029,
         "Zavod": "Dentafill Plyus"
@@ -8169,17 +8089,17 @@
     },
     {
         "Nomi": "Кальция глюконат таб №10",
-        "Pachka": 1.0,
+        "Pachka": 15.0,
         "Dona": 0.0,
-        "Sotish_narxi": 3000.0,
+        "Sotish_narxi": 2500.0,
         "Srok": 3.2029,
         "Zavod": "Ирбитский химфармзавод"
     },
     {
         "Nomi": "Кальция глюконат таб №10",
-        "Pachka": 15.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 2500.0,
+        "Sotish_narxi": 3000.0,
         "Srok": 3.2029,
         "Zavod": "Ирбитский химфармзавод"
     },
@@ -8249,18 +8169,18 @@
     },
     {
         "Nomi": "Камфорний спирт 10% 25 мл №1",
-        "Pachka": 30.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
-        "Srok": 3.2031,
+        "Srok": 12.203,
         "Zavod": "Radiks"
     },
     {
         "Nomi": "Камфорний спирт 10% 25 мл №1",
-        "Pachka": 3.0,
+        "Pachka": 30.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
-        "Srok": 12.203,
+        "Srok": 3.2031,
         "Zavod": "Radiks"
     },
     {
@@ -8360,12 +8280,12 @@
         "Zavod": "Pharmacon LLC"
     },
     {
-        "Nomi": "Кардексин капли глазные ушные 5мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 39000.0,
-        "Srok": 4.2028,
-        "Zavod": "Karan Healthcare"
+        "Nomi": "Кардива 12,5мг таб №28",
+        "Pachka": 0.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 84000.0,
+        "Srok": 12.2026,
+        "Zavod": "Ali Raif Ilac San."
     },
     {
         "Nomi": "Кардива 12,5мг таб №28",
@@ -8376,10 +8296,10 @@
         "Zavod": "Ali Raif Ilac San."
     },
     {
-        "Nomi": "Кардива 12,5мг таб №28",
+        "Nomi": "Кардива таб.25мг №28",
         "Pachka": 0.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 84000.0,
+        "Dona": 23.0,
+        "Sotish_narxi": 95200.0,
         "Srok": 12.2026,
         "Zavod": "Ali Raif Ilac San."
     },
@@ -8392,14 +8312,6 @@
         "Zavod": "Ali Raif Ilac San."
     },
     {
-        "Nomi": "Кардива таб.25мг №28",
-        "Pachka": 0.0,
-        "Dona": 23.0,
-        "Sotish_narxi": 95200.0,
-        "Srok": 12.2026,
-        "Zavod": "Ali Raif Ilac San."
-    },
-    {
         "Nomi": "Кардиомагнил 150мг №100",
         "Pachka": 2.0,
         "Dona": 90.0,
@@ -8409,8 +8321,8 @@
     },
     {
         "Nomi": "Кардиомагнил 75мг №100",
-        "Pachka": 2.0,
-        "Dona": 16.0,
+        "Pachka": 1.0,
+        "Dona": 86.0,
         "Sotish_narxi": 70000.0,
         "Srok": 1.2028,
         "Zavod": "STADA Arzneimittel AG"
@@ -8513,17 +8425,17 @@
     },
     {
         "Nomi": "Кванил р-р д/инъек.1000мг 4мл №5",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 150000.0,
+        "Pachka": 0.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 162500.0,
         "Srok": 6.2027,
         "Zavod": "Kusum Healthcare"
     },
     {
         "Nomi": "Кванил р-р д/инъек.1000мг 4мл №5",
-        "Pachka": 0.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 162500.0,
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 150000.0,
         "Srok": 6.2027,
         "Zavod": "Kusum Healthcare"
     },
@@ -8545,18 +8457,10 @@
     },
     {
         "Nomi": "Кейвер р-р 2мл №10",
-        "Pachka": 3.0,
-        "Dona": 0.0,
+        "Pachka": 2.0,
+        "Dona": 5.0,
         "Sotish_narxi": 125000.0,
         "Srok": 10.2027,
-        "Zavod": "Фармак"
-    },
-    {
-        "Nomi": "Кейвер таб 25мг №30",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 120000.0,
-        "Srok": 12.2026,
         "Zavod": "Фармак"
     },
     {
@@ -8564,6 +8468,14 @@
         "Pachka": 0.0,
         "Dona": 10.0,
         "Sotish_narxi": 126000.0,
+        "Srok": 12.2026,
+        "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "Кейвер таб 25мг №30",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 120000.0,
         "Srok": 12.2026,
         "Zavod": "Фармак"
     },
@@ -8625,14 +8537,6 @@
     },
     {
         "Nomi": "Кетонал амп.100мг/2мл№10",
-        "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 65000.0,
-        "Srok": 2.2027,
-        "Zavod": "Lek Pharmaceuticals"
-    },
-    {
-        "Nomi": "Кетонал амп.100мг/2мл№10",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 65000.0,
@@ -8640,8 +8544,16 @@
         "Zavod": "Lek Pharmaceuticals"
     },
     {
+        "Nomi": "Кетонал амп.100мг/2мл№10",
+        "Pachka": 0.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 65000.0,
+        "Srok": 2.2027,
+        "Zavod": "Lek Pharmaceuticals"
+    },
+    {
         "Nomi": "Кетонал гель 2,5% 50г №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 54000.0,
         "Srok": 9.2028,
@@ -8665,7 +8577,7 @@
     },
     {
         "Nomi": "Кетономер гел 30гр №1",
-        "Pachka": 11.0,
+        "Pachka": 10.0,
         "Dona": 0.0,
         "Sotish_narxi": 14000.0,
         "Srok": 11.2028,
@@ -8689,14 +8601,6 @@
     },
     {
         "Nomi": "Кетотифен 1мг таб №30",
-        "Pachka": 16.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 7500.0,
-        "Srok": 10.2028,
-        "Zavod": "Borisovskiy zavod meditsinskix preparatov"
-    },
-    {
-        "Nomi": "Кетотифен 1мг таб №30",
         "Pachka": 20.0,
         "Dona": 0.0,
         "Sotish_narxi": 7500.0,
@@ -8704,9 +8608,17 @@
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
     },
     {
+        "Nomi": "Кетотифен 1мг таб №30",
+        "Pachka": 16.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 7500.0,
+        "Srok": 10.2028,
+        "Zavod": "Borisovskiy zavod meditsinskix preparatov"
+    },
+    {
         "Nomi": "Кетотифен таб 1мг №30",
-        "Pachka": 1.0,
-        "Dona": 0.0,
+        "Pachka": 0.0,
+        "Dona": 10.0,
         "Sotish_narxi": 9000.0,
         "Srok": 12.2028,
         "Zavod": "UKRFARMEXPORT"
@@ -8777,18 +8689,18 @@
     },
     {
         "Nomi": "Кламок 1000мг таб №10",
-        "Pachka": 0.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 67000.0,
-        "Srok": 8.2027,
-        "Zavod": "Nobel Pharmsanoat"
-    },
-    {
-        "Nomi": "Кламок 1000мг таб №10",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 63000.0,
         "Srok": 11.2027,
+        "Zavod": "Nobel Pharmsanoat"
+    },
+    {
+        "Nomi": "Кламок 1000мг таб №10",
+        "Pachka": 0.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 67000.0,
+        "Srok": 8.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
@@ -8817,7 +8729,7 @@
     },
     {
         "Nomi": "Кламок пор.приг.сусп. 156,25мг 100мл №1",
-        "Pachka": 4.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 56000.0,
         "Srok": 12.2027,
@@ -8857,18 +8769,18 @@
     },
     {
         "Nomi": "Клексан  0,6мл №2",
-        "Pachka": 4.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 164000.0,
-        "Srok": 12.2027,
-        "Zavod": "Sanofi Winthrop Industrie"
-    },
-    {
-        "Nomi": "Клексан  0,6мл №2",
         "Pachka": 0.0,
         "Dona": 1.0,
         "Sotish_narxi": 158000.0,
         "Srok": 1.2028,
+        "Zavod": "Sanofi Winthrop Industrie"
+    },
+    {
+        "Nomi": "Клексан  0,6мл №2",
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 164000.0,
+        "Srok": 12.2027,
         "Zavod": "Sanofi Winthrop Industrie"
     },
     {
@@ -8890,7 +8802,7 @@
     {
         "Nomi": "Климадинон таб  №60",
         "Pachka": 1.0,
-        "Dona": 45.0,
+        "Dona": 30.0,
         "Sotish_narxi": 126000.0,
         "Srok": 8.2029,
         "Zavod": "Bionorica"
@@ -8905,7 +8817,7 @@
     },
     {
         "Nomi": "Климаксан гранулы №1",
-        "Pachka": 10.0,
+        "Pachka": 8.0,
         "Dona": 0.0,
         "Sotish_narxi": 20000.0,
         "Srok": 10.2028,
@@ -8993,7 +8905,7 @@
     },
     {
         "Nomi": "Клопидогрел таб. 75мг №30",
-        "Pachka": 3.0,
+        "Pachka": 10.0,
         "Dona": 0.0,
         "Sotish_narxi": 48000.0,
         "Srok": 10.2027,
@@ -9001,7 +8913,7 @@
     },
     {
         "Nomi": "Клопидогрел таб. 75мг №30",
-        "Pachka": 10.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 48000.0,
         "Srok": 10.2027,
@@ -9010,14 +8922,14 @@
     {
         "Nomi": "Клопидогрел таб.75мг№30",
         "Pachka": 7.0,
-        "Dona": 20.0,
+        "Dona": 6.0,
         "Sotish_narxi": 48000.0,
         "Srok": 10.2028,
         "Zavod": "Radiks"
     },
     {
         "Nomi": "Клотримазол мазь 1% 25г №1",
-        "Pachka": 8.0,
+        "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 11.2028,
@@ -9225,17 +9137,17 @@
     },
     {
         "Nomi": "Коледан капли 10мл №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 63000.0,
+        "Sotish_narxi": 65000.0,
         "Srok": 9.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
         "Nomi": "Коледан капли 10мл №1",
-        "Pachka": 1.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 65000.0,
+        "Sotish_narxi": 63000.0,
         "Srok": 9.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
@@ -9281,18 +9193,18 @@
     },
     {
         "Nomi": "Коло иммуно капс  №30",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 264000.0,
-        "Srok": 12.2027,
-        "Zavod": "Коло иммуно"
-    },
-    {
-        "Nomi": "Коло иммуно капс  №30",
         "Pachka": 0.0,
         "Dona": 5.0,
         "Sotish_narxi": 258000.0,
         "Srok": 6.2027,
+        "Zavod": "Коло иммуно"
+    },
+    {
+        "Nomi": "Коло иммуно капс  №30",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 264000.0,
+        "Srok": 12.2027,
         "Zavod": "Коло иммуно"
     },
     {
@@ -9338,7 +9250,7 @@
     {
         "Nomi": "Конкор кор 2,5 мг  №30",
         "Pachka": 5.0,
-        "Dona": 24.0,
+        "Dona": 14.0,
         "Sotish_narxi": 48000.0,
         "Srok": 12.2027,
         "Zavod": "Merck"
@@ -9393,7 +9305,7 @@
     },
     {
         "Nomi": "Корвалол 25 мл №1",
-        "Pachka": 7.0,
+        "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 8000.0,
         "Srok": 2.2028,
@@ -9401,8 +9313,8 @@
     },
     {
         "Nomi": "Кордарон таб. 200мг  №30",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 8.0,
         "Sotish_narxi": 84000.0,
         "Srok": 9.2028,
         "Zavod": "Sanofi Aventis Groupe"
@@ -9442,25 +9354,17 @@
     {
         "Nomi": "Кортексин лиоф в/м 5мг  №10",
         "Pachka": 0.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 250000.0,
-        "Srok": 7.2028,
-        "Zavod": "Герофарм"
-    },
-    {
-        "Nomi": "Кортексин лиоф в/м 5мг  №10",
-        "Pachka": 0.0,
         "Dona": 1.0,
         "Sotish_narxi": 260000.0,
         "Srok": 7.2028,
         "Zavod": "Герофарм"
     },
     {
-        "Nomi": "Кортексин лиоф.приг. р-ра инъек.10мг №10",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 390000.0,
-        "Srok": 9.2028,
+        "Nomi": "Кортексин лиоф в/м 5мг  №10",
+        "Pachka": 0.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 250000.0,
+        "Srok": 7.2028,
         "Zavod": "Герофарм"
     },
     {
@@ -9469,6 +9373,14 @@
         "Dona": 3.0,
         "Sotish_narxi": 390000.0,
         "Srok": 8.2028,
+        "Zavod": "Герофарм"
+    },
+    {
+        "Nomi": "Кортексин лиоф.приг. р-ра инъек.10мг №10",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 390000.0,
+        "Srok": 9.2028,
         "Zavod": "Герофарм"
     },
     {
@@ -9506,14 +9418,6 @@
     {
         "Nomi": "Кортел-40 таб №28",
         "Pachka": 0.0,
-        "Dona": 14.0,
-        "Sotish_narxi": 36400.0,
-        "Srok": 4.2027,
-        "Zavod": "Serene Healthcare"
-    },
-    {
-        "Nomi": "Кортел-40 таб №28",
-        "Pachka": 0.0,
         "Dona": 5.0,
         "Sotish_narxi": 35000.0,
         "Srok": 2.2027,
@@ -9524,6 +9428,14 @@
         "Pachka": 0.0,
         "Dona": 27.0,
         "Sotish_narxi": 42000.0,
+        "Srok": 4.2027,
+        "Zavod": "Serene Healthcare"
+    },
+    {
+        "Nomi": "Кортел-40 таб №28",
+        "Pachka": 0.0,
+        "Dona": 14.0,
+        "Sotish_narxi": 36400.0,
         "Srok": 4.2027,
         "Zavod": "Serene Healthcare"
     },
@@ -9634,7 +9546,7 @@
     {
         "Nomi": "Креон капс 10000  №20",
         "Pachka": 8.0,
-        "Dona": 9.0,
+        "Dona": 5.0,
         "Sotish_narxi": 66000.0,
         "Srok": 6.2027,
         "Zavod": "ПРЕДСТАВИТЕЛЬСТВО «Abbott Laboratories», УЗБЕКИСТАН"
@@ -9689,7 +9601,7 @@
     },
     {
         "Nomi": "Ксило-норм спрей наз 1мг/мл 10мл №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 37000.0,
         "Srok": 9.2027,
@@ -9746,15 +9658,15 @@
     {
         "Nomi": "Куленто таб.10мг №28",
         "Pachka": 1.0,
-        "Dona": 13.0,
+        "Dona": 6.0,
         "Sotish_narxi": 86800.0,
         "Srok": 4.2028,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
         "Nomi": "Курантил n 25 №120",
-        "Pachka": 2.0,
-        "Dona": 20.0,
+        "Pachka": 1.0,
+        "Dona": 110.0,
         "Sotish_narxi": 60000.0,
         "Srok": 2.2028,
         "Zavod": "Berlin-Chemie AG"
@@ -9785,18 +9697,18 @@
     },
     {
         "Nomi": "Кюпен таб №100",
-        "Pachka": 8.0,
-        "Dona": 80.0,
-        "Sotish_narxi": 80000.0,
-        "Srok": 4.2028,
-        "Zavod": "Avison Pharmaceuticals Pvt Ltd"
-    },
-    {
-        "Nomi": "Кюпен таб №100",
         "Pachka": 16.0,
         "Dona": 80.0,
         "Sotish_narxi": 70000.0,
         "Srok": 2.2028,
+        "Zavod": "Avison Pharmaceuticals Pvt Ltd"
+    },
+    {
+        "Nomi": "Кюпен таб №100",
+        "Pachka": 8.0,
+        "Dona": 30.0,
+        "Sotish_narxi": 80000.0,
+        "Srok": 4.2028,
         "Zavod": "Avison Pharmaceuticals Pvt Ltd"
     },
     {
@@ -9809,7 +9721,7 @@
     },
     {
         "Nomi": "Кюпен юниор сусп. 60мл №1",
-        "Pachka": 4.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 29000.0,
         "Srok": 10.2027,
@@ -9842,7 +9754,7 @@
     {
         "Nomi": "Л-монтус кид таб.2,5мг/4мг№10",
         "Pachka": 5.0,
-        "Dona": 4.0,
+        "Dona": 2.0,
         "Sotish_narxi": 80000.0,
         "Srok": 10.2027,
         "Zavod": "Fourts "
@@ -9881,8 +9793,8 @@
     },
     {
         "Nomi": "Лакто-g капс. №10",
-        "Pachka": 9.0,
-        "Dona": 6.0,
+        "Pachka": 8.0,
+        "Dona": 1.0,
         "Sotish_narxi": 55000.0,
         "Srok": 12.2026,
         "Zavod": "Gm pharmaceuticals ltd"
@@ -9954,7 +9866,7 @@
     {
         "Nomi": "Лацидофорте капс. №10",
         "Pachka": 6.0,
-        "Dona": 6.0,
+        "Dona": 2.0,
         "Sotish_narxi": 62000.0,
         "Srok": 9.2027,
         "Zavod": "World Medicine Europe"
@@ -9962,7 +9874,7 @@
     {
         "Nomi": "Левмонте Кидс №50 (Л монтус кидс)",
         "Pachka": 3.0,
-        "Dona": 22.0,
+        "Dona": 7.0,
         "Sotish_narxi": 275000.0,
         "Srok": 9.2028,
         "Zavod": "Miller Pharm, Индия"
@@ -9993,7 +9905,7 @@
     },
     {
         "Nomi": "Левомекдол мазь df 30г №1",
-        "Pachka": 21.0,
+        "Pachka": 20.0,
         "Dona": 0.0,
         "Sotish_narxi": 8000.0,
         "Srok": 11.2028,
@@ -10001,17 +9913,17 @@
     },
     {
         "Nomi": "Левомеколь мазь 40г №1",
-        "Pachka": 22.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
-        "Sotish_narxi": 25000.0,
+        "Sotish_narxi": 24000.0,
         "Srok": 5.2028,
         "Zavod": "Нижфарм"
     },
     {
         "Nomi": "Левомеколь мазь 40г №1",
-        "Pachka": 3.0,
+        "Pachka": 22.0,
         "Dona": 0.0,
-        "Sotish_narxi": 24000.0,
+        "Sotish_narxi": 25000.0,
         "Srok": 5.2028,
         "Zavod": "Нижфарм"
     },
@@ -10033,18 +9945,18 @@
     },
     {
         "Nomi": "Левомицетин таб 500мг №10(ривулет)",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 17000.0,
-        "Srok": 1.2028,
-        "Zavod": "УКРФАРМЭКСПОРТ"
-    },
-    {
-        "Nomi": "Левомицетин таб 500мг №10(ривулет)",
         "Pachka": 3.0,
         "Dona": 8.0,
         "Sotish_narxi": 16000.0,
         "Srok": 7.2028,
+        "Zavod": "УКРФАРМЭКСПОРТ"
+    },
+    {
+        "Nomi": "Левомицетин таб 500мг №10(ривулет)",
+        "Pachka": 5.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 17000.0,
+        "Srok": 1.2028,
         "Zavod": "УКРФАРМЭКСПОРТ"
     },
     {
@@ -10097,7 +10009,7 @@
     },
     {
         "Nomi": "Левофлоксацин капс.500мг№10",
-        "Pachka": 19.0,
+        "Pachka": 18.0,
         "Dona": 0.0,
         "Sotish_narxi": 19000.0,
         "Srok": 10.2027,
@@ -10114,7 +10026,7 @@
     {
         "Nomi": "Левофлоксацин таб. п/о 500мг №10",
         "Pachka": 2.0,
-        "Dona": 5.0,
+        "Dona": 0.0,
         "Sotish_narxi": 40000.0,
         "Srok": 6.2028,
         "Zavod": "Промомед Рус"
@@ -10153,7 +10065,7 @@
     },
     {
         "Nomi": "Лейкопластыр 2,5*400см №1",
-        "Pachka": 87.0,
+        "Pachka": 85.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 3.2028,
@@ -10265,7 +10177,7 @@
     },
     {
         "Nomi": "Летфиксим 400 таб. №10",
-        "Pachka": 6.0,
+        "Pachka": 4.0,
         "Dona": 2.0,
         "Sotish_narxi": 65000.0,
         "Srok": 7.2028,
@@ -10281,14 +10193,6 @@
     },
     {
         "Nomi": "Лив-52 таб №100",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 74000.0,
-        "Srok": 4.2028,
-        "Zavod": "The Himalaya Drug Company"
-    },
-    {
-        "Nomi": "Лив-52 таб №100",
         "Pachka": 0.0,
         "Dona": 15.0,
         "Sotish_narxi": 80000.0,
@@ -10296,8 +10200,16 @@
         "Zavod": "The Himalaya Drug Company"
     },
     {
+        "Nomi": "Лив-52 таб №100",
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 74000.0,
+        "Srok": 4.2028,
+        "Zavod": "The Himalaya Drug Company"
+    },
+    {
         "Nomi": "Ливамиколь мазь 30г №1",
-        "Pachka": 19.0,
+        "Pachka": 18.0,
         "Dona": 0.0,
         "Sotish_narxi": 24000.0,
         "Srok": 4.2027,
@@ -10329,8 +10241,8 @@
     },
     {
         "Nomi": "Лидокаина г/х амп. 1% 5мл №10",
-        "Pachka": 55.0,
-        "Dona": 1.0,
+        "Pachka": 52.0,
+        "Dona": 5.0,
         "Sotish_narxi": 5000.0,
         "Srok": 1.2029,
         "Zavod": "Jurabek Laboratories"
@@ -10385,10 +10297,10 @@
     },
     {
         "Nomi": "Линекс №16",
-        "Pachka": 1.0,
-        "Dona": 14.0,
-        "Sotish_narxi": 40000.0,
-        "Srok": 6.2026,
+        "Pachka": 0.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 25600.0,
+        "Srok": 7.2026,
         "Zavod": "Lek d.d."
     },
     {
@@ -10401,16 +10313,16 @@
     },
     {
         "Nomi": "Линекс №16",
-        "Pachka": 0.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 25600.0,
-        "Srok": 7.2026,
+        "Pachka": 1.0,
+        "Dona": 14.0,
+        "Sotish_narxi": 40000.0,
+        "Srok": 6.2026,
         "Zavod": "Lek d.d."
     },
     {
         "Nomi": "Линекс для детей пор. 1,5г  №10",
-        "Pachka": 1.0,
-        "Dona": 1.0,
+        "Pachka": 0.0,
+        "Dona": 6.0,
         "Sotish_narxi": 80000.0,
         "Srok": 4.2027,
         "Zavod": "Lek d.d."
@@ -10425,17 +10337,17 @@
     },
     {
         "Nomi": "Линимент бальзамический №1",
-        "Pachka": 19.0,
+        "Pachka": 13.0,
         "Dona": 0.0,
-        "Sotish_narxi": 12000.0,
+        "Sotish_narxi": 11000.0,
         "Srok": 1.2031,
         "Zavod": "по Вишневскому"
     },
     {
         "Nomi": "Линимент бальзамический №1",
-        "Pachka": 13.0,
+        "Pachka": 18.0,
         "Dona": 0.0,
-        "Sotish_narxi": 11000.0,
+        "Sotish_narxi": 12000.0,
         "Srok": 1.2031,
         "Zavod": "по Вишневскому"
     },
@@ -10529,7 +10441,7 @@
     },
     {
         "Nomi": "Лоперамид SD таб. 2мг №20",
-        "Pachka": 63.0,
+        "Pachka": 62.0,
         "Dona": 9.0,
         "Sotish_narxi": 4000.0,
         "Srok": 1.2029,
@@ -10585,7 +10497,7 @@
     },
     {
         "Nomi": "Лоратадин (борисов.) таб. 10мг №10",
-        "Pachka": 48.0,
+        "Pachka": 45.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 11.2028,
@@ -10602,18 +10514,10 @@
     {
         "Nomi": "Лораталь 10мг №30",
         "Pachka": 1.0,
-        "Dona": 4.0,
+        "Dona": 1.0,
         "Sotish_narxi": 96000.0,
         "Srok": 1.203,
         "Zavod": "<>"
-    },
-    {
-        "Nomi": "Лорде-гиаль  р-р.ингаляц.4мл№10",
-        "Pachka": 4.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 90000.0,
-        "Srok": 7.2027,
-        "Zavod": "Lorde hyal"
     },
     {
         "Nomi": "Лорде-гиаль  р-р.ингаляц.4мл№10",
@@ -10624,8 +10528,16 @@
         "Zavod": "Lorde hyal"
     },
     {
+        "Nomi": "Лорде-гиаль  р-р.ингаляц.4мл№10",
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 90000.0,
+        "Srok": 7.2027,
+        "Zavod": "Lorde hyal"
+    },
+    {
         "Nomi": "Лордент 50мл №1",
-        "Pachka": 12.0,
+        "Pachka": 11.0,
         "Dona": 0.0,
         "Sotish_narxi": 25000.0,
         "Srok": 10.2027,
@@ -10641,18 +10553,18 @@
     },
     {
         "Nomi": "Лордент р-р 100мл №1",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 43000.0,
-        "Srok": 2.2028,
-        "Zavod": "Узбекистан"
-    },
-    {
-        "Nomi": "Лордент р-р 100мл №1",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 43000.0,
         "Srok": 10.2027,
+        "Zavod": "Узбекистан"
+    },
+    {
+        "Nomi": "Лордент р-р 100мл №1",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 43000.0,
+        "Srok": 2.2028,
         "Zavod": "Узбекистан"
     },
     {
@@ -10705,18 +10617,18 @@
     },
     {
         "Nomi": "Лоринден а мазь 15г №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 48000.0,
-        "Srok": 10.2027,
-        "Zavod": "Bausch Health"
-    },
-    {
-        "Nomi": "Лоринден а мазь 15г №1",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 48000.0,
         "Srok": 3.2027,
+        "Zavod": "Bausch Health"
+    },
+    {
+        "Nomi": "Лоринден а мазь 15г №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 48000.0,
+        "Srok": 10.2027,
         "Zavod": "Bausch Health"
     },
     {
@@ -10738,7 +10650,7 @@
     {
         "Nomi": "Лориста 50мг №28",
         "Pachka": 14.0,
-        "Dona": 11.0,
+        "Dona": 2.0,
         "Sotish_narxi": 32200.0,
         "Srok": 12.2029,
         "Zavod": "KRKA Novo mesto"
@@ -10802,7 +10714,7 @@
     {
         "Nomi": "Лортенза 50мг/5мг №30 (лориста + тенокс)",
         "Pachka": 4.0,
-        "Dona": 23.0,
+        "Dona": 3.0,
         "Sotish_narxi": 69000.0,
         "Srok": 5.2028,
         "Zavod": "KRKA Novo mesto"
@@ -10858,7 +10770,7 @@
     {
         "Nomi": "Люкамонт плус 10/5 мг №30 таб",
         "Pachka": 3.0,
-        "Dona": 18.0,
+        "Dona": 15.0,
         "Sotish_narxi": 150000.0,
         "Srok": 11.2026,
         "Zavod": "Pharmactive Ilac San.Ve Tic"
@@ -10874,23 +10786,23 @@
     {
         "Nomi": "Магне Б6 р-р 10мл №10",
         "Pachka": 0.0,
-        "Dona": 8.0,
+        "Dona": 7.0,
         "Sotish_narxi": 260000.0,
         "Srok": 12.2026,
         "Zavod": "Sanofi Aventis France"
     },
     {
         "Nomi": "Магне в6 таб. 48мг+5мг  №60",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 35.0,
         "Sotish_narxi": 192000.0,
         "Srok": 5.2027,
         "Zavod": "Chinoin Pharmaceutical & Chemical Works"
     },
     {
         "Nomi": "Магне В6 таб. Нест №50",
-        "Pachka": 4.0,
-        "Dona": 0.0,
+        "Pachka": 3.0,
+        "Dona": 20.0,
         "Sotish_narxi": 60000.0,
         "Srok": 7.2027,
         "Zavod": "<>"
@@ -10969,18 +10881,18 @@
     },
     {
         "Nomi": "Магния сульфат амп.25%.5мл№10",
-        "Pachka": 8.0,
-        "Dona": 6.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 12.2028,
-        "Zavod": "Radiks"
-    },
-    {
-        "Nomi": "Магния сульфат амп.25%.5мл№10",
         "Pachka": 60.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 1.2029,
+        "Zavod": "Radiks"
+    },
+    {
+        "Nomi": "Магния сульфат амп.25%.5мл№10",
+        "Pachka": 7.0,
+        "Dona": 8.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 12.2028,
         "Zavod": "Radiks"
     },
     {
@@ -11072,22 +10984,6 @@
         "Zavod": "Узбекистан*"
     },
     {
-        "Nomi": "Маннитол р-р 15% 200мл №1",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 16000.0,
-        "Srok": 9.2027,
-        "Zavod": "Dentafill Plyus"
-    },
-    {
-        "Nomi": "Маннитол р-р д/инф. 15% 200мл №1",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 14000.0,
-        "Srok": 9.2027,
-        "Zavod": "Dentafill Plyus"
-    },
-    {
         "Nomi": "Марл 2метр 13тяж ",
         "Pachka": 37.0,
         "Dona": 0.0,
@@ -11121,18 +11017,18 @@
     },
     {
         "Nomi": "Марля мед. отб. в кусках 2м х 90см по ts №1",
-        "Pachka": 21.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 6000.0,
-        "Srok": 12.2029,
-        "Zavod": "Sarbon teks STB"
-    },
-    {
-        "Nomi": "Марля мед. отб. в кусках 2м х 90см по ts №1",
         "Pachka": 33.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 1.203,
+        "Zavod": "Sarbon teks STB"
+    },
+    {
+        "Nomi": "Марля мед. отб. в кусках 2м х 90см по ts №1",
+        "Pachka": 21.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 12.2029,
         "Zavod": "Sarbon teks STB"
     },
     {
@@ -11241,14 +11137,6 @@
     },
     {
         "Nomi": "Масло гусь 25мл №1",
-        "Pachka": 8.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 6000.0,
-        "Srok": 7.2027,
-        "Zavod": "АЛ Шифо Фарм"
-    },
-    {
-        "Nomi": "Масло гусь 25мл №1",
         "Pachka": 4.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
@@ -11257,18 +11145,26 @@
     },
     {
         "Nomi": "Масло гусь 25мл №1",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 5000.0,
-        "Srok": 6.2027,
-        "Zavod": "АЛ Шифо Фарм"
-    },
-    {
-        "Nomi": "Масло гусь 25мл №1",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 3.2027,
+        "Zavod": "АЛ Шифо Фарм"
+    },
+    {
+        "Nomi": "Масло гусь 25мл №1",
+        "Pachka": 8.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 7.2027,
+        "Zavod": "АЛ Шифо Фарм"
+    },
+    {
+        "Nomi": "Масло гусь 25мл №1",
+        "Pachka": 5.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 5000.0,
+        "Srok": 6.2027,
         "Zavod": "АЛ Шифо Фарм"
     },
     {
@@ -11305,7 +11201,7 @@
     },
     {
         "Nomi": "Масло оливквое 100мл №1",
-        "Pachka": 9.0,
+        "Pachka": 8.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 1.2028,
@@ -11465,18 +11361,18 @@
     },
     {
         "Nomi": "Мегасеф таб. 500мг №10",
-        "Pachka": 0.0,
-        "Dona": 8.0,
-        "Sotish_narxi": 110000.0,
-        "Srok": 10.2028,
-        "Zavod": "Nobel Ilac Sanayii Ve Ticaret"
-    },
-    {
-        "Nomi": "Мегасеф таб. 500мг №10",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 110000.0,
         "Srok": 12.2028,
+        "Zavod": "Nobel Ilac Sanayii Ve Ticaret"
+    },
+    {
+        "Nomi": "Мегасеф таб. 500мг №10",
+        "Pachka": 0.0,
+        "Dona": 8.0,
+        "Sotish_narxi": 110000.0,
+        "Srok": 10.2028,
         "Zavod": "Nobel Ilac Sanayii Ve Ticaret"
     },
     {
@@ -11514,7 +11410,7 @@
     {
         "Nomi": "Медролгин р-р д/и амп. 30 мг/мл №5",
         "Pachka": 1.0,
-        "Dona": 3.0,
+        "Dona": 2.0,
         "Sotish_narxi": 57500.0,
         "Srok": 5.2026,
         "Zavod": "World Medicine Ilac San. ve Tic."
@@ -11561,17 +11457,17 @@
     },
     {
         "Nomi": "Мексидол 2мл амп №10",
-        "Pachka": 0.0,
-        "Dona": 7.0,
-        "Sotish_narxi": 100000.0,
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 95000.0,
         "Srok": 11.2027,
         "Zavod": "Фармасофт"
     },
     {
         "Nomi": "Мексидол 2мл амп №10",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 95000.0,
+        "Pachka": 0.0,
+        "Dona": 7.0,
+        "Sotish_narxi": 100000.0,
         "Srok": 11.2027,
         "Zavod": "Фармасофт"
     },
@@ -11609,18 +11505,18 @@
     },
     {
         "Nomi": "Мелбек р-р 15мг/1,5мл №3",
-        "Pachka": 0.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 39000.0,
-        "Srok": 5.2029,
-        "Zavod": "Nobel Ilac Sanayii Ve Ticaret"
-    },
-    {
-        "Nomi": "Мелбек р-р 15мг/1,5мл №3",
         "Pachka": 3.0,
         "Dona": 2.0,
         "Sotish_narxi": 39000.0,
         "Srok": 1.2029,
+        "Zavod": "Nobel Ilac Sanayii Ve Ticaret"
+    },
+    {
+        "Nomi": "Мелбек р-р 15мг/1,5мл №3",
+        "Pachka": 0.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 39000.0,
+        "Srok": 5.2029,
         "Zavod": "Nobel Ilac Sanayii Ve Ticaret"
     },
     {
@@ -11689,7 +11585,7 @@
     },
     {
         "Nomi": "МЕНОВАЗИН-МЕД 40МЛ №1 (ОРГ №100)",
-        "Pachka": 164.0,
+        "Pachka": 158.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 12.2027,
@@ -11705,18 +11601,18 @@
     },
     {
         "Nomi": "Мер суперкам 2мл амп №10",
-        "Pachka": 15.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 30000.0,
-        "Srok": 3.2029,
-        "Zavod": "MERRYMED FARM"
-    },
-    {
-        "Nomi": "Мер суперкам 2мл амп №10",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 28000.0,
         "Srok": 2.2029,
+        "Zavod": "MERRYMED FARM"
+    },
+    {
+        "Nomi": "Мер суперкам 2мл амп №10",
+        "Pachka": 15.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 30000.0,
+        "Srok": 3.2029,
         "Zavod": "MERRYMED FARM"
     },
     {
@@ -11809,8 +11705,8 @@
     },
     {
         "Nomi": "МЕТОКЛОПРАМИД 10МГ ТАБ   N50",
-        "Pachka": 19.0,
-        "Dona": 0.0,
+        "Pachka": 18.0,
+        "Dona": 40.0,
         "Sotish_narxi": 15000.0,
         "Srok": 10.2028,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -11913,14 +11809,6 @@
     },
     {
         "Nomi": "Метронидазол супп.ваг. 500мг  №10",
-        "Pachka": 3.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 18000.0,
-        "Srok": 5.2028,
-        "Zavod": "Фармаприм"
-    },
-    {
-        "Nomi": "Метронидазол супп.ваг. 500мг  №10",
         "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 18000.0,
@@ -11928,9 +11816,17 @@
         "Zavod": "Фармаприм"
     },
     {
+        "Nomi": "Метронидазол супп.ваг. 500мг  №10",
+        "Pachka": 3.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 18000.0,
+        "Srok": 5.2028,
+        "Zavod": "Фармаприм"
+    },
+    {
         "Nomi": "Метронидазол таб. 250мг  №20",
         "Pachka": 71.0,
-        "Dona": 10.0,
+        "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 5.2027,
         "Zavod": "Navbahor Sanoat"
@@ -11946,16 +11842,16 @@
     {
         "Nomi": "Метфогамма 1000 №120",
         "Pachka": 0.0,
-        "Dona": 30.0,
-        "Sotish_narxi": 204000.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 192000.0,
         "Srok": 1.2028,
         "Zavod": "Worwag Pharma"
     },
     {
         "Nomi": "Метфогамма 1000 №120",
         "Pachka": 0.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 192000.0,
+        "Dona": 30.0,
+        "Sotish_narxi": 204000.0,
         "Srok": 1.2028,
         "Zavod": "Worwag Pharma"
     },
@@ -12001,18 +11897,18 @@
     },
     {
         "Nomi": "Миг таб 400мг №10",
-        "Pachka": 14.0,
-        "Dona": 5.0,
+        "Pachka": 13.0,
+        "Dona": 2.0,
         "Sotish_narxi": 25000.0,
-        "Srok": 7.2028,
+        "Srok": 6.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
         "Nomi": "Миг таб 400мг №10",
         "Pachka": 14.0,
-        "Dona": 8.0,
+        "Dona": 5.0,
         "Sotish_narxi": 25000.0,
-        "Srok": 6.2028,
+        "Srok": 7.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
@@ -12025,7 +11921,7 @@
     },
     {
         "Nomi": "Мидокалм амп. 10% 1мл №5",
-        "Pachka": 1.0,
+        "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 107500.0,
         "Srok": 10.2028,
@@ -12033,8 +11929,8 @@
     },
     {
         "Nomi": "Мидокалм амп. 10% 1мл №5",
-        "Pachka": 0.0,
-        "Dona": 3.0,
+        "Pachka": 1.0,
+        "Dona": 0.0,
         "Sotish_narxi": 107500.0,
         "Srok": 10.2028,
         "Zavod": "Gedeon Richter"
@@ -12049,16 +11945,16 @@
     },
     {
         "Nomi": "Мидокалм таб 50мг №30",
-        "Pachka": 3.0,
-        "Dona": 0.0,
+        "Pachka": 7.0,
+        "Dona": 1.0,
         "Sotish_narxi": 60000.0,
         "Srok": 1.2028,
         "Zavod": "Gedeon Richter"
     },
     {
         "Nomi": "Мидокалм таб 50мг №30",
-        "Pachka": 7.0,
-        "Dona": 1.0,
+        "Pachka": 3.0,
+        "Dona": 0.0,
         "Sotish_narxi": 60000.0,
         "Srok": 1.2028,
         "Zavod": "Gedeon Richter"
@@ -12073,18 +11969,18 @@
     },
     {
         "Nomi": "Мидоптик капли глазные 2.5% 10мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 48000.0,
-        "Srok": 4.2027,
-        "Zavod": "Ликвор"
-    },
-    {
-        "Nomi": "Мидоптик капли глазные 2.5% 10мл №1",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 40000.0,
         "Srok": 11.2027,
+        "Zavod": "Ликвор"
+    },
+    {
+        "Nomi": "Мидоптик капли глазные 2.5% 10мл №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 48000.0,
+        "Srok": 4.2027,
         "Zavod": "Ликвор"
     },
     {
@@ -12121,18 +12017,18 @@
     },
     {
         "Nomi": "Микроклизма для взрослых 9г №6",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 81000.0,
-        "Srok": 2.2029,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Микроклизма для взрослых 9г №6",
         "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 84000.0,
         "Srok": 10.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Микроклизма для взрослых 9г №6",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 81000.0,
+        "Srok": 2.2029,
         "Zavod": "<>"
     },
     {
@@ -12154,7 +12050,7 @@
     {
         "Nomi": "Милдронат р-р 5мл №10",
         "Pachka": 1.0,
-        "Dona": 5.0,
+        "Dona": 3.0,
         "Sotish_narxi": 175000.0,
         "Srok": 10.203,
         "Zavod": "Гриндекс"
@@ -12241,7 +12137,7 @@
     },
     {
         "Nomi": "Мукалтин  таб. 50 мг № 10",
-        "Pachka": 100.0,
+        "Pachka": 99.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
         "Srok": 1.2028,
@@ -12249,17 +12145,17 @@
     },
     {
         "Nomi": "Мукоген таб.100мг№30",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 96000.0,
+        "Pachka": 0.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 99000.0,
         "Srok": 9.2028,
         "Zavod": "Macleods Pharmaceuticals"
     },
     {
         "Nomi": "Мукоген таб.100мг№30",
-        "Pachka": 0.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 99000.0,
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 96000.0,
         "Srok": 9.2028,
         "Zavod": "Macleods Pharmaceuticals"
     },
@@ -12273,8 +12169,8 @@
     },
     {
         "Nomi": "Мумиё Техно капс № 20",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 10.0,
         "Sotish_narxi": 14000.0,
         "Srok": 11.2027,
         "Zavod": "<>"
@@ -12306,9 +12202,9 @@
     {
         "Nomi": "Мускомед кап №20",
         "Pachka": 0.0,
-        "Dona": 5.0,
+        "Dona": 3.0,
         "Sotish_narxi": 96000.0,
-        "Srok": 3.2027,
+        "Srok": 10.2026,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
@@ -12322,15 +12218,15 @@
     {
         "Nomi": "Мускомед кап №20",
         "Pachka": 0.0,
-        "Dona": 3.0,
+        "Dona": 5.0,
         "Sotish_narxi": 96000.0,
-        "Srok": 10.2026,
+        "Srok": 3.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
         "Nomi": "Мускомед р-р д/ин. 4мг/2мл №6",
         "Pachka": 0.0,
-        "Dona": 3.0,
+        "Dona": 2.0,
         "Sotish_narxi": 117000.0,
         "Srok": 1.2028,
         "Zavod": "World Medicine Ilac San. ve Tic."
@@ -12385,7 +12281,7 @@
     },
     {
         "Nomi": "Найз гель 1% туб 20г №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 30000.0,
         "Srok": 12.2027,
@@ -12441,17 +12337,17 @@
     },
     {
         "Nomi": "Налгезин таб 275мг №10",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 28000.0,
+        "Pachka": 2.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 32000.0,
         "Srok": 2.203,
         "Zavod": "KRKA Novo mesto"
     },
     {
         "Nomi": "Налгезин таб 275мг №10",
-        "Pachka": 2.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 32000.0,
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 28000.0,
         "Srok": 2.203,
         "Zavod": "KRKA Novo mesto"
     },
@@ -12473,7 +12369,7 @@
     },
     {
         "Nomi": "Насморктотал таб.№10",
-        "Pachka": 35.0,
+        "Pachka": 30.0,
         "Dona": 0.0,
         "Sotish_narxi": 11000.0,
         "Srok": 4.2028,
@@ -12529,7 +12425,7 @@
     },
     {
         "Nomi": "Натрия гидрокарбонат 4% 200мл (дентафил) №1",
-        "Pachka": 18.0,
+        "Pachka": 90.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
         "Srok": 2.2028,
@@ -12537,7 +12433,7 @@
     },
     {
         "Nomi": "Натрия гидрокарбонат 4% 200мл (дентафил) №1",
-        "Pachka": 90.0,
+        "Pachka": 18.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
         "Srok": 2.2028,
@@ -12562,7 +12458,7 @@
     {
         "Nomi": "Натрия тиосулфат 30% 10мл №50",
         "Pachka": 3.0,
-        "Dona": 34.0,
+        "Dona": 30.0,
         "Sotish_narxi": 75000.0,
         "Srok": 2.2029,
         "Zavod": "MERRYMED FARM"
@@ -12601,18 +12497,10 @@
     },
     {
         "Nomi": "Натрия хлорид df р-р д/инф. 0,9% 100мл №1",
-        "Pachka": 80.0,
+        "Pachka": 64.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 4.2029,
-        "Zavod": "Dentafill Plyus"
-    },
-    {
-        "Nomi": "Натрия хлорид df р-р д/инф. 0,9% 100мл №1",
-        "Pachka": 4.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 5000.0,
-        "Srok": 1.2029,
         "Zavod": "Dentafill Plyus"
     },
     {
@@ -12629,14 +12517,6 @@
         "Dona": 7.0,
         "Sotish_narxi": 5000.0,
         "Srok": 3.2029,
-        "Zavod": "Jurabek Laboratories"
-    },
-    {
-        "Nomi": "Натрия хлорид амп.0.9%.5мл№10",
-        "Pachka": 5.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 5000.0,
-        "Srok": 4.2027,
         "Zavod": "Jurabek Laboratories"
     },
     {
@@ -12657,7 +12537,7 @@
     },
     {
         "Nomi": "Натрия хлорид р-р д/ин. 0,9% 100мл (radiks) №1",
-        "Pachka": 119.0,
+        "Pachka": 109.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 4.2028,
@@ -12729,18 +12609,10 @@
     },
     {
         "Nomi": "Небилет  №28",
-        "Pachka": 3.0,
-        "Dona": 5.0,
+        "Pachka": 2.0,
+        "Dona": 19.0,
         "Sotish_narxi": 64400.0,
         "Srok": 1.2028,
-        "Zavod": "Menarini international Operations Luxembourg"
-    },
-    {
-        "Nomi": "Небилет  №28",
-        "Pachka": 0.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 64400.0,
-        "Srok": 9.2027,
         "Zavod": "Menarini international Operations Luxembourg"
     },
     {
@@ -12842,16 +12714,16 @@
     {
         "Nomi": "Нейромидин таб. 20мг  №50",
         "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 215000.0,
+        "Dona": 30.0,
+        "Sotish_narxi": 240000.0,
         "Srok": 2.2031,
         "Zavod": "Olainfarm"
     },
     {
         "Nomi": "Нейромидин таб. 20мг  №50",
         "Pachka": 1.0,
-        "Dona": 30.0,
-        "Sotish_narxi": 240000.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 215000.0,
         "Srok": 2.2031,
         "Zavod": "Olainfarm"
     },
@@ -12865,7 +12737,7 @@
     },
     {
         "Nomi": "Нейротон р-р д/и 2мл  №5",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 60000.0,
         "Srok": 1.2028,
@@ -12881,7 +12753,7 @@
     },
     {
         "Nomi": "Неодерм крем для наружного прим 10г №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 60000.0,
         "Srok": 12.2027,
@@ -12929,7 +12801,7 @@
     },
     {
         "Nomi": "Нестле 12 200г (яблоко-банан)",
-        "Pachka": 6.0,
+        "Pachka": 5.0,
         "Dona": 0.0,
         "Sotish_narxi": 30000.0,
         "Srok": 4.2027,
@@ -12961,7 +12833,7 @@
     },
     {
         "Nomi": "Нестожен 1 600г №2",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 110000.0,
         "Srok": 5.2027,
@@ -12977,18 +12849,18 @@
     },
     {
         "Nomi": "Нестожен 3 600г №2",
-        "Pachka": 2.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 104000.0,
-        "Srok": 8.2026,
-        "Zavod": "Нестле Фарм "
-    },
-    {
-        "Nomi": "Нестожен 3 600г №2",
         "Pachka": 5.0,
         "Dona": 1.0,
         "Sotish_narxi": 104000.0,
         "Srok": 2.2027,
+        "Zavod": "Нестле Фарм "
+    },
+    {
+        "Nomi": "Нестожен 3 600г №2",
+        "Pachka": 2.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 104000.0,
+        "Srok": 8.2026,
         "Zavod": "Нестле Фарм "
     },
     {
@@ -13018,7 +12890,7 @@
     {
         "Nomi": "Нижагара long last 100мг таб №4",
         "Pachka": 9.0,
-        "Dona": 2.0,
+        "Dona": 0.0,
         "Sotish_narxi": 20000.0,
         "Srok": 1.2029,
         "Zavod": "Combitic Global Caplet"
@@ -13066,7 +12938,7 @@
     {
         "Nomi": "Нимесил 2 г №30",
         "Pachka": 2.0,
-        "Dona": 14.0,
+        "Dona": 12.0,
         "Sotish_narxi": 120000.0,
         "Srok": 7.2028,
         "Zavod": "Laboratory Guidotti S. p. A. "
@@ -13089,7 +12961,7 @@
     },
     {
         "Nomi": "Нимид гель 10мг 30гр №1",
-        "Pachka": 15.0,
+        "Pachka": 12.0,
         "Dona": 0.0,
         "Sotish_narxi": 33000.0,
         "Srok": 7.2028,
@@ -13145,7 +13017,7 @@
     },
     {
         "Nomi": "Нистатин мазь 100000ед   1г 15г №1",
-        "Pachka": 10.0,
+        "Pachka": 9.0,
         "Dona": 0.0,
         "Sotish_narxi": 11000.0,
         "Srok": 11.2028,
@@ -13169,10 +13041,10 @@
     },
     {
         "Nomi": "Нистатин супп 250000эд №10",
-        "Pachka": 3.0,
-        "Dona": 9.0,
-        "Sotish_narxi": 12000.0,
-        "Srok": 9.2027,
+        "Pachka": 4.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 10.2027,
         "Zavod": "Dentafill plyus MCHJ"
     },
     {
@@ -13185,10 +13057,10 @@
     },
     {
         "Nomi": "Нистатин супп 250000эд №10",
-        "Pachka": 4.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 10.2027,
+        "Pachka": 3.0,
+        "Dona": 9.0,
+        "Sotish_narxi": 12000.0,
+        "Srok": 9.2027,
         "Zavod": "Dentafill plyus MCHJ"
     },
     {
@@ -13201,18 +13073,18 @@
     },
     {
         "Nomi": "Нистатин таб. 500 000ед №20",
-        "Pachka": 8.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 16000.0,
-        "Srok": 10.2028,
-        "Zavod": "УКРФАРМЭКСПОРТ"
-    },
-    {
-        "Nomi": "Нистатин таб. 500 000ед №20",
         "Pachka": 2.0,
         "Dona": 5.0,
         "Sotish_narxi": 16000.0,
         "Srok": 2.2028,
+        "Zavod": "УКРФАРМЭКСПОРТ"
+    },
+    {
+        "Nomi": "Нистатин таб. 500 000ед №20",
+        "Pachka": 8.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 16000.0,
+        "Srok": 10.2028,
         "Zavod": "УКРФАРМЭКСПОРТ"
     },
     {
@@ -13257,8 +13129,8 @@
     },
     {
         "Nomi": "Нифедипин таб 10мг №50",
-        "Pachka": 12.0,
-        "Dona": 5.0,
+        "Pachka": 11.0,
+        "Dona": 43.0,
         "Sotish_narxi": 20000.0,
         "Srok": 8.2028,
         "Zavod": "Озон"
@@ -13322,7 +13194,7 @@
     {
         "Nomi": "Новакаин 05% 5мл №10",
         "Pachka": 120.0,
-        "Dona": 5.0,
+        "Dona": 4.0,
         "Sotish_narxi": 5000.0,
         "Srok": 3.2029,
         "Zavod": "Jurabek Laboratories"
@@ -13393,8 +13265,8 @@
     },
     {
         "Nomi": "Новузоме капс. 40мг №28",
-        "Pachka": 3.0,
-        "Dona": 0.0,
+        "Pachka": 2.0,
+        "Dona": 14.0,
         "Sotish_narxi": 100800.0,
         "Srok": 2.2028,
         "Zavod": "Novugen Pharma"
@@ -13457,14 +13329,6 @@
     },
     {
         "Nomi": "Новусита-м таб. 1000мг/50мг №28",
-        "Pachka": 0.0,
-        "Dona": 11.0,
-        "Sotish_narxi": 131600.0,
-        "Srok": 12.2027,
-        "Zavod": "NOVUGEN PHARMA MCHJ XK"
-    },
-    {
-        "Nomi": "Новусита-м таб. 1000мг/50мг №28",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 131600.0,
@@ -13475,6 +13339,14 @@
         "Nomi": "Новусита-м таб. 1000мг/50мг №28",
         "Pachka": 3.0,
         "Dona": 0.0,
+        "Sotish_narxi": 131600.0,
+        "Srok": 12.2027,
+        "Zavod": "NOVUGEN PHARMA MCHJ XK"
+    },
+    {
+        "Nomi": "Новусита-м таб. 1000мг/50мг №28",
+        "Pachka": 0.0,
+        "Dona": 11.0,
         "Sotish_narxi": 131600.0,
         "Srok": 12.2027,
         "Zavod": "NOVUGEN PHARMA MCHJ XK"
@@ -13497,18 +13369,18 @@
     },
     {
         "Nomi": "Ноклот таб. 75мг 30 (клопидогрел) №30",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 102000.0,
-        "Srok": 4.2028,
-        "Zavod": "CCL Pharmaceuticals FZ LLC"
-    },
-    {
-        "Nomi": "Ноклот таб. 75мг 30 (клопидогрел) №30",
         "Pachka": 0.0,
         "Dona": 2.0,
         "Sotish_narxi": 117000.0,
         "Srok": 12.2027,
+        "Zavod": "CCL Pharmaceuticals FZ LLC"
+    },
+    {
+        "Nomi": "Ноклот таб. 75мг 30 (клопидогрел) №30",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 102000.0,
+        "Srok": 4.2028,
         "Zavod": "CCL Pharmaceuticals FZ LLC"
     },
     {
@@ -13537,14 +13409,6 @@
     },
     {
         "Nomi": "Нолаксен таб 25,25 №20",
-        "Pachka": 1.0,
-        "Dona": 16.0,
-        "Sotish_narxi": 80000.0,
-        "Srok": 2.2027,
-        "Zavod": "World Medicine Ilac San. ve Tic."
-    },
-    {
-        "Nomi": "Нолаксен таб 25,25 №20",
         "Pachka": 0.0,
         "Dona": 10.0,
         "Sotish_narxi": 80000.0,
@@ -13552,27 +13416,19 @@
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
     {
+        "Nomi": "Нолаксен таб 25,25 №20",
+        "Pachka": 1.0,
+        "Dona": 16.0,
+        "Sotish_narxi": 80000.0,
+        "Srok": 2.2027,
+        "Zavod": "World Medicine Ilac San. ve Tic."
+    },
+    {
         "Nomi": "Нольпаза 40мг  №28",
-        "Pachka": 11.0,
-        "Dona": 8.0,
+        "Pachka": 10.0,
+        "Dona": 27.0,
         "Sotish_narxi": 56000.0,
         "Srok": 5.203,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Нольпаза 40мг р-р №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 60000.0,
-        "Srok": 9.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Нольпаза таб 20мг №28",
-        "Pachka": 6.0,
-        "Dona": 13.0,
-        "Sotish_narxi": 44800.0,
-        "Srok": 3.203,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -13586,9 +13442,17 @@
     {
         "Nomi": "Нольпаза таб 20мг №28",
         "Pachka": 2.0,
-        "Dona": 19.0,
+        "Dona": 5.0,
         "Sotish_narxi": 44800.0,
         "Srok": 1.203,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Нольпаза таб 20мг №28",
+        "Pachka": 6.0,
+        "Dona": 13.0,
+        "Sotish_narxi": 44800.0,
+        "Srok": 3.203,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -13602,17 +13466,17 @@
     {
         "Nomi": "Ноогам таб №60",
         "Pachka": 0.0,
-        "Dona": 5.0,
+        "Dona": 50.0,
         "Sotish_narxi": 186000.0,
-        "Srok": 1.2028,
+        "Srok": 6.2028,
         "Zavod": "<>"
     },
     {
         "Nomi": "Ноогам таб №60",
         "Pachka": 0.0,
-        "Dona": 50.0,
+        "Dona": 5.0,
         "Sotish_narxi": 186000.0,
-        "Srok": 6.2028,
+        "Srok": 1.2028,
         "Zavod": "<>"
     },
     {
@@ -13697,18 +13561,18 @@
     },
     {
         "Nomi": "Нуппи Голд 2 600г №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 136000.0,
-        "Srok": 3.2027,
-        "Zavod": "Эстония"
-    },
-    {
-        "Nomi": "Нуппи Голд 2 600г №1",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 136000.0,
         "Srok": 4.2027,
+        "Zavod": "Эстония"
+    },
+    {
+        "Nomi": "Нуппи Голд 2 600г №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 136000.0,
+        "Srok": 3.2027,
         "Zavod": "Эстония"
     },
     {
@@ -13793,7 +13657,7 @@
     },
     {
         "Nomi": "Облепиховое масло Сибириское 50мл",
-        "Pachka": 19.0,
+        "Pachka": 18.0,
         "Dona": 0.0,
         "Sotish_narxi": 14000.0,
         "Srok": 1.2028,
@@ -13900,7 +13764,7 @@
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 70000.0,
-        "Srok": 6.2027,
+        "Srok": 5.2028,
         "Zavod": "S.C. Rompharm Company"
     },
     {
@@ -13908,7 +13772,7 @@
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 70000.0,
-        "Srok": 5.2028,
+        "Srok": 6.2027,
         "Zavod": "S.C. Rompharm Company"
     },
     {
@@ -13937,18 +13801,18 @@
     },
     {
         "Nomi": "Олфрекс таб.10мг№28",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 100800.0,
-        "Srok": 12.2027,
-        "Zavod": "Nobel Pharmsanoat"
-    },
-    {
-        "Nomi": "Олфрекс таб.10мг№28",
         "Pachka": 0.0,
         "Dona": 23.0,
         "Sotish_narxi": 100800.0,
         "Srok": 11.2027,
+        "Zavod": "Nobel Pharmsanoat"
+    },
+    {
+        "Nomi": "Олфрекс таб.10мг№28",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 100800.0,
+        "Srok": 12.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
@@ -13961,17 +13825,17 @@
     },
     {
         "Nomi": "Омегаст капс. 20мг №28",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 44800.0,
+        "Pachka": 0.0,
+        "Dona": 14.0,
+        "Sotish_narxi": 42000.0,
         "Srok": 7.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
         "Nomi": "Омегаст капс. 20мг №28",
-        "Pachka": 0.0,
-        "Dona": 14.0,
-        "Sotish_narxi": 42000.0,
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 44800.0,
         "Srok": 7.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
@@ -14065,7 +13929,7 @@
     },
     {
         "Nomi": "Омепразол-аджио капс.20мг№30",
-        "Pachka": 111.0,
+        "Pachka": 109.0,
         "Dona": 0.0,
         "Sotish_narxi": 12000.0,
         "Srok": 1.2029,
@@ -14217,8 +14081,8 @@
     },
     {
         "Nomi": "Ортофен 0,25мг таб  №30",
-        "Pachka": 7.0,
-        "Dona": 0.0,
+        "Pachka": 6.0,
+        "Dona": 10.0,
         "Sotish_narxi": 12000.0,
         "Srok": 1.2029,
         "Zavod": "УКРФАРМЭКСПОРТ"
@@ -14321,18 +14185,18 @@
     },
     {
         "Nomi": "Офлоксацин р-р д/инф. 2мг/мл 100мл №1",
-        "Pachka": 25.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 8.2027,
-        "Zavod": "Синтез"
-    },
-    {
-        "Nomi": "Офлоксацин р-р д/инф. 2мг/мл 100мл №1",
         "Pachka": 4.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 4.2027,
+        "Zavod": "Синтез"
+    },
+    {
+        "Nomi": "Офлоксацин р-р д/инф. 2мг/мл 100мл №1",
+        "Pachka": 25.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 8.2027,
         "Zavod": "Синтез"
     },
     {
@@ -14401,7 +14265,7 @@
     },
     {
         "Nomi": "Панкреатин таб.25 ед №60",
-        "Pachka": 48.0,
+        "Pachka": 47.0,
         "Dona": 40.0,
         "Sotish_narxi": 30000.0,
         "Srok": 2.2028,
@@ -14410,24 +14274,8 @@
     {
         "Nomi": "Пантап 40мг таб №28",
         "Pachka": 0.0,
-        "Dona": 7.0,
-        "Sotish_narxi": 44800.0,
-        "Srok": 4.2027,
-        "Zavod": "Nobel Pharmsanoat"
-    },
-    {
-        "Nomi": "Пантап 40мг таб №28",
-        "Pachka": 0.0,
         "Dona": 12.0,
         "Sotish_narxi": 40600.0,
-        "Srok": 4.2027,
-        "Zavod": "Nobel Pharmsanoat"
-    },
-    {
-        "Nomi": "Пантап 40мг таб №28",
-        "Pachka": 0.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 44800.0,
         "Srok": 4.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
@@ -14440,6 +14288,22 @@
         "Zavod": "Nobel Pharmsanoat"
     },
     {
+        "Nomi": "Пантап 40мг таб №28",
+        "Pachka": 0.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 44800.0,
+        "Srok": 4.2027,
+        "Zavod": "Nobel Pharmsanoat"
+    },
+    {
+        "Nomi": "Пантап 40мг таб №28",
+        "Pachka": 0.0,
+        "Dona": 7.0,
+        "Sotish_narxi": 44800.0,
+        "Srok": 4.2027,
+        "Zavod": "Nobel Pharmsanoat"
+    },
+    {
         "Nomi": "Пантенол крем восстанавливающий 5% 50мл",
         "Pachka": 3.0,
         "Dona": 0.0,
@@ -14449,7 +14313,7 @@
     },
     {
         "Nomi": "Пантенол крем универсальный 50мл №1",
-        "Pachka": 10.0,
+        "Pachka": 9.0,
         "Dona": 0.0,
         "Sotish_narxi": 21000.0,
         "Srok": 9.2028,
@@ -14490,7 +14354,7 @@
     {
         "Nomi": "Пантогам таб.250мг№50",
         "Pachka": 0.0,
-        "Dona": 15.0,
+        "Dona": 5.0,
         "Sotish_narxi": 160000.0,
         "Srok": 1.2029,
         "Zavod": "ПИК-ФАРМА ПРО"
@@ -14529,17 +14393,17 @@
     },
     {
         "Nomi": "Панфор sr таб 500мг №100",
-        "Pachka": 4.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 45000.0,
+        "Pachka": 1.0,
+        "Dona": 65.0,
+        "Sotish_narxi": 50000.0,
         "Srok": 1.2027,
         "Zavod": "Mega Lfesciences"
     },
     {
         "Nomi": "Панфор sr таб 500мг №100",
-        "Pachka": 1.0,
-        "Dona": 65.0,
-        "Sotish_narxi": 50000.0,
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 45000.0,
         "Srok": 1.2027,
         "Zavod": "Mega Lfesciences"
     },
@@ -14593,16 +14457,16 @@
     },
     {
         "Nomi": "Парадик таб №100",
-        "Pachka": 0.0,
-        "Dona": 5.0,
+        "Pachka": 2.0,
+        "Dona": 20.0,
         "Sotish_narxi": 90000.0,
         "Srok": 4.2028,
         "Zavod": "Avantika Medex Pvt Ltd"
     },
     {
         "Nomi": "Парадик таб №100",
-        "Pachka": 2.0,
-        "Dona": 20.0,
+        "Pachka": 0.0,
+        "Dona": 5.0,
         "Sotish_narxi": 90000.0,
         "Srok": 4.2028,
         "Zavod": "Avantika Medex Pvt Ltd"
@@ -14633,6 +14497,14 @@
     },
     {
         "Nomi": "Парацетамол супп.рект.250мг№10",
+        "Pachka": 6.0,
+        "Dona": 9.0,
+        "Sotish_narxi": 8000.0,
+        "Srok": 9.2028,
+        "Zavod": "Dentafill Plyus"
+    },
+    {
+        "Nomi": "Парацетамол супп.рект.250мг№10",
         "Pachka": 4.0,
         "Dona": 7.0,
         "Sotish_narxi": 8000.0,
@@ -14648,17 +14520,9 @@
         "Zavod": "Dentafill Plyus"
     },
     {
-        "Nomi": "Парацетамол супп.рект.250мг№10",
-        "Pachka": 6.0,
-        "Dona": 9.0,
-        "Sotish_narxi": 8000.0,
-        "Srok": 9.2028,
-        "Zavod": "Dentafill Plyus"
-    },
-    {
         "Nomi": "Парацетамол таб 0,5гр №50",
-        "Pachka": 66.0,
-        "Dona": 15.0,
+        "Pachka": 65.0,
+        "Dona": 5.0,
         "Sotish_narxi": 20000.0,
         "Srok": 12.2028,
         "Zavod": "Уралбиофарм"
@@ -14681,17 +14545,17 @@
     },
     {
         "Nomi": "Парацетамол-ГТ таб 0,2мг №10",
-        "Pachka": 31.0,
+        "Pachka": 9.0,
         "Dona": 0.0,
-        "Sotish_narxi": 2000.0,
+        "Sotish_narxi": 3000.0,
         "Srok": 11.2026,
         "Zavod": "Grand Medical Group"
     },
     {
         "Nomi": "Парацетамол-ГТ таб 0,2мг №10",
-        "Pachka": 9.0,
+        "Pachka": 31.0,
         "Dona": 0.0,
-        "Sotish_narxi": 3000.0,
+        "Sotish_narxi": 2000.0,
         "Srok": 11.2026,
         "Zavod": "Grand Medical Group"
     },
@@ -14729,18 +14593,18 @@
     },
     {
         "Nomi": "Пентоксифиллин амп.2%.5мл№10",
-        "Pachka": 0.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 20000.0,
-        "Srok": 12.2027,
-        "Zavod": "Jurabek Laboratories"
-    },
-    {
-        "Nomi": "Пентоксифиллин амп.2%.5мл№10",
         "Pachka": 14.0,
         "Dona": 1.0,
         "Sotish_narxi": 20000.0,
         "Srok": 11.2027,
+        "Zavod": "Jurabek Laboratories"
+    },
+    {
+        "Nomi": "Пентоксифиллин амп.2%.5мл№10",
+        "Pachka": 0.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 20000.0,
+        "Srok": 12.2027,
         "Zavod": "Jurabek Laboratories"
     },
     {
@@ -14777,7 +14641,7 @@
     },
     {
         "Nomi": "Пертуссин сироп 90мл №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 4.2027,
@@ -14785,7 +14649,7 @@
     },
     {
         "Nomi": "Перфусол р-р 200мл №1",
-        "Pachka": 1.0,
+        "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 53000.0,
         "Srok": 10.2027,
@@ -14801,7 +14665,7 @@
     },
     {
         "Nomi": "Перчатки латексные хирургические стер. разм. 7,5",
-        "Pachka": 158.0,
+        "Pachka": 155.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 10.2028,
@@ -14857,7 +14721,7 @@
     },
     {
         "Nomi": "Пиколакс капли 0,75% 15мл №1",
-        "Pachka": 6.0,
+        "Pachka": 5.0,
         "Dona": 0.0,
         "Sotish_narxi": 32000.0,
         "Srok": 5.2028,
@@ -14962,7 +14826,7 @@
     {
         "Nomi": "Пирацетам капс 400мг №20",
         "Pachka": 6.0,
-        "Dona": 10.0,
+        "Dona": 0.0,
         "Sotish_narxi": 12000.0,
         "Srok": 8.2027,
         "Zavod": "Navbahor Sanoat"
@@ -15001,8 +14865,8 @@
     },
     {
         "Nomi": "Пирацетам раствор для инъекций 20% 10мл №5",
-        "Pachka": 1.0,
-        "Dona": 0.0,
+        "Pachka": 0.0,
+        "Dona": 3.0,
         "Sotish_narxi": 15000.0,
         "Srok": 3.2028,
         "Zavod": "Radiks"
@@ -15025,14 +14889,6 @@
     },
     {
         "Nomi": "Пищевой продукт рео-reo №1",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 28000.0,
-        "Srok": 6.2026,
-        "Zavod": "ReO"
-    },
-    {
-        "Nomi": "Пищевой продукт рео-reo №1",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 28000.0,
@@ -15040,9 +14896,17 @@
         "Zavod": "ReO"
     },
     {
-        "Nomi": "Плаквенил таб. 200мг  №60",
-        "Pachka": 1.0,
+        "Nomi": "Пищевой продукт рео-reo №1",
+        "Pachka": 5.0,
         "Dona": 0.0,
+        "Sotish_narxi": 28000.0,
+        "Srok": 6.2026,
+        "Zavod": "ReO"
+    },
+    {
+        "Nomi": "Плаквенил таб. 200мг  №60",
+        "Pachka": 0.0,
+        "Dona": 51.0,
         "Sotish_narxi": 198000.0,
         "Srok": 2.2028,
         "Zavod": "Sanofi Aventis"
@@ -15073,8 +14937,8 @@
     },
     {
         "Nomi": "Платифиллин г/т 0,2% р-р 1мл №10 (дальхимфарм)",
-        "Pachka": 10.0,
-        "Dona": 0.0,
+        "Pachka": 9.0,
+        "Dona": 6.0,
         "Sotish_narxi": 35000.0,
         "Srok": 4.203,
         "Zavod": "Dalximfarm AJ"
@@ -15097,14 +14961,6 @@
     },
     {
         "Nomi": "Полижен капс №12",
-        "Pachka": 1.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 132000.0,
-        "Srok": 2.2028,
-        "Zavod": "World Medicine"
-    },
-    {
-        "Nomi": "Полижен капс №12",
         "Pachka": 0.0,
         "Dona": 7.0,
         "Sotish_narxi": 126000.0,
@@ -15112,9 +14968,17 @@
         "Zavod": "World Medicine"
     },
     {
+        "Nomi": "Полижен капс №12",
+        "Pachka": 1.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 132000.0,
+        "Srok": 2.2028,
+        "Zavod": "World Medicine"
+    },
+    {
         "Nomi": "Полижинакс ваг/капс №12",
-        "Pachka": 5.0,
-        "Dona": 4.0,
+        "Pachka": 4.0,
+        "Dona": 11.0,
         "Sotish_narxi": 150000.0,
         "Srok": 6.2027,
         "Zavod": "Laboratoire Innotech International"
@@ -15137,7 +15001,7 @@
     },
     {
         "Nomi": "Поликид сироп 30мл №1",
-        "Pachka": 47.0,
+        "Pachka": 46.0,
         "Dona": 0.0,
         "Sotish_narxi": 60000.0,
         "Srok": 7.2027,
@@ -15154,7 +15018,7 @@
     {
         "Nomi": "Полимик таб. №10",
         "Pachka": 3.0,
-        "Dona": 8.0,
+        "Dona": 0.0,
         "Sotish_narxi": 66000.0,
         "Srok": 8.2028,
         "Zavod": "Kusum Healthcare"
@@ -15283,15 +15147,15 @@
         "Nomi": "Преднизалон 30мг/1мл  №10",
         "Pachka": 0.0,
         "Dona": 5.0,
-        "Sotish_narxi": 35000.0,
+        "Sotish_narxi": 40000.0,
         "Srok": 9.2028,
         "Zavod": "Limited Ellara, Россия"
     },
     {
         "Nomi": "Преднизалон 30мг/1мл  №10",
         "Pachka": 0.0,
-        "Dona": 7.0,
-        "Sotish_narxi": 40000.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 35000.0,
         "Srok": 9.2028,
         "Zavod": "Limited Ellara, Россия"
     },
@@ -15329,7 +15193,7 @@
     },
     {
         "Nomi": "Презервативы m.dior латекс. №3 classik",
-        "Pachka": 28.0,
+        "Pachka": 27.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 1.203,
@@ -15425,7 +15289,7 @@
     },
     {
         "Nomi": "Прозерин р-р д/ин. 0,5мг 1мл №10",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 12000.0,
         "Srok": 4.2029,
@@ -15474,7 +15338,7 @@
     {
         "Nomi": "Просульпин 200мг таб №30",
         "Pachka": 5.0,
-        "Dona": 15.0,
+        "Dona": 0.0,
         "Sotish_narxi": 90000.0,
         "Srok": 1.203,
         "Zavod": "ПРО.МЕД.ЦС Прага"
@@ -15554,7 +15418,7 @@
     {
         "Nomi": "Пульмикорт сусп 0,25мг/2мл №20",
         "Pachka": 4.0,
-        "Dona": 17.0,
+        "Dona": 14.0,
         "Sotish_narxi": 260000.0,
         "Srok": 7.2027,
         "Zavod": "Астрафарм"
@@ -15577,6 +15441,14 @@
     },
     {
         "Nomi": "Рабез-д капс 20мг+30мг №30*",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 69000.0,
+        "Srok": 6.2027,
+        "Zavod": "Serene Healthcare"
+    },
+    {
+        "Nomi": "Рабез-д капс 20мг+30мг №30*",
         "Pachka": 0.0,
         "Dona": 20.0,
         "Sotish_narxi": 69000.0,
@@ -15589,14 +15461,6 @@
         "Dona": 5.0,
         "Sotish_narxi": 69000.0,
         "Srok": 11.2026,
-        "Zavod": "Serene Healthcare"
-    },
-    {
-        "Nomi": "Рабез-д капс 20мг+30мг №30*",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 69000.0,
-        "Srok": 6.2027,
         "Zavod": "Serene Healthcare"
     },
     {
@@ -15649,18 +15513,18 @@
     },
     {
         "Nomi": "Ран-дит 150мг таб №100",
-        "Pachka": 5.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 30000.0,
-        "Srok": 2.2028,
-        "Zavod": "Combitic Global Caplet"
-    },
-    {
-        "Nomi": "Ран-дит 150мг таб №100",
         "Pachka": 4.0,
         "Dona": 0.0,
         "Sotish_narxi": 30000.0,
         "Srok": 3.2028,
+        "Zavod": "Combitic Global Caplet"
+    },
+    {
+        "Nomi": "Ран-дит 150мг таб №100",
+        "Pachka": 5.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 30000.0,
+        "Srok": 2.2028,
         "Zavod": "Combitic Global Caplet"
     },
     {
@@ -15809,8 +15673,8 @@
     },
     {
         "Nomi": "Ренгалин таб.  №20",
-        "Pachka": 4.0,
-        "Dona": 0.0,
+        "Pachka": 3.0,
+        "Dona": 10.0,
         "Sotish_narxi": 36000.0,
         "Srok": 7.2028,
         "Zavod": "Материа медика холдинг"
@@ -15881,18 +15745,18 @@
     },
     {
         "Nomi": "Реосорбилакт раствор для инфузий 200мл  орг №30 (дентафил)",
-        "Pachka": 30.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 11000.0,
-        "Srok": 12.2028,
-        "Zavod": "Dentafill Plyus"
-    },
-    {
-        "Nomi": "Реосорбилакт раствор для инфузий 200мл  орг №30 (дентафил)",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 12000.0,
         "Srok": 9.2028,
+        "Zavod": "Dentafill Plyus"
+    },
+    {
+        "Nomi": "Реосорбилакт раствор для инфузий 200мл  орг №30 (дентафил)",
+        "Pachka": 30.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 11000.0,
+        "Srok": 12.2028,
         "Zavod": "Dentafill Plyus"
     },
     {
@@ -15905,7 +15769,7 @@
     },
     {
         "Nomi": "Реосорбилактат р-р 200мл №1",
-        "Pachka": 42.0,
+        "Pachka": 40.0,
         "Dona": 0.0,
         "Sotish_narxi": 28000.0,
         "Srok": 8.2028,
@@ -16034,16 +15898,16 @@
     {
         "Nomi": "Риваксажен таб. 20мг №30",
         "Pachka": 0.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 234000.0,
+        "Dona": 18.0,
+        "Sotish_narxi": 231000.0,
         "Srok": 5.2027,
         "Zavod": "Novugen Pharma"
     },
     {
         "Nomi": "Риваксажен таб. 20мг №30",
         "Pachka": 0.0,
-        "Dona": 18.0,
-        "Sotish_narxi": 231000.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 234000.0,
         "Srok": 5.2027,
         "Zavod": "Novugen Pharma"
     },
@@ -16097,7 +15961,7 @@
     },
     {
         "Nomi": "Риназолин 0,25% 10 мл в п/э фл, №1",
-        "Pachka": 4.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 25000.0,
         "Srok": 4.2027,
@@ -16137,7 +16001,7 @@
     },
     {
         "Nomi": "Рингер лактат р-р 100мл №1",
-        "Pachka": 91.0,
+        "Pachka": 90.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 2.2028,
@@ -16225,7 +16089,7 @@
     },
     {
         "Nomi": "Риноксил формула+ спрей 0,05% 10мл №1",
-        "Pachka": 4.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 34000.0,
         "Srok": 10.2028,
@@ -16273,18 +16137,18 @@
     },
     {
         "Nomi": "Ринт увлажняющий спрей 10г",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 51000.0,
-        "Srok": 9.2028,
-        "Zavod": "Фармак"
-    },
-    {
-        "Nomi": "Ринт увлажняющий спрей 10г",
         "Pachka": 4.0,
         "Dona": 0.0,
         "Sotish_narxi": 50000.0,
         "Srok": 2.2029,
+        "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "Ринт увлажняющий спрей 10г",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 51000.0,
+        "Srok": 9.2028,
         "Zavod": "Фармак"
     },
     {
@@ -16305,17 +16169,17 @@
     },
     {
         "Nomi": "Ровигет таб 10мг №30",
-        "Pachka": 0.0,
-        "Dona": 15.0,
-        "Sotish_narxi": 63000.0,
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 51000.0,
         "Srok": 3.2028,
         "Zavod": "Getz Pharma"
     },
     {
         "Nomi": "Ровигет таб 10мг №30",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 51000.0,
+        "Pachka": 0.0,
+        "Dona": 15.0,
+        "Sotish_narxi": 63000.0,
         "Srok": 3.2028,
         "Zavod": "Getz Pharma"
     },
@@ -16386,14 +16250,6 @@
     {
         "Nomi": "Роксера таб 10 мг №30",
         "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 84000.0,
-        "Srok": 4.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Роксера таб 10 мг №30",
-        "Pachka": 0.0,
         "Dona": 9.0,
         "Sotish_narxi": 69000.0,
         "Srok": 4.2028,
@@ -16405,6 +16261,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 69000.0,
         "Srok": 9.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Роксера таб 10 мг №30",
+        "Pachka": 0.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 84000.0,
+        "Srok": 4.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -16457,14 +16321,6 @@
     },
     {
         "Nomi": "Роксибел таб 150мг №10",
-        "Pachka": 0.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 55000.0,
-        "Srok": 5.2027,
-        "Zavod": "Nobel Pharmsanoat"
-    },
-    {
-        "Nomi": "Роксибел таб 150мг №10",
         "Pachka": 1.0,
         "Dona": 5.0,
         "Sotish_narxi": 55000.0,
@@ -16477,6 +16333,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 55000.0,
         "Srok": 6.2029,
+        "Zavod": "Nobel Pharmsanoat"
+    },
+    {
+        "Nomi": "Роксибел таб 150мг №10",
+        "Pachka": 0.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 55000.0,
+        "Srok": 5.2027,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
@@ -16569,18 +16433,18 @@
     },
     {
         "Nomi": "Саваген таб.100мг  №30",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 264000.0,
-        "Srok": 11.2027,
-        "Zavod": "NOVUGEN PHARMA MCHJ XK"
-    },
-    {
-        "Nomi": "Саваген таб.100мг  №30",
         "Pachka": 0.0,
         "Dona": 12.0,
         "Sotish_narxi": 264000.0,
         "Srok": 5.2027,
+        "Zavod": "NOVUGEN PHARMA MCHJ XK"
+    },
+    {
+        "Nomi": "Саваген таб.100мг  №30",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 264000.0,
+        "Srok": 11.2027,
         "Zavod": "NOVUGEN PHARMA MCHJ XK"
     },
     {
@@ -16657,7 +16521,7 @@
     },
     {
         "Nomi": "Салициловая к-та р-р спирт.2%.20мл.№1",
-        "Pachka": 7.0,
+        "Pachka": 6.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 8.2028,
@@ -16697,14 +16561,6 @@
     },
     {
         "Nomi": "Салфетки марлевые мадицинск стерилн 16см х 14см (2-слон) №10",
-        "Pachka": 21.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 4000.0,
-        "Srok": 3.2028,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Салфетки марлевые мадицинск стерилн 16см х 14см (2-слон) №10",
         "Pachka": 38.0,
         "Dona": 0.0,
         "Sotish_narxi": 4000.0,
@@ -16712,8 +16568,16 @@
         "Zavod": "<>"
     },
     {
+        "Nomi": "Салфетки марлевые мадицинск стерилн 16см х 14см (2-слон) №10",
+        "Pachka": 21.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 4000.0,
+        "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
         "Nomi": "Сальбутамол аэрозоль д/инг. 100мкг 200д 12мл №1",
-        "Pachka": 18.0,
+        "Pachka": 16.0,
         "Dona": 0.0,
         "Sotish_narxi": 28000.0,
         "Srok": 7.2028,
@@ -16793,15 +16657,15 @@
     },
     {
         "Nomi": "Сенадексин таб.№50",
-        "Pachka": 17.0,
-        "Dona": 30.0,
+        "Pachka": 16.0,
+        "Dona": 0.0,
         "Sotish_narxi": 12500.0,
         "Srok": 1.2029,
         "Zavod": "Navbahor Sanoat"
     },
     {
         "Nomi": "Сенна листья 2гр.№15",
-        "Pachka": 18.0,
+        "Pachka": 17.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 2.2028,
@@ -16905,18 +16769,18 @@
     },
     {
         "Nomi": "Серрата таб. 10мг №150",
-        "Pachka": 0.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 300000.0,
-        "Srok": 9.2028,
-        "Zavod": "Kusum Healthcare"
-    },
-    {
-        "Nomi": "Серрата таб. 10мг №150",
         "Pachka": 2.0,
         "Dona": 44.0,
         "Sotish_narxi": 300000.0,
         "Srok": 7.2028,
+        "Zavod": "Kusum Healthcare"
+    },
+    {
+        "Nomi": "Серрата таб. 10мг №150",
+        "Pachka": 0.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 300000.0,
+        "Srok": 9.2028,
         "Zavod": "Kusum Healthcare"
     },
     {
@@ -16945,18 +16809,18 @@
     },
     {
         "Nomi": "Сиглип-м таб. 50мг+1000мг №35",
-        "Pachka": 2.0,
-        "Dona": 28.0,
-        "Sotish_narxi": 220500.0,
-        "Srok": 4.2027,
-        "Zavod": "Getz Pharma"
-    },
-    {
-        "Nomi": "Сиглип-м таб. 50мг+1000мг №35",
         "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 238000.0,
         "Srok": 2.2027,
+        "Zavod": "Getz Pharma"
+    },
+    {
+        "Nomi": "Сиглип-м таб. 50мг+1000мг №35",
+        "Pachka": 2.0,
+        "Dona": 28.0,
+        "Sotish_narxi": 220500.0,
+        "Srok": 4.2027,
         "Zavod": "Getz Pharma"
     },
     {
@@ -16993,18 +16857,18 @@
     },
     {
         "Nomi": "Синарта амп №5",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 190000.0,
-        "Srok": 7.2027,
-        "Zavod": "Фармак"
-    },
-    {
-        "Nomi": "Синарта амп №5",
         "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 232500.0,
         "Srok": 2.2027,
+        "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "Синарта амп №5",
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 190000.0,
+        "Srok": 7.2027,
         "Zavod": "Фармак"
     },
     {
@@ -17033,8 +16897,8 @@
     },
     {
         "Nomi": "Синглон 4мг таб  №28",
-        "Pachka": 2.0,
-        "Dona": 0.0,
+        "Pachka": 1.0,
+        "Dona": 18.0,
         "Sotish_narxi": 44800.0,
         "Srok": 12.2026,
         "Zavod": "Gedeon Richter"
@@ -17122,14 +16986,6 @@
     {
         "Nomi": "Синупрет др №50",
         "Pachka": 0.0,
-        "Dona": 46.0,
-        "Sotish_narxi": 85000.0,
-        "Srok": 3.2028,
-        "Zavod": "Bionorica"
-    },
-    {
-        "Nomi": "Синупрет др №50",
-        "Pachka": 0.0,
         "Dona": 1.0,
         "Sotish_narxi": 90000.0,
         "Srok": 4.2028,
@@ -17137,18 +16993,34 @@
     },
     {
         "Nomi": "Синупрет др №50",
-        "Pachka": 4.0,
-        "Dona": 0.0,
+        "Pachka": 0.0,
+        "Dona": 46.0,
+        "Sotish_narxi": 85000.0,
+        "Srok": 3.2028,
+        "Zavod": "Bionorica"
+    },
+    {
+        "Nomi": "Синупрет др №50",
+        "Pachka": 3.0,
+        "Dona": 19.0,
         "Sotish_narxi": 90000.0,
         "Srok": 3.2028,
         "Zavod": "Bionorica"
     },
     {
         "Nomi": "Синупрет капли 100мл №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 94000.0,
         "Srok": 9.2027,
+        "Zavod": "Bionorica"
+    },
+    {
+        "Nomi": "Синупрет форте таб №20",
+        "Pachka": 0.0,
+        "Dona": 9.0,
+        "Sotish_narxi": 98000.0,
+        "Srok": 10.2029,
         "Zavod": "Bionorica"
     },
     {
@@ -17157,14 +17029,6 @@
         "Dona": 0.0,
         "Sotish_narxi": 92000.0,
         "Srok": 9.2029,
-        "Zavod": "Bionorica"
-    },
-    {
-        "Nomi": "Синупрет форте таб №20",
-        "Pachka": 1.0,
-        "Dona": 9.0,
-        "Sotish_narxi": 98000.0,
-        "Srok": 10.2029,
         "Zavod": "Bionorica"
     },
     {
@@ -17177,18 +17041,18 @@
     },
     {
         "Nomi": "Сиофор 500 таб №60",
-        "Pachka": 2.0,
-        "Dona": 30.0,
-        "Sotish_narxi": 54000.0,
-        "Srok": 2.2028,
-        "Zavod": "Berlin-Chemie AG"
-    },
-    {
-        "Nomi": "Сиофор 500 таб №60",
         "Pachka": 0.0,
         "Dona": 50.0,
         "Sotish_narxi": 54000.0,
         "Srok": 3.2028,
+        "Zavod": "Berlin-Chemie AG"
+    },
+    {
+        "Nomi": "Сиофор 500 таб №60",
+        "Pachka": 2.0,
+        "Dona": 30.0,
+        "Sotish_narxi": 54000.0,
+        "Srok": 2.2028,
         "Zavod": "Berlin-Chemie AG"
     },
     {
@@ -17217,18 +17081,18 @@
     },
     {
         "Nomi": "Сиофор таб 1000мг №60",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 72000.0,
-        "Srok": 4.2028,
-        "Zavod": "Laboratory Guidotti S. p. A. "
-    },
-    {
-        "Nomi": "Сиофор таб 1000мг №60",
         "Pachka": 0.0,
         "Dona": 25.0,
         "Sotish_narxi": 72000.0,
         "Srok": 10.2028,
+        "Zavod": "Laboratory Guidotti S. p. A. "
+    },
+    {
+        "Nomi": "Сиофор таб 1000мг №60",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 72000.0,
+        "Srok": 4.2028,
         "Zavod": "Laboratory Guidotti S. p. A. "
     },
     {
@@ -17265,7 +17129,7 @@
     },
     {
         "Nomi": "Система инф №1",
-        "Pachka": 219.0,
+        "Pachka": 195.0,
         "Dona": 0.0,
         "Sotish_narxi": 2000.0,
         "Srok": 12.203,
@@ -17281,18 +17145,18 @@
     },
     {
         "Nomi": "Система инфузионная №1",
-        "Pachka": 628.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 2000.0,
-        "Srok": 1.203,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Система инфузионная №1",
         "Pachka": 720.0,
         "Dona": 0.0,
         "Sotish_narxi": 2000.0,
         "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Система инфузионная №1",
+        "Pachka": 628.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 2000.0,
+        "Srok": 1.203,
         "Zavod": "<>"
     },
     {
@@ -17649,7 +17513,7 @@
     },
     {
         "Nomi": "Спирт этиловий 70% 50мл №1",
-        "Pachka": 274.0,
+        "Pachka": 266.0,
         "Dona": 0.0,
         "Sotish_narxi": 3500.0,
         "Srok": 11.203,
@@ -17673,18 +17537,18 @@
     },
     {
         "Nomi": "Спринцовка  а -2  55мл №1",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 11000.0,
-        "Srok": 8.2029,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Спринцовка  а -2  55мл №1",
         "Pachka": 9.0,
         "Dona": 0.0,
         "Sotish_narxi": 11000.0,
         "Srok": 1.2029,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Спринцовка  а -2  55мл №1",
+        "Pachka": 5.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 11000.0,
+        "Srok": 8.2029,
         "Zavod": "<>"
     },
     {
@@ -17721,10 +17585,10 @@
     },
     {
         "Nomi": "Стерильные салфетки 45см-29см №1",
-        "Pachka": 28.0,
+        "Pachka": 48.0,
         "Dona": 0.0,
-        "Sotish_narxi": 5500.0,
-        "Srok": 11.2029,
+        "Sotish_narxi": 5000.0,
+        "Srok": 9.2029,
         "Zavod": "<>"
     },
     {
@@ -17737,10 +17601,10 @@
     },
     {
         "Nomi": "Стерильные салфетки 45см-29см №1",
-        "Pachka": 48.0,
+        "Pachka": 28.0,
         "Dona": 0.0,
-        "Sotish_narxi": 5000.0,
-        "Srok": 9.2029,
+        "Sotish_narxi": 5500.0,
+        "Srok": 11.2029,
         "Zavod": "<>"
     },
     {
@@ -17826,7 +17690,7 @@
     {
         "Nomi": "Стрептоцид таб. 300мг №100",
         "Pachka": 7.0,
-        "Dona": 40.0,
+        "Dona": 30.0,
         "Sotish_narxi": 30000.0,
         "Srok": 3.2031,
         "Zavod": "Radiks"
@@ -17841,18 +17705,18 @@
     },
     {
         "Nomi": "Стресстагин таб №60",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 72000.0,
-        "Srok": 3.2028,
-        "Zavod": "Узбекистан"
-    },
-    {
-        "Nomi": "Стресстагин таб №60",
         "Pachka": 0.0,
         "Dona": 49.0,
         "Sotish_narxi": 72000.0,
         "Srok": 1.2028,
+        "Zavod": "Узбекистан"
+    },
+    {
+        "Nomi": "Стресстагин таб №60",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 72000.0,
+        "Srok": 3.2028,
         "Zavod": "Узбекистан"
     },
     {
@@ -17874,7 +17738,7 @@
     {
         "Nomi": "Сульфакамфакаин амп. 2мл №10",
         "Pachka": 3.0,
-        "Dona": 4.0,
+        "Dona": 1.0,
         "Sotish_narxi": 15000.0,
         "Srok": 9.2027,
         "Zavod": "MERRYMED FARM"
@@ -17889,18 +17753,18 @@
     },
     {
         "Nomi": "СУЛЬФАЦИЛ-БЕЛМЕД ГЛ КАПЛИ 200МГ/МЛ 5МЛ №1",
-        "Pachka": 6.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 8000.0,
-        "Srok": 4.2027,
-        "Zavod": "BELMEDPREPARATY"
-    },
-    {
-        "Nomi": "СУЛЬФАЦИЛ-БЕЛМЕД ГЛ КАПЛИ 200МГ/МЛ 5МЛ №1",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 8.2028,
+        "Zavod": "BELMEDPREPARATY"
+    },
+    {
+        "Nomi": "СУЛЬФАЦИЛ-БЕЛМЕД ГЛ КАПЛИ 200МГ/МЛ 5МЛ №1",
+        "Pachka": 6.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 8000.0,
+        "Srok": 4.2027,
         "Zavod": "BELMEDPREPARATY"
     },
     {
@@ -17929,18 +17793,18 @@
     },
     {
         "Nomi": "Сумамигрен таб. 50мг №6",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 102000.0,
-        "Srok": 7.2029,
-        "Zavod": "Polpharma Pharmaceutical Works"
-    },
-    {
-        "Nomi": "Сумамигрен таб. 50мг №6",
         "Pachka": 0.0,
         "Dona": 5.0,
         "Sotish_narxi": 147000.0,
         "Srok": 10.2029,
+        "Zavod": "Polpharma Pharmaceutical Works"
+    },
+    {
+        "Nomi": "Сумамигрен таб. 50мг №6",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 102000.0,
+        "Srok": 7.2029,
         "Zavod": "Polpharma Pharmaceutical Works"
     },
     {
@@ -18065,7 +17929,7 @@
     },
     {
         "Nomi": "Таблетки От кашля №10",
-        "Pachka": 32.0,
+        "Pachka": 31.0,
         "Dona": 0.0,
         "Sotish_narxi": 2000.0,
         "Srok": 10.2027,
@@ -18169,7 +18033,7 @@
     },
     {
         "Nomi": "Теймурова крем-паста для ног 50г",
-        "Pachka": 30.0,
+        "Pachka": 28.0,
         "Dona": 0.0,
         "Sotish_narxi": 20000.0,
         "Srok": 2.2029,
@@ -18202,7 +18066,7 @@
     {
         "Nomi": "Телам santo таб. 80мг+5мг №28",
         "Pachka": 0.0,
-        "Dona": 21.0,
+        "Dona": 5.0,
         "Sotish_narxi": 64400.0,
         "Srok": 7.2028,
         "Zavod": "Химфарм"
@@ -18210,7 +18074,7 @@
     {
         "Nomi": "Телам santo таб. 80мг+5мг №28",
         "Pachka": 0.0,
-        "Dona": 5.0,
+        "Dona": 21.0,
         "Sotish_narxi": 64400.0,
         "Srok": 7.2028,
         "Zavod": "Химфарм"
@@ -18241,14 +18105,6 @@
     },
     {
         "Nomi": "Телмиклар таб 80мг №30",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 57000.0,
-        "Srok": 5.2026,
-        "Zavod": "Ajanta Pharma Ltd"
-    },
-    {
-        "Nomi": "Телмиклар таб 80мг №30",
         "Pachka": 0.0,
         "Dona": 3.0,
         "Sotish_narxi": 60000.0,
@@ -18259,6 +18115,14 @@
         "Nomi": "Телмиклар таб 80мг №30",
         "Pachka": 0.0,
         "Dona": 2.0,
+        "Sotish_narxi": 57000.0,
+        "Srok": 5.2026,
+        "Zavod": "Ajanta Pharma Ltd"
+    },
+    {
+        "Nomi": "Телмиклар таб 80мг №30",
+        "Pachka": 1.0,
+        "Dona": 0.0,
         "Sotish_narxi": 57000.0,
         "Srok": 5.2026,
         "Zavod": "Ajanta Pharma Ltd"
@@ -18282,7 +18146,7 @@
     {
         "Nomi": "Телмиста н 80 80мг/12,5мг №28",
         "Pachka": 3.0,
-        "Dona": 25.0,
+        "Dona": 11.0,
         "Sotish_narxi": 92400.0,
         "Srok": 2.2028,
         "Zavod": "KRKA Novo mesto"
@@ -18337,18 +18201,18 @@
     },
     {
         "Nomi": "Телсартан а таб 40мг + 5мг №28",
-        "Pachka": 0.0,
-        "Dona": 18.0,
-        "Sotish_narxi": 61600.0,
-        "Srok": 11.2027,
-        "Zavod": "Dr.Reddy's Laboratories"
-    },
-    {
-        "Nomi": "Телсартан а таб 40мг + 5мг №28",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 58800.0,
         "Srok": 5.2028,
+        "Zavod": "Dr.Reddy's Laboratories"
+    },
+    {
+        "Nomi": "Телсартан а таб 40мг + 5мг №28",
+        "Pachka": 0.0,
+        "Dona": 18.0,
+        "Sotish_narxi": 61600.0,
+        "Srok": 11.2027,
         "Zavod": "Dr.Reddy's Laboratories"
     },
     {
@@ -18361,14 +18225,6 @@
     },
     {
         "Nomi": "Телсартан А таб. 80мг+10мг №1",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 64400.0,
-        "Srok": 5.2028,
-        "Zavod": "Dr.Reddy's Laboratories"
-    },
-    {
-        "Nomi": "Телсартан А таб. 80мг+10мг №1",
         "Pachka": 0.0,
         "Dona": 1.0,
         "Sotish_narxi": 64400.0,
@@ -18376,9 +18232,17 @@
         "Zavod": "Dr.Reddy's Laboratories"
     },
     {
+        "Nomi": "Телсартан А таб. 80мг+10мг №1",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 64400.0,
+        "Srok": 5.2028,
+        "Zavod": "Dr.Reddy's Laboratories"
+    },
+    {
         "Nomi": "Телсартан н  40мг+12.5мг таб №28",
         "Pachka": 3.0,
-        "Dona": 0.0,
+        "Dona": 7.0,
         "Sotish_narxi": 61600.0,
         "Srok": 8.2026,
         "Zavod": "Dr.Reddy's Laboratories"
@@ -18386,7 +18250,7 @@
     {
         "Nomi": "Телсартан н  40мг+12.5мг таб №28",
         "Pachka": 3.0,
-        "Dona": 7.0,
+        "Dona": 0.0,
         "Sotish_narxi": 61600.0,
         "Srok": 8.2026,
         "Zavod": "Dr.Reddy's Laboratories"
@@ -18457,6 +18321,14 @@
     },
     {
         "Nomi": "Тенотен детский таб №40",
+        "Pachka": 0.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 44000.0,
+        "Srok": 4.2029,
+        "Zavod": "Материа медика холдинг"
+    },
+    {
+        "Nomi": "Тенотен детский таб №40",
         "Pachka": 5.0,
         "Dona": 0.0,
         "Sotish_narxi": 40000.0,
@@ -18469,14 +18341,6 @@
         "Dona": 2.0,
         "Sotish_narxi": 44000.0,
         "Srok": 9.2029,
-        "Zavod": "Материа медика холдинг"
-    },
-    {
-        "Nomi": "Тенотен детский таб №40",
-        "Pachka": 0.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 44000.0,
-        "Srok": 4.2029,
         "Zavod": "Материа медика холдинг"
     },
     {
@@ -18497,14 +18361,6 @@
     },
     {
         "Nomi": "Терафлекс адванс №120",
-        "Pachka": 0.0,
-        "Dona": 29.0,
-        "Sotish_narxi": 384000.0,
-        "Srok": 5.2027,
-        "Zavod": "Bayer Consumer Care"
-    },
-    {
-        "Nomi": "Терафлекс адванс №120",
         "Pachka": 1.0,
         "Dona": 88.0,
         "Sotish_narxi": 384000.0,
@@ -18512,11 +18368,11 @@
         "Zavod": "Bayer Consumer Care"
     },
     {
-        "Nomi": "Терафлекс ультра-60 капс. 875мг №60",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 252000.0,
-        "Srok": 8.2027,
+        "Nomi": "Терафлекс адванс №120",
+        "Pachka": 0.0,
+        "Dona": 29.0,
+        "Sotish_narxi": 384000.0,
+        "Srok": 5.2027,
         "Zavod": "Bayer Consumer Care"
     },
     {
@@ -18525,6 +18381,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 246000.0,
         "Srok": 5.2027,
+        "Zavod": "Bayer Consumer Care"
+    },
+    {
+        "Nomi": "Терафлекс ультра-60 капс. 875мг №60",
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 252000.0,
+        "Srok": 8.2027,
         "Zavod": "Bayer Consumer Care"
     },
     {
@@ -18577,18 +18441,18 @@
     },
     {
         "Nomi": "Термометр ртутный crw-23 №1",
-        "Pachka": 57.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 14000.0,
-        "Srok": 1.203,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Термометр ртутный crw-23 №1",
         "Pachka": 20.0,
         "Dona": 0.0,
         "Sotish_narxi": 14000.0,
         "Srok": 3.2028,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Термометр ртутный crw-23 №1",
+        "Pachka": 57.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 14000.0,
+        "Srok": 1.203,
         "Zavod": "<>"
     },
     {
@@ -18625,7 +18489,7 @@
     },
     {
         "Nomi": "Тетрациклин мазь глаз.1% 3г№1",
-        "Pachka": 38.0,
+        "Pachka": 37.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 11.2027,
@@ -18634,17 +18498,9 @@
     {
         "Nomi": "Тетрациклин таб 0,1г №20.",
         "Pachka": 6.0,
-        "Dona": 10.0,
+        "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 4.2028,
-        "Zavod": "Биосинтез"
-    },
-    {
-        "Nomi": "Тетрациклин таб. 0,1г  №20",
-        "Pachka": 14.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 1.2028,
         "Zavod": "Биосинтез"
     },
     {
@@ -18653,6 +18509,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 4.2027,
+        "Zavod": "Биосинтез"
+    },
+    {
+        "Nomi": "Тетрациклин таб. 0,1г  №20",
+        "Pachka": 14.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 1.2028,
         "Zavod": "Биосинтез"
     },
     {
@@ -18745,18 +18609,18 @@
     },
     {
         "Nomi": "Тигралис таб.10мг№4",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 32000.0,
-        "Srok": 9.2027,
-        "Zavod": "Novugen Pharma"
-    },
-    {
-        "Nomi": "Тигралис таб.10мг№4",
         "Pachka": 0.0,
         "Dona": 2.0,
         "Sotish_narxi": 32000.0,
         "Srok": 7.2027,
+        "Zavod": "Novugen Pharma"
+    },
+    {
+        "Nomi": "Тигралис таб.10мг№4",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 32000.0,
+        "Srok": 9.2027,
         "Zavod": "Novugen Pharma"
     },
     {
@@ -18785,18 +18649,18 @@
     },
     {
         "Nomi": "Тиотриазолин 2мл №10 амп",
-        "Pachka": 0.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 125000.0,
-        "Srok": 11.2026,
-        "Zavod": "Галичфарм"
-    },
-    {
-        "Nomi": "Тиотриазолин 2мл №10 амп",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 125000.0,
         "Srok": 2.2029,
+        "Zavod": "Галичфарм"
+    },
+    {
+        "Nomi": "Тиотриазолин 2мл №10 амп",
+        "Pachka": 0.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 125000.0,
+        "Srok": 11.2026,
         "Zavod": "Галичфарм"
     },
     {
@@ -18810,7 +18674,7 @@
     {
         "Nomi": "Тиоцетам амп.10мл №10",
         "Pachka": 1.0,
-        "Dona": 6.0,
+        "Dona": 3.0,
         "Sotish_narxi": 110000.0,
         "Srok": 8.203,
         "Zavod": "Галичфарм"
@@ -18882,7 +18746,7 @@
     {
         "Nomi": "Толанз таб.10мг №30",
         "Pachka": 1.0,
-        "Dona": 16.0,
+        "Dona": 13.0,
         "Sotish_narxi": 123000.0,
         "Srok": 6.2028,
         "Zavod": "Torrent Pharmaceuticals Limited"
@@ -18929,18 +18793,18 @@
     },
     {
         "Nomi": "Торсид таб.10мг  №30",
-        "Pachka": 4.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 75000.0,
-        "Srok": 8.2028,
-        "Zavod": "Фармак"
-    },
-    {
-        "Nomi": "Торсид таб.10мг  №30",
         "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 69000.0,
         "Srok": 10.2028,
+        "Zavod": "Фармак"
+    },
+    {
+        "Nomi": "Торсид таб.10мг  №30",
+        "Pachka": 4.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 75000.0,
+        "Srok": 8.2028,
         "Zavod": "Фармак"
     },
     {
@@ -18961,17 +18825,17 @@
     },
     {
         "Nomi": "Траврелакс гранулы для приг. 5г  №6",
-        "Pachka": 9.0,
-        "Dona": 2.0,
-        "Sotish_narxi": 24000.0,
+        "Pachka": 11.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 30000.0,
         "Srok": 9.2027,
         "Zavod": "Isshaan Healthcare"
     },
     {
         "Nomi": "Траврелакс гранулы для приг. 5г  №6",
-        "Pachka": 11.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 30000.0,
+        "Pachka": 9.0,
+        "Dona": 2.0,
+        "Sotish_narxi": 24000.0,
         "Srok": 9.2027,
         "Zavod": "Isshaan Healthcare"
     },
@@ -19033,17 +18897,17 @@
     },
     {
         "Nomi": "Тримедат 200мг №30",
-        "Pachka": 1.0,
-        "Dona": 29.0,
-        "Sotish_narxi": 126000.0,
+        "Pachka": 0.0,
+        "Dona": 17.0,
+        "Sotish_narxi": 135000.0,
         "Srok": 3.2028,
         "Zavod": "Валента Фарм"
     },
     {
         "Nomi": "Тримедат 200мг №30",
-        "Pachka": 0.0,
-        "Dona": 17.0,
-        "Sotish_narxi": 135000.0,
+        "Pachka": 1.0,
+        "Dona": 29.0,
+        "Sotish_narxi": 126000.0,
         "Srok": 3.2028,
         "Zavod": "Валента Фарм"
     },
@@ -19081,8 +18945,8 @@
     },
     {
         "Nomi": "Тримол таб №100",
-        "Pachka": 6.0,
-        "Dona": 7.0,
+        "Pachka": 5.0,
+        "Dona": 87.0,
         "Sotish_narxi": 60000.0,
         "Srok": 9.2029,
         "Zavod": "<>"
@@ -19113,6 +18977,14 @@
     },
     {
         "Nomi": "Трихопол ваг таб 500мг №10",
+        "Pachka": 7.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 39000.0,
+        "Srok": 7.2028,
+        "Zavod": "Polpharma Pharmaceutical Works"
+    },
+    {
+        "Nomi": "Трихопол ваг таб 500мг №10",
         "Pachka": 0.0,
         "Dona": 6.0,
         "Sotish_narxi": 50000.0,
@@ -19128,17 +19000,9 @@
         "Zavod": "Polpharma Pharmaceutical Works"
     },
     {
-        "Nomi": "Трихопол ваг таб 500мг №10",
-        "Pachka": 7.0,
-        "Dona": 4.0,
-        "Sotish_narxi": 39000.0,
-        "Srok": 7.2028,
-        "Zavod": "Polpharma Pharmaceutical Works"
-    },
-    {
         "Nomi": "Трихопол таб. 250мг №20",
         "Pachka": 4.0,
-        "Dona": 10.0,
+        "Dona": 0.0,
         "Sotish_narxi": 30000.0,
         "Srok": 11.2028,
         "Zavod": "Polpharma Pharmaceutical Works"
@@ -19169,18 +19033,18 @@
     },
     {
         "Nomi": "Тромбо асс 100мг  №30",
-        "Pachka": 7.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 15000.0,
-        "Srok": 1.2028,
-        "Zavod": "Bausch Health"
-    },
-    {
-        "Nomi": "Тромбо асс 100мг  №30",
         "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 15000.0,
         "Srok": 10.2027,
+        "Zavod": "Bausch Health"
+    },
+    {
+        "Nomi": "Тромбо асс 100мг  №30",
+        "Pachka": 7.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 15000.0,
+        "Srok": 1.2028,
         "Zavod": "Bausch Health"
     },
     {
@@ -19209,8 +19073,8 @@
     },
     {
         "Nomi": "Тромбо асс таб 100мг №30",
-        "Pachka": 12.0,
-        "Dona": 10.0,
+        "Pachka": 11.0,
+        "Dona": 20.0,
         "Sotish_narxi": 15000.0,
         "Srok": 1.2028,
         "Zavod": "Bausch Health"
@@ -19218,7 +19082,7 @@
     {
         "Nomi": "Тромбопол таб. 150мг №60",
         "Pachka": 0.0,
-        "Dona": 30.0,
+        "Dona": 10.0,
         "Sotish_narxi": 48000.0,
         "Srok": 5.2028,
         "Zavod": "Polpharma Pharmaceutical Works"
@@ -19234,7 +19098,7 @@
     {
         "Nomi": "Тромбопол таб. 75мг №60",
         "Pachka": 22.0,
-        "Dona": 30.0,
+        "Dona": 10.0,
         "Sotish_narxi": 30000.0,
         "Srok": 1.2028,
         "Zavod": "Polpharma Pharmaceutical Works"
@@ -19313,17 +19177,17 @@
     },
     {
         "Nomi": "Укропная вода 50мл №1",
-        "Pachka": 3.0,
+        "Pachka": 4.0,
         "Dona": 0.0,
-        "Sotish_narxi": 9000.0,
+        "Sotish_narxi": 12000.0,
         "Srok": 6.2027,
         "Zavod": "<>"
     },
     {
         "Nomi": "Укропная вода 50мл №1",
-        "Pachka": 7.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
-        "Sotish_narxi": 12000.0,
+        "Sotish_narxi": 9000.0,
         "Srok": 6.2027,
         "Zavod": "<>"
     },
@@ -19362,17 +19226,17 @@
     {
         "Nomi": "Улуфор 1000мг таб №60",
         "Pachka": 0.0,
-        "Dona": 30.0,
-        "Sotish_narxi": 72000.0,
-        "Srok": 1.203,
+        "Dona": 10.0,
+        "Sotish_narxi": 60000.0,
+        "Srok": 9.2028,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
         "Nomi": "Улуфор 1000мг таб №60",
         "Pachka": 0.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 60000.0,
-        "Srok": 9.2028,
+        "Dona": 30.0,
+        "Sotish_narxi": 72000.0,
+        "Srok": 1.203,
         "Zavod": "Nobel Pharmsanoat"
     },
     {
@@ -19401,7 +19265,7 @@
     },
     {
         "Nomi": "Ультракаст плюс таб №10",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 50000.0,
         "Srok": 11.2027,
@@ -19497,10 +19361,10 @@
     },
     {
         "Nomi": "Утрожестан капс. 200мг  №14",
-        "Pachka": 0.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 147000.0,
-        "Srok": 6.2027,
+        "Pachka": 2.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 140000.0,
+        "Srok": 8.2028,
         "Zavod": "Besins Healthcare"
     },
     {
@@ -19513,10 +19377,10 @@
     },
     {
         "Nomi": "Утрожестан капс. 200мг  №14",
-        "Pachka": 2.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 140000.0,
-        "Srok": 8.2028,
+        "Pachka": 0.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 147000.0,
+        "Srok": 6.2027,
         "Zavod": "Besins Healthcare"
     },
     {
@@ -19625,17 +19489,17 @@
     },
     {
         "Nomi": "Фастум гель 30г №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 49000.0,
+        "Sotish_narxi": 48000.0,
         "Srok": 1.203,
         "Zavod": "A. Menarini Manufacturing Logistics and Services"
     },
     {
         "Nomi": "Фастум гель 30г №1",
-        "Pachka": 1.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 48000.0,
+        "Sotish_narxi": 49000.0,
         "Srok": 1.203,
         "Zavod": "A. Menarini Manufacturing Logistics and Services"
     },
@@ -19657,14 +19521,6 @@
     },
     {
         "Nomi": "Февалган р-р 100мл №1",
-        "Pachka": 8.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 30000.0,
-        "Srok": 11.2026,
-        "Zavod": "Jurabek Laboratories"
-    },
-    {
-        "Nomi": "Февалган р-р 100мл №1",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 29000.0,
@@ -19672,9 +19528,17 @@
         "Zavod": "Jurabek Laboratories"
     },
     {
+        "Nomi": "Февалган р-р 100мл №1",
+        "Pachka": 8.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 30000.0,
+        "Srok": 11.2026,
+        "Zavod": "Jurabek Laboratories"
+    },
+    {
         "Nomi": "Февалган сироп 120мг/5мл  №10",
-        "Pachka": 9.0,
-        "Dona": 3.0,
+        "Pachka": 8.0,
+        "Dona": 8.0,
         "Sotish_narxi": 20000.0,
         "Srok": 10.2027,
         "Zavod": "Jurabek Laboratories"
@@ -19745,17 +19609,17 @@
     },
     {
         "Nomi": "Фенистил-нью капли 0.1%.20мл №1",
-        "Pachka": 1.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 80000.0,
+        "Sotish_narxi": 82000.0,
         "Srok": 9.2027,
         "Zavod": "Хелеон"
     },
     {
         "Nomi": "Фенистил-нью капли 0.1%.20мл №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 82000.0,
+        "Sotish_narxi": 80000.0,
         "Srok": 9.2027,
         "Zavod": "Хелеон"
     },
@@ -20017,6 +19881,14 @@
     },
     {
         "Nomi": "Флуконазол капс. 150мг №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 7000.0,
+        "Srok": 2.2027,
+        "Zavod": "Астрафарм"
+    },
+    {
+        "Nomi": "Флуконазол капс. 150мг №1",
         "Pachka": 18.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
@@ -20032,14 +19904,6 @@
         "Zavod": "Астрафарм"
     },
     {
-        "Nomi": "Флуконазол капс. 150мг №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 7000.0,
-        "Srok": 2.2027,
-        "Zavod": "Астрафарм"
-    },
-    {
         "Nomi": "Флуконазол р-р.инф.100мл№1",
         "Pachka": 75.0,
         "Dona": 0.0,
@@ -20049,18 +19913,18 @@
     },
     {
         "Nomi": "Флуконазол таб. 150мг №2",
-        "Pachka": 2.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 8.2027,
-        "Zavod": "UKRFARMEXPORT LLC."
-    },
-    {
-        "Nomi": "Флуконазол таб. 150мг №2",
         "Pachka": 17.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 6.2029,
+        "Zavod": "UKRFARMEXPORT LLC."
+    },
+    {
+        "Nomi": "Флуконазол таб. 150мг №2",
+        "Pachka": 2.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 8.2027,
         "Zavod": "UKRFARMEXPORT LLC."
     },
     {
@@ -20107,8 +19971,8 @@
         "Nomi": "Флуцинар маз 15г №1",
         "Pachka": 3.0,
         "Dona": 0.0,
-        "Sotish_narxi": 43000.0,
-        "Srok": 6.2027,
+        "Sotish_narxi": 36000.0,
+        "Srok": 9.2027,
         "Zavod": "ВАЛЕАНТ"
     },
     {
@@ -20123,8 +19987,8 @@
         "Nomi": "Флуцинар маз 15г №1",
         "Pachka": 3.0,
         "Dona": 0.0,
-        "Sotish_narxi": 36000.0,
-        "Srok": 9.2027,
+        "Sotish_narxi": 43000.0,
+        "Srok": 6.2027,
         "Zavod": "ВАЛЕАНТ"
     },
     {
@@ -20145,8 +20009,8 @@
     },
     {
         "Nomi": "Фолиевая кислота таб. 1мг №50",
-        "Pachka": 4.0,
-        "Dona": 20.0,
+        "Pachka": 2.0,
+        "Dona": 30.0,
         "Sotish_narxi": 10000.0,
         "Srok": 10.2028,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
@@ -20169,18 +20033,18 @@
     },
     {
         "Nomi": "Фонипар таб №100",
-        "Pachka": 0.0,
-        "Dona": 72.0,
-        "Sotish_narxi": 90000.0,
-        "Srok": 3.2027,
-        "Zavod": "Pvt Ltd Ratnamani Healthcare Индия"
-    },
-    {
-        "Nomi": "Фонипар таб №100",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 90000.0,
         "Srok": 3.2028,
+        "Zavod": "Pvt Ltd Ratnamani Healthcare Индия"
+    },
+    {
+        "Nomi": "Фонипар таб №100",
+        "Pachka": 0.0,
+        "Dona": 72.0,
+        "Sotish_narxi": 90000.0,
+        "Srok": 3.2027,
         "Zavod": "Pvt Ltd Ratnamani Healthcare Индия"
     },
     {
@@ -20225,19 +20089,11 @@
     },
     {
         "Nomi": "Фосфомед саше внутрь 3г №1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 65000.0,
         "Srok": 7.2028,
         "Zavod": "World Medicine Ilac San. ve Tic."
-    },
-    {
-        "Nomi": "Фрамидекс капли глазные и ушные 5мл №1",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 34000.0,
-        "Srok": 6.2027,
-        "Zavod": "Aseptica MCHJ"
     },
     {
         "Nomi": "Фрамидекс капли глазные и ушные 5мл №1",
@@ -20248,10 +20104,18 @@
         "Zavod": "Aseptica MCHJ"
     },
     {
+        "Nomi": "Фрамидекс капли глазные и ушные 5мл №1",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 34000.0,
+        "Srok": 6.2027,
+        "Zavod": "Aseptica MCHJ"
+    },
+    {
         "Nomi": "Фронза спрей наз. 27,5мкг/120доз 10мл№1",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 81000.0,
+        "Sotish_narxi": 84000.0,
         "Srok": 5.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
@@ -20259,7 +20123,7 @@
         "Nomi": "Фронза спрей наз. 27,5мкг/120доз 10мл№1",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 84000.0,
+        "Sotish_narxi": 81000.0,
         "Srok": 5.2027,
         "Zavod": "World Medicine Ilac San. ve Tic."
     },
@@ -20337,18 +20201,18 @@
     },
     {
         "Nomi": "Фурадонин таб 50мг №50",
-        "Pachka": 5.0,
-        "Dona": 30.0,
-        "Sotish_narxi": 10000.0,
-        "Srok": 11.2029,
-        "Zavod": "Borisovskiy zavod meditsinskix preparatov"
-    },
-    {
-        "Nomi": "Фурадонин таб 50мг №50",
         "Pachka": 30.0,
         "Dona": 0.0,
         "Sotish_narxi": 10000.0,
         "Srok": 1.203,
+        "Zavod": "Borisovskiy zavod meditsinskix preparatov"
+    },
+    {
+        "Nomi": "Фурадонин таб 50мг №50",
+        "Pachka": 5.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 10000.0,
+        "Srok": 11.2029,
         "Zavod": "Borisovskiy zavod meditsinskix preparatov"
     },
     {
@@ -20361,7 +20225,7 @@
     },
     {
         "Nomi": "Фуразолидон табл. 0,05г  №10",
-        "Pachka": 50.0,
+        "Pachka": 11.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 2.2028,
@@ -20369,7 +20233,7 @@
     },
     {
         "Nomi": "Фуразолидон табл. 0,05г  №10",
-        "Pachka": 11.0,
+        "Pachka": 50.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 2.2028,
@@ -20394,14 +20258,14 @@
     {
         "Nomi": "Фурацилин таб.0.02г.№100",
         "Pachka": 35.0,
-        "Dona": 60.0,
+        "Dona": 50.0,
         "Sotish_narxi": 20000.0,
         "Srok": 2.2028,
         "Zavod": "Zunnur SERVIS FARM"
     },
     {
         "Nomi": "Фурациллин  таб 0,2г №10",
-        "Pachka": 145.0,
+        "Pachka": 141.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 12.203,
@@ -20481,18 +20345,18 @@
     },
     {
         "Nomi": "Фуцис гель 0.5%.30г.№1 ",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 44000.0,
-        "Srok": 7.2028,
-        "Zavod": "Kusum Healthcare"
-    },
-    {
-        "Nomi": "Фуцис гель 0.5%.30г.№1 ",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 43000.0,
         "Srok": 10.2028,
+        "Zavod": "Kusum Healthcare"
+    },
+    {
+        "Nomi": "Фуцис гель 0.5%.30г.№1 ",
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 44000.0,
+        "Srok": 7.2028,
         "Zavod": "Kusum Healthcare"
     },
     {
@@ -20521,14 +20385,6 @@
     },
     {
         "Nomi": "Хиконцил 500мг №16 капс",
-        "Pachka": 5.0,
-        "Dona": 11.0,
-        "Sotish_narxi": 28800.0,
-        "Srok": 5.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Хиконцил 500мг №16 капс",
         "Pachka": 1.0,
         "Dona": 3.0,
         "Sotish_narxi": 32000.0,
@@ -20536,11 +20392,11 @@
         "Zavod": "KRKA Novo mesto"
     },
     {
-        "Nomi": "Хиконцил капс 250мг №16",
-        "Pachka": 3.0,
-        "Dona": 15.0,
-        "Sotish_narxi": 9600.0,
-        "Srok": 8.2028,
+        "Nomi": "Хиконцил 500мг №16 капс",
+        "Pachka": 5.0,
+        "Dona": 11.0,
+        "Sotish_narxi": 28800.0,
+        "Srok": 5.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -20549,6 +20405,14 @@
         "Dona": 1.0,
         "Sotish_narxi": 9600.0,
         "Srok": 7.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Хиконцил капс 250мг №16",
+        "Pachka": 3.0,
+        "Dona": 15.0,
+        "Sotish_narxi": 9600.0,
+        "Srok": 8.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -20561,7 +20425,7 @@
     },
     {
         "Nomi": "Хлоргексидин-LIK р-р.0.05%.90мл№1",
-        "Pachka": 4.0,
+        "Pachka": 3.0,
         "Dona": 0.0,
         "Sotish_narxi": 3000.0,
         "Srok": 12.2027,
@@ -20625,7 +20489,7 @@
     },
     {
         "Nomi": "Холосас сироп 90мл№1",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 1.2028,
@@ -20657,14 +20521,6 @@
     },
     {
         "Nomi": "Хондромед р-р 200мг/2мл амп №10",
-        "Pachka": 0.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 220000.0,
-        "Srok": 9.2027,
-        "Zavod": "S.C. Rompharm Company"
-    },
-    {
-        "Nomi": "Хондромед р-р 200мг/2мл амп №10",
         "Pachka": 1.0,
         "Dona": 5.0,
         "Sotish_narxi": 195000.0,
@@ -20672,12 +20528,12 @@
         "Zavod": "S.C. Rompharm Company"
     },
     {
-        "Nomi": "Хофитол таб №180",
+        "Nomi": "Хондромед р-р 200мг/2мл амп №10",
         "Pachka": 0.0,
-        "Dona": 19.0,
-        "Sotish_narxi": 198000.0,
-        "Srok": 7.2028,
-        "Zavod": "Laboratories Rosa-Phytopharma"
+        "Dona": 3.0,
+        "Sotish_narxi": 220000.0,
+        "Srok": 9.2027,
+        "Zavod": "S.C. Rompharm Company"
     },
     {
         "Nomi": "Хофитол таб №180",
@@ -20685,6 +20541,14 @@
         "Dona": 0.0,
         "Sotish_narxi": 198000.0,
         "Srok": 8.2028,
+        "Zavod": "Laboratories Rosa-Phytopharma"
+    },
+    {
+        "Nomi": "Хофитол таб №180",
+        "Pachka": 0.0,
+        "Dona": 19.0,
+        "Sotish_narxi": 198000.0,
+        "Srok": 7.2028,
         "Zavod": "Laboratories Rosa-Phytopharma"
     },
     {
@@ -20739,16 +20603,16 @@
         "Nomi": "Церебролизин 20мл №5",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 575000.0,
-        "Srok": 9.2028,
+        "Sotish_narxi": 550000.0,
+        "Srok": 11.2029,
         "Zavod": "Ever Neuro Pharma"
     },
     {
         "Nomi": "Церебролизин 20мл №5",
         "Pachka": 1.0,
         "Dona": 0.0,
-        "Sotish_narxi": 550000.0,
-        "Srok": 11.2029,
+        "Sotish_narxi": 575000.0,
+        "Srok": 9.2028,
         "Zavod": "Ever Neuro Pharma"
     },
     {
@@ -20953,7 +20817,7 @@
     },
     {
         "Nomi": "Цефтриаксон 1г биосинтез №1",
-        "Pachka": 39.0,
+        "Pachka": 24.0,
         "Dona": 0.0,
         "Sotish_narxi": 6500.0,
         "Srok": 9.2027,
@@ -20961,7 +20825,7 @@
     },
     {
         "Nomi": "Цефтриаксон пор. 1000мг №1",
-        "Pachka": 26.0,
+        "Pachka": 21.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
         "Srok": 10.2028,
@@ -20978,7 +20842,7 @@
     {
         "Nomi": "Цефтриаксон пор.д/приг р-ра для в/в и в/м введ 1,0г №50",
         "Pachka": 1.0,
-        "Dona": 32.0,
+        "Dona": 14.0,
         "Sotish_narxi": 300000.0,
         "Srok": 9.2028,
         "Zavod": "Красфарма"
@@ -20993,8 +20857,8 @@
     },
     {
         "Nomi": "Цианокобаламин-вит.в12-амп.1мл№10",
-        "Pachka": 49.0,
-        "Dona": 2.0,
+        "Pachka": 48.0,
+        "Dona": 6.0,
         "Sotish_narxi": 10000.0,
         "Srok": 3.2029,
         "Zavod": "ЦИАНОКОБАЛАМИН"
@@ -21011,7 +20875,7 @@
         "Nomi": "Циклон таб.50мг№4",
         "Pachka": 4.0,
         "Dona": 0.0,
-        "Sotish_narxi": 24000.0,
+        "Sotish_narxi": 26000.0,
         "Srok": 12.2027,
         "Zavod": "Avison Pharmaceuticals Pvt Ltd"
     },
@@ -21019,7 +20883,7 @@
         "Nomi": "Циклон таб.50мг№4",
         "Pachka": 4.0,
         "Dona": 0.0,
-        "Sotish_narxi": 26000.0,
+        "Sotish_narxi": 24000.0,
         "Srok": 12.2027,
         "Zavod": "Avison Pharmaceuticals Pvt Ltd"
     },
@@ -21065,17 +20929,17 @@
     },
     {
         "Nomi": "Циклоферуммер 2мл №5 амп",
-        "Pachka": 5.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 75000.0,
+        "Pachka": 0.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 70000.0,
         "Srok": 2.2029,
         "Zavod": "MERRYMED FARM"
     },
     {
         "Nomi": "Циклоферуммер 2мл №5 амп",
-        "Pachka": 0.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 70000.0,
+        "Pachka": 4.0,
+        "Dona": 4.0,
+        "Sotish_narxi": 75000.0,
         "Srok": 2.2029,
         "Zavod": "MERRYMED FARM"
     },
@@ -21113,7 +20977,7 @@
     },
     {
         "Nomi": "Цинк-Зиё мазь 30г",
-        "Pachka": 13.0,
+        "Pachka": 12.0,
         "Dona": 0.0,
         "Sotish_narxi": 7000.0,
         "Srok": 9.2027,
@@ -21153,18 +21017,18 @@
     },
     {
         "Nomi": "Ципрофлаксацин таб 500мг №100",
-        "Pachka": 7.0,
-        "Dona": 15.0,
-        "Sotish_narxi": 100000.0,
-        "Srok": 12.2028,
-        "Zavod": "Nika Pharm"
-    },
-    {
-        "Nomi": "Ципрофлаксацин таб 500мг №100",
         "Pachka": 14.0,
         "Dona": 80.0,
         "Sotish_narxi": 100000.0,
         "Srok": 1.2029,
+        "Zavod": "Nika Pharm"
+    },
+    {
+        "Nomi": "Ципрофлаксацин таб 500мг №100",
+        "Pachka": 6.0,
+        "Dona": 65.0,
+        "Sotish_narxi": 100000.0,
+        "Srok": 12.2028,
         "Zavod": "Nika Pharm"
     },
     {
@@ -21234,17 +21098,17 @@
     {
         "Nomi": "Цистон таб №100",
         "Pachka": 0.0,
-        "Dona": 33.0,
+        "Dona": 73.0,
         "Sotish_narxi": 110000.0,
-        "Srok": 10.2028,
+        "Srok": 11.2028,
         "Zavod": "The Himalaya Drug Company"
     },
     {
         "Nomi": "Цистон таб №100",
         "Pachka": 0.0,
-        "Dona": 73.0,
+        "Dona": 33.0,
         "Sotish_narxi": 110000.0,
-        "Srok": 11.2028,
+        "Srok": 10.2028,
         "Zavod": "The Himalaya Drug Company"
     },
     {
@@ -21266,14 +21130,14 @@
     {
         "Nomi": "Цитофлавин р-р д/в.в. 10мл  №10",
         "Pachka": 0.0,
-        "Dona": 6.0,
+        "Dona": 4.0,
         "Sotish_narxi": 390000.0,
         "Srok": 5.2027,
         "Zavod": "Полисан НТФФ"
     },
     {
         "Nomi": "Цитрамон П таб. №20",
-        "Pachka": 13.0,
+        "Pachka": 12.0,
         "Dona": 10.0,
         "Sotish_narxi": 6000.0,
         "Srok": 10.2029,
@@ -21329,18 +21193,18 @@
     },
     {
         "Nomi": "Чай почечный 1,5 гр №20",
-        "Pachka": 43.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 6000.0,
-        "Srok": 2.2027,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Чай почечный 1,5 гр №20",
         "Pachka": 30.0,
         "Dona": 0.0,
         "Sotish_narxi": 6000.0,
         "Srok": 8.2027,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Чай почечный 1,5 гр №20",
+        "Pachka": 43.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 6000.0,
+        "Srok": 2.2027,
         "Zavod": "<>"
     },
     {
@@ -21393,7 +21257,7 @@
     },
     {
         "Nomi": "Чай ромашки №20 (цветки)",
-        "Pachka": 17.0,
+        "Pachka": 15.0,
         "Dona": 0.0,
         "Sotish_narxi": 5000.0,
         "Srok": 3.2028,
@@ -21497,7 +21361,7 @@
     },
     {
         "Nomi": "Шприц 10мл №1",
-        "Pachka": 782.0,
+        "Pachka": 743.0,
         "Dona": 0.0,
         "Sotish_narxi": 700.0,
         "Srok": 1.2029,
@@ -21529,18 +21393,18 @@
     },
     {
         "Nomi": "Шприц 20мл№1",
-        "Pachka": 152.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 1500.0,
-        "Srok": 3.2028,
-        "Zavod": "<>"
-    },
-    {
-        "Nomi": "Шприц 20мл№1",
         "Pachka": 376.0,
         "Dona": 0.0,
         "Sotish_narxi": 1500.0,
         "Srok": 10.203,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Шприц 20мл№1",
+        "Pachka": 151.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 1500.0,
+        "Srok": 3.2028,
         "Zavod": "<>"
     },
     {
@@ -21553,6 +21417,14 @@
     },
     {
         "Nomi": "Шприц 2мл№1",
+        "Pachka": 298.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 500.0,
+        "Srok": 5.203,
+        "Zavod": "<>"
+    },
+    {
+        "Nomi": "Шприц 2мл№1",
         "Pachka": 908.0,
         "Dona": 0.0,
         "Sotish_narxi": 500.0,
@@ -21560,16 +21432,8 @@
         "Zavod": "<>"
     },
     {
-        "Nomi": "Шприц 2мл№1",
-        "Pachka": 335.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 500.0,
-        "Srok": 5.203,
-        "Zavod": "<>"
-    },
-    {
         "Nomi": "Шприц kd-ject iii инсулин. с иглами 0,5мл u100 №1",
-        "Pachka": 340.0,
+        "Pachka": 338.0,
         "Dona": 0.0,
         "Sotish_narxi": 1500.0,
         "Srok": 10.203,
@@ -21593,7 +21457,7 @@
     },
     {
         "Nomi": "Эвика капс. №20",
-        "Pachka": 2.0,
+        "Pachka": 1.0,
         "Dona": 0.0,
         "Sotish_narxi": 44000.0,
         "Srok": 2.2028,
@@ -21601,18 +21465,18 @@
     },
     {
         "Nomi": "Эвказолин аква спрей назальный 10мл №1",
-        "Pachka": 2.0,
+        "Pachka": 5.0,
         "Dona": 0.0,
-        "Sotish_narxi": 39000.0,
-        "Srok": 5.2027,
+        "Sotish_narxi": 42000.0,
+        "Srok": 9.2027,
         "Zavod": "Фармак"
     },
     {
         "Nomi": "Эвказолин аква спрей назальный 10мл №1",
-        "Pachka": 6.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
-        "Sotish_narxi": 42000.0,
-        "Srok": 9.2027,
+        "Sotish_narxi": 39000.0,
+        "Srok": 5.2027,
         "Zavod": "Фармак"
     },
     {
@@ -21665,8 +21529,8 @@
     },
     {
         "Nomi": "Эдем таб. 5мг  №30",
-        "Pachka": 1.0,
-        "Dona": 11.0,
+        "Pachka": 0.0,
+        "Dona": 27.0,
         "Sotish_narxi": 102000.0,
         "Srok": 11.2027,
         "Zavod": "Фармак"
@@ -21721,7 +21585,7 @@
     },
     {
         "Nomi": "Эко драй спрей 35мл №1",
-        "Pachka": 3.0,
+        "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 38000.0,
         "Srok": 1.2028,
@@ -21769,8 +21633,8 @@
     },
     {
         "Nomi": "Эллезиум р-р. д/ин. 1,0мг/мл 5мл №10",
-        "Pachka": 4.0,
-        "Dona": 7.0,
+        "Pachka": 3.0,
+        "Dona": 9.0,
         "Sotish_narxi": 190000.0,
         "Srok": 3.2028,
         "Zavod": "Uzgermed Pharm"
@@ -21817,8 +21681,8 @@
     },
     {
         "Nomi": "Эмаглиф таб.10мг №30",
-        "Pachka": 3.0,
-        "Dona": 3.0,
+        "Pachka": 2.0,
+        "Dona": 23.0,
         "Sotish_narxi": 174000.0,
         "Srok": 6.2027,
         "Zavod": "Aristopharma"
@@ -21849,16 +21713,16 @@
     },
     {
         "Nomi": "Эмкор таб 2,5мг №30",
-        "Pachka": 2.0,
-        "Dona": 17.0,
+        "Pachka": 0.0,
+        "Dona": 3.0,
         "Sotish_narxi": 45000.0,
         "Srok": 3.2028,
         "Zavod": "Gm pharmaceuticals ltd"
     },
     {
         "Nomi": "Эмкор таб 2,5мг №30",
-        "Pachka": 0.0,
-        "Dona": 3.0,
+        "Pachka": 2.0,
+        "Dona": 17.0,
         "Sotish_narxi": 45000.0,
         "Srok": 3.2028,
         "Zavod": "Gm pharmaceuticals ltd"
@@ -21913,6 +21777,14 @@
     },
     {
         "Nomi": "Эн-ура (solifenacin) 5 мг 30 таблеток покрытых оболочкой №30",
+        "Pachka": 0.0,
+        "Dona": 14.0,
+        "Sotish_narxi": 108000.0,
+        "Srok": 12.2027,
+        "Zavod": "Novugen Pharma"
+    },
+    {
+        "Nomi": "Эн-ура (solifenacin) 5 мг 30 таблеток покрытых оболочкой №30",
         "Pachka": 2.0,
         "Dona": 0.0,
         "Sotish_narxi": 108000.0,
@@ -21925,14 +21797,6 @@
         "Dona": 0.0,
         "Sotish_narxi": 108000.0,
         "Srok": 1.2029,
-        "Zavod": "Novugen Pharma"
-    },
-    {
-        "Nomi": "Эн-ура (solifenacin) 5 мг 30 таблеток покрытых оболочкой №30",
-        "Pachka": 0.0,
-        "Dona": 14.0,
-        "Sotish_narxi": 108000.0,
-        "Srok": 12.2027,
         "Zavod": "Novugen Pharma"
     },
     {
@@ -22025,17 +21889,17 @@
     },
     {
         "Nomi": "Энап таб. 10мг №20",
-        "Pachka": 2.0,
-        "Dona": 5.0,
-        "Sotish_narxi": 22000.0,
+        "Pachka": 8.0,
+        "Dona": 1.0,
+        "Sotish_narxi": 24000.0,
         "Srok": 10.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
         "Nomi": "Энап таб. 10мг №20",
-        "Pachka": 8.0,
-        "Dona": 1.0,
-        "Sotish_narxi": 24000.0,
+        "Pachka": 2.0,
+        "Dona": 5.0,
+        "Sotish_narxi": 22000.0,
         "Srok": 10.2028,
         "Zavod": "KRKA Novo mesto"
     },
@@ -22049,18 +21913,18 @@
     },
     {
         "Nomi": "Энап-нl 10мг/12,5мг таб №20",
-        "Pachka": 3.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 34000.0,
-        "Srok": 3.2029,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Энап-нl 10мг/12,5мг таб №20",
         "Pachka": 0.0,
         "Dona": 14.0,
         "Sotish_narxi": 34000.0,
         "Srok": 11.2027,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Энап-нl 10мг/12,5мг таб №20",
+        "Pachka": 3.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 34000.0,
+        "Srok": 3.2029,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -22081,8 +21945,8 @@
     },
     {
         "Nomi": "Энтерожермина сусп. 2м/5мл   №10",
-        "Pachka": 5.0,
-        "Dona": 1.0,
+        "Pachka": 4.0,
+        "Dona": 8.0,
         "Sotish_narxi": 115000.0,
         "Srok": 8.2027,
         "Zavod": "<>"
@@ -22233,17 +22097,17 @@
     },
     {
         "Nomi": "Эритростат таб №30",
-        "Pachka": 1.0,
-        "Dona": 20.0,
-        "Sotish_narxi": 96000.0,
+        "Pachka": 0.0,
+        "Dona": 10.0,
+        "Sotish_narxi": 135000.0,
         "Srok": 10.2027,
         "Zavod": "Узбекистан*"
     },
     {
         "Nomi": "Эритростат таб №30",
-        "Pachka": 0.0,
-        "Dona": 10.0,
-        "Sotish_narxi": 135000.0,
+        "Pachka": 1.0,
+        "Dona": 20.0,
+        "Sotish_narxi": 96000.0,
         "Srok": 10.2027,
         "Zavod": "Узбекистан*"
     },
@@ -22281,17 +22145,17 @@
     },
     {
         "Nomi": "Эспа 10мг таб №28",
-        "Pachka": 11.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 89600.0,
+        "Pachka": 0.0,
+        "Dona": 18.0,
+        "Sotish_narxi": 95200.0,
         "Srok": 1.2027,
         "Zavod": "Biofarma Pharmaceutical Industry"
     },
     {
         "Nomi": "Эспа 10мг таб №28",
-        "Pachka": 0.0,
-        "Dona": 18.0,
-        "Sotish_narxi": 95200.0,
+        "Pachka": 11.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 89600.0,
         "Srok": 1.2027,
         "Zavod": "Biofarma Pharmaceutical Industry"
     },
@@ -22313,17 +22177,17 @@
     },
     {
         "Nomi": "Эспиро таб.50мг №30",
-        "Pachka": 3.0,
-        "Dona": 18.0,
-        "Sotish_narxi": 201000.0,
+        "Pachka": 0.0,
+        "Dona": 23.0,
+        "Sotish_narxi": 210000.0,
         "Srok": 11.2029,
         "Zavod": "Polpharma Pharmaceutical Works"
     },
     {
         "Nomi": "Эспиро таб.50мг №30",
-        "Pachka": 0.0,
-        "Dona": 23.0,
-        "Sotish_narxi": 210000.0,
+        "Pachka": 3.0,
+        "Dona": 18.0,
+        "Sotish_narxi": 201000.0,
         "Srok": 11.2029,
         "Zavod": "Polpharma Pharmaceutical Works"
     },
@@ -22409,14 +22273,6 @@
     },
     {
         "Nomi": "Этоксиб таб. 60мг №14",
-        "Pachka": 3.0,
-        "Dona": 3.0,
-        "Sotish_narxi": 49000.0,
-        "Srok": 9.2028,
-        "Zavod": "KRKA Novo mesto"
-    },
-    {
-        "Nomi": "Этоксиб таб. 60мг №14",
         "Pachka": 0.0,
         "Dona": 5.0,
         "Sotish_narxi": 49000.0,
@@ -22429,6 +22285,14 @@
         "Dona": 9.0,
         "Sotish_narxi": 50400.0,
         "Srok": 6.2028,
+        "Zavod": "KRKA Novo mesto"
+    },
+    {
+        "Nomi": "Этоксиб таб. 60мг №14",
+        "Pachka": 3.0,
+        "Dona": 3.0,
+        "Sotish_narxi": 49000.0,
+        "Srok": 9.2028,
         "Zavod": "KRKA Novo mesto"
     },
     {
@@ -22473,8 +22337,8 @@
     },
     {
         "Nomi": "Эуфиллин мер 2,4% 5мл №50",
-        "Pachka": 7.0,
-        "Dona": 10.0,
+        "Pachka": 6.0,
+        "Dona": 47.0,
         "Sotish_narxi": 50000.0,
         "Srok": 12.2028,
         "Zavod": "MERRYMED FARM"
@@ -22505,17 +22369,17 @@
     },
     {
         "Nomi": "Юперио таб. 24мг/26мг  №28",
-        "Pachka": 0.0,
-        "Dona": 6.0,
-        "Sotish_narxi": 378000.0,
+        "Pachka": 1.0,
+        "Dona": 0.0,
+        "Sotish_narxi": 369600.0,
         "Srok": 5.2028,
         "Zavod": "Novartis Pharma Stein"
     },
     {
         "Nomi": "Юперио таб. 24мг/26мг  №28",
-        "Pachka": 1.0,
-        "Dona": 0.0,
-        "Sotish_narxi": 369600.0,
+        "Pachka": 0.0,
+        "Dona": 6.0,
+        "Sotish_narxi": 378000.0,
         "Srok": 5.2028,
         "Zavod": "Novartis Pharma Stein"
     },
