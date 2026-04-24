@@ -5,76 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zuxro Farm Katalog</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
-        .gradient-bg { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); }
-        .product-card:active { transform: scale(0.98); }
+        body { font-family: sans-serif; background: #f4f4f7; padding: 10px; margin: 0; }
+        .search-box { position: sticky; top: 0; background: white; padding: 10px; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 0 0 15px 15px; }
+        input { width: 100%; padding: 12px; border: 1.5px solid #27ae60; border-radius: 10px; box-sizing: border-box; font-size: 16px; outline: none; }
+        #list { margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .card { background: white; padding: 12px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between; }
+        .name { font-weight: bold; color: #2c3e50; font-size: 13px; margin-bottom: 5px; height: 32px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .price { color: #27ae60; font-weight: 800; font-size: 15px; margin: 5px 0; }
+        .info { font-size: 11px; color: #95a5a6; }
+        .error-msg { text-align: center; color: #e74c3c; margin-top: 50px; font-weight: bold; }
     </style>
 </head>
-<body class="bg-gray-100 pb-10">
-
-    <div class="gradient-bg p-6 text-white text-center rounded-b-3xl shadow-lg">
-        <h1 class="text-2xl font-bold">🌿 Zuxro Farm 2020</h1>
-        <p class="text-sm opacity-90">Sog'ligingiz - bizning baxtimiz!</p>
+<body>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Dori qidirish..." oninput="render()">
     </div>
+    <div id="list"></div>
 
-    <div class="swiper my-6 px-4">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide bg-blue-500 p-10 rounded-2xl text-white text-center">Hammasi sifatli!</div>
-            <div class="swiper-slide bg-green-500 p-10 rounded-2xl text-white text-center">Hamyonbop narxlar</div>
-            <div class="swiper-slide bg-orange-500 p-10 rounded-2xl text-white text-center">Tezkor xizmat</div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <div class="px-4 sticky top-2 z-10">
-        <input type="text" id="search" placeholder="Dori nomini yozing..." 
-               class="w-full p-4 rounded-xl shadow-md border-none focus:ring-2 focus:ring-green-500 outline-none">
-    </div>
-
-    <div id="catalog" class="grid grid-cols-2 gap-4 p-4">
-        </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', { loop: true, pagination: { el: '.swiper-pagination' }, autoplay: {delay: 3000} });
-        
-        let allProducts = [];
-
-        // Ma'lumotlarni yuklash (Bot yaratgan data.json faylidan)
-        async function loadData() {
-            try {
-                // Bu yerda biz botimizdagi JSON faylni saytga bog'lashimiz kerak
-                // Sinov uchun quyidagi formatda ishlaydi:
-                const res = await fetch('data.json');
-                allProducts = await res.json();
-                render(allProducts);
-            } catch (e) { console.log("Hali ma'lumot yo'q"); }
-        }
-
-        function render(data) {
-            const container = document.getElementById('catalog');
-            container.innerHTML = data.map(p => `
-                <div class="product-card bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-semibold text-gray-800 text-sm leading-tight h-10 overflow-hidden">${p.Nomi}</h3>
-                        <p class="text-green-600 font-bold mt-2">${p.Sotish_narxi.toLocaleString()} so'm</p>
-                    </div>
-                    <div class="mt-2 text-[10px] text-gray-500">
-                        <p>📦 ${Math.floor(p.Pachka)}p, ${Math.floor(p.Dona)}d</p>
-                        <p>⏳ ${p.Srok}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        document.getElementById('search').addEventListener('input', (e) => {
-            const filtered = allProducts.filter(p => p.Nomi.toLowerCase().includes(e.target.value.toLowerCase()));
-            render(filtered);
+<script>
+    let products = [];
+    // Cache-dan qochish uchun data.json?v=vaqt qo'shamiz
+    fetch('data.json?v=' + new Date().getTime())
+        .then(res => {
+            if (!res.ok) throw new Error("Ma'lumot topilmadi");
+            return res.json();
+        })
+        .then(data => {
+            products = data;
+            render();
+        })
+        .catch(err => {
+            document.getElementById('list').innerHTML = `<div class="error-msg">⚠️ Xatolik: Ma'lumotlarni yuklab bo'lmadi.<br>${err.message}</div>`;
         });
 
-        loadData();
-    </script>
+    function render() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const filtered = products.filter(p => p.Nomi.toLowerCase().includes(query));
+        
+        const html = filtered.map(p => `
+            <div class="card">
+                <div class="name">${p.Nomi}</div>
+                <div>
+                    <div class="price">${p.Sotish_narxi.toLocaleString()} so'm</div>
+                    <div class="info">📦 ${p.Pachka}p, ${p.Dona}d</div>
+                    <div class="info">⏳ ${p.Srok}</div>
+                </div>
+            </div>
+        `).join('');
+        
+        document.getElementById('list').innerHTML = html || '<div style="grid-column: 1/3; text-align: center; color: #95a5a6; padding: 20px;">Hech narsa topilmadi 😕</div>';
+    }
+</script>
 </body>
 </html>
