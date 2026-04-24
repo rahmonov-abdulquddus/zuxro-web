@@ -3,52 +3,1152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zuxro Farm Katalog</title>
+    <title>Zuxro Farm 2020 | Dorixona</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; background: #f4f4f7; padding: 10px; margin: 0; }
-        .search-box { position: sticky; top: 0; background: white; padding: 10px; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 0 0 15px 15px; }
-        input { width: 100%; padding: 12px; border: 2px solid #27ae60; border-radius: 10px; box-sizing: border-box; font-size: 16px; outline: none; }
-        #list { margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .card { background: white; padding: 12px; border-radius: 15px; border: 1px solid #eee; display: flex; flex-direction: column; min-height: 110px; }
-        .name { font-weight: bold; color: #2c3e50; font-size: 12px; height: 32px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-        .price { color: #27ae60; font-weight: 800; font-size: 14px; margin: 5px 0; }
-        .info { font-size: 10px; color: #7f8c8d; }
+        :root {
+            --primary: #1a6fd4;
+            --primary-dark: #0d4fa0;
+            --primary-light: #4a9af5;
+            --accent: #00c9a7;
+            --accent2: #f5a623;
+            --bg: #f0f4fb;
+            --card: #ffffff;
+            --text: #1a2340;
+            --text2: #5a6a8a;
+            --border: #dde6f5;
+            --shadow: 0 4px 24px rgba(26,111,212,0.10);
+            --radius: 18px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            box-shadow: 0 4px 20px rgba(26,111,212,0.25);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px 8px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-text {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+            color: white;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .header-time {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: white;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ===== NAV ===== */
+        .nav {
+            display: flex;
+            padding: 0 10px 0;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .nav::-webkit-scrollbar { display: none; }
+
+        .nav-btn {
+            padding: 10px 16px;
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .nav-btn.active {
+            color: white;
+            border-bottom-color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .nav-btn:hover { color: white; }
+
+        /* ===== PAGES ===== */
+        .page { display: none; padding: 20px 16px; min-height: calc(100vh - 120px); }
+        .page.active { display: block; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== CATALOG PAGE ===== */
+        .search-wrap {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            pointer-events: none;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 14px 14px 44px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            background: white;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(26,111,212,0.12);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 4px;
+        }
+        .filter-row::-webkit-scrollbar { display: none; }
+
+        .filter-btn {
+            padding: 7px 16px;
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            background: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text2);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .stats-bar {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .stats-bar .stat-item { text-align: center; }
+        .stats-bar .stat-num { font-size: 22px; font-weight: 800; font-family: 'Nunito', sans-serif; }
+        .stats-bar .stat-label { font-size: 11px; opacity: 0.8; font-weight: 500; }
+
+        .divider { width: 1px; height: 40px; background: rgba(255,255,255,0.3); }
+
+        #product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (min-width: 600px) {
+            #product-grid { grid-template-columns: 1fr 1fr 1fr; }
+        }
+
+        @media (min-width: 900px) {
+            #product-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 14px;
+            border: 1.5px solid var(--border);
+            box-shadow: 0 2px 12px rgba(26,111,212,0.07);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(26,111,212,0.15);
+        }
+
+        .card-name {
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--text);
+            line-height: 1.4;
+            min-height: 34px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-price {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 15px;
+            color: var(--primary);
+        }
+
+        .card-badge {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .badge-green { background: #e8f9f5; color: #00a880; }
+        .badge-blue { background: #e8f0fe; color: var(--primary); }
+        .badge-orange { background: #fff3e0; color: #e07b00; }
+
+        .card-info {
+            font-size: 10px;
+            color: var(--text2);
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .loading-wrap {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text2);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text2);
+        }
+
+        .empty-icon { font-size: 48px; margin-bottom: 12px; }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10,20,50,0.6);
+            z-index: 500;
+            backdrop-filter: blur(4px);
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .modal-overlay.open { display: flex; }
+
+        .modal {
+            background: white;
+            border-radius: 24px 24px 0 0;
+            padding: 24px 20px 32px;
+            width: 100%;
+            max-width: 500px;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .modal-handle {
+            width: 40px;
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            margin: 0 auto 20px;
+        }
+
+        .modal-name {
+            font-size: 18px;
+            font-weight: 800;
+            font-family: 'Nunito', sans-serif;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .modal-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .modal-row:last-child { border-bottom: none; }
+        .modal-label { color: var(--text2); font-weight: 500; }
+        .modal-value { font-weight: 700; color: var(--text); }
+        .modal-price { font-size: 22px; font-weight: 900; color: var(--primary); font-family: 'Nunito', sans-serif; }
+
+        .modal-close {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover { background: var(--primary-dark); }
+
+        /* ===== ADMIN PAGE ===== */
+        .admin-lock {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .admin-lock-icon { font-size: 56px; margin-bottom: 16px; }
+
+        .admin-lock h2 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .admin-lock p { color: var(--text2); margin-bottom: 20px; font-size: 14px; }
+
+        .pin-input {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .pin-input input {
+            width: 50px;
+            height: 56px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 800;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            outline: none;
+            font-family: 'Nunito', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .pin-input input:focus { border-color: var(--primary); }
+
+        .pin-btn {
+            padding: 12px 32px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .admin-content { display: none; }
+        .admin-content.show { display: block; }
+
+        .admin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .admin-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .admin-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 18px 14px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1.5px solid var(--border);
+        }
+
+        .admin-card-icon { font-size: 32px; margin-bottom: 8px; }
+        .admin-card-num {
+            font-family: 'Nunito', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary);
+        }
+        .admin-card-label { font-size: 12px; color: var(--text2); font-weight: 600; margin-top: 4px; }
+
+        .section-title {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-list { display: flex; flex-direction: column; gap: 8px; }
+
+        .top-item {
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1.5px solid var(--border);
+        }
+
+        .top-rank {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            font-weight: 800;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .top-name { font-weight: 600; font-size: 13px; flex: 1; }
+        .top-count { font-weight: 800; color: var(--primary); font-family: 'Nunito', sans-serif; font-size: 14px; }
+
+        .update-info {
+            background: linear-gradient(135deg, var(--accent), #00a880);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            color: white;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .update-info-icon { font-size: 32px; }
+        .update-info-text h3 { font-weight: 800; font-size: 16px; margin-bottom: 2px; }
+        .update-info-text p { font-size: 12px; opacity: 0.85; }
+
+        /* ===== LOCATION PAGE ===== */
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--border);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 280px;
+            display: block;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border: 1.5px solid var(--border);
+            margin-bottom: 12px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-row:last-child { border-bottom: none; }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-label { font-size: 11px; color: var(--text2); font-weight: 500; margin-bottom: 2px; }
+        .contact-value { font-weight: 700; font-size: 15px; color: var(--text); }
+
+        .contact-link { text-decoration: none; color: inherit; }
+
+        .hours-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: var(--radius);
+            padding: 20px;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .hours-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hours-row:last-child { border-bottom: none; }
+        .hours-day { opacity: 0.8; }
+        .hours-time { font-weight: 700; }
+        .hours-open { color: var(--accent); }
+
+        /* ===== ABOUT PAGE ===== */
+        .hero-about {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            color: white;
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-about::before {
+            content: '💊';
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.08;
+            top: -20px;
+            right: -20px;
+        }
+
+        .hero-about h1 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .hero-about p { font-size: 14px; opacity: 0.85; line-height: 1.6; }
+
+        .about-year {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 18px 14px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1.5px solid var(--border);
+        }
+
+        .feature-icon { font-size: 32px; margin-bottom: 10px; }
+        .feature-title { font-weight: 800; font-size: 14px; margin-bottom: 4px; font-family: 'Nunito', sans-serif; }
+        .feature-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+        .about-desc {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border: 1.5px solid var(--border);
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text2);
+            margin-bottom: 16px;
+        }
+
+        .about-desc strong { color: var(--text); }
+
+        .social-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: var(--radius);
+            border: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .social-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .btn-tg { background: linear-gradient(135deg, #229ed9, #1a7ab5); color: white; }
+        .btn-phone { background: linear-gradient(135deg, var(--accent), #00a880); color: white; }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
     </style>
 </head>
 <body>
-    <div class="search-box"><input type="text" id="search" placeholder="Dori qidirish..." oninput="render()"></div>
-    <div id="list"></div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-top">
+        <div class="logo">
+            <div class="logo-icon">💊</div>
+            <div class="logo-text">
+                Zuxro Farm
+                <span>2020 • Quva tumani</span>
+            </div>
+        </div>
+        <div class="header-time" id="live-time">⏰ --:--</div>
+    </div>
+    <nav class="nav">
+        <button class="nav-btn active" onclick="showPage('catalog')">💊 Katalog</button>
+        <button class="nav-btn" onclick="showPage('admin')">📊 Admin</button>
+        <button class="nav-btn" onclick="showPage('location')">📍 Manzil</button>
+        <button class="nav-btn" onclick="showPage('about')">🏥 Haqida</button>
+    </nav>
+</header>
+
+<!-- CATALOG PAGE -->
+<div class="page active" id="page-catalog">
+    <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="search" placeholder="Dori nomini kiriting..." oninput="filterProducts()">
+    </div>
+
+    <div class="filter-row">
+        <button class="filter-btn active" onclick="setFilter('all', this)">Hammasi</button>
+        <button class="filter-btn" onclick="setFilter('available', this)">✅ Mavjud</button>
+        <button class="filter-btn" onclick="setFilter('pachka', this)">📦 Pachkada</button>
+        <button class="filter-btn" onclick="setFilter('cheap', this)">💰 Arzon</button>
+        <button class="filter-btn" onclick="setFilter('expensive', this)">💎 Qimmat</button>
+    </div>
+
+    <div class="stats-bar" id="stats-bar">
+        <div class="stat-item">
+            <div class="stat-num" id="stat-total">0</div>
+            <div class="stat-label">Jami dori</div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+            <div class="stat-num" id="stat-available">0</div>
+            <div class="stat-label">Mavjud</div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+            <div class="stat-num" id="stat-shown">0</div>
+            <div class="stat-label">Ko'rsatildi</div>
+        </div>
+    </div>
+
+    <div id="product-grid">
+        <div class="loading-wrap">
+            <div class="spinner"></div>
+            <p>Ma'lumotlar yuklanmoqda...</p>
+        </div>
+    </div>
+</div>
+
+<!-- ADMIN PAGE -->
+<div class="page" id="page-admin">
+    <div class="admin-lock" id="admin-lock">
+        <div class="admin-lock-icon">🔐</div>
+        <h2>Admin Panel</h2>
+        <p>Kirish uchun PIN kodingizni kiriting</p>
+        <div class="pin-input">
+            <input type="password" maxlength="1" id="p1" oninput="pinNext(this,'p2')">
+            <input type="password" maxlength="1" id="p2" oninput="pinNext(this,'p3')">
+            <input type="password" maxlength="1" id="p3" oninput="pinNext(this,'p4')">
+            <input type="password" maxlength="1" id="p4" oninput="pinCheck()">
+        </div>
+        <p id="pin-error" style="color:#e74c3c;font-size:13px;margin-bottom:12px;display:none;">❌ Noto'g'ri PIN kod</p>
+        <button class="pin-btn" onclick="checkPin()">Kirish</button>
+    </div>
+
+    <div class="admin-content" id="admin-content">
+        <div class="update-info" id="update-info">
+            <div class="update-info-icon">🔄</div>
+            <div class="update-info-text">
+                <h3>Baza holati</h3>
+                <p id="last-update">Yuklanmoqda...</p>
+            </div>
+        </div>
+
+        <div class="admin-grid">
+            <div class="admin-card">
+                <div class="admin-card-icon">💊</div>
+                <div class="admin-card-num" id="adm-total">0</div>
+                <div class="admin-card-label">Jami dori</div>
+            </div>
+            <div class="admin-card">
+                <div class="admin-card-icon">✅</div>
+                <div class="admin-card-num" id="adm-available">0</div>
+                <div class="admin-card-label">Mavjud</div>
+            </div>
+            <div class="admin-card">
+                <div class="admin-card-icon">📦</div>
+                <div class="admin-card-num" id="adm-pachka">0</div>
+                <div class="admin-card-label">Pachkada</div>
+            </div>
+            <div class="admin-card">
+                <div class="admin-card-icon">🏭</div>
+                <div class="admin-card-num" id="adm-factories">0</div>
+                <div class="admin-card-label">Ishlab chiq.</div>
+            </div>
+        </div>
+
+        <div class="section-title">🏆 Eng ko'p mavjud dorilar</div>
+        <div class="top-list" id="top-list"></div>
+    </div>
+</div>
+
+<!-- LOCATION PAGE -->
+<div class="page" id="page-location">
+    <div class="map-container">
+        <iframe
+            src="https://maps.google.com/maps?q=Quva+tumani,+Farg'ona+viloyati,+O'zbekiston&output=embed&z=14"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+                <div class="contact-label">Manzil</div>
+                <div class="contact-value">Quva tumani, A.Yassaviy 133</div>
+            </div>
+        </div>
+        <a href="tel:+998882052520" class="contact-link">
+            <div class="contact-row">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <div class="contact-label">Telefon</div>
+                    <div class="contact-value">+998 88 205 25 20</div>
+                </div>
+            </div>
+        </a>
+        <div class="contact-row">
+            <div class="contact-icon">🏙️</div>
+            <div>
+                <div class="contact-label">Viloyat</div>
+                <div class="contact-value">Farg'ona viloyati</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hours-card">
+        <div class="hours-title">🕐 Ish vaqti</div>
+        <div class="hours-row">
+            <span class="hours-day">Dushanba - Juma</span>
+            <span class="hours-time hours-open">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row">
+            <span class="hours-day">Shanba</span>
+            <span class="hours-time hours-open">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row">
+            <span class="hours-day">Yakshanba</span>
+            <span class="hours-time hours-open">08:00 – 20:00</span>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div class="page" id="page-about">
+    <div class="hero-about">
+        <div class="about-year">✨ 2020-yildan beri</div>
+        <h1>Zuxro Farm</h1>
+        <p>Quva tumanidagi ishonchli dorixona.<br>Sog'ligingiz — bizning ustuvorligimiz.</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">💊</div>
+            <div class="feature-title">Keng assortiment</div>
+            <div class="feature-desc">Mingdan ortiq dori-darmon va tibbiy mahsulotlar</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <div class="feature-title">Sifat kafolati</div>
+            <div class="feature-desc">Faqat sertifikatlangan va original dorilar</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🕐</div>
+            <div class="feature-title">Qulay vaqt</div>
+            <div class="feature-desc">Har kuni 08:00 dan 20:00 gacha xizmat</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <div class="feature-title">Qulay narx</div>
+            <div class="feature-desc">Hamyonbop narxlar va maxsus takliflar</div>
+        </div>
+    </div>
+
+    <div class="about-desc">
+        <strong>Zuxro Farm 2020</strong> — Farg'ona viloyati, Quva tumanida joylashgan zamonaviy dorixona. 
+        Biz 2020-yildan buyon aholi sog'ligini saqlashda ishonchli hamkor bo'lib kelmoqdamiz.<br><br>
+        Dorixonamizda <strong>keng assortimentdagi dorilar</strong>, tibbiy asbob-uskunalar va 
+        shaxsiy gigiyena mahsulotlari mavjud. Malakali farmatsevtlarimiz sizga har doim 
+        to'g'ri maslahat beradi.
+    </div>
+
+    <div class="social-row">
+        <a href="https://t.me/zuxrofarm" class="social-btn btn-tg">
+            ✈️ Telegram
+        </a>
+        <a href="tel:+998882052520" class="social-btn btn-phone">
+            📞 Qo'ng'iroq
+        </a>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal">
+        <div class="modal-handle"></div>
+        <div class="modal-name" id="modal-name"></div>
+        <div id="modal-body"></div>
+        <button class="modal-close" onclick="closeModal()">✕ Yopish</button>
+    </div>
+</div>
 
 <script>
-    let products = [];
+    // ===== TELEGRAM WEB APP =====
+    if (window.Telegram && window.Telegram.WebApp) {
+        Telegram.WebApp.ready();
+        Telegram.WebApp.expand();
+    }
 
-    // Ma'lumotlarni yuklash
+    // ===== LIVE TIME =====
+    function updateTime() {
+        const now = new Date();
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        const timeEl = document.getElementById('live-time');
+        const hour = now.getHours();
+        const isOpen = hour >= 8 && hour < 20;
+        timeEl.textContent = `${isOpen ? '🟢' : '🔴'} ${h}:${m}`;
+        timeEl.title = isOpen ? 'Ochiq' : 'Yopiq';
+    }
+    updateTime();
+    setInterval(updateTime, 30000);
+
+    // ===== NAV =====
+    function showPage(name) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('page-' + name).classList.add('active');
+        event.target.classList.add('active');
+        if (name === 'admin' && document.getElementById('admin-content').classList.contains('show')) {
+            renderAdmin();
+        }
+    }
+
+    // ===== DATA =====
+    let products = [];
+    let currentFilter = 'all';
+
     fetch('data.json?v=' + Date.now())
-        .then(res => res.json())
+        .then(r => r.json())
         .then(data => {
             products = data;
-            render();
+            updateStats(data, data.length);
+            renderProducts(data);
         })
-        .catch(err => {
-            console.error(err);
-            document.getElementById('list').innerHTML = "Yuklashda xato!";
+        .catch(() => {
+            document.getElementById('product-grid').innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">⚠️</div>
+                    <p>Ma'lumotlarni yuklashda xato</p>
+                    <p style="font-size:12px;margin-top:6px;">Bot orqali Excel yuklang</p>
+                </div>`;
         });
 
-    function render() {
-        const query = document.getElementById('search').value.toLowerCase();
-        const filtered = products.filter(p => p.Nomi && p.Nomi.toLowerCase().includes(query));
-        
-        const html = filtered.map(p => `
-            <div class="card">
-                <div class="name">${p.Nomi}</div>
-                <div class="price">${Number(p.Sotish_narxi).toLocaleString('ru-RU')} so'm</div>
-                <div class="info">📦 ${p.Pachka} pachka, ${p.Dona} dona</div>
-                <div class="info">⏳ ${p.Srok || '-'}</div>
-            </div>
-        `).join('');
-        
-        document.getElementById('list').innerHTML = html || '<div style="grid-column: 1/3; text-align: center;">Topilmadi.</div>';
+    function updateStats(all, shown) {
+        const available = all.filter(p => p.Pachka > 0 || p.Dona > 0).length;
+        document.getElementById('stat-total').textContent = products.length;
+        document.getElementById('stat-available').textContent = products.filter(p => p.Pachka > 0 || p.Dona > 0).length;
+        document.getElementById('stat-shown').textContent = shown;
+    }
+
+    function setFilter(f, btn) {
+        currentFilter = f;
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterProducts();
+    }
+
+    function filterProducts() {
+        const q = document.getElementById('search').value.toLowerCase().trim();
+        let filtered = products;
+
+        if (q) filtered = filtered.filter(p => p.Nomi && p.Nomi.toLowerCase().includes(q));
+
+        if (currentFilter === 'available') filtered = filtered.filter(p => p.Pachka > 0 || p.Dona > 0);
+        else if (currentFilter === 'pachka') filtered = filtered.filter(p => p.Pachka > 0);
+        else if (currentFilter === 'cheap') filtered = [...filtered].sort((a, b) => a.Sotish_narxi - b.Sotish_narxi);
+        else if (currentFilter === 'expensive') filtered = [...filtered].sort((a, b) => b.Sotish_narxi - a.Sotish_narxi);
+
+        updateStats(products, filtered.length);
+        renderProducts(filtered);
+    }
+
+    function renderProducts(list) {
+        const grid = document.getElementById('product-grid');
+        if (!list.length) {
+            grid.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><p>Topilmadi</p></div>`;
+            return;
+        }
+        grid.innerHTML = list.slice(0, 200).map((p, i) => {
+            const price = Number(p.Sotish_narxi).toLocaleString('ru-RU');
+            const hasPachka = p.Pachka > 0;
+            const hasDona = p.Dona > 0;
+            const available = hasPachka || hasDona;
+            return `
+            <div class="card" onclick="openModal(${i})" style="animation-delay:${Math.min(i,20)*0.03}s">
+                <div class="card-name">${p.Nomi || '-'}</div>
+                <div class="card-price">${price} so'm</div>
+                <div class="card-badge">
+                    ${available ? '<span class="badge badge-green">✅ Bor</span>' : '<span class="badge badge-orange">❌ Yo\'q</span>'}
+                    ${hasPachka ? `<span class="badge badge-blue">📦 ${p.Pachka}p</span>` : ''}
+                </div>
+                <div class="card-info">
+                    <span>⏳ ${p.Srok || '-'}</span>
+                    <span>🏭 ${p.Zavod || '-'}</span>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    // ===== MODAL =====
+    let modalProducts = [];
+
+    function openModal(index) {
+        const q = document.getElementById('search').value.toLowerCase().trim();
+        let filtered = products;
+        if (q) filtered = filtered.filter(p => p.Nomi && p.Nomi.toLowerCase().includes(q));
+        if (currentFilter === 'available') filtered = filtered.filter(p => p.Pachka > 0 || p.Dona > 0);
+        else if (currentFilter === 'pachka') filtered = filtered.filter(p => p.Pachka > 0);
+        else if (currentFilter === 'cheap') filtered = [...filtered].sort((a,b) => a.Sotish_narxi-b.Sotish_narxi);
+        else if (currentFilter === 'expensive') filtered = [...filtered].sort((a,b) => b.Sotish_narxi-a.Sotish_narxi);
+
+        const p = filtered[index];
+        if (!p) return;
+        const price = Number(p.Sotish_narxi).toLocaleString('ru-RU');
+
+        document.getElementById('modal-name').textContent = p.Nomi || '-';
+        document.getElementById('modal-body').innerHTML = `
+            <div class="modal-row"><span class="modal-label">💰 Narxi</span><span class="modal-price">${price} so'm</span></div>
+            <div class="modal-row"><span class="modal-label">📦 Pachka</span><span class="modal-value">${p.Pachka} dona</span></div>
+            <div class="modal-row"><span class="modal-label">💊 Dona</span><span class="modal-value">${p.Dona} dona</span></div>
+            <div class="modal-row"><span class="modal-label">⏳ Muddati</span><span class="modal-value">${p.Srok || '-'}</span></div>
+            <div class="modal-row"><span class="modal-label">🏭 Zavod</span><span class="modal-value">${p.Zavod || '-'}</span></div>
+            <div class="modal-row"><span class="modal-label">📊 Holat</span><span class="modal-value">${(p.Pachka > 0 || p.Dona > 0) ? '✅ Mavjud' : '❌ Tugagan'}</span></div>
+        `;
+        document.getElementById('modal').classList.add('open');
+    }
+
+    function closeModal(e) {
+        if (!e || e.target === document.getElementById('modal') || e.target.classList.contains('modal-close')) {
+            document.getElementById('modal').classList.remove('open');
+        }
+    }
+
+    // ===== ADMIN =====
+    const ADMIN_PIN = '2020';
+
+    function pinNext(el, nextId) {
+        if (el.value.length === 1) document.getElementById(nextId)?.focus();
+    }
+
+    function pinCheck() {
+        const pin = ['p1','p2','p3','p4'].map(id => document.getElementById(id).value).join('');
+        if (pin.length === 4) checkPin();
+    }
+
+    function checkPin() {
+        const pin = ['p1','p2','p3','p4'].map(id => document.getElementById(id).value).join('');
+        if (pin === ADMIN_PIN) {
+            document.getElementById('admin-lock').style.display = 'none';
+            document.getElementById('admin-content').classList.add('show');
+            renderAdmin();
+        } else {
+            document.getElementById('pin-error').style.display = 'block';
+            ['p1','p2','p3','p4'].forEach(id => { document.getElementById(id).value = ''; });
+            document.getElementById('p1').focus();
+        }
+    }
+
+    function renderAdmin() {
+        if (!products.length) return;
+        const available = products.filter(p => p.Pachka > 0 || p.Dona > 0);
+        const pachka = products.filter(p => p.Pachka > 0);
+        const factories = [...new Set(products.map(p => p.Zavod).filter(Boolean))];
+
+        document.getElementById('adm-total').textContent = products.length;
+        document.getElementById('adm-available').textContent = available.length;
+        document.getElementById('adm-pachka').textContent = pachka.length;
+        document.getElementById('adm-factories').textContent = factories.length;
+
+        const now = new Date();
+        document.getElementById('last-update').textContent = `So'nggi yangilanish: ${now.toLocaleDateString('uz-UZ')} ${now.toLocaleTimeString('uz-UZ', {hour:'2-digit',minute:'2-digit'})}`;
+
+        const top = [...available].sort((a, b) => (b.Pachka + b.Dona) - (a.Pachka + a.Dona)).slice(0, 8);
+        document.getElementById('top-list').innerHTML = top.map((p, i) => `
+            <div class="top-item">
+                <div class="top-rank">${i + 1}</div>
+                <div class="top-name">${p.Nomi}</div>
+                <div class="top-count">${p.Pachka}p ${p.Dona}d</div>
+            </div>`).join('');
     }
 </script>
 </body>
