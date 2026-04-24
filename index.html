@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuxro Farm Katalog</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); }
+        .product-card:active { transform: scale(0.98); }
+    </style>
+</head>
+<body class="bg-gray-100 pb-10">
+
+    <div class="gradient-bg p-6 text-white text-center rounded-b-3xl shadow-lg">
+        <h1 class="text-2xl font-bold">🌿 Zuxro Farm 2020</h1>
+        <p class="text-sm opacity-90">Sog'ligingiz - bizning baxtimiz!</p>
+    </div>
+
+    <div class="swiper my-6 px-4">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-blue-500 p-10 rounded-2xl text-white text-center">Hammasi sifatli!</div>
+            <div class="swiper-slide bg-green-500 p-10 rounded-2xl text-white text-center">Hamyonbop narxlar</div>
+            <div class="swiper-slide bg-orange-500 p-10 rounded-2xl text-white text-center">Tezkor xizmat</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="px-4 sticky top-2 z-10">
+        <input type="text" id="search" placeholder="Dori nomini yozing..." 
+               class="w-full p-4 rounded-xl shadow-md border-none focus:ring-2 focus:ring-green-500 outline-none">
+    </div>
+
+    <div id="catalog" class="grid grid-cols-2 gap-4 p-4">
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', { loop: true, pagination: { el: '.swiper-pagination' }, autoplay: {delay: 3000} });
+        
+        let allProducts = [];
+
+        // Ma'lumotlarni yuklash (Bot yaratgan data.json faylidan)
+        async function loadData() {
+            try {
+                // Bu yerda biz botimizdagi JSON faylni saytga bog'lashimiz kerak
+                // Sinov uchun quyidagi formatda ishlaydi:
+                const res = await fetch('data.json');
+                allProducts = await res.json();
+                render(allProducts);
+            } catch (e) { console.log("Hali ma'lumot yo'q"); }
+        }
+
+        function render(data) {
+            const container = document.getElementById('catalog');
+            container.innerHTML = data.map(p => `
+                <div class="product-card bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 text-sm leading-tight h-10 overflow-hidden">${p.Nomi}</h3>
+                        <p class="text-green-600 font-bold mt-2">${p.Sotish_narxi.toLocaleString()} so'm</p>
+                    </div>
+                    <div class="mt-2 text-[10px] text-gray-500">
+                        <p>📦 ${Math.floor(p.Pachka)}p, ${Math.floor(p.Dona)}d</p>
+                        <p>⏳ ${p.Srok}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.getElementById('search').addEventListener('input', (e) => {
+            const filtered = allProducts.filter(p => p.Nomi.toLowerCase().includes(e.target.value.toLowerCase()));
+            render(filtered);
+        });
+
+        loadData();
+    </script>
+</body>
+</html>
