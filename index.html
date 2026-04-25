@@ -104,6 +104,34 @@
         backdrop-filter: blur(10px);
       }
 
+      .header-cart {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        color: white;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .header-cart:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-1px);
+      }
+
+      #cart-count {
+        background: var(--accent);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-size: 10px;
+        margin-left: 4px;
+        min-width: 16px;
+        text-align: center;
+      }
+
       /* ===== NAV ===== */
       .nav {
         display: flex;
@@ -421,6 +449,57 @@
         font-weight: 900;
         font-size: 15px;
         color: var(--primary);
+      }
+
+      .card-qoldiq {
+        font-size: 11px;
+        color: var(--text2);
+        font-weight: 600;
+        margin: 4px 0;
+      }
+
+      .card-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+        align-items: center;
+      }
+
+      .quantity-input {
+        width: 60px;
+        padding: 6px 8px;
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        font-size: 12px;
+        text-align: center;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+      }
+
+      .quantity-input:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      .add-to-cart-btn {
+        flex: 1;
+        padding: 6px 12px;
+        background: linear-gradient(135deg, var(--accent), #00a880);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .add-to-cart-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 201, 167, 0.3);
       }
 
       .card-badge {
@@ -891,8 +970,8 @@
         color: var(--accent);
       }
 
-      /* ===== ABOUT PAGE ===== */
-      .hero-about {
+      /* ===== CART PAGE ===== */
+      .cart-header {
         background: linear-gradient(
           135deg,
           var(--primary-dark) 0%,
@@ -900,21 +979,219 @@
           var(--primary-light) 100%
         );
         border-radius: var(--radius);
-        padding: 32px 24px;
+        padding: 20px;
         color: white;
-        text-align: center;
         margin-bottom: 16px;
-        position: relative;
-        overflow: hidden;
       }
 
-      .hero-about::before {
-        content: "💊";
-        position: absolute;
-        font-size: 120px;
-        opacity: 0.08;
-        top: -20px;
-        right: -20px;
+      .cart-header h1 {
+        font-family: "Nunito", sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .cart-summary {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .cart-items {
+        margin-bottom: 16px;
+      }
+
+      .empty-cart {
+        background: white;
+        border-radius: var(--radius);
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+      }
+
+      .empty-cart .empty-icon {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+      .empty-cart p {
+        color: var(--text2);
+        margin-bottom: 16px;
+      }
+
+      .continue-shopping {
+        padding: 10px 20px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .continue-shopping:hover {
+        background: var(--primary-dark);
+      }
+
+      .admin-section {
+        background: white;
+        border-radius: var(--radius);
+        padding: 20px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+      }
+
+      .admin-section h3 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      .search-filters {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
+
+      .date-input {
+        padding: 8px 12px;
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        font-size: 12px;
+        font-family: 'Outfit', sans-serif;
+        color: var(--text);
+      }
+
+      .date-input:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      .cart-item {
+        background: white;
+        border-radius: var(--radius);
+        padding: 16px;
+        margin-bottom: 12px;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cart-item-info {
+        flex: 1;
+      }
+
+      .cart-item-name {
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .cart-item-details {
+        font-size: 12px;
+        color: var(--text2);
+      }
+
+      .cart-item-price {
+        font-family: "Nunito", sans-serif;
+        font-weight: 800;
+        font-size: 16px;
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+
+      .cart-item-quantity {
+        font-size: 12px;
+        color: var(--text2);
+      }
+
+      .cart-item-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+      }
+
+      .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .quantity-btn {
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--border);
+        background: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+
+      .quantity-btn:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      .remove-item {
+        padding: 4px 8px;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .remove-item:hover {
+        background: #c0392b;
+      }
+
+      .cart-actions {
+        display: flex;
+        gap: 12px;
+      }
+
+      .clear-cart-btn {
+        flex: 1;
+        padding: 14px;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .clear-cart-btn:hover {
+        background: #c0392b;
+      }
+
+      .send-to-bot-btn {
+        flex: 2;
+        padding: 14px;
+        background: linear-gradient(135deg, var(--accent), #00a880);
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .send-to-bot-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 201, 167, 0.3);
       }
 
       .hero-about h1 {
@@ -1051,6 +1328,9 @@
           </div>
         </div>
         <div class="header-time" id="live-time">⏰ --:--</div>
+        <div class="header-cart" onclick="showCart()">
+          🛒 <span id="cart-count">0</span>
+        </div>
       </div>
       <nav class="nav">
         <button class="nav-btn active" onclick="showPage('catalog')">
@@ -1152,59 +1432,55 @@
           <input
             type="password"
             maxlength="1"
-            id="p3"
-            oninput="pinNext(this, 'p4')"
-          />
-          <input type="password" maxlength="1" id="p4" oninput="pinCheck()" />
-        </div>
-        <p
-          id="pin-error"
-          style="
-            color: #e74c3c;
-            font-size: 13px;
-            margin-bottom: 12px;
-            display: none;
-          "
-        >
-          ❌ Noto'g'ri PIN kod
-        </p>
-        <button class="pin-btn" onclick="checkPin()">Kirish</button>
       </div>
 
       <div class="admin-content" id="admin-content">
-        <div class="update-info" id="update-info">
-          <div class="update-info-icon">🔄</div>
-          <div class="update-info-text">
-            <h3>Baza holati</h3>
-            <p id="last-update">Yuklanmoqda...</p>
+        <h1>📊 Admin panel</h1>
+        
+        <div class="admin-stats">
+          <div class="stat-card">
+            <div class="stat-icon">📦</div>
+            <div class="stat-info">
+              <div class="stat-number" id="total-products">0</div>
+              <div class="stat-label">Jami dorilar</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-info">
+              <div class="stat-number" id="available-products">0</div>
+              <div class="stat-label">Mavjud dorilar</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔍</div>
+            <div class="stat-info">
+              <div class="stat-number" id="search-count">0</div>
+              <div class="stat-label">Qidiruvlar</div>
+            </div>
           </div>
         </div>
 
-        <div class="admin-grid">
-          <div class="admin-card">
-            <div class="admin-card-icon">💊</div>
-            <div class="admin-card-num" id="adm-total">0</div>
-            <div class="admin-card-label">Jami dori</div>
+        <div class="admin-section">
+          <h3>🔍 So'rov statistikasi</h3>
+          <div class="search-filters">
+            <input type="date" id="search-date" class="date-input">
+            <button class="filter-btn" onclick="filterSearches()">📅 Filtrlash</button>
+            <button class="filter-btn" onclick="clearSearchFilter()">🔄 Tozalash</button>
           </div>
-          <div class="admin-card">
-            <div class="admin-card-icon">✅</div>
-            <div class="admin-card-num" id="adm-available">0</div>
-            <div class="admin-card-label">Mavjud</div>
-          </div>
-          <div class="admin-card">
-            <div class="admin-card-icon">📦</div>
-            <div class="admin-card-num" id="adm-pachka">0</div>
-            <div class="admin-card-label">Pachkada</div>
-          </div>
-          <div class="admin-card">
-            <div class="admin-card-icon">🏭</div>
-            <div class="admin-card-num" id="adm-factories">0</div>
-            <div class="admin-card-label">Ishlab chiq.</div>
+          <div id="recent-searches" class="search-list">
+            <p class="empty-message">Hozircha ma'lumot yo'q</p>
           </div>
         </div>
 
-        <div class="section-title">🏆 Eng ko'p mavjud dorilar</div>
-        <div class="top-list" id="top-list"></div>
+        <div class="admin-section">
+          <h3>📦 Mavjud bo'lmagan dorilar</h3>
+          <div id="out-of-stock" class="product-list">
+            <p class="empty-message">Hozircha ma'lumot yo'q</p>
+          </div>
+        </div>
+
+        <button class="admin-close" onclick="lockAdmin()">🔒 Panelni yopish</button>
       </div>
     </div>
 
@@ -1260,6 +1536,36 @@
           <span class="hours-day">Yakshanba</span>
           <span class="hours-time hours-open">08:00 – 20:00</span>
         </div>
+      </div>
+    </div>
+
+    <!-- CART PAGE -->
+    <div class="page" id="page-cart">
+      <div class="cart-header">
+        <h1>🛒 Savatcha</h1>
+        <div class="cart-summary">
+          <span>Jami: <span id="cart-total-items">0</span> ta</span>
+          <span>Summa: <span id="cart-total-price">0</span> so'm</span>
+        </div>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <div class="empty-cart">
+          <div class="empty-icon">🛒</div>
+          <p>Savatchangiz bo'sh</p>
+          <button class="continue-shopping" onclick="showPage('catalog')">
+            🛍️ Savatga olish
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-actions" id="cart-actions" style="display: none">
+        <button class="clear-cart-btn" onclick="clearCart()">
+          🗑️ Savatchani tozalash
+        </button>
+        <button class="send-to-bot-btn" onclick="sendToBot()">
+          📤 Botga yuborish
+        </button>
       </div>
     </div>
 
@@ -1380,6 +1686,268 @@
       // ===== DATA =====
       let products = [];
       let currentFilter = "all";
+      let cart = [];
+
+      // Savatchani yuklash
+      function loadCart() {
+        const saved = localStorage.getItem("zuxro_cart");
+        if (saved) {
+          cart = JSON.parse(saved);
+        }
+        updateCartCount();
+      }
+
+      // Savatchani saqlash
+      function saveCart() {
+        localStorage.setItem("zuxro_cart", JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      // Savatchaga qo'shish
+      function addToCart(index, event) {
+        if (event) {
+          event.stopPropagation();
+        }
+
+        const q = document.getElementById("search").value.toLowerCase().trim();
+        let filtered = products;
+        if (q)
+          filtered = filtered.filter(
+            (p) => p.Nomi && p.Nomi.toLowerCase().includes(q),
+          );
+        if (currentFilter === "available")
+          filtered = filtered.filter((p) => p.Pachka > 0 || p.Dona > 0);
+        else if (currentFilter === "pachka")
+          filtered = filtered.filter((p) => p.Pachka > 0);
+        else if (currentFilter === "cheap")
+          filtered = [...filtered].sort(
+            (a, b) => a.Sotish_narxi - b.Sotish_narxi,
+          );
+        else if (currentFilter === "expensive")
+          filtered = [...filtered].sort(
+            (a, b) => b.Sotish_narxi - a.Sotish_narxi,
+          );
+
+        const product = filtered[index];
+        if (!product) return;
+
+        const card = document.querySelectorAll(".card")[index];
+        const quantityInput = card.querySelector(".quantity-input");
+        const quantity = parseInt(quantityInput.value) || 1;
+
+        if (quantity <= 0) {
+          alert("Iltimos, kamida 1 ta kiriting!");
+          return;
+        }
+
+        const maxQuantity = product.Pachka > 0 ? product.Pachka : product.Dona;
+        if (quantity > maxQuantity) {
+          alert(`Mavjud: ${maxQuantity} ta`);
+          return;
+        }
+
+        // Savatchada borligini tekshirish
+        const existingItem = cart.find((item) => item.Nomi === product.Nomi);
+        if (existingItem) {
+          existingItem.quantity += quantity;
+        } else {
+          cart.push({
+            ...product,
+            quantity: quantity,
+          });
+        }
+
+        saveCart();
+        quantityInput.value = "";
+
+        // Muvaffaqiyat xabari
+        showNotification("🛒 Savatchaga qo'shildi!");
+      }
+
+      // Savatcha sonini yangilash
+      function updateCartCount() {
+        const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const cartCount = document.getElementById("cart-count");
+        if (cartCount) {
+          cartCount.textContent = total;
+        }
+      }
+
+      // Savatchani ko'rsatish
+      function showCart() {
+        renderCart();
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelectorAll(".nav-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document.getElementById("page-cart").classList.add("active");
+      }
+
+      // Savatchani render qilish
+      function renderCart() {
+        const cartItems = document.getElementById("cart-items");
+        const cartActions = document.getElementById("cart-actions");
+        const totalItems = document.getElementById("cart-total-items");
+        const totalPrice = document.getElementById("cart-total-price");
+
+        if (cart.length === 0) {
+          cartItems.innerHTML = `
+            <div class="empty-cart">
+              <div class="empty-icon">🛒</div>
+              <p>Savatchangiz bo'sh</p>
+              <button class="continue-shopping" onclick="showPage('catalog')">🛍️ Savatga olish</button>
+            </div>`;
+          cartActions.style.display = "none";
+        } else {
+          let total = 0;
+          let itemCount = 0;
+
+          cartItems.innerHTML = cart
+            .map((item, index) => {
+              const itemTotal = item.Sotish_narxi * item.quantity;
+              total += itemTotal;
+              itemCount += item.quantity;
+
+              return `
+              <div class="cart-item">
+                <div class="cart-item-info">
+                  <div class="cart-item-name">${item.Nomi}</div>
+                  <div class="cart-item-details">🏭 ${item.Zavod} • ⏳ ${item.Srok}</div>
+                  <div class="cart-item-price">${Number(itemTotal).toLocaleString("uz-UZ")} so'm</div>
+                  <div class="cart-item-quantity">${item.quantity} ta • ${Number(item.Sotish_narxi).toLocaleString("uz-UZ")} so'm/dona</div>
+                </div>
+                <div class="cart-item-actions">
+                  <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                    <span>${item.quantity}</span>
+                    <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                  </div>
+                  <button class="remove-item" onclick="removeFromCart(${index})">🗑️</button>
+                </div>
+              </div>`;
+            })
+            .join("");
+
+          cartActions.style.display = "flex";
+        }
+
+        totalItems.textContent = itemCount;
+        totalPrice.textContent = Number(total).toLocaleString("uz-UZ");
+      }
+
+      // Sonini yangilash
+      function updateQuantity(index, change) {
+        const item = cart[index];
+        const newQuantity = item.quantity + change;
+
+        if (newQuantity <= 0) {
+          removeFromCart(index);
+          return;
+        }
+
+        const maxQuantity = item.Pachka > 0 ? item.Pachka : item.Dona;
+        if (newQuantity > maxQuantity) {
+          showNotification(`Maksimal: ${maxQuantity} ta`);
+          return;
+        }
+
+        item.quantity = newQuantity;
+        saveCart();
+        renderCart();
+      }
+
+      // Savatchadan o'chirish
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        saveCart();
+        renderCart();
+        showNotification("🗑️ Savatchadan olib tashlandi");
+      }
+
+      // Savatchani tozalash
+      function clearCart() {
+        if (confirm("Savatchani to'lashni istaysizmi?")) {
+          cart = [];
+          saveCart();
+          renderCart();
+          showNotification("🗑️ Savatcha tozalandi");
+        }
+      }
+
+      // Botga yuborish
+      function sendToBot() {
+        if (cart.length === 0) {
+          showNotification("❌ Savatcha bo'sh");
+          return;
+        }
+
+        let total = 0;
+        let message = "🛒 *Buyurtma*\n\n";
+
+        cart.forEach((item, index) => {
+          const itemTotal = item.Sotish_narxi * item.quantity;
+          total += itemTotal;
+          message += `${index + 1}. ${item.Nomi}\n`;
+          message += `   Soni: ${item.quantity} ta\n`;
+          message += `   Narxi: ${Number(item.Sotish_narxi).toLocaleString("uz-UZ")} so'm\n`;
+          message += `   Jami: ${Number(itemTotal).toLocaleString("uz-UZ")} so'm\n\n`;
+        });
+
+        message += `💰 *Jami summa: ${Number(total).toLocaleString("uz-UZ")} so'm*\n`;
+        message += `📅 Sana: ${new Date().toLocaleDateString("uz-UZ")}\n`;
+        message += `⏰ Vaqt: ${new Date().toLocaleTimeString("uz-UZ", { hour: "2-digit", minute: "2-digit" })}`;
+
+        // Telegram WebApp orqali yuborish
+        if (window.Telegram && window.Telegram.WebApp) {
+          window.Telegram.WebApp.sendData(message);
+          showNotification("📤 Botga yuborildi!");
+
+          // Savatchani tozalash
+          setTimeout(() => {
+            cart = [];
+            saveCart();
+            renderCart();
+          }, 1000);
+        } else {
+          // Agar Telegram WebApp bo'lmasa, clipboard ga nusxalash
+          navigator.clipboard.writeText(message).then(() => {
+            showNotification("📋 Nusxalandi! Botga yuboring.");
+          });
+        }
+      }
+
+      // Xabarni ko'rsatish
+      function showNotification(message) {
+        const notification = document.createElement("div");
+        notification.className = "notification";
+        notification.textContent = message;
+        notification.style.cssText = `
+              position: fixed;
+              top: 20px;
+              right: 20px;
+              background: linear-gradient(135deg, var(--accent), #00a880);
+              color: white;
+              padding: 12px 20px;
+              border-radius: 8px;
+              font-weight: 600;
+              z-index: 2000;
+              animation: slideInRight 0.3s ease;
+          `;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.animation = "slideOutRight 0.3s ease";
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 2000);
+      }
+
+      // Savatchani yuklash
+      loadCart();
 
       fetch("data.json?v=" + Date.now())
         .then((r) => r.json())
@@ -1415,27 +1983,111 @@
         filterProducts();
       }
 
+      function normalizeUzbekText(text) {
+        if (!text) return "";
+        text = text.toLowerCase();
+
+        // Kirill harflarini lotin harflariga o'tkazish
+        const kirillToLatin = {
+          а: "a",
+          б: "b",
+          в: "v",
+          г: "g",
+          д: "d",
+          е: "e",
+          ё: "yo",
+          ж: "j",
+          з: "z",
+          и: "i",
+          й: "y",
+          к: "k",
+          л: "l",
+          м: "m",
+          н: "n",
+          о: "o",
+          п: "p",
+          р: "r",
+          с: "s",
+          т: "t",
+          у: "u",
+          ф: "f",
+          х: "h",
+          ц: "c",
+          ч: "ch",
+          ш: "sh",
+          ъ: "",
+          э: "e",
+          ю: "yu",
+          я: "ya",
+          қ: "q",
+          ғ: "g",
+          ҳ: "h",
+          ў: "o",
+        };
+
+        // Lotin harflarini kirill harflariga o'tkazish
+        const latinToKirill = {
+          q: "қ",
+          g: "ғ",
+          h: "ҳ",
+          o: "ў",
+          "'": "ь",
+          sh: "ш",
+          ch: "ч",
+          yo: "ё",
+          yu: "ю",
+          ya: "я",
+        };
+
+        // Kirill -> Lotin
+        let latinText = text;
+        for (let [k, v] of Object.entries(kirillToLatin)) {
+          latinText = latinText.replace(new RegExp(k, "g"), v);
+        }
+
+        // Lotin -> Kirill
+        let kirillText = text;
+        for (let [k, v] of Object.entries(latinToKirill)) {
+          kirillText = kirillText.replace(new RegExp(k, "g"), v);
+        }
+
+        // Ikkala versiyani qaytarish
+        return latinText + " " + kirillText;
+      }
+
       function filterProducts() {
-        const q = document.getElementById("search").value.toLowerCase().trim();
+        const q = document.getElementById("search").value.trim();
         let filtered = products;
 
-        if (q)
-          filtered = filtered.filter(
-            (p) => p.Nomi && p.Nomi.toLowerCase().includes(q),
-          );
+        if (q) {
+          const normalizedQuery = normalizeUzbekText(q);
+          
+          filtered = products.filter((p) => {
+            const searchFields = [
+              p.Nomi || "",
+              p.Zavod || "",
+              p.Srok || "",
+            ].join(" ");
+            
+            const normalizedFields = normalizeUzbekText(searchFields);
+            
+            // Ikkala tomondan qidirish
+            return normalizedFields.includes(normalizedQuery) || 
+                   searchFields.toLowerCase().includes(q.toLowerCase());
+          });
+          
+          // Qidiruv statistikasini qayd etish
+          recordSearch(q, filtered.length);
+        }
 
         if (currentFilter === "available")
           filtered = filtered.filter((p) => p.Pachka > 0 || p.Dona > 0);
         else if (currentFilter === "pachka")
           filtered = filtered.filter((p) => p.Pachka > 0);
         else if (currentFilter === "cheap")
-          filtered = [...filtered].sort(
-            (a, b) => a.Sotish_narxi - b.Sotish_narxi,
-          );
+          filtered = [...filtered].sort((a, b) => a.Sotish_narxi - b.Sotish_narxi);
         else if (currentFilter === "expensive")
-          filtered = [...filtered].sort(
-            (a, b) => b.Sotish_narxi - a.Sotish_narxi,
-          );
+          filtered = [...filtered].sort((a, b) => b.Sotish_narxi - a.Sotish_narxi);
 
         updateStats(products, filtered.length);
         renderProducts(filtered);
@@ -1454,18 +2106,46 @@
             const hasPachka = p.Pachka > 0;
             const hasDona = p.Dona > 0;
             const available = hasPachka || hasDona;
+
+            // Qoldiqni formatlash
+            let qoldiq = "";
+            if (hasPachka && hasDona) {
+              qoldiq = `${p.Pachka} pachka, ${p.Dona} dona`;
+            } else if (hasPachka) {
+              qoldiq = `${p.Pachka} pachka`;
+            } else if (hasDona) {
+              qoldiq = `${p.Dona} dona`;
+            }
+
+            // Sroq formatlash (8.2027 -> 08.2027)
+            let srok = p.Srok || "-";
+            if (srok !== "-" && srok.match(/^\d\.\d{4}$/)) {
+              srok = "0" + srok;
+            }
+
             return `
             <div class="card" onclick="openModal(${i})" style="animation-delay:${Math.min(i, 20) * 0.03}s">
                 <div class="card-name">${p.Nomi || "-"}</div>
                 <div class="card-price">${price} so'm</div>
+                <div class="card-qoldiq">📦 ${qoldiq}</div>
                 <div class="card-badge">
-                    ${available ? '<span class="badge badge-green">✅ Bor</span>' : '<span class="badge badge-orange">❌ Yo\'q</span>'}
-                    ${hasPachka ? `<span class="badge badge-blue">📦 ${p.Pachka}p</span>` : ""}
+                    ${available ? '<span class="badge badge-green">✅ Mavjud</span>' : '<span class="badge badge-orange">❌ Tugagan</span>'}
                 </div>
                 <div class="card-info">
-                    <span>⏳ ${p.Srok || "-"}</span>
+                    <span>⏳ ${srok}</span>
                     <span>🏭 ${p.Zavod || "-"}</span>
                 </div>
+                ${
+                  available
+                    ? `
+                <div class="card-actions">
+                    <input type="number" class="quantity-input" placeholder="Soni" min="1" max="${hasPachka ? p.Pachka : p.Dona}" onclick="event.stopPropagation()">
+                    <button class="add-to-cart-btn" onclick="addToCart(${i}, event.stopPropagation())">
+                        🛒 Savatcha
+                    </button>
+                </div>`
+                    : ""
+                }
             </div>`;
           })
           .join("");
@@ -1498,12 +2178,47 @@
         if (!p) return;
         const price = Number(p.Sotish_narxi).toLocaleString("uz-UZ");
 
+        // Qoldiqni formatlash
+        let qoldiqText = "";
+        if (p.Pachka > 0 && p.Dona > 0) {
+          qoldiqText = `${p.Pachka} pachka, ${p.Dona} dona`;
+        } else if (p.Pachka > 0) {
+          qoldiqText = `${p.Pachka} pachka`;
+        } else if (p.Dona > 0) {
+          qoldiqText = `${p.Dona} dona`;
+        } else {
+          qoldiqText = "Qolmagan";
+        }
+
+        // Sroq formatlash
+        let srok = p.Srok || "-";
+        if (srok !== "-" && srok.match(/^\d\.\d{4}$/)) {
+          srok = "0" + srok;
+        }
+
         document.getElementById("modal-name").textContent = p.Nomi || "-";
+
+        // Pachka va dona narxlarini hisoblash
+        let priceInfo = "";
+        if (p.Pachka > 0 && p.Dona > 0) {
+          const pachkaPrice = Number(p.Sotish_narxi).toLocaleString("uz-UZ");
+          const donaPrice = Number(
+            Math.round(p.Sotish_narxi / p.Pachka),
+          ).toLocaleString("uz-UZ");
+          priceInfo = `
+                <div class="modal-row"><span class="modal-label">💰 Pachka narxi</span><span class="modal-price">${pachkaPrice} so'm</span></div>
+                <div class="modal-row"><span class="modal-label">💊 Dona narxi</span><span class="modal-price">${donaPrice} so'm</span></div>
+            `;
+        } else if (p.Pachka > 0) {
+          priceInfo = `<div class="modal-row"><span class="modal-label">💰 Pachka narxi</span><span class="modal-price">${price} so'm</span></div>`;
+        } else {
+          priceInfo = `<div class="modal-row"><span class="modal-label">💰 Dona narxi</span><span class="modal-price">${price} so'm</span></div>`;
+        }
+
         document.getElementById("modal-body").innerHTML = `
-            <div class="modal-row"><span class="modal-label">💰 Narxi</span><span class="modal-price">${price} so'm</span></div>
-            <div class="modal-row"><span class="modal-label">📦 Pachka</span><span class="modal-value">${p.Pachka} dona</span></div>
-            <div class="modal-row"><span class="modal-label">💊 Dona</span><span class="modal-value">${p.Dona} dona</span></div>
-            <div class="modal-row"><span class="modal-label">⏳ Muddati</span><span class="modal-value">${p.Srok || "-"}</span></div>
+            ${priceInfo}
+            <div class="modal-row"><span class="modal-label">📦 Qoldiq</span><span class="modal-value">${qoldiqText}</span></div>
+            <div class="modal-row"><span class="modal-label">⏳ Muddati</span><span class="modal-value">${srok}</span></div>
             <div class="modal-row"><span class="modal-label">🏭 Zavod</span><span class="modal-value">${p.Zavod || "-"}</span></div>
             <div class="modal-row"><span class="modal-label">📊 Holat</span><span class="modal-value">${p.Pachka > 0 || p.Dona > 0 ? "✅ Mavjud" : "❌ Tugagan"}</span></div>
         `;
@@ -1531,24 +2246,101 @@
         const pin = ["p1", "p2", "p3", "p4"]
           .map((id) => document.getElementById(id).value)
           .join("");
-        if (pin.length === 4) checkPin();
-      }
-
-      function checkPin() {
-        const pin = ["p1", "p2", "p3", "p4"]
-          .map((id) => document.getElementById(id).value)
-          .join("");
-        if (pin === ADMIN_PIN) {
+        
+        if (pin === "2020") {
           document.getElementById("admin-lock").style.display = "none";
           document.getElementById("admin-content").classList.add("show");
+          loadSearchStats();
           renderAdmin();
         } else {
-          document.getElementById("pin-error").style.display = "block";
-          ["p1", "p2", "p3", "p4"].forEach((id) => {
-            document.getElementById(id).value = "";
-          });
-          document.getElementById("p1").focus();
+          showNotification("❌ Noto'g'ri PIN kod");
         }
+      }
+
+      // Qidiruv statistikasini yuklash
+      function loadSearchStats() {
+        const saved = localStorage.getItem('search_stats');
+        if (saved) {
+          searchStats = JSON.parse(saved);
+        } else {
+          // Namuna statistika
+          searchStats = [
+            { query: 'paracetamol', date: '2026-04-25', time: '14:30', results: 5 },
+            { query: 'аспирин', date: '2026-04-25', time: '14:25', results: 3 },
+            { query: 'қон босим', date: '2026-04-25', time: '14:20', results: 8 },
+            { query: 'витамин', date: '2026-04-24', time: '16:45', results: 12 },
+            { query: 'грипп', date: '2026-04-24', time: '16:40', results: 7 }
+          ];
+        }
+        filteredSearchStats = [...searchStats];
+        renderSearches();
+      }
+
+      // Qidiruv statistikasini saqlash
+      function saveSearchStats() {
+        localStorage.setItem('search_stats', JSON.stringify(searchStats));
+      }
+
+      // Qidiruvni qayd etish
+      function recordSearch(query, resultCount) {
+        if (!query.trim()) return;
+        
+        const now = new Date();
+        const searchRecord = {
+          query: query.trim(),
+          date: now.toISOString().split('T')[0],
+          time: now.toTimeString().split(' ')[0].substring(0, 5),
+          results: resultCount
+        };
+        
+        searchStats.unshift(searchRecord);
+        if (searchStats.length > 100) {
+          searchStats = searchStats.slice(0, 100);
+        }
+        
+        saveSearchStats();
+      }
+
+      // Qidiruvlarni filtrlash
+      function filterSearches() {
+        const dateInput = document.getElementById('search-date');
+        const selectedDate = dateInput.value;
+        
+        if (selectedDate) {
+          filteredSearchStats = searchStats.filter(search => search.date === selectedDate);
+        } else {
+          filteredSearchStats = [...searchStats];
+        }
+        
+        renderSearches();
+      }
+
+      // Filtrni tozalash
+      function clearSearchFilter() {
+        document.getElementById('search-date').value = '';
+        filteredSearchStats = [...searchStats];
+        renderSearches();
+      }
+
+      // Qidiruvlarni render qilish
+      function renderSearches() {
+        const container = document.getElementById('recent-searches');
+        
+        if (filteredSearchStats.length === 0) {
+          container.innerHTML = '<p class="empty-message">Hozircha ma\'lumot yo\'q</p>';
+          return;
+        }
+        
+        container.innerHTML = filteredSearchStats.slice(0, 20).map((search, index) => `
+          <div class="search-item">
+            <div class="search-query">${search.query}</div>
+            <div class="search-meta">
+              <span>📅 ${search.date}</span>
+              <span>⏰ ${search.time}</span>
+              <span>📊 ${search.results} ta</span>
+            </div>
+          </div>
+        `).join('');
       }
 
       function renderAdmin() {
