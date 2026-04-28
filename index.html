@@ -452,6 +452,24 @@ function totalDona(p){
   return p.Pachka*pkgSize + p.Dona;
 }
 
+// QOLDIQNI FORMATLASH (stockStr funksiyasi)
+function stockStr(p) {
+  if (!p) return '—';
+  
+  const pachka = p.Pachka || 0;
+  const dona = p.Dona || 0;
+  
+  if (pachka > 0 && dona > 0) {
+    return `${pachka} pachka, ${dona} dona`;
+  } else if (pachka > 0) {
+    return `${pachka} pachka`;
+  } else if (dona > 0) {
+    return `${dona} dona`;
+  } else {
+    return 'Qolmagan';
+  }
+}
+
 // DATA
 let products=[],curF='all',selP=null,selQty=1,cart={};
 
