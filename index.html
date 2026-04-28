@@ -403,32 +403,47 @@ function fmtSrok(s){
   const r=s.match(/^(\d{1,2})\.(\d{4})$/);
   return r?r[1].padStart(2,'0')+'.'+r[2]:s;
 }
-
-// 1 PACHKADA NECHTA DONA — nomdan №N ni o'qish
-function getPkgSize(name){
-  if(!name)return null;
-  const m=String(name).match(/[№#No\.]\s*(\d+)/i)||String(name).match(/(\d+)\s*(ta|шт|dona|таб|капс|amp)/i);
-  return m?parseInt(m[1]):null;
+// 1 PACHKADA NECHTA DONA BORLIGINI ANIQLASH
+function getPkgSize(name) {
+    if (!name) return null;
+    
+    // 1. № belgisidan keyin kelgan raqamni topish (masalan: №30, №100)
+    // 2. Yoki "30 ta", "10 tab", "20 amp" kabi yozuvlarni topish
+    const m = String(name).match(/[№#No]\.?\s*(\d+)/i) || 
+              String(name).match(/(\d+)\s*(ta|шт|dona|tab|капс|amp|таб)/i);
+    
+    if (m) {
+        const size = parseInt(m[1]);
+        // AGAR №1 BO'LSA — bu dona narxi hisoblanmaydi (chunki pachkaning o'zi 1 dona)
+        if (size <= 1) return null; 
+        return size;
+    }
+    return null;
 }
 
-// DONA NARXI HISOBLASH
-// Pachka = nechta to'liq pachka, Dona = qolgan alohida dona soni
-// Narx = 1 pachka narxi
-// 1 dona narxi = pachkaNarx / (1 pachkadagi dona soni)
-function calcDonaPrice(p){
-  const pkgSize=getPkgSize(p.Nomi);
-  if(pkgSize&&pkgSize>1){
-    return Math.round(p.Sotish_narxi/pkgSize);
-  }
-  return null;
+// DONA NARXINI HISOBLASH
+function calcDonaPrice(p) {
+    const pkgSize = getPkgSize(p.Nomi);
+    
+    // Agar pachka ichida 1 tadan ko'p dona bo'lsa va narx 0 bo'lmasa
+    if (pkgSize && pkgSize > 1 && p.Sotish_narxi > 0) {
+        return Math.round(p.Sotish_narxi / pkgSize);
+    }
+    return null; // Aks holda dona narxi ko'rsatilmaydi
 }
 
-// OMBOR: "4 pachka + 3 dona" ko'rinishi
-function stockStr(p){
-  const parts=[];
-  if(p.Pachka>0)parts.push(p.Pachka+' pachka');
-  if(p.Dona>0)parts.push(p.Dona+' dona');
-  return parts.length?parts.join(' + '):'—';
+// KATALOGDA KO'RSATISH FUNKSIYASI (Render ichida ishlatish uchun)
+function getPriceDisplay(p) {
+    const pNarx = parseFloat(p.Sotish_narxi) || 0;
+    const dNarx = calcDonaPrice(p);
+    
+    let html = `<div class="price">${pNarx.toLocaleString('ru-RU')} so'm</div>`;
+    
+    // Agar dona narxi mavjud bo'lsa, uni ham pastidan kichikroq qilib chiqaramiz
+    if (dNarx) {
+        html += `<div style="font-size: 11px; color: #27ae60;">(1 donasi: ${dNarx.toLocaleString('ru-RU')} so'm)</div>`;
+    }
+    return html;
 }
 
 // JAMI DONA (savat uchun)
