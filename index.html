@@ -876,6 +876,33 @@
       .pin-row input:focus {
         border-color: var(--primary);
       }
+      .numpad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 15px;
+      }
+      .num-btn {
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--text);
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: "Nunito", sans-serif;
+      }
+      .num-btn:hover {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+        transform: scale(1.05);
+      }
+      .num-btn:active {
+        transform: scale(0.95);
+      }
       .pbtn2 {
         padding: 11px 26px;
         background: var(--primary);
@@ -1306,18 +1333,6 @@
             oninput="pnext(this, 'p2')"
           />
           <input
-            type="password"
-            maxlength="1"
-            id="p2"
-            oninput="pnext(this, 'p3')"
-          />
-          <input
-            type="password"
-            maxlength="1"
-            id="p3"
-            oninput="pnext(this, 'p4')"
-          />
-          <input type="password" maxlength="1" id="p4" oninput="pcheck()" />
         </div>
         <div
           id="perr"
@@ -1357,11 +1372,13 @@
             <div class="albl">Pachkada</div>
           </div>
           <div class="acard">
-            <div class="aico">🏭</div>
-            <div class="anum" id="af">0</div>
-            <div class="albl">Ishlab chiq.</div>
+            <div class="aico">⏰</div>
+            <div class="anum" id="aexp">0</div>
+            <div class="albl">Tugaydi</div>
           </div>
         </div>
+        <div class="stitle">⚠️ Muddati yaqin qolgan dorilar</div>
+        <div id="explist"></div>
         <div class="stitle">🏆 Eng ko'p mavjud dorilar</div>
         <div id="toplist"></div>
       </div>
@@ -1964,7 +1981,7 @@
         <span class="chek-tlbl">💰 Jami to'lov:</span>
         <span class="chek-tsum">${total.toLocaleString("ru-RU")} so'm</span>
       </div>
-      <div class="chek-foot">Rahmat! Sog'lig'ingiz tiklansing 🙏<br>Zuxro Farm 2020 — Quva tumani</div>
+      <div class="chek-foot">Rahmat! Sog'lig'ingiz tiklansin 🙏<br>Zuxro Farm 2020 — Quva tumani</div>
     </div>
     <div class="edit-title">📝 Miqdorni o'zgartirish</div>
     <div style="background:#fff;border-radius:var(--r);padding:10px;border:1.5px solid var(--border);margin-bottom:12px">${editRows}</div>
@@ -2028,7 +2045,7 @@
       }
 
       // ADMIN
-      const PIN = "2020";
+      const PIN = "2520";
       function pnext(el, nid) {
         if (el.value.length === 1) document.getElementById(nid)?.focus();
       }
@@ -2037,6 +2054,44 @@
           .map((id) => document.getElementById(id).value)
           .join("");
         if (p.length === 4) checkPin();
+      }
+      
+      // Numpad funktsiyalari
+      function addNum(num) {
+        const inputs = ['p1', 'p2', 'p3', 'p4'];
+        for (let i = 0; i < inputs.length; i++) {
+          const input = document.getElementById(inputs[i]);
+          if (!input.value) {
+            input.value = num;
+            if (i < 3) {
+              document.getElementById(inputs[i + 1]).focus();
+            } else {
+              checkPin();
+            }
+            break;
+          }
+        }
+      }
+      
+      function clearPin() {
+        ['p1', 'p2', 'p3', 'p4'].forEach(id => {
+          document.getElementById(id).value = '';
+        });
+        document.getElementById('p1').focus();
+      }
+      
+      function deleteNum() {
+        const inputs = ['p1', 'p2', 'p3', 'p4'];
+        for (let i = 3; i >= 0; i--) {
+          const input = document.getElementById(inputs[i]);
+          if (input.value) {
+            input.value = '';
+            if (i > 0) {
+              document.getElementById(inputs[i - 1]).focus();
+            }
+            break;
+          }
+        }
       }
       function checkPin() {
         const p = ["p1", "p2", "p3", "p4"]
@@ -2057,20 +2112,54 @@
       function renderAdmin() {
         if (!products.length) return;
         const avail = products.filter((p) => p.Pachka > 0 || p.Dona > 0);
+        const now = new Date();
+        
+        // Oxirgi yangilanish sanasi
+        const lastUpdate = localStorage.getItem('last_update') || new Date().toISOString();
+        const updateDate = new Date(lastUpdate);
+        document.getElementById("lupdate").textContent =
+          `📅 ${updateDate.toLocaleDateString('uz-UZ')} ⏰ ${updateDate.toLocaleTimeString('uz-UZ', {hour: '2-digit', minute: '2-digit'})}`;
+
+        // Statistika
         document.getElementById("at").textContent = products.length;
         document.getElementById("aa").textContent = avail.length;
-        document.getElementById("ap").textContent = products.filter(
-          (p) => p.Pachka > 0,
-        ).length;
-        document.getElementById("af").textContent = [
-          ...new Set(products.map((p) => p.Zavod).filter(Boolean)),
-        ].length;
-        document.getElementById("lupdate").textContent =
-          "Faol • " +
-          new Date().toLocaleTimeString("uz-UZ", {
-            hour: "2-digit",
-            minute: "2-digit",
-          });
+        document.getElementById("ap").textContent = products.filter((p) => p.Pachka > 0).length;
+        
+        // Muddati tugayotgan dorilar (3 oy ichida)
+        const expiring = products.filter(p => {
+          if (!p.Srok || p.Srok === '-') return false;
+          const [month, year] = p.Srok.split('.').map(Number);
+          const expDate = new Date(year, month - 1);
+          const threeMonthsFromNow = new Date(now.getFullYear(), now.getMonth() + 3);
+          return expDate <= threeMonthsFromNow && expDate > now;
+        });
+        document.getElementById("aexp").textContent = expiring.length;
+
+        // Muddati yaqin dorilar ro'yxati
+        if (expiring.length > 0) {
+          document.getElementById("explist").innerHTML = expiring
+            .sort((a, b) => {
+              const dateA = new Date(a.Srok.split('.')[1], a.Srok.split('.')[0] - 1);
+              const dateB = new Date(b.Srok.split('.')[1], b.Srok.split('.')[0] - 1);
+              return dateA - dateB;
+            })
+            .slice(0, 10)
+            .map(p => {
+              const daysLeft = Math.ceil((new Date(p.Srok.split('.')[1], p.Srok.split('.')[0] - 1) - now) / (1000 * 60 * 60 * 24));
+              const urgency = daysLeft <= 30 ? '🔴' : daysLeft <= 60 ? '🟡' : '🟢';
+              return `
+                <div class="topitem" style="border-left: 4px solid ${daysLeft <= 30 ? '#e74c3c' : daysLeft <= 60 ? '#f39c12' : '#27ae60'}">
+                  <div class="toprank" style="background: ${daysLeft <= 30 ? '#e74c3c' : daysLeft <= 60 ? '#f39c12' : '#27ae60'}">${urgency}</div>
+                  <div class="topname">${p.Nomi}</div>
+                  <div class="topcnt">${p.Srok} (${daysLeft} kun)</div>
+                </div>
+              `;
+            }).join('');
+        } else {
+          document.getElementById("explist").innerHTML = '<div style="text-align: center; padding: 20px; color: var(--text2);">✅ Hozircha muddati yaqin qolgan dorilar yo\'q</div>';
+        }
+
+        // Eng ko'p mavjud dorilar
         const top = [...avail]
           .sort((a, b) => b.Pachka + b.Dona - (a.Pachka + a.Dona))
           .slice(0, 8);
