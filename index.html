@@ -1,650 +1,1956 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zuxro Farm 2020 | Dorixona</title>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--primary:#1a6fd4;--pdark:#0d4fa0;--plight:#4a9af5;--accent:#00c9a7;--bg:#f0f4fb;--text:#1a2340;--text2:#5a6a8a;--border:#dde6f5;--shadow:0 4px 24px rgba(26,111,212,0.10);--r:18px}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zuxro Farm 2020 | Dorixona</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #1a6fd4;
+        --pdark: #0d4fa0;
+        --plight: #4a9af5;
+        --accent: #00c9a7;
+        --bg: #f0f4fb;
+        --text: #1a2340;
+        --text2: #5a6a8a;
+        --border: #dde6f5;
+        --shadow: 0 4px 24px rgba(26, 111, 212, 0.1);
+        --r: 18px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
 
-/* HEADER */
-.header{background:linear-gradient(135deg,var(--pdark) 0%,var(--primary) 60%,var(--plight) 100%);position:sticky;top:0;z-index:200;box-shadow:0 4px 20px rgba(26,111,212,0.25)}
-.header-top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 8px}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-icon{width:40px;height:40px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.logo-text{font-family:'Nunito',sans-serif;font-weight:900;font-size:17px;color:#fff;line-height:1.1}
-.logo-text span{display:block;font-size:10px;font-weight:500;opacity:0.8;letter-spacing:1px}
-.header-right{display:flex;align-items:center;gap:8px}
-.htime{background:rgba(255,255,255,0.15);padding:5px 11px;border-radius:20px;font-size:11px;color:#fff;font-weight:600}
-.cart-btn{background:rgba(255,255,255,0.2);border:none;border-radius:11px;padding:7px 12px;color:#fff;font-size:12px;font-weight:700;cursor:pointer;position:relative;display:flex;align-items:center;gap:5px}
-.cart-badge{background:#ff4757;color:#fff;border-radius:50%;width:17px;height:17px;font-size:9px;font-weight:800;display:none;align-items:center;justify-content:center;position:absolute;top:-5px;right:-5px}
-.nav{display:flex;padding:0 8px;gap:2px;overflow-x:auto;scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}
-.nav-btn{padding:9px 14px;background:transparent;border:none;color:rgba(255,255,255,0.65);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.3s;border-radius:8px 8px 0 0}
-.nav-btn.active{color:#fff;border-bottom-color:var(--accent);background:rgba(255,255,255,0.1)}
+      /* HEADER */
+      .header {
+        background: linear-gradient(
+          135deg,
+          var(--pdark) 0%,
+          var(--primary) 60%,
+          var(--plight) 100%
+        );
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        box-shadow: 0 4px 20px rgba(26, 111, 212, 0.25);
+      }
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px 8px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+      .logo-text {
+        font-family: "Nunito", sans-serif;
+        font-weight: 900;
+        font-size: 17px;
+        color: #fff;
+        line-height: 1.1;
+      }
+      .logo-text span {
+        display: block;
+        font-size: 10px;
+        font-weight: 500;
+        opacity: 0.8;
+        letter-spacing: 1px;
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .htime {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 5px 11px;
+        border-radius: 20px;
+        font-size: 11px;
+        color: #fff;
+        font-weight: 600;
+      }
+      .cart-btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 11px;
+        padding: 7px 12px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .cart-badge {
+        background: #ff4757;
+        color: #fff;
+        border-radius: 50%;
+        width: 17px;
+        height: 17px;
+        font-size: 9px;
+        font-weight: 800;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+      }
+      .nav {
+        display: flex;
+        padding: 0 8px;
+        gap: 2px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-btn {
+        padding: 9px 14px;
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.65);
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+        border-radius: 8px 8px 0 0;
+      }
+      .nav-btn.active {
+        color: #fff;
+        border-bottom-color: var(--accent);
+        background: rgba(255, 255, 255, 0.1);
+      }
 
-/* SLIDER */
-.slider-wrap{overflow:hidden;margin-bottom:12px;border-radius:var(--r)}
-.slider-track{display:flex;transition:transform 0.5s ease}
-.slide{min-width:100%;padding:20px 18px;border-radius:var(--r);position:relative;overflow:hidden}
-.s1{background:linear-gradient(135deg,#1a6fd4,#4a9af5)}
-.s2{background:linear-gradient(135deg,#00c9a7,#00a880)}
-.s3{background:linear-gradient(135deg,#f5a623,#e07b00)}
-.slide h2{color:#fff;font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;margin-bottom:4px}
-.slide p{color:rgba(255,255,255,0.85);font-size:12px;line-height:1.5}
-.slide-icon{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:50px;opacity:0.12}
-.dots{display:flex;gap:5px;justify-content:center;margin-top:8px}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.3s}
-.dot.active{background:var(--primary);width:18px;border-radius:3px}
+      /* SLIDER */
+      .slider-wrap {
+        overflow: hidden;
+        margin-bottom: 12px;
+        border-radius: var(--r);
+      }
+      .slider-track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .slide {
+        min-width: 100%;
+        padding: 20px 18px;
+        border-radius: var(--r);
+        position: relative;
+        overflow: hidden;
+      }
+      .s1 {
+        background: linear-gradient(135deg, #1a6fd4, #4a9af5);
+      }
+      .s2 {
+        background: linear-gradient(135deg, #00c9a7, #00a880);
+      }
+      .s3 {
+        background: linear-gradient(135deg, #f5a623, #e07b00);
+      }
+      .slide h2 {
+        color: #fff;
+        font-family: "Nunito", sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        margin-bottom: 4px;
+      }
+      .slide p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+      .slide-icon {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        opacity: 0.12;
+      }
+      .dots {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 8px;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--border);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .dot.active {
+        background: var(--primary);
+        width: 18px;
+        border-radius: 3px;
+      }
 
-/* PAGES */
-.page{display:none;padding:12px 13px;min-height:calc(100vh - 115px)}
-.page.active{display:block;animation:fadeIn 0.3s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+      /* PAGES */
+      .page {
+        display: none;
+        padding: 12px 13px;
+        min-height: calc(100vh - 115px);
+      }
+      .page.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(7px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-/* SEARCH */
-.srch-wrap{position:relative;margin-bottom:9px}
-.srch-ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:15px;pointer-events:none}
-.srch-input{width:100%;padding:12px 13px 12px 40px;border:2px solid var(--border);border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:14px;background:#fff;color:var(--text);outline:none;transition:border-color 0.3s,box-shadow 0.3s}
-.srch-input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(26,111,212,0.11)}
+      /* SEARCH */
+      .srch-wrap {
+        position: relative;
+        margin-bottom: 9px;
+      }
+      .srch-ico {
+        position: absolute;
+        left: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+        pointer-events: none;
+      }
+      .srch-input {
+        width: 100%;
+        padding: 12px 13px 12px 40px;
+        border: 2px solid var(--border);
+        border-radius: var(--r);
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        background: #fff;
+        color: var(--text);
+        outline: none;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .srch-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(26, 111, 212, 0.11);
+      }
 
-/* FILTER */
-.frow{display:flex;gap:6px;margin-bottom:9px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.frow::-webkit-scrollbar{display:none}
-.fbtn{padding:6px 12px;border-radius:20px;border:2px solid var(--border);background:#fff;font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap;transition:all 0.2s}
-.fbtn.active{background:var(--primary);border-color:var(--primary);color:#fff}
+      /* FILTER */
+      .frow {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 9px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+      }
+      .frow::-webkit-scrollbar {
+        display: none;
+      }
+      .fbtn {
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 2px solid var(--border);
+        background: #fff;
+        font-family: "Outfit", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text2);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.2s;
+      }
+      .fbtn.active {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+      }
 
-/* STATS */
-.stats-bar{background:linear-gradient(135deg,var(--primary),var(--plight));border-radius:var(--r);padding:11px 15px;color:#fff;display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
-.si{text-align:center}
-.sn{font-size:19px;font-weight:800;font-family:'Nunito',sans-serif}
-.sl{font-size:10px;opacity:0.8}
-.sdiv{width:1px;height:32px;background:rgba(255,255,255,0.3)}
+      /* STATS */
+      .stats-bar {
+        background: linear-gradient(135deg, var(--primary), var(--plight));
+        border-radius: var(--r);
+        padding: 11px 15px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 11px;
+      }
+      .si {
+        text-align: center;
+      }
+      .sn {
+        font-size: 19px;
+        font-weight: 800;
+        font-family: "Nunito", sans-serif;
+      }
+      .sl {
+        font-size: 10px;
+        opacity: 0.8;
+      }
+      .sdiv {
+        width: 1px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.3);
+      }
 
-/* GRID */
-#pgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-@media(min-width:580px){#pgrid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:860px){#pgrid{grid-template-columns:repeat(4,1fr)}}
+      /* GRID */
+      #pgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+      }
+      @media (min-width: 580px) {
+        #pgrid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (min-width: 860px) {
+        #pgrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
 
-/* CARD */
-.card{background:#fff;border-radius:var(--r);padding:11px;border:1.5px solid var(--border);display:flex;flex-direction:column;gap:5px;transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
-.card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(26,111,212,0.13)}
-.cname{font-weight:700;font-size:11px;color:var(--text);line-height:1.4;min-height:29px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.cprice{font-family:'Nunito',sans-serif;font-weight:900;font-size:13px;color:var(--primary)}
-.cdona{font-size:10px;color:var(--accent);font-weight:600;margin-top:-3px}
-.cstock{font-size:10px;color:var(--text2);margin-top:-2px}
-.cbadges{display:flex;gap:3px;flex-wrap:wrap}
-.badge{padding:2px 6px;border-radius:6px;font-size:9px;font-weight:700}
-.bg{background:#e8f9f5;color:#00a880}
-.bb{background:#e8f0fe;color:var(--primary)}
-.br{background:#ffeaea;color:#e74c3c}
-.cinfo{font-size:9px;color:var(--text2)}
-.addbtn{background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;border:none;border-radius:8px;padding:6px 8px;font-size:10px;font-weight:700;cursor:pointer;margin-top:2px;transition:opacity 0.2s;font-family:'Outfit',sans-serif}
-.addbtn.added{background:linear-gradient(135deg,var(--accent),#00a880)}
+      /* CARD */
+      .card {
+        background: #fff;
+        border-radius: var(--r);
+        padding: 11px;
+        border: 1.5px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(26, 111, 212, 0.13);
+      }
+      .cname {
+        font-weight: 700;
+        font-size: 11px;
+        color: var(--text);
+        line-height: 1.4;
+        min-height: 29px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .cprice {
+        font-family: "Nunito", sans-serif;
+        font-weight: 900;
+        font-size: 13px;
+        color: var(--primary);
+      }
+      .cdona {
+        font-size: 10px;
+        color: var(--accent);
+        font-weight: 600;
+        margin-top: -3px;
+      }
+      .cstock {
+        font-size: 10px;
+        color: var(--text2);
+        margin-top: -2px;
+      }
+      .cbadges {
+        display: flex;
+        gap: 3px;
+        flex-wrap: wrap;
+      }
+      .badge {
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-size: 9px;
+        font-weight: 700;
+      }
+      .bg {
+        background: #e8f9f5;
+        color: #00a880;
+      }
+      .bb {
+        background: #e8f0fe;
+        color: var(--primary);
+      }
+      .br {
+        background: #ffeaea;
+        color: #e74c3c;
+      }
+      .cinfo {
+        font-size: 9px;
+        color: var(--text2);
+      }
+      .addbtn {
+        background: linear-gradient(135deg, var(--primary), var(--plight));
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 6px 8px;
+        font-size: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 2px;
+        transition: opacity 0.2s;
+        font-family: "Outfit", sans-serif;
+      }
+      .addbtn.added {
+        background: linear-gradient(135deg, var(--accent), #00a880);
+      }
 
-/* LOADING */
-.loading{grid-column:1/-1;text-align:center;padding:48px 20px;color:var(--text2)}
-.spin{width:32px;height:32px;border:4px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:sp 0.8s linear infinite;margin:0 auto 11px}
-@keyframes sp{to{transform:rotate(360deg)}}
-.empty{grid-column:1/-1;text-align:center;padding:48px 20px;color:var(--text2)}
+      /* LOADING */
+      .loading {
+        grid-column: 1/-1;
+        text-align: center;
+        padding: 48px 20px;
+        color: var(--text2);
+      }
+      .spin {
+        width: 32px;
+        height: 32px;
+        border: 4px solid var(--border);
+        border-top-color: var(--primary);
+        border-radius: 50%;
+        animation: sp 0.8s linear infinite;
+        margin: 0 auto 11px;
+      }
+      @keyframes sp {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .empty {
+        grid-column: 1/-1;
+        text-align: center;
+        padding: 48px 20px;
+        color: var(--text2);
+      }
 
-/* OVERLAY / BOTTOM SHEET */
-.overlay{display:none;position:fixed;inset:0;background:rgba(10,20,50,0.55);z-index:500;backdrop-filter:blur(4px);align-items:flex-end;justify-content:center}
-.overlay.open{display:flex}
-.bsheet{background:#fff;border-radius:24px 24px 0 0;padding:17px 17px 28px;width:100%;max-width:500px;animation:su 0.3s ease;max-height:88vh;overflow-y:auto}
-@keyframes su{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 13px}
-.mtitle{font-size:15px;font-weight:800;font-family:'Nunito',sans-serif;margin-bottom:11px}
+      /* OVERLAY / BOTTOM SHEET */
+      .overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 20, 50, 0.55);
+        z-index: 500;
+        backdrop-filter: blur(4px);
+        align-items: flex-end;
+        justify-content: center;
+      }
+      .overlay.open {
+        display: flex;
+      }
+      .bsheet {
+        background: #fff;
+        border-radius: 24px 24px 0 0;
+        padding: 17px 17px 28px;
+        width: 100%;
+        max-width: 500px;
+        animation: su 0.3s ease;
+        max-height: 88vh;
+        overflow-y: auto;
+      }
+      @keyframes su {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .handle {
+        width: 36px;
+        height: 4px;
+        background: var(--border);
+        border-radius: 2px;
+        margin: 0 auto 13px;
+      }
+      .mtitle {
+        font-size: 15px;
+        font-weight: 800;
+        font-family: "Nunito", sans-serif;
+        margin-bottom: 11px;
+      }
 
-/* INFO ROWS */
-.irow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
-.irow:last-of-type{border-bottom:none}
-.ilbl{color:var(--text2);font-weight:500}
-.ival{font-weight:700}
-.iprice{font-size:18px;font-weight:900;color:var(--primary);font-family:'Nunito',sans-serif}
-.idona{font-size:15px;font-weight:900;color:var(--accent);font-family:'Nunito',sans-serif}
+      /* INFO ROWS */
+      .irow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 13px;
+      }
+      .irow:last-of-type {
+        border-bottom: none;
+      }
+      .ilbl {
+        color: var(--text2);
+        font-weight: 500;
+      }
+      .ival {
+        font-weight: 700;
+      }
+      .iprice {
+        font-size: 18px;
+        font-weight: 900;
+        color: var(--primary);
+        font-family: "Nunito", sans-serif;
+      }
+      .idona {
+        font-size: 15px;
+        font-weight: 900;
+        color: var(--accent);
+        font-family: "Nunito", sans-serif;
+      }
 
-/* QTY */
-.qbox{background:var(--bg);border-radius:13px;padding:10px 13px;margin:10px 0;display:flex;align-items:center;gap:8px}
-.qlbl{font-size:12px;color:var(--text2);font-weight:600;flex:1}
-.qctrl{display:flex;align-items:center;gap:9px}
-.qbtn{width:29px;height:29px;border-radius:8px;border:2px solid var(--border);background:#fff;font-size:17px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--primary)}
-.qbtn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
-.qnum{font-size:16px;font-weight:800;font-family:'Nunito',sans-serif;min-width:24px;text-align:center}
-.qsum{text-align:center;font-size:12px;color:var(--text2);margin-bottom:8px}
-.qsum strong{color:var(--primary);font-size:15px;font-family:'Nunito',sans-serif}
+      /* QTY */
+      .qbox {
+        background: var(--bg);
+        border-radius: 13px;
+        padding: 10px 13px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .qlbl {
+        font-size: 12px;
+        color: var(--text2);
+        font-weight: 600;
+        flex: 1;
+      }
+      .qctrl {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      .qbtn {
+        width: 29px;
+        height: 29px;
+        border-radius: 8px;
+        border: 2px solid var(--border);
+        background: #fff;
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+      }
+      .qbtn:hover {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .qnum {
+        font-size: 16px;
+        font-weight: 800;
+        font-family: "Nunito", sans-serif;
+        min-width: 24px;
+        text-align: center;
+      }
+      .qnum-input {
+        font-size: 16px;
+        font-weight: 800;
+        font-family: "Nunito", sans-serif;
+        width: 60px;
+        text-align: center;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--text);
+        outline: none;
+        transition: border-color 0.3s;
+      }
+      .qnum-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(26, 111, 212, 0.1);
+      }
+      .qsum {
+        text-align: center;
+        font-size: 12px;
+        color: var(--text2);
+        margin-bottom: 8px;
+      }
+      .qsum strong {
+        color: var(--primary);
+        font-size: 15px;
+        font-family: "Nunito", sans-serif;
+      }
 
-/* BUTTONS */
-.pbtn{width:100%;padding:13px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;border:none;border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px}
-.gbtn{width:100%;padding:11px;background:var(--bg);color:var(--text2);border:none;border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;margin-top:7px}
-.sendbtn{width:100%;padding:13px;background:linear-gradient(135deg,var(--accent),#00a880);color:#fff;border:none;border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:8px}
+      /* BUTTONS */
+      .pbtn {
+        width: 100%;
+        padding: 13px;
+        background: linear-gradient(135deg, var(--primary), var(--plight));
+        color: #fff;
+        border: none;
+        border-radius: var(--r);
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 4px;
+      }
+      .gbtn {
+        width: 100%;
+        padding: 11px;
+        background: var(--bg);
+        color: var(--text2);
+        border: none;
+        border-radius: var(--r);
+        font-family: "Outfit", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 7px;
+      }
+      .sendbtn {
+        width: 100%;
+        padding: 13px;
+        background: linear-gradient(135deg, var(--accent), #00a880);
+        color: #fff;
+        border: none;
+        border-radius: var(--r);
+        font-family: "Outfit", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 8px;
+      }
 
-/* CHEK */
-.chek{background:#fff;border:2px dashed var(--border);border-radius:var(--r);padding:16px 14px;margin-bottom:13px}
-.chek-head{text-align:center;border-bottom:2px dashed var(--border);padding-bottom:11px;margin-bottom:11px}
-.chek-logo{font-size:24px;margin-bottom:2px}
-.chek-name{font-family:'Nunito',sans-serif;font-size:16px;font-weight:900}
-.chek-sub{font-size:10px;color:var(--text2);margin-top:1px}
-.chek-item{display:flex;gap:7px;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px}
-.chek-item:last-child{border-bottom:none}
-.chek-iname{flex:1;font-weight:600;line-height:1.4}
-.chek-iright{text-align:right;flex-shrink:0}
-.chek-iqty{font-size:9px;color:var(--text2)}
-.chek-iprice{font-weight:700;color:var(--primary);font-family:'Nunito',sans-serif}
-.chek-total{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-top:2px solid var(--text);margin-top:3px}
-.chek-tlbl{font-weight:700;font-size:13px}
-.chek-tsum{font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--primary)}
-.chek-foot{text-align:center;margin-top:11px;padding-top:9px;border-top:2px dashed var(--border);font-size:10px;color:var(--text2);line-height:1.8}
+      /* CHEK */
+      .chek {
+        background: #fff;
+        border: 2px dashed var(--border);
+        border-radius: var(--r);
+        padding: 16px 14px;
+        margin-bottom: 13px;
+      }
+      .chek-head {
+        text-align: center;
+        border-bottom: 2px dashed var(--border);
+        padding-bottom: 11px;
+        margin-bottom: 11px;
+      }
+      .chek-logo {
+        font-size: 24px;
+        margin-bottom: 2px;
+      }
+      .chek-name {
+        font-family: "Nunito", sans-serif;
+        font-size: 16px;
+        font-weight: 900;
+      }
+      .chek-sub {
+        font-size: 10px;
+        color: var(--text2);
+        margin-top: 1px;
+      }
+      .chek-item {
+        display: flex;
+        gap: 7px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 11px;
+      }
+      .chek-item:last-child {
+        border-bottom: none;
+      }
+      .chek-iname {
+        flex: 1;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      .chek-iright {
+        text-align: right;
+        flex-shrink: 0;
+      }
+      .chek-iqty {
+        font-size: 9px;
+        color: var(--text2);
+      }
+      .chek-iprice {
+        font-weight: 700;
+        color: var(--primary);
+        font-family: "Nunito", sans-serif;
+      }
+      .chek-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 0;
+        border-top: 2px solid var(--text);
+        margin-top: 3px;
+      }
+      .chek-tlbl {
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .chek-tsum {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--primary);
+      }
+      .chek-foot {
+        text-align: center;
+        margin-top: 11px;
+        padding-top: 9px;
+        border-top: 2px dashed var(--border);
+        font-size: 10px;
+        color: var(--text2);
+        line-height: 1.8;
+      }
 
-/* CART ITEMS EDIT */
-.cart-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.cart-title{font-family:'Nunito',sans-serif;font-size:18px;font-weight:900}
-.cart-clear{background:#ffeaea;color:#e74c3c;border:none;border-radius:9px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer}
-.cirow{display:flex;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid var(--border)}
-.cirow:last-child{border-bottom:none}
-.ciname{flex:1;font-size:11px;font-weight:600;line-height:1.4}
-.cictrl{display:flex;align-items:center;gap:6px}
-.cibtn{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--border);background:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--primary)}
-.ciamount{font-size:11px;font-weight:700;min-width:16px;text-align:center}
-.ciprice{font-size:11px;font-weight:700;color:var(--primary);font-family:'Nunito',sans-serif;min-width:56px;text-align:right}
-.cidel{background:none;border:none;cursor:pointer;font-size:13px;color:#e74c3c;padding:3px}
-.cart-empty{text-align:center;padding:34px 20px;color:var(--text2)}
-.edit-title{font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;margin:12px 0 8px}
+      /* CART ITEMS EDIT */
+      .cart-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+      .cart-title {
+        font-family: "Nunito", sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+      }
+      .cart-clear {
+        background: #ffeaea;
+        color: #e74c3c;
+        border: none;
+        border-radius: 9px;
+        padding: 5px 10px;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .cirow {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .cirow:last-child {
+        border-bottom: none;
+      }
+      .ciname {
+        flex: 1;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      .cictrl {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .cibtn {
+        width: 24px;
+        height: 24px;
+        border-radius: 7px;
+        border: 1.5px solid var(--border);
+        background: #fff;
+        font-size: 13px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+      }
+      .ciamount {
+        font-size: 11px;
+        font-weight: 700;
+        min-width: 16px;
+        text-align: center;
+      }
+      .ciprice {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--primary);
+        font-family: "Nunito", sans-serif;
+        min-width: 56px;
+        text-align: right;
+      }
+      .cidel {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        color: #e74c3c;
+        padding: 3px;
+      }
+      .cart-empty {
+        text-align: center;
+        padding: 34px 20px;
+        color: var(--text2);
+      }
+      .edit-title {
+        font-family: "Nunito", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        margin: 12px 0 8px;
+      }
 
-/* ADMIN */
-.alock{background:#fff;border-radius:var(--r);padding:26px 18px;text-align:center;box-shadow:var(--shadow)}
-.pin-row{display:flex;gap:9px;justify-content:center;margin-bottom:13px}
-.pin-row input{width:48px;height:50px;text-align:center;font-size:21px;font-weight:800;border:2px solid var(--border);border-radius:11px;outline:none;font-family:'Nunito',sans-serif}
-.pin-row input:focus{border-color:var(--primary)}
-.pbtn2{padding:11px 26px;background:var(--primary);color:#fff;border:none;border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
-.acontent{display:none}
-.acontent.show{display:block}
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:13px}
-@media(min-width:580px){.agrid{grid-template-columns:repeat(4,1fr)}}
-.acard{background:#fff;border-radius:var(--r);padding:13px 11px;text-align:center;box-shadow:var(--shadow);border:1.5px solid var(--border)}
-.aico{font-size:24px;margin-bottom:5px}
-.anum{font-family:'Nunito',sans-serif;font-size:21px;font-weight:900;color:var(--primary)}
-.albl{font-size:11px;color:var(--text2);font-weight:600;margin-top:2px}
-.stitle{font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;margin-bottom:9px}
-.topitem{background:#fff;border-radius:11px;padding:9px 12px;display:flex;align-items:center;gap:9px;border:1.5px solid var(--border);margin-bottom:6px}
-.toprank{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.topname{font-weight:600;font-size:11px;flex:1}
-.topcnt{font-weight:800;color:var(--primary);font-family:'Nunito',sans-serif;font-size:12px}
-.ubar{background:linear-gradient(135deg,var(--accent),#00a880);border-radius:var(--r);padding:12px 15px;color:#fff;margin-bottom:13px;display:flex;align-items:center;gap:11px}
+      /* ADMIN */
+      .alock {
+        background: #fff;
+        border-radius: var(--r);
+        padding: 26px 18px;
+        text-align: center;
+        box-shadow: var(--shadow);
+      }
+      .pin-row {
+        display: flex;
+        gap: 9px;
+        justify-content: center;
+        margin-bottom: 13px;
+      }
+      .pin-row input {
+        width: 48px;
+        height: 50px;
+        text-align: center;
+        font-size: 21px;
+        font-weight: 800;
+        border: 2px solid var(--border);
+        border-radius: 11px;
+        outline: none;
+        font-family: "Nunito", sans-serif;
+      }
+      .pin-row input:focus {
+        border-color: var(--primary);
+      }
+      .pbtn2 {
+        padding: 11px 26px;
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        border-radius: var(--r);
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .acontent {
+        display: none;
+      }
+      .acontent.show {
+        display: block;
+      }
+      .agrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+        margin-bottom: 13px;
+      }
+      @media (min-width: 580px) {
+        .agrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .acard {
+        background: #fff;
+        border-radius: var(--r);
+        padding: 13px 11px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+      }
+      .aico {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+      .anum {
+        font-family: "Nunito", sans-serif;
+        font-size: 21px;
+        font-weight: 900;
+        color: var(--primary);
+      }
+      .albl {
+        font-size: 11px;
+        color: var(--text2);
+        font-weight: 600;
+        margin-top: 2px;
+      }
+      .stitle {
+        font-family: "Nunito", sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        margin-bottom: 9px;
+      }
+      .topitem {
+        background: #fff;
+        border-radius: 11px;
+        padding: 9px 12px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        border: 1.5px solid var(--border);
+        margin-bottom: 6px;
+      }
+      .toprank {
+        width: 24px;
+        height: 24px;
+        border-radius: 7px;
+        background: linear-gradient(135deg, var(--primary), var(--plight));
+        color: #fff;
+        font-weight: 800;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .topname {
+        font-weight: 600;
+        font-size: 11px;
+        flex: 1;
+      }
+      .topcnt {
+        font-weight: 800;
+        color: var(--primary);
+        font-family: "Nunito", sans-serif;
+        font-size: 12px;
+      }
+      .ubar {
+        background: linear-gradient(135deg, var(--accent), #00a880);
+        border-radius: var(--r);
+        padding: 12px 15px;
+        color: #fff;
+        margin-bottom: 13px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
 
-/* LOCATION */
-.mapbox{border-radius:var(--r);overflow:hidden;margin-bottom:11px;box-shadow:var(--shadow);border:2px solid var(--border)}
-.mapbox iframe{width:100%;height:240px;display:block}
-.ccard{background:#fff;border-radius:var(--r);padding:15px;box-shadow:var(--shadow);border:1.5px solid var(--border);margin-bottom:10px}
-.crow{display:flex;align-items:center;gap:11px;padding:7px 0;border-bottom:1px solid var(--border)}
-.crow:last-child{border-bottom:none}
-.cico{width:37px;height:37px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.clbl{font-size:10px;color:var(--text2)}
-.cval{font-weight:700;font-size:13px}
-.hcard{background:linear-gradient(135deg,var(--primary),var(--plight));border-radius:var(--r);padding:15px;color:#fff;margin-bottom:10px}
-.htitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;margin-bottom:9px}
-.hrow{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,0.15)}
-.hrow:last-child{border-bottom:none}
-.hopen{font-weight:700;color:#b3f5e8}
+      /* LOCATION */
+      .mapbox {
+        border-radius: var(--r);
+        overflow: hidden;
+        margin-bottom: 11px;
+        box-shadow: var(--shadow);
+        border: 2px solid var(--border);
+      }
+      .mapbox iframe {
+        width: 100%;
+        height: 240px;
+        display: block;
+      }
+      .ccard {
+        background: #fff;
+        border-radius: var(--r);
+        padding: 15px;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+        margin-bottom: 10px;
+      }
+      .crow {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 7px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .crow:last-child {
+        border-bottom: none;
+      }
+      .cico {
+        width: 37px;
+        height: 37px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--primary), var(--plight));
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+      .clbl {
+        font-size: 10px;
+        color: var(--text2);
+      }
+      .cval {
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .hcard {
+        background: linear-gradient(135deg, var(--primary), var(--plight));
+        border-radius: var(--r);
+        padding: 15px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .htitle {
+        font-family: "Nunito", sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+        margin-bottom: 9px;
+      }
+      .hrow {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .hrow:last-child {
+        border-bottom: none;
+      }
+      .hopen {
+        font-weight: 700;
+        color: #b3f5e8;
+      }
 
-/* ABOUT */
-.hero{background:linear-gradient(135deg,var(--pdark),var(--primary),var(--plight));border-radius:var(--r);padding:24px 18px;color:#fff;text-align:center;margin-bottom:11px;position:relative;overflow:hidden}
-.hero::before{content:'💊';position:absolute;font-size:95px;opacity:0.07;top:-8px;right:-8px}
-.hero h1{font-family:'Nunito',sans-serif;font-size:23px;font-weight:900;margin-bottom:5px}
-.hero p{font-size:12px;opacity:0.85;line-height:1.6}
-.ybadge{display:inline-block;background:rgba(255,255,255,0.2);padding:3px 12px;border-radius:20px;font-size:10px;font-weight:700;margin-bottom:8px}
-.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:11px}
-.fcard{background:#fff;border-radius:var(--r);padding:13px 10px;text-align:center;box-shadow:var(--shadow);border:1.5px solid var(--border)}
-.fico{font-size:24px;margin-bottom:6px}
-.ftitle{font-weight:800;font-size:12px;margin-bottom:3px;font-family:'Nunito',sans-serif}
-.fdesc{font-size:10px;color:var(--text2);line-height:1.5}
-.atxt{background:#fff;border-radius:var(--r);padding:15px;box-shadow:var(--shadow);border:1.5px solid var(--border);font-size:12px;line-height:1.8;color:var(--text2);margin-bottom:11px}
-.srow{display:flex;gap:9px}
-.sbtn{flex:1;padding:12px;border-radius:var(--r);border:none;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none}
-.stg{background:linear-gradient(135deg,#229ed9,#1a7ab5);color:#fff}
-.scall{background:linear-gradient(135deg,var(--accent),#00a880);color:#fff}
-</style>
-</head>
-<body>
+      /* ABOUT */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--pdark),
+          var(--primary),
+          var(--plight)
+        );
+        border-radius: var(--r);
+        padding: 24px 18px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 11px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "💊";
+        position: absolute;
+        font-size: 95px;
+        opacity: 0.07;
+        top: -8px;
+        right: -8px;
+      }
+      .hero h1 {
+        font-family: "Nunito", sans-serif;
+        font-size: 23px;
+        font-weight: 900;
+        margin-bottom: 5px;
+      }
+      .hero p {
+        font-size: 12px;
+        opacity: 0.85;
+        line-height: 1.6;
+      }
+      .ybadge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 3px 12px;
+        border-radius: 20px;
+        font-size: 10px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .fgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+        margin-bottom: 11px;
+      }
+      .fcard {
+        background: #fff;
+        border-radius: var(--r);
+        padding: 13px 10px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+      }
+      .fico {
+        font-size: 24px;
+        margin-bottom: 6px;
+      }
+      .ftitle {
+        font-weight: 800;
+        font-size: 12px;
+        margin-bottom: 3px;
+        font-family: "Nunito", sans-serif;
+      }
+      .fdesc {
+        font-size: 10px;
+        color: var(--text2);
+        line-height: 1.5;
+      }
+      .atxt {
+        background: #fff;
+        border-radius: var(--r);
+        padding: 15px;
+        box-shadow: var(--shadow);
+        border: 1.5px solid var(--border);
+        font-size: 12px;
+        line-height: 1.8;
+        color: var(--text2);
+        margin-bottom: 11px;
+      }
+      .srow {
+        display: flex;
+        gap: 9px;
+      }
+      .sbtn {
+        flex: 1;
+        padding: 12px;
+        border-radius: var(--r);
+        border: none;
+        font-family: "Outfit", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-decoration: none;
+      }
+      .stg {
+        background: linear-gradient(135deg, #229ed9, #1a7ab5);
+        color: #fff;
+      }
+      .scall {
+        background: linear-gradient(135deg, var(--accent), #00a880);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="logo">
+          <div class="logo-icon">💊</div>
+          <div class="logo-text">
+            Zuxro Farm <span>2020 • Quva tumani</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="htime" id="htime">⏰ --:--</div>
+          <button class="cart-btn" onclick="openCart()">
+            🛒 Savat
+            <span class="cart-badge" id="cbadge">0</span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn active" onclick="showPage('catalog', this)">
+          💊 Katalog
+        </button>
+        <button class="nav-btn" onclick="showPage('admin', this)">
+          📊 Admin
+        </button>
+        <button class="nav-btn" onclick="showPage('location', this)">
+          📍 Manzil
+        </button>
+        <button class="nav-btn" onclick="showPage('about', this)">
+          🏥 Haqida
+        </button>
+      </nav>
+    </header>
 
-<header class="header">
-  <div class="header-top">
-    <div class="logo">
-      <div class="logo-icon">💊</div>
-      <div class="logo-text">Zuxro Farm <span>2020 • Quva tumani</span></div>
-    </div>
-    <div class="header-right">
-      <div class="htime" id="htime">⏰ --:--</div>
-      <button class="cart-btn" onclick="openCart()">
-        🛒 Savat
-        <span class="cart-badge" id="cbadge">0</span>
-      </button>
-    </div>
-  </div>
-  <nav class="nav">
-    <button class="nav-btn active" onclick="showPage('catalog',this)">💊 Katalog</button>
-    <button class="nav-btn" onclick="showPage('admin',this)">📊 Admin</button>
-    <button class="nav-btn" onclick="showPage('location',this)">📍 Manzil</button>
-    <button class="nav-btn" onclick="showPage('about',this)">🏥 Haqida</button>
-  </nav>
-</header>
-
-<!-- CATALOG -->
-<div class="page active" id="page-catalog">
-  <div class="slider-wrap">
-    <div class="slider-track" id="strack">
-      <div class="slide s1"><h2>💊 Zuxro Farm 2020</h2><p>Quva tumanidagi ishonchli dorixona.<br>Keng assortiment, sifatli dorilar.</p><div class="slide-icon">💊</div></div>
-      <div class="slide s2"><h2>🕐 Har kuni 08:00–20:00</h2><p>Dam olish kunlari ham ochiq!<br>Qulay vaqtda xizmatdamiz.</p><div class="slide-icon">🕐</div></div>
-      <div class="slide s3"><h2>✅ Sifat kafolati</h2><p>Faqat sertifikatlangan dorilar.<br>Malakali farmatsevt maslahati.</p><div class="slide-icon">✅</div></div>
-    </div>
-    <div class="dots"><div class="dot active" onclick="gslide(0)"></div><div class="dot" onclick="gslide(1)"></div><div class="dot" onclick="gslide(2)"></div></div>
-  </div>
-  <div class="srch-wrap">
-    <span class="srch-ico">🔍</span>
-    <input type="text" class="srch-input" id="srch" placeholder="Dori nomini kiriting (o'z/ru)..." oninput="filterP()">
-  </div>
-  <div class="frow">
-    <button class="fbtn active" onclick="setF('all',this)">Hammasi</button>
-    <button class="fbtn" onclick="setF('available',this)">✅ Mavjud</button>
-    <button class="fbtn" onclick="setF('pachka',this)">📦 Pachkada</button>
-    <button class="fbtn" onclick="setF('cheap',this)">💰 Arzon</button>
-    <button class="fbtn" onclick="setF('expensive',this)">💎 Qimmat</button>
-  </div>
-  <div class="stats-bar">
-    <div class="si"><div class="sn" id="st-total">0</div><div class="sl">Jami dori</div></div>
-    <div class="sdiv"></div>
-    <div class="si"><div class="sn" id="st-avail">0</div><div class="sl">Mavjud</div></div>
-    <div class="sdiv"></div>
-    <div class="si"><div class="sn" id="st-shown">0</div><div class="sl">Ko'rsatildi</div></div>
-  </div>
-  <div id="pgrid"><div class="loading"><div class="spin"></div><p>Yuklanmoqda...</p></div></div>
-</div>
-
-<!-- ADMIN -->
-<div class="page" id="page-admin">
-  <div class="alock" id="alock">
-    <div style="font-size:48px;margin-bottom:11px">🔐</div>
-    <div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;margin-bottom:7px">Admin Panel</div>
-    <div style="color:var(--text2);font-size:12px;margin-bottom:15px">PIN kodni kiriting</div>
-    <div class="pin-row">
-      <input type="password" maxlength="1" id="p1" oninput="pnext(this,'p2')">
-      <input type="password" maxlength="1" id="p2" oninput="pnext(this,'p3')">
-      <input type="password" maxlength="1" id="p3" oninput="pnext(this,'p4')">
-      <input type="password" maxlength="1" id="p4" oninput="pcheck()">
-    </div>
-    <div id="perr" style="color:#e74c3c;font-size:12px;margin-bottom:9px;display:none">❌ Noto'g'ri PIN</div>
-    <button class="pbtn2" onclick="checkPin()">Kirish</button>
-  </div>
-  <div class="acontent" id="acontent">
-    <div class="ubar"><div style="font-size:24px">🔄</div><div><div style="font-weight:800;font-size:14px">Baza holati</div><div style="font-size:11px;opacity:0.85" id="lupdate">...</div></div></div>
-    <div class="agrid">
-      <div class="acard"><div class="aico">💊</div><div class="anum" id="at">0</div><div class="albl">Jami dori</div></div>
-      <div class="acard"><div class="aico">✅</div><div class="anum" id="aa">0</div><div class="albl">Mavjud</div></div>
-      <div class="acard"><div class="aico">📦</div><div class="anum" id="ap">0</div><div class="albl">Pachkada</div></div>
-      <div class="acard"><div class="aico">🏭</div><div class="anum" id="af">0</div><div class="albl">Ishlab chiq.</div></div>
-    </div>
-    <div class="stitle">🏆 Eng ko'p mavjud dorilar</div>
-    <div id="toplist"></div>
-  </div>
-</div>
-
-<!-- LOCATION -->
-<div class="page" id="page-location">
-  <div class="mapbox"><iframe src="https://maps.google.com/maps?q=Quva+tumani,+Farg%27ona+viloyati&output=embed&z=14" allowfullscreen loading="lazy"></iframe></div>
-  <div class="ccard">
-    <div class="crow"><div class="cico">📍</div><div><div class="clbl">Manzil</div><div class="cval">Quva tumani, A.Yassaviy 133</div></div></div>
-    <a href="tel:+998882052520" style="text-decoration:none;color:inherit"><div class="crow"><div class="cico">📞</div><div><div class="clbl">Telefon</div><div class="cval">+998 88 205 25 20</div></div></div></a>
-    <div class="crow"><div class="cico">🏙️</div><div><div class="clbl">Viloyat</div><div class="cval">Farg'ona viloyati</div></div></div>
-  </div>
-  <div class="hcard">
-    <div class="htitle">🕐 Ish vaqti</div>
-    <div class="hrow"><span>Dushanba – Juma</span><span class="hopen">08:00 – 20:00</span></div>
-    <div class="hrow"><span>Shanba</span><span class="hopen">08:00 – 20:00</span></div>
-    <div class="hrow"><span>Yakshanba</span><span class="hopen">08:00 – 20:00</span></div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<div class="page" id="page-about">
-  <div class="hero">
-    <div class="ybadge">✨ 2020-yildan beri</div>
-    <h1>Zuxro Farm</h1>
-    <p>Quva tumanidagi ishonchli dorixona.<br>Sog'ligingiz — bizning ustuvorligimiz.</p>
-  </div>
-  <div class="fgrid">
-    <div class="fcard"><div class="fico">💊</div><div class="ftitle">Keng assortiment</div><div class="fdesc">Mingdan ortiq dori va tibbiy mahsulotlar</div></div>
-    <div class="fcard"><div class="fico">✅</div><div class="ftitle">Sifat kafolati</div><div class="fdesc">Faqat sertifikatlangan original dorilar</div></div>
-    <div class="fcard"><div class="fico">🕐</div><div class="ftitle">Qulay vaqt</div><div class="fdesc">Har kuni 08:00 dan 20:00 gacha</div></div>
-    <div class="fcard"><div class="fico">💰</div><div class="ftitle">Qulay narx</div><div class="fdesc">Hamyonbop narxlar va takliflar</div></div>
-  </div>
-  <div class="atxt"><strong>Zuxro Farm 2020</strong> — Farg'ona viloyati, Quva tumanida joylashgan zamonaviy dorixona. Biz 2020-yildan buyon aholi sog'ligini saqlashda ishonchli hamkor bo'lib kelmoqdamiz.<br><br>Dorixonamizda <strong>keng assortimentdagi dorilar</strong>, tibbiy asbob-uskunalar va shaxsiy gigiyena mahsulotlari mavjud.</div>
-  <div class="srow">
-    <a href="https://t.me/zuxrofarm" class="sbtn stg">✈️ Telegram</a>
-    <a href="tel:+998882052520" class="sbtn scall">📞 Qo'ng'iroq</a>
-  </div>
-</div>
-
-<!-- DORI MODAL -->
-<div class="overlay" id="dovl" onclick="closeDM(event)">
-  <div class="bsheet">
-    <div class="handle"></div>
-    <div class="mtitle" id="mn"></div>
-    <div id="mb"></div>
-    <div class="qbox">
-      <div class="qlbl">📦 Miqdor (dona):</div>
-      <div class="qctrl">
-        <button class="qbtn" onclick="chQty(-1)">−</button>
-        <div class="qnum" id="qnum">1</div>
-        <button class="qbtn" onclick="chQty(1)">+</button>
+    <!-- CATALOG -->
+    <div class="page active" id="page-catalog">
+      <div class="slider-wrap">
+        <div class="slider-track" id="strack">
+          <div class="slide s1">
+            <h2>💊 Zuxro Farm 2020</h2>
+            <p>
+              Quva tumanidagi ishonchli dorixona.<br />Keng assortiment, sifatli
+              dorilar.
+            </p>
+            <div class="slide-icon">💊</div>
+          </div>
+          <div class="slide s2">
+            <h2>🕐 Har kuni 08:00–20:00</h2>
+            <p>Dam olish kunlari ham ochiq!<br />Qulay vaqtda xizmatdamiz.</p>
+            <div class="slide-icon">🕐</div>
+          </div>
+          <div class="slide s3">
+            <h2>✅ Sifat kafolati</h2>
+            <p>
+              Faqat sertifikatlangan dorilar.<br />Malakali farmatsevt
+              maslahati.
+            </p>
+            <div class="slide-icon">✅</div>
+          </div>
+        </div>
+        <div class="dots">
+          <div class="dot active" onclick="gslide(0)"></div>
+          <div class="dot" onclick="gslide(1)"></div>
+          <div class="dot" onclick="gslide(2)"></div>
+        </div>
+      </div>
+      <div class="srch-wrap">
+        <span class="srch-ico">🔍</span>
+        <input
+          type="text"
+          class="srch-input"
+          id="srch"
+          placeholder="Dori nomini kiriting (o'z/ru)..."
+          oninput="filterP()"
+        />
+      </div>
+      <div class="frow">
+        <button class="fbtn active" onclick="setF('all', this)">Hammasi</button>
+        <button class="fbtn" onclick="setF('available', this)">
+          ✅ Mavjud
+        </button>
+        <button class="fbtn" onclick="setF('pachka', this)">📦 Pachkada</button>
+        <button class="fbtn" onclick="setF('cheap', this)">💰 Arzon</button>
+        <button class="fbtn" onclick="setF('expensive', this)">
+          💎 Qimmat
+        </button>
+      </div>
+      <div class="stats-bar">
+        <div class="si">
+          <div class="sn" id="st-total">0</div>
+          <div class="sl">Jami dori</div>
+        </div>
+        <div class="sdiv"></div>
+        <div class="si">
+          <div class="sn" id="st-avail">0</div>
+          <div class="sl">Mavjud</div>
+        </div>
+        <div class="sdiv"></div>
+        <div class="si">
+          <div class="sn" id="st-shown">0</div>
+          <div class="sl">Ko'rsatildi</div>
+        </div>
+      </div>
+      <div id="pgrid">
+        <div class="loading">
+          <div class="spin"></div>
+          <p>Yuklanmoqda...</p>
+        </div>
       </div>
     </div>
-    <div class="qsum">Jami: <strong id="qsum">0 so'm</strong></div>
-    <button class="pbtn" onclick="addCart()">🛒 Savatga qo'shish</button>
-    <button class="gbtn" onclick="closeDM()">Yopish</button>
-  </div>
-</div>
 
-<!-- SAVAT MODAL -->
-<div class="overlay" id="covl" onclick="closeCM(event)">
-  <div class="bsheet">
-    <div class="handle"></div>
-    <div class="cart-head">
-      <div class="cart-title">🛒 Savat</div>
-      <button class="cart-clear" onclick="clearCart()">🗑️ Tozalash</button>
+    <!-- ADMIN -->
+    <div class="page" id="page-admin">
+      <div class="alock" id="alock">
+        <div style="font-size: 48px; margin-bottom: 11px">🔐</div>
+        <div
+          style="
+            font-family: &quot;Nunito&quot;, sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 7px;
+          "
+        >
+          Admin Panel
+        </div>
+        <div style="color: var(--text2); font-size: 12px; margin-bottom: 15px">
+          PIN kodni kiriting
+        </div>
+        <div class="pin-row">
+          <input
+            type="password"
+            maxlength="1"
+            id="p1"
+            oninput="pnext(this, 'p2')"
+          />
+          <input
+            type="password"
+            maxlength="1"
+            id="p2"
+            oninput="pnext(this, 'p3')"
+          />
+          <input
+            type="password"
+            maxlength="1"
+            id="p3"
+            oninput="pnext(this, 'p4')"
+          />
+          <input type="password" maxlength="1" id="p4" oninput="pcheck()" />
+        </div>
+        <div
+          id="perr"
+          style="
+            color: #e74c3c;
+            font-size: 12px;
+            margin-bottom: 9px;
+            display: none;
+          "
+        >
+          ❌ Noto'g'ri PIN
+        </div>
+        <button class="pbtn2" onclick="checkPin()">Kirish</button>
+      </div>
+      <div class="acontent" id="acontent">
+        <div class="ubar">
+          <div style="font-size: 24px">🔄</div>
+          <div>
+            <div style="font-weight: 800; font-size: 14px">Baza holati</div>
+            <div style="font-size: 11px; opacity: 0.85" id="lupdate">...</div>
+          </div>
+        </div>
+        <div class="agrid">
+          <div class="acard">
+            <div class="aico">💊</div>
+            <div class="anum" id="at">0</div>
+            <div class="albl">Jami dori</div>
+          </div>
+          <div class="acard">
+            <div class="aico">✅</div>
+            <div class="anum" id="aa">0</div>
+            <div class="albl">Mavjud</div>
+          </div>
+          <div class="acard">
+            <div class="aico">📦</div>
+            <div class="anum" id="ap">0</div>
+            <div class="albl">Pachkada</div>
+          </div>
+          <div class="acard">
+            <div class="aico">🏭</div>
+            <div class="anum" id="af">0</div>
+            <div class="albl">Ishlab chiq.</div>
+          </div>
+        </div>
+        <div class="stitle">🏆 Eng ko'p mavjud dorilar</div>
+        <div id="toplist"></div>
+      </div>
     </div>
-    <div id="cbody"></div>
-  </div>
-</div>
 
-<script>
-// TELEGRAM
-if(window.Telegram&&window.Telegram.WebApp){Telegram.WebApp.ready();Telegram.WebApp.expand();}
+    <!-- LOCATION -->
+    <div class="page" id="page-location">
+      <div class="mapbox">
+        <iframe
+          src="https://maps.google.com/maps?q=Quva+tumani,+Farg%27ona+viloyati&output=embed&z=14"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="ccard">
+        <div class="crow">
+          <div class="cico">📍</div>
+          <div>
+            <div class="clbl">Manzil</div>
+            <div class="cval">Quva tumani, A.Yassaviy 133</div>
+          </div>
+        </div>
+        <a
+          href="tel:+998882052520"
+          style="text-decoration: none; color: inherit"
+          ><div class="crow">
+            <div class="cico">📞</div>
+            <div>
+              <div class="clbl">Telefon</div>
+              <div class="cval">+998 88 205 25 20</div>
+            </div>
+          </div></a
+        >
+        <div class="crow">
+          <div class="cico">🏙️</div>
+          <div>
+            <div class="clbl">Viloyat</div>
+            <div class="cval">Farg'ona viloyati</div>
+          </div>
+        </div>
+      </div>
+      <div class="hcard">
+        <div class="htitle">🕐 Ish vaqti</div>
+        <div class="hrow">
+          <span>Dushanba – Juma</span><span class="hopen">08:00 – 20:00</span>
+        </div>
+        <div class="hrow">
+          <span>Shanba</span><span class="hopen">08:00 – 20:00</span>
+        </div>
+        <div class="hrow">
+          <span>Yakshanba</span><span class="hopen">08:00 – 20:00</span>
+        </div>
+      </div>
+    </div>
 
-// VAQT
-function updTime(){
-  const n=new Date(),h=String(n.getHours()).padStart(2,'0'),m=String(n.getMinutes()).padStart(2,'0');
-  const open=n.getHours()>=8&&n.getHours()<20;
-  document.getElementById('htime').textContent=(open?'🟢':'🔴')+' '+h+':'+m;
-}
-updTime();setInterval(updTime,30000);
+    <!-- ABOUT -->
+    <div class="page" id="page-about">
+      <div class="hero">
+        <div class="ybadge">✨ 2020-yildan beri</div>
+        <h1>Zuxro Farm</h1>
+        <p>
+          Quva tumanidagi ishonchli dorixona.<br />Sog'ligingiz — bizning
+          ustuvorligimiz.
+        </p>
+      </div>
+      <div class="fgrid">
+        <div class="fcard">
+          <div class="fico">💊</div>
+          <div class="ftitle">Keng assortiment</div>
+          <div class="fdesc">Mingdan ortiq dori va tibbiy mahsulotlar</div>
+        </div>
+        <div class="fcard">
+          <div class="fico">✅</div>
+          <div class="ftitle">Sifat kafolati</div>
+          <div class="fdesc">Faqat sertifikatlangan original dorilar</div>
+        </div>
+        <div class="fcard">
+          <div class="fico">🕐</div>
+          <div class="ftitle">Qulay vaqt</div>
+          <div class="fdesc">Har kuni 08:00 dan 20:00 gacha</div>
+        </div>
+        <div class="fcard">
+          <div class="fico">💰</div>
+          <div class="ftitle">Qulay narx</div>
+          <div class="fdesc">Hamyonbop narxlar va takliflar</div>
+        </div>
+      </div>
+      <div class="atxt">
+        <strong>Zuxro Farm 2020</strong> — Farg'ona viloyati, Quva tumanida
+        joylashgan zamonaviy dorixona. Biz 2020-yildan buyon aholi sog'ligini
+        saqlashda ishonchli hamkor bo'lib kelmoqdamiz.<br /><br />Dorixonamizda
+        <strong>keng assortimentdagi dorilar</strong>, tibbiy asbob-uskunalar va
+        shaxsiy gigiyena mahsulotlari mavjud.
+      </div>
+      <div class="srow">
+        <a href="https://t.me/zuxrofarm" class="sbtn stg">✈️ Telegram</a>
+        <a href="tel:+998882052520" class="sbtn scall">📞 Qo'ng'iroq</a>
+      </div>
+    </div>
 
-// SLIDER
-let si=0;
-function gslide(i){si=i;document.getElementById('strack').style.transform='translateX(-'+i*100+'%)';document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===i));}
-setInterval(()=>gslide((si+1)%3),4000);
+    <!-- DORI MODAL -->
+    <div class="overlay" id="dovl" onclick="closeDM(event)">
+      <div class="bsheet">
+        <div class="handle"></div>
+        <div class="mtitle" id="mn"></div>
+        <div id="mb"></div>
+        <div class="qbox">
+          <div class="qlbl">📦 Miqdor (dona):</div>
+          <div class="qctrl">
+            <button class="qbtn" onclick="chQty(-1)">−</button>
+            <input
+              type="number"
+              id="qnum"
+              class="qnum-input"
+              value="1"
+              min="1"
+              max="999"
+              onclick="this.select()"
+              onchange="updateQtyFromInput()"
+            />
+            <button class="qbtn" onclick="chQty(1)">+</button>
+          </div>
+        </div>
+        <div class="qsum">Jami: <strong id="qsum">0 so'm</strong></div>
+        <button class="pbtn" onclick="addCart()">🛒 Savatga qo'shish</button>
+        <button class="gbtn" onclick="closeDM()">Yopish</button>
+      </div>
+    </div>
 
-// NAV
-function showPage(name,btn){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('page-'+name).classList.add('active');
-  if(btn)btn.classList.add('active');
-  if(name==='admin'&&document.getElementById('acontent').classList.contains('show'))renderAdmin();
-}
+    <!-- SAVAT MODAL -->
+    <div class="overlay" id="covl" onclick="closeCM(event)">
+      <div class="bsheet">
+        <div class="handle"></div>
+        <div class="cart-head">
+          <div class="cart-title">🛒 Savat</div>
+          <button class="cart-clear" onclick="clearCart()">🗑️ Tozalash</button>
+        </div>
+        <div id="cbody"></div>
+      </div>
+    </div>
 
-// O'ZBEK + KIRILL NORMALIZATSIYA
-function norm(t){
-  if(!t)return'';
-  t=String(t).toLowerCase();
-  const m={'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'yo','ж':'j','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'x','ц':'s','ч':'ch','ш':'sh','ъ':'','э':'e','ю':'yu','я':'ya','қ':'q','ғ':'g','ҳ':'h','ў':'o'};
-  for(const[k,v]of Object.entries(m))t=t.replaceAll(k,v);
-  return t.replace(/\s+/g,' ').trim();
-}
+    <script>
+      // TELEGRAM
+      if (window.Telegram && window.Telegram.WebApp) {
+        Telegram.WebApp.ready();
+        Telegram.WebApp.expand();
+      }
 
-// SROK: "8.2026" → "08.2026"
-function fmtSrok(s){
-  if(!s||['nan','none','undefined','null'].includes(String(s).toLowerCase().trim()))return'—';
-  s=String(s).trim();
-  const r=s.match(/^(\d{1,2})\.(\d{4})$/);
-  return r?r[1].padStart(2,'0')+'.'+r[2]:s;
-}
-// 1 PACHKADA NECHTA DONA BORLIGINI ANIQLASH
-function getPkgSize(name) {
-    if (!name) return null;
-    
-    // 1. № belgisidan keyin kelgan raqamni topish (masalan: №30, №100)
-    // 2. Yoki "30 ta", "10 tab", "20 amp" kabi yozuvlarni topish
-    const m = String(name).match(/[№#No]\.?\s*(\d+)/i) || 
-              String(name).match(/(\d+)\s*(ta|шт|dona|tab|капс|amp|таб)/i);
-    
-    if (m) {
-        const size = parseInt(m[1]);
-        // AGAR №1 BO'LSA — bu dona narxi hisoblanmaydi (chunki pachkaning o'zi 1 dona)
-        if (size <= 1) return null; 
-        return size;
-    }
-    return null;
-}
+      // VAQT
+      function updTime() {
+        const n = new Date(),
+          h = String(n.getHours()).padStart(2, "0"),
+          m = String(n.getMinutes()).padStart(2, "0");
+        const open = n.getHours() >= 8 && n.getHours() < 20;
+        document.getElementById("htime").textContent =
+          (open ? "🟢" : "🔴") + " " + h + ":" + m;
+      }
+      updTime();
+      setInterval(updTime, 30000);
 
-// DONA NARXINI HISOBLASH
-function calcDonaPrice(p) {
-    const pkgSize = getPkgSize(p.Nomi);
-    
-    // Agar pachka ichida 1 tadan ko'p dona bo'lsa va narx 0 bo'lmasa
-    if (pkgSize && pkgSize > 1 && p.Sotish_narxi > 0) {
-        return Math.round(p.Sotish_narxi / pkgSize);
-    }
-    return null; // Aks holda dona narxi ko'rsatilmaydi
-}
+      // SLIDER
+      let si = 0;
+      function gslide(i) {
+        si = i;
+        document.getElementById("strack").style.transform =
+          "translateX(-" + i * 100 + "%)";
+        document
+          .querySelectorAll(".dot")
+          .forEach((d, j) => d.classList.toggle("active", j === i));
+      }
+      setInterval(() => gslide((si + 1) % 3), 4000);
 
-// KATALOGDA KO'RSATISH FUNKSIYASI (Render ichida ishlatish uchun)
-function getPriceDisplay(p) {
-    const pNarx = parseFloat(p.Sotish_narxi) || 0;
-    const dNarx = calcDonaPrice(p);
-    
-    let html = `<div class="price">${pNarx.toLocaleString('ru-RU')} so'm</div>`;
-    
-    // Agar dona narxi mavjud bo'lsa, uni ham pastidan kichikroq qilib chiqaramiz
-    if (dNarx) {
-        html += `<div style="font-size: 11px; color: #27ae60;">(1 donasi: ${dNarx.toLocaleString('ru-RU')} so'm)</div>`;
-    }
-    return html;
-}
+      // NAV
+      function showPage(name, btn) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelectorAll(".nav-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document.getElementById("page-" + name).classList.add("active");
+        if (btn) btn.classList.add("active");
+        if (
+          name === "admin" &&
+          document.getElementById("acontent").classList.contains("show")
+        )
+          renderAdmin();
+      }
 
-// JAMI DONA (savat uchun)
-function totalDona(p){
-  const pkgSize=getPkgSize(p.Nomi)||1;
-  return p.Pachka*pkgSize + p.Dona;
-}
+      // O'ZBEK + KIRILL NORMALIZATSIYA
+      function norm(t) {
+        if (!t) return "";
+        t = String(t).toLowerCase();
+        const m = {
+          а: "a",
+          б: "b",
+          в: "v",
+          г: "g",
+          д: "d",
+          е: "e",
+          ё: "yo",
+          ж: "j",
+          з: "z",
+          и: "i",
+          й: "y",
+          к: "k",
+          л: "l",
+          м: "m",
+          н: "n",
+          о: "o",
+          п: "p",
+          р: "r",
+          с: "s",
+          т: "t",
+          у: "u",
+          ф: "f",
+          х: "x",
+          ц: "s",
+          ч: "ch",
+          ш: "sh",
+          ъ: "",
+          э: "e",
+          ю: "yu",
+          я: "ya",
+          қ: "q",
+          ғ: "g",
+          ҳ: "h",
+          ў: "o",
+        };
+        for (const [k, v] of Object.entries(m)) t = t.replaceAll(k, v);
+        return t.replace(/\s+/g, " ").trim();
+      }
 
-// QOLDIQNI FORMATLASH (stockStr funksiyasi)
-function stockStr(p) {
-  if (!p) return '—';
-  
-  const pachka = p.Pachka || 0;
-  const dona = p.Dona || 0;
-  
-  if (pachka > 0 && dona > 0) {
-    return `${pachka} pachka, ${dona} dona`;
-  } else if (pachka > 0) {
-    return `${pachka} pachka`;
-  } else if (dona > 0) {
-    return `${dona} dona`;
-  } else {
-    return 'Qolmagan';
-  }
-}
+      // SROK: "8.2026" → "08.2026"
+      function fmtSrok(s) {
+        if (
+          !s ||
+          ["nan", "none", "undefined", "null"].includes(
+            String(s).toLowerCase().trim(),
+          )
+        )
+          return "—";
+        s = String(s).trim();
+        const r = s.match(/^(\d{1,2})\.(\d{4})$/);
+        return r ? r[1].padStart(2, "0") + "." + r[2] : s;
+      }
+      // 1 PACHKADA NECHTA DONA BORLIGINI ANIQLASH
+      function getPkgSize(name) {
+        if (!name) return null;
 
-// DATA
-let products=[],curF='all',selP=null,selQty=1,cart={};
+        // 1. № belgisidan keyin kelgan raqamni topish (masalan: №30, №100)
+        // 2. Yoki "30 ta", "10 tab", "20 amp" kabi yozuvlarni topish
+        const m =
+          String(name).match(/[№#No]\.?\s*(\d+)/i) ||
+          String(name).match(/(\d+)\s*(ta|шт|dona|tab|капс|amp|таб)/i);
 
-fetch('data.json?v='+Date.now())
-  .then(r=>r.json())
-  .then(d=>{products=d;updStats(d.length);renderP(d);})
-  .catch(()=>{document.getElementById('pgrid').innerHTML='<div class="empty"><p style="font-size:34px">⚠️</p><p style="margin-top:8px">Ma\'lumot yuklanmadi.<br><small>Bot orqali Excel yuboring.</small></p></div>';});
+        if (m) {
+          const size = parseInt(m[1]);
+          // AGAR №1 BO'LSA — bu dona narxi hisoblanmaydi (chunki pachkaning o'zi 1 dona)
+          if (size <= 1) return null;
+          return size;
+        }
+        return null;
+      }
 
-function updStats(shown){
-  document.getElementById('st-total').textContent=products.length;
-  document.getElementById('st-avail').textContent=products.filter(p=>p.Pachka>0||p.Dona>0).length;
-  document.getElementById('st-shown').textContent=shown;
-}
+      // DONA NARXINI HISOBLASH
+      function calcDonaPrice(p) {
+        const pkgSize = getPkgSize(p.Nomi);
 
-function setF(f,btn){curF=f;document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');filterP();}
+        // Agar pachka ichida 1 tadan ko'p dona bo'lsa va narx 0 bo'lmasa
+        if (pkgSize && pkgSize > 1 && p.Sotish_narxi > 0) {
+          return Math.round(p.Sotish_narxi / pkgSize);
+        }
+        return null; // Aks holda dona narxi ko'rsatilmaydi
+      }
 
-function getList(){
-  const q=norm(document.getElementById('srch').value);
-  const terms=q.split(/\s+/).filter(Boolean);
-  let list=products;
-  if(terms.length)list=list.filter(p=>terms.every(t=>norm(p.Nomi).includes(t)));
-  if(curF==='available')list=list.filter(p=>p.Pachka>0||p.Dona>0);
-  else if(curF==='pachka')list=list.filter(p=>p.Pachka>0);
-  else if(curF==='cheap')list=[...list].sort((a,b)=>a.Sotish_narxi-b.Sotish_narxi);
-  else if(curF==='expensive')list=[...list].sort((a,b)=>b.Sotish_narxi-a.Sotish_narxi);
-  return list;
-}
+      // KATALOGDA KO'RSATISH FUNKSIYASI (Render ichida ishlatish uchun)
+      function getPriceDisplay(p) {
+        const pNarx = parseFloat(p.Sotish_narxi) || 0;
+        const dNarx = calcDonaPrice(p);
 
-function filterP(){const l=getList();updStats(l.length);renderP(l);}
+        let html = `<div class="price">${pNarx.toLocaleString("ru-RU")} so'm</div>`;
 
-function renderP(list){
-  const g=document.getElementById('pgrid');
-  if(!list.length){g.innerHTML='<div class="empty"><p style="font-size:34px">🔍</p><p style="margin-top:8px">Topilmadi</p></div>';return;}
-  g.innerHTML=list.slice(0,200).map(p=>{
-    const pi=products.indexOf(p);
-    const price=Number(p.Sotish_narxi).toLocaleString('ru-RU');
-    const avail=p.Pachka>0||p.Dona>0;
-    const dp=calcDonaPrice(p);
-    const stock=stockStr(p);
-    const inCart=!!cart[p.Nomi];
-    return`<div class="card" onclick="openDM(${pi})">
-      <div class="cname">${p.Nomi||'—'}</div>
+        // Agar dona narxi mavjud bo'lsa, uni ham pastidan kichikroq qilib chiqaramiz
+        if (dNarx) {
+          html += `<div style="font-size: 11px; color: #27ae60;">(1 donasi: ${dNarx.toLocaleString("ru-RU")} so'm)</div>`;
+        }
+        return html;
+      }
+
+      // JAMI DONA (savat uchun)
+      function totalDona(p) {
+        const pkgSize = getPkgSize(p.Nomi) || 1;
+        return p.Pachka * pkgSize + p.Dona;
+      }
+
+      // QOLDIQNI FORMATLASH (stockStr funksiyasi)
+      function stockStr(p) {
+        if (!p) return "—";
+
+        const pachka = p.Pachka || 0;
+        const dona = p.Dona || 0;
+
+        if (pachka > 0 && dona > 0) {
+          return `${pachka} pachka, ${dona} dona`;
+        } else if (pachka > 0) {
+          return `${pachka} pachka`;
+        } else if (dona > 0) {
+          return `${dona} dona`;
+        } else {
+          return "Qolmagan";
+        }
+      }
+
+      // DATA
+      let products = [],
+        curF = "all",
+        selP = null,
+        selQty = 1,
+        cart = {};
+
+      fetch("data.json?v=" + Date.now())
+        .then((r) => r.json())
+        .then((d) => {
+          products = d;
+          updStats(d.length);
+          renderP(d);
+        })
+        .catch(() => {
+          document.getElementById("pgrid").innerHTML =
+            '<div class="empty"><p style="font-size:34px">⚠️</p><p style="margin-top:8px">Ma\'lumot yuklanmadi.<br><small>Bot orqali Excel yuboring.</small></p></div>';
+        });
+
+      function updStats(shown) {
+        document.getElementById("st-total").textContent = products.length;
+        document.getElementById("st-avail").textContent = products.filter(
+          (p) => p.Pachka > 0 || p.Dona > 0,
+        ).length;
+        document.getElementById("st-shown").textContent = shown;
+      }
+
+      function setF(f, btn) {
+        curF = f;
+        document
+          .querySelectorAll(".fbtn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        filterP();
+      }
+
+      function getList() {
+        const q = norm(document.getElementById("srch").value);
+        const terms = q.split(/\s+/).filter(Boolean);
+        let list = products;
+        if (terms.length)
+          list = list.filter((p) =>
+            terms.every((t) => norm(p.Nomi).includes(t)),
+          );
+        if (curF === "available")
+          list = list.filter((p) => p.Pachka > 0 || p.Dona > 0);
+        else if (curF === "pachka") list = list.filter((p) => p.Pachka > 0);
+        else if (curF === "cheap")
+          list = [...list].sort((a, b) => a.Sotish_narxi - b.Sotish_narxi);
+        else if (curF === "expensive")
+          list = [...list].sort((a, b) => b.Sotish_narxi - a.Sotish_narxi);
+        return list;
+      }
+
+      function filterP() {
+        const l = getList();
+        updStats(l.length);
+        renderP(l);
+      }
+
+      function renderP(list) {
+        const g = document.getElementById("pgrid");
+        if (!list.length) {
+          g.innerHTML =
+            '<div class="empty"><p style="font-size:34px">🔍</p><p style="margin-top:8px">Topilmadi</p></div>';
+          return;
+        }
+        g.innerHTML = list
+          .slice(0, 200)
+          .map((p) => {
+            const pi = products.indexOf(p);
+            const price = Number(p.Sotish_narxi).toLocaleString("ru-RU");
+            const avail = p.Pachka > 0 || p.Dona > 0;
+            const dp = calcDonaPrice(p);
+            const stock = stockStr(p);
+            const inCart = !!cart[p.Nomi];
+            return `<div class="card" onclick="openDM(${pi})">
+      <div class="cname">${p.Nomi || "—"}</div>
       <div class="cprice">${price} so'm</div>
-      ${dp?`<div class="cdona">1 dona ≈ ${dp.toLocaleString('ru-RU')} so'm</div>`:''}
+      ${dp ? `<div class="cdona">1 dona ≈ ${dp.toLocaleString("ru-RU")} so'm</div>` : ""}
       <div class="cstock">📦 ${stock}</div>
       <div class="cbadges">
-        ${avail?'<span class="badge bg">✅ Bor</span>':'<span class="badge br">❌ Yo\'q</span>'}
-        ${p.Pachka>0?`<span class="badge bb">${p.Pachka}p</span>`:''}
+        ${avail ? '<span class="badge bg">✅ Bor</span>' : '<span class="badge br">❌ Yo\'q</span>'}
+        ${p.Pachka > 0 ? `<span class="badge bb">${p.Pachka}p</span>` : ""}
       </div>
-      <div class="cinfo">⏳ ${fmtSrok(p.Srok)} &nbsp;🏭 ${p.Zavod||'—'}</div>
-      <button class="addbtn${inCart?' added':''}" onclick="event.stopPropagation();quickAdd(${pi},this)">${inCart?'✅ Savatda':'🛒 Qo\'shish'}</button>
+      <div class="cinfo">⏳ ${fmtSrok(p.Srok)} &nbsp;🏭 ${p.Zavod || "—"}</div>
+      <button class="addbtn${inCart ? " added" : ""}" onclick="event.stopPropagation();quickAdd(${pi},this)">${inCart ? "✅ Savatda" : "🛒 Qo'shish"}</button>
     </div>`;
-  }).join('');
-}
+          })
+          .join("");
+      }
 
-// QUICK ADD — 1 dona qo'shadi, badge faqat 1 oshadi
-function quickAdd(idx,btn){
-  const p=products[idx];if(!p)return;
-  if(cart[p.Nomi]){cart[p.Nomi].qty++;}
-  else{cart[p.Nomi]={product:p,qty:1};}
-  btn.textContent='✅ Savatda';btn.classList.add('added');
-  updBadge();
-}
+      // QUICK ADD — 1 dona qo'shadi, badge faqat 1 oshadi
+      function quickAdd(idx, btn) {
+        const p = products[idx];
+        if (!p) return;
+        if (cart[p.Nomi]) {
+          cart[p.Nomi].qty++;
+        } else {
+          cart[p.Nomi] = { product: p, qty: 1 };
+        }
+        btn.textContent = "✅ Savatda";
+        btn.classList.add("added");
+        updBadge();
+      }
 
-// MODAL OCHISH
-function openDM(idx){
-  const p=products[idx];if(!p)return;
-  selP=p;selQty=cart[p.Nomi]?cart[p.Nomi].qty:1;
-  const price=Number(p.Sotish_narxi).toLocaleString('ru-RU');
-  const dp=calcDonaPrice(p);
-  const stock=stockStr(p);
-  const pkgSize=getPkgSize(p.Nomi);
-  document.getElementById('mn').textContent=p.Nomi||'—';
-  document.getElementById('mb').innerHTML=`
+      // MODAL OCHISH
+      function openDM(idx) {
+        const p = products[idx];
+        if (!p) return;
+        selP = p;
+        selQty = cart[p.Nomi] ? cart[p.Nomi].qty : 1;
+        const price = Number(p.Sotish_narxi).toLocaleString("ru-RU");
+        const dp = calcDonaPrice(p);
+        const stock = stockStr(p);
+        const pkgSize = getPkgSize(p.Nomi);
+        document.getElementById("mn").textContent = p.Nomi || "—";
+        document.getElementById("mb").innerHTML = `
     <div class="irow"><span class="ilbl">💰 Pachka narxi</span><span class="iprice">${price} so'm</span></div>
-    ${dp?`<div class="irow"><span class="ilbl">💊 1 dona narxi</span><span class="idona">≈ ${dp.toLocaleString('ru-RU')} so'm</span></div>`:''}
+    ${dp ? `<div class="irow"><span class="ilbl">💊 1 dona narxi</span><span class="idona">≈ ${dp.toLocaleString("ru-RU")} so'm</span></div>` : ""}
     <div class="irow"><span class="ilbl">📦 Ombordagi miqdor</span><span class="ival">${stock}</span></div>
-    ${pkgSize?`<div class="irow"><span class="ilbl">📋 Pachkadagi dona</span><span class="ival">${pkgSize} ta</span></div>`:''}
+    ${pkgSize ? `<div class="irow"><span class="ilbl">📋 Pachkadagi dona</span><span class="ival">${pkgSize} ta</span></div>` : ""}
     <div class="irow"><span class="ilbl">⏳ Muddati</span><span class="ival">${fmtSrok(p.Srok)}</span></div>
-    <div class="irow"><span class="ilbl">🏭 Zavod</span><span class="ival">${p.Zavod||'—'}</span></div>
-    <div class="irow"><span class="ilbl">📊 Holat</span><span class="ival">${(p.Pachka>0||p.Dona>0)?'✅ Mavjud':'❌ Tugagan'}</span></div>
+    <div class="irow"><span class="ilbl">🏭 Zavod</span><span class="ival">${p.Zavod || "—"}</span></div>
+    <div class="irow"><span class="ilbl">📊 Holat</span><span class="ival">${p.Pachka > 0 || p.Dona > 0 ? "✅ Mavjud" : "❌ Tugagan"}</span></div>
   `;
-  document.getElementById('qnum').textContent=selQty;
-  updQSum();
-  document.getElementById('dovl').classList.add('open');
-}
+        document.getElementById("qnum").value = selQty;
+        updQSum();
+        document.getElementById("dovl").classList.add("open");
+      }
 
-function chQty(d){selQty=Math.max(1,selQty+d);document.getElementById('qnum').textContent=selQty;updQSum();}
-function updQSum(){
-  if(!selP)return;
-  const dp=calcDonaPrice(selP);
-  const unitPrice=dp||selP.Sotish_narxi;
-  document.getElementById('qsum').textContent=(unitPrice*selQty).toLocaleString('ru-RU')+' so\'m';
-}
+      function chQty(d) {
+        selQty = Math.max(1, selQty + d);
+        document.getElementById("qnum").value = selQty;
+        updQSum();
+      }
 
-function addCart(){
-  if(!selP)return;
-  // Agar avval bor bo'lsa miqdorini yangilaymiz, yo'q bo'lsa yangi qo'shamiz
-  cart[selP.Nomi]={product:selP,qty:selQty};
-  updBadge();renderP(getList());
-  document.getElementById('dovl').classList.remove('open');
-}
+      function updateQtyFromInput() {
+        const val = parseInt(document.getElementById("qnum").value) || 1;
+        selQty = Math.max(1, Math.min(999, val));
+        document.getElementById("qnum").value = selQty;
+        updQSum();
+      }
 
-function closeDM(e){if(!e||e.target===document.getElementById('dovl')||e.target.classList.contains('gbtn'))document.getElementById('dovl').classList.remove('open');}
+      function updQSum() {
+        if (!selP) return;
+        const dp = calcDonaPrice(selP);
+        const unitPrice = dp || selP.Sotish_narxi;
+        document.getElementById("qsum").textContent =
+          (unitPrice * selQty).toLocaleString("ru-RU") + " so'm";
+      }
 
-// SAVAT BADGE — faqat nechta xil dori (item soni), dona soni emas
-function updBadge(){
-  const count=Object.keys(cart).length; // nechta xil dori
-  const b=document.getElementById('cbadge');
-  b.textContent=count;
-  b.style.display=count>0?'flex':'none';
-}
+      function addCart() {
+        if (!selP) return;
+        // Agar avval bor bo'lsa miqdorini yangilaymiz, yo'q bo'lsa yangi qo'shamiz
+        cart[selP.Nomi] = { product: selP, qty: selQty };
+        updBadge();
+        renderP(getList());
+        document.getElementById("dovl").classList.remove("open");
+      }
 
-function openCart(){renderCart();document.getElementById('covl').classList.add('open');}
-function closeCM(e){if(!e||e.target===document.getElementById('covl')||e.target.classList.contains('gbtn'))document.getElementById('covl').classList.remove('open');}
-function clearCart(){cart={};updBadge();renderCart();renderP(getList());}
+      function closeDM(e) {
+        if (
+          !e ||
+          e.target === document.getElementById("dovl") ||
+          e.target.classList.contains("gbtn")
+        )
+          document.getElementById("dovl").classList.remove("open");
+      }
 
-function ciQty(name,d){
-  const k=name;
-  if(cart[k]){
-    cart[k].qty=Math.max(1,cart[k].qty+d);
-    updBadge();renderCart();
-  }
-}
-function ciDel(name){delete cart[name];updBadge();renderCart();renderP(getList());}
+      // SAVAT BADGE — faqat nechta xil dori (item soni), dona soni emas
+      function updBadge() {
+        const count = Object.keys(cart).length; // nechta xil dori
+        const b = document.getElementById("cbadge");
+        b.textContent = count;
+        b.style.display = count > 0 ? "flex" : "none";
+      }
 
-function renderCart(){
-  const items=Object.values(cart);
-  const body=document.getElementById('cbody');
-  if(!items.length){
-    body.innerHTML='<div class="cart-empty"><p style="font-size:40px">🛒</p><p style="font-weight:700;margin:8px 0 4px">Savat bo\'sh</p><p style="font-size:12px;color:var(--text2)">Dorilarni savatga qo\'shing</p></div>';
-    return;
-  }
+      function openCart() {
+        renderCart();
+        document.getElementById("covl").classList.add("open");
+      }
+      function closeCM(e) {
+        if (
+          !e ||
+          e.target === document.getElementById("covl") ||
+          e.target.classList.contains("gbtn")
+        )
+          document.getElementById("covl").classList.remove("open");
+      }
+      function clearCart() {
+        cart = {};
+        updBadge();
+        renderCart();
+        renderP(getList());
+      }
 
-  // Har bir item uchun narx: dona narxi * qty
-  function itemPrice(i){
-    const dp=calcDonaPrice(i.product);
-    return Math.round((dp||i.product.Sotish_narxi)*i.qty);
-  }
+      function ciQty(name, d) {
+        const k = name;
+        if (cart[k]) {
+          cart[k].qty = Math.max(1, cart[k].qty + d);
+          updBadge();
+          renderCart();
+        }
+      }
+      function ciDel(name) {
+        delete cart[name];
+        updBadge();
+        renderCart();
+        renderP(getList());
+      }
 
-  const total=items.reduce((s,i)=>s+itemPrice(i),0);
-  const now=new Date();
-  const ds=now.toLocaleDateString('uz-UZ')+' '+now.toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});
+      function renderCart() {
+        const items = Object.values(cart);
+        const body = document.getElementById("cbody");
+        if (!items.length) {
+          body.innerHTML =
+            '<div class="cart-empty"><p style="font-size:40px">🛒</p><p style="font-weight:700;margin:8px 0 4px">Savat bo\'sh</p><p style="font-size:12px;color:var(--text2)">Dorilarni savatga qo\'shing</p></div>';
+          return;
+        }
 
-  const chekItems=items.map(i=>{
-    const dp=calcDonaPrice(i.product);
-    const uPrice=dp||i.product.Sotish_narxi;
-    const it=Math.round(uPrice*i.qty);
-    return`<div class="chek-item">
+        // Har bir item uchun narx: dona narxi * qty
+        function itemPrice(i) {
+          const dp = calcDonaPrice(i.product);
+          return Math.round((dp || i.product.Sotish_narxi) * i.qty);
+        }
+
+        const total = items.reduce((s, i) => s + itemPrice(i), 0);
+        const now = new Date();
+        const ds =
+          now.toLocaleDateString("uz-UZ") +
+          " " +
+          now.toLocaleTimeString("uz-UZ", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+
+        const chekItems = items
+          .map((i) => {
+            const dp = calcDonaPrice(i.product);
+            const uPrice = dp || i.product.Sotish_narxi;
+            const it = Math.round(uPrice * i.qty);
+            return `<div class="chek-item">
       <div class="chek-iname">${i.product.Nomi}</div>
       <div class="chek-iright">
-        <div class="chek-iqty">${i.qty} dona x ${uPrice.toLocaleString('ru-RU')} so'm</div>
-        <div class="chek-iprice">${it.toLocaleString('ru-RU')} so'm</div>
+        <div class="chek-iqty">${i.qty} dona x ${uPrice.toLocaleString("ru-RU")} so'm</div>
+        <div class="chek-iprice">${it.toLocaleString("ru-RU")} so'm</div>
       </div>
     </div>`;
-  }).join('');
+          })
+          .join("");
 
-  const editRows=items.map(i=>{
-    const dp=calcDonaPrice(i.product);
-    const uPrice=dp||i.product.Sotish_narxi;
-    const it=Math.round(uPrice*i.qty);
-    const nk=i.product.Nomi.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    return`<div class="cirow">
+        const editRows = items
+          .map((i) => {
+            const dp = calcDonaPrice(i.product);
+            const uPrice = dp || i.product.Sotish_narxi;
+            const it = Math.round(uPrice * i.qty);
+            const nk = i.product.Nomi.replace(/\\/g, "\\\\").replace(
+              /'/g,
+              "\\'",
+            );
+            return `<div class="cirow">
       <div class="ciname">${i.product.Nomi}</div>
       <div class="cictrl">
         <button class="cibtn" onclick="ciQty('${nk}',-1)">−</button>
         <span class="ciamount">${i.qty}</span>
         <button class="cibtn" onclick="ciQty('${nk}',1)">+</button>
       </div>
-      <div class="ciprice">${it.toLocaleString('ru-RU')} so'm</div>
+      <div class="ciprice">${it.toLocaleString("ru-RU")} so'm</div>
       <button class="cidel" onclick="ciDel('${nk}')">✕</button>
     </div>`;
-  }).join('');
+          })
+          .join("");
 
-  body.innerHTML=`
+        body.innerHTML = `
     <div class="chek">
       <div class="chek-head">
         <div class="chek-logo">💊</div>
@@ -656,7 +1962,7 @@ function renderCart(){
       ${chekItems}
       <div class="chek-total">
         <span class="chek-tlbl">💰 Jami to'lov:</span>
-        <span class="chek-tsum">${total.toLocaleString('ru-RU')} so'm</span>
+        <span class="chek-tsum">${total.toLocaleString("ru-RU")} so'm</span>
       </div>
       <div class="chek-foot">Rahmat! Sog'lig'ingiz tiklansing 🙏<br>Zuxro Farm 2020 — Quva tumani</div>
     </div>
@@ -665,61 +1971,116 @@ function renderCart(){
     <button class="sendbtn" onclick="sendOrder()">✈️ Telegram orqali yuborish</button>
     <button class="gbtn" onclick="closeCM()">Yopish</button>
   `;
-}
+      }
 
-// TELEGRAM ORQALI YUBORISH
-function sendOrder(){
-  const items=Object.values(cart);
-  if(!items.length)return;
+      // TELEGRAM ORQALI YUBORISH
+      function sendOrder() {
+        const items = Object.values(cart);
+        if (!items.length) return;
 
-  function itemPrice(i){const dp=calcDonaPrice(i.product);return Math.round((dp||i.product.Sotish_narxi)*i.qty);}
-  const total=items.reduce((s,i)=>s+itemPrice(i),0);
-  const now=new Date();
-  const ds=now.toLocaleDateString('uz-UZ')+' '+now.toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});
+        function itemPrice(i) {
+          const dp = calcDonaPrice(i.product);
+          return Math.round((dp || i.product.Sotish_narxi) * i.qty);
+        }
+        const total = items.reduce((s, i) => s + itemPrice(i), 0);
+        const now = new Date();
+        const ds =
+          now.toLocaleDateString("uz-UZ") +
+          " " +
+          now.toLocaleTimeString("uz-UZ", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
 
-  let msg='🛒 YANGI BUYURTMA\n';
-  msg+='📅 '+ds+'\n';
-  msg+='━━━━━━━━━━━━\n';
-  items.forEach((i,idx)=>{
-    const dp=calcDonaPrice(i.product);
-    const uPrice=dp||i.product.Sotish_narxi;
-    const it=Math.round(uPrice*i.qty);
-    msg+=`${idx+1}. ${i.product.Nomi}\n`;
-    msg+=`   ${i.qty} dona x ${uPrice.toLocaleString('ru-RU')} = ${it.toLocaleString('ru-RU')} so'm\n`;
-  });
-  msg+='━━━━━━━━━━━━\n';
-  msg+=`💰 Jami: ${total.toLocaleString('ru-RU')} so'm\n`;
-  msg+='📍 Zuxro Farm 2020, Quva tumani';
+        let msg = "🛒 YANGI BUYURTMA\n";
+        msg += "📅 " + ds + "\n";
+        msg += "━━━━━━━━━━━━\n";
+        items.forEach((i, idx) => {
+          const dp = calcDonaPrice(i.product);
+          const uPrice = dp || i.product.Sotish_narxi;
+          const it = Math.round(uPrice * i.qty);
+          msg += `${idx + 1}. ${i.product.Nomi}\n`;
+          msg += `   ${i.qty} dona x ${uPrice.toLocaleString("ru-RU")} = ${it.toLocaleString("ru-RU")} so'm\n`;
+        });
+        msg += "━━━━━━━━━━━━\n";
+        msg += `💰 Jami: ${total.toLocaleString("ru-RU")} so'm\n`;
+        msg += "📍 Zuxro Farm 2020, Quva tumani";
 
-  // Telegram Web App ichida ishlaydi
-  if(window.Telegram&&window.Telegram.WebApp&&typeof Telegram.WebApp.sendData==='function'){
-    try{Telegram.WebApp.sendData(msg);return;}catch(e){console.log('sendData err:',e);}
-  }
-  // Fallback: share orqali
-  window.open('https://t.me/share/url?url=https://t.me/ZuxroFarm2020Bot&text='+encodeURIComponent(msg),'_blank');
-}
+        // Telegram Web App ichida ishlaydi
+        if (
+          window.Telegram &&
+          window.Telegram.WebApp &&
+          typeof Telegram.WebApp.sendData === "function"
+        ) {
+          try {
+            Telegram.WebApp.sendData(msg);
+            return;
+          } catch (e) {
+            console.log("sendData err:", e);
+          }
+        }
+        // Fallback: share orqali
+        window.open(
+          "https://t.me/share/url?url=https://t.me/ZuxroFarm2020Bot&text=" +
+            encodeURIComponent(msg),
+          "_blank",
+        );
+      }
 
-// ADMIN
-const PIN='2020';
-function pnext(el,nid){if(el.value.length===1)document.getElementById(nid)?.focus();}
-function pcheck(){const p=['p1','p2','p3','p4'].map(id=>document.getElementById(id).value).join('');if(p.length===4)checkPin();}
-function checkPin(){
-  const p=['p1','p2','p3','p4'].map(id=>document.getElementById(id).value).join('');
-  if(p===PIN){document.getElementById('alock').style.display='none';document.getElementById('acontent').classList.add('show');renderAdmin();}
-  else{document.getElementById('perr').style.display='block';['p1','p2','p3','p4'].forEach(id=>{document.getElementById(id).value='';});document.getElementById('p1').focus();}
-}
-function renderAdmin(){
-  if(!products.length)return;
-  const avail=products.filter(p=>p.Pachka>0||p.Dona>0);
-  document.getElementById('at').textContent=products.length;
-  document.getElementById('aa').textContent=avail.length;
-  document.getElementById('ap').textContent=products.filter(p=>p.Pachka>0).length;
-  document.getElementById('af').textContent=[...new Set(products.map(p=>p.Zavod).filter(Boolean))].length;
-  document.getElementById('lupdate').textContent='Faol • '+new Date().toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});
-  const top=[...avail].sort((a,b)=>(b.Pachka+b.Dona)-(a.Pachka+a.Dona)).slice(0,8);
-  document.getElementById('toplist').innerHTML=top.map((p,i)=>`
-    <div class="topitem"><div class="toprank">${i+1}</div><div class="topname">${p.Nomi}</div><div class="topcnt">${stockStr(p)}</div></div>`).join('');
-}
-</script>
-</body>
+      // ADMIN
+      const PIN = "2020";
+      function pnext(el, nid) {
+        if (el.value.length === 1) document.getElementById(nid)?.focus();
+      }
+      function pcheck() {
+        const p = ["p1", "p2", "p3", "p4"]
+          .map((id) => document.getElementById(id).value)
+          .join("");
+        if (p.length === 4) checkPin();
+      }
+      function checkPin() {
+        const p = ["p1", "p2", "p3", "p4"]
+          .map((id) => document.getElementById(id).value)
+          .join("");
+        if (p === PIN) {
+          document.getElementById("alock").style.display = "none";
+          document.getElementById("acontent").classList.add("show");
+          renderAdmin();
+        } else {
+          document.getElementById("perr").style.display = "block";
+          ["p1", "p2", "p3", "p4"].forEach((id) => {
+            document.getElementById(id).value = "";
+          });
+          document.getElementById("p1").focus();
+        }
+      }
+      function renderAdmin() {
+        if (!products.length) return;
+        const avail = products.filter((p) => p.Pachka > 0 || p.Dona > 0);
+        document.getElementById("at").textContent = products.length;
+        document.getElementById("aa").textContent = avail.length;
+        document.getElementById("ap").textContent = products.filter(
+          (p) => p.Pachka > 0,
+        ).length;
+        document.getElementById("af").textContent = [
+          ...new Set(products.map((p) => p.Zavod).filter(Boolean)),
+        ].length;
+        document.getElementById("lupdate").textContent =
+          "Faol • " +
+          new Date().toLocaleTimeString("uz-UZ", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+        const top = [...avail]
+          .sort((a, b) => b.Pachka + b.Dona - (a.Pachka + a.Dona))
+          .slice(0, 8);
+        document.getElementById("toplist").innerHTML = top
+          .map(
+            (p, i) => `
+    <div class="topitem"><div class="toprank">${i + 1}</div><div class="topname">${p.Nomi}</div><div class="topcnt">${stockStr(p)}</div></div>`,
+          )
+          .join("");
+      }
+    </script>
+  </body>
 </html>
