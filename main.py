@@ -20,7 +20,7 @@ ADMIN_ID = 5545483477
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 REPO_OWNER = "rahmonov-abdulquddus"
 REPO_NAME = "zuxro-web"
-WEB_APP_URL = ""
+WEB_APP_URL = "https://rahmonov-abdulquddus.github.io/zuxro-web/"
 
 DATA_FILE = "local_database.json"
 STATS_FILE = "search_stats.json"
