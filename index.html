@@ -1,886 +1,646 @@
 <!doctype html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zuxro Farm 2020 | Dorixona</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <style>
-      :root {
-        --primary: #1a6fd4;
-        --pdark: #0d4fa0;
-        --plight: #4a9af5;
-        --accent: #00c9a7;
-        --bg: #f0f4fb;
-        --text: #1a2340;
-        --text2: #5a6a8a;
-        --border: #dde6f5;
-        --shadow: 0 4px 24px rgba(26, 111, 212, 0.1);
-        --r: 18px;
-      }
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: "Outfit", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Zuxro Farm 2020 | Dorixona</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root{--primary:#1a6fd4;--pdark:#0d4fa0;--plight:#4a9af5;--accent:#00c9a7;--bg:#f0f4fb;--text:#1a2340;--text2:#5a6a8a;--border:#dde6f5;--shadow:0 4px 24px rgba(26,111,212,0.1);--r:18px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Outfit",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+.header{background:linear-gradient(135deg,var(--pdark) 0%,var(--primary) 60%,var(--plight) 100%);position:sticky;top:0;z-index:200;box-shadow:0 4px 20px rgba(26,111,212,0.25);}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 8px;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{width:40px;height:40px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.logo-text{font-family:"Nunito",sans-serif;font-weight:900;font-size:17px;color:#fff;line-height:1.1;}
+.logo-text span{display:block;font-size:10px;font-weight:500;opacity:0.8;letter-spacing:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.htime{background:rgba(255,255,255,0.15);padding:5px 11px;border-radius:20px;font-size:11px;color:#fff;font-weight:600;}
+.cart-btn{background:rgba(255,255,255,0.2);border:none;border-radius:11px;padding:7px 12px;color:#fff;font-size:12px;font-weight:700;cursor:pointer;position:relative;display:flex;align-items:center;gap:5px;}
+.cart-badge{background:#ff4757;color:#fff;border-radius:50%;width:17px;height:17px;font-size:9px;font-weight:800;display:none;align-items:center;justify-content:center;position:absolute;top:-5px;right:-5px;}
+.nav{display:flex;padding:0 8px;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav-btn{padding:9px 14px;background:transparent;border:none;color:rgba(255,255,255,0.65);font-family:"Outfit",sans-serif;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.3s;border-radius:8px 8px 0 0;}
+.nav-btn.active{color:#fff;border-bottom-color:var(--accent);background:rgba(255,255,255,0.1);}
+.slider-wrap{overflow:hidden;margin-bottom:12px;border-radius:var(--r);}
+.slider-track{display:flex;transition:transform 0.5s ease;}
+.slide{min-width:100%;padding:20px 18px;border-radius:var(--r);position:relative;overflow:hidden;}
+.s1{background:linear-gradient(135deg,#1a6fd4,#4a9af5);}
+.s2{background:linear-gradient(135deg,#00c9a7,#00a880);}
+.s3{background:linear-gradient(135deg,#f5a623,#e07b00);}
+.slide h2{color:#fff;font-family:"Nunito",sans-serif;font-size:18px;font-weight:900;margin-bottom:4px;}
+.slide p{color:rgba(255,255,255,0.85);font-size:12px;line-height:1.5;}
+.slide-icon{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:50px;opacity:0.12;}
+.dots{display:flex;gap:5px;justify-content:center;margin-top:8px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.3s;}
+.dot.active{background:var(--primary);width:18px;border-radius:3px;}
+.page{display:none;padding:12px 13px;min-height:calc(100vh - 115px);}
+.page.active{display:block;animation:fadeIn 0.3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(7px);}to{opacity:1;transform:translateY(0);}}
+.srch-wrap{position:relative;margin-bottom:9px;}
+.srch-ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:15px;pointer-events:none;}
+.srch-input{width:100%;padding:12px 13px 12px 40px;border:2px solid var(--border);border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:14px;background:#fff;color:var(--text);outline:none;transition:border-color 0.3s,box-shadow 0.3s;}
+.srch-input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(26,111,212,0.11);}
+.frow{display:flex;gap:6px;margin-bottom:9px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+.frow::-webkit-scrollbar{display:none;}
+.fbtn{padding:6px 12px;border-radius:20px;border:2px solid var(--border);background:#fff;font-family:"Outfit",sans-serif;font-size:11px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap;transition:all 0.2s;}
+.fbtn.active{background:var(--primary);border-color:var(--primary);color:#fff;}
+.stats-bar{background:linear-gradient(135deg,var(--primary),var(--plight));border-radius:var(--r);padding:11px 15px;color:#fff;display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;}
+.si{text-align:center;}
+.sn{font-size:19px;font-weight:800;font-family:"Nunito",sans-serif;}
+.sl{font-size:10px;opacity:0.8;}
+.sdiv{width:1px;height:32px;background:rgba(255,255,255,0.3);}
+#pgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+@media(min-width:580px){#pgrid{grid-template-columns:repeat(3,1fr);}}
+.card{background:#fff;border-radius:var(--r);padding:11px;border:1.5px solid var(--border);display:flex;flex-direction:column;gap:5px;transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;position:relative;overflow:hidden;}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent));}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(26,111,212,0.13);}
+.cname{font-weight:700;font-size:11px;color:var(--text);line-height:1.4;min-height:29px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.cprice{font-family:"Nunito",sans-serif;font-weight:900;font-size:13px;color:var(--primary);}
+.cdona{font-size:10px;color:var(--accent);font-weight:600;margin-top:-3px;}
+.cstock{font-size:10px;color:var(--text2);margin-top:-2px;}
+.cbadges{display:flex;gap:3px;flex-wrap:wrap;}
+.badge{padding:2px 6px;border-radius:6px;font-size:9px;font-weight:700;}
+.bg{background:#e8f9f5;color:#00a880;}
+.bb{background:#e8f0fe;color:var(--primary);}
+.br{background:#ffeaea;color:#e74c3c;}
+.cinfo{font-size:9px;color:var(--text2);}
+.addbtn{background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;border:none;border-radius:8px;padding:6px 8px;font-size:10px;font-weight:700;cursor:pointer;margin-top:2px;font-family:"Outfit",sans-serif;}
+.addbtn.added{background:linear-gradient(135deg,var(--accent),#00a880);}
+.loading{grid-column:1/-1;text-align:center;padding:48px 20px;color:var(--text2);}
+.spin{width:32px;height:32px;border:4px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:sp 0.8s linear infinite;margin:0 auto 11px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+.empty{grid-column:1/-1;text-align:center;padding:48px 20px;color:var(--text2);}
+.overlay{display:none;position:fixed;inset:0;background:rgba(10,20,50,0.55);z-index:500;backdrop-filter:blur(4px);align-items:flex-end;justify-content:center;}
+.overlay.open{display:flex;}
+.bsheet{background:#fff;border-radius:24px 24px 0 0;padding:17px 17px 28px;width:100%;max-width:500px;animation:su 0.3s ease;max-height:88vh;overflow-y:auto;}
+@keyframes su{from{transform:translateY(100%);}to{transform:translateY(0);}}
+.handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 13px;}
+.mtitle{font-size:15px;font-weight:800;font-family:"Nunito",sans-serif;margin-bottom:11px;}
+.irow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.irow:last-of-type{border-bottom:none;}
+.ilbl{color:var(--text2);font-weight:500;}
+.ival{font-weight:700;}
+.iprice{font-size:18px;font-weight:900;color:var(--primary);font-family:"Nunito",sans-serif;}
+.idona{font-size:15px;font-weight:900;color:var(--accent);font-family:"Nunito",sans-serif;}
+.qbox{background:var(--bg);border-radius:13px;padding:10px 13px;margin:10px 0;display:flex;align-items:center;gap:8px;}
+.qlbl{font-size:12px;color:var(--text2);font-weight:600;flex:1;}
+.qctrl{display:flex;align-items:center;gap:9px;}
+.qbtn{width:29px;height:29px;border-radius:8px;border:2px solid var(--border);background:#fff;font-size:17px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--primary);}
+.qnum-input{font-size:16px;font-weight:800;font-family:"Nunito",sans-serif;width:60px;text-align:center;border:2px solid var(--border);border-radius:8px;background:#fff;color:var(--text);outline:none;}
+.qsum{text-align:center;font-size:12px;color:var(--text2);margin-bottom:8px;}
+.qsum strong{color:var(--primary);font-size:15px;font-family:"Nunito",sans-serif;}
+.pbtn{width:100%;padding:13px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;border:none;border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px;}
+.gbtn{width:100%;padding:11px;background:var(--bg);color:var(--text2);border:none;border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:13px;font-weight:600;cursor:pointer;margin-top:7px;}
+.sendbtn{width:100%;padding:13px;background:linear-gradient(135deg,var(--accent),#00a880);color:#fff;border:none;border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:8px;}
+.chek{background:#fff;border:2px dashed var(--border);border-radius:var(--r);padding:16px 14px;margin-bottom:13px;}
+.chek-head{text-align:center;border-bottom:2px dashed var(--border);padding-bottom:11px;margin-bottom:11px;}
+.chek-logo{font-size:24px;margin-bottom:2px;}
+.chek-name{font-family:"Nunito",sans-serif;font-size:16px;font-weight:900;}
+.chek-sub{font-size:10px;color:var(--text2);margin-top:1px;}
+.chek-item{display:flex;gap:7px;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px;}
+.chek-iname{flex:1;font-weight:600;line-height:1.4;}
+.chek-iright{text-align:right;flex-shrink:0;}
+.chek-iqty{font-size:9px;color:var(--text2);}
+.chek-iprice{font-weight:700;color:var(--primary);font-family:"Nunito",sans-serif;}
+.chek-total{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-top:2px solid var(--text);margin-top:3px;}
+.chek-tlbl{font-weight:700;font-size:13px;}
+.chek-tsum{font-family:"Nunito",sans-serif;font-size:20px;font-weight:900;color:var(--primary);}
+.chek-foot{text-align:center;margin-top:11px;padding-top:9px;border-top:2px dashed var(--border);font-size:10px;color:var(--text2);line-height:1.8;}
+.cart-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.cart-title{font-family:"Nunito",sans-serif;font-size:18px;font-weight:900;}
+.cart-clear{background:#ffeaea;color:#e74c3c;border:none;border-radius:9px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;}
+.cirow{display:flex;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid var(--border);}
+.cirow:last-child{border-bottom:none;}
+.ciname{flex:1;font-size:11px;font-weight:600;line-height:1.4;}
+.cictrl{display:flex;align-items:center;gap:6px;}
+.cibtn{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--border);background:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--primary);}
+.ciamount{font-size:11px;font-weight:700;min-width:16px;text-align:center;}
+.ciprice{font-size:11px;font-weight:700;color:var(--primary);font-family:"Nunito",sans-serif;min-width:56px;text-align:right;}
+.cidel{background:none;border:none;cursor:pointer;font-size:13px;color:#e74c3c;padding:3px;}
+.cart-empty{text-align:center;padding:34px 20px;color:var(--text2);}
+.edit-title{font-family:"Nunito",sans-serif;font-size:14px;font-weight:800;margin:12px 0 8px;}
+/* ADMIN */
+.alock{background:#fff;border-radius:var(--r);padding:26px 18px;text-align:center;box-shadow:var(--shadow);}
+.pin-row{display:flex;gap:9px;justify-content:center;margin-bottom:13px;}
+.pin-row input{width:48px;height:50px;text-align:center;font-size:21px;font-weight:800;border:2px solid var(--border);border-radius:11px;outline:none;font-family:"Nunito",sans-serif;}
+.pin-row input:focus{border-color:var(--primary);}
+.pbtn2{padding:11px 26px;background:var(--primary);color:#fff;border:none;border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.acontent{display:none;}
+.acontent.show{display:block;}
+.admin-tabs{display:flex;gap:6px;margin-bottom:14px;}
+.atab{flex:1;padding:10px 8px;border:2px solid var(--border);border-radius:12px;background:#fff;font-family:"Outfit",sans-serif;font-size:12px;font-weight:700;color:var(--text2);cursor:pointer;text-align:center;transition:all 0.2s;}
+.atab.active{background:var(--primary);border-color:var(--primary);color:#fff;}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:13px;}
+.acard{background:#fff;border-radius:var(--r);padding:13px 11px;text-align:center;box-shadow:var(--shadow);border:1.5px solid var(--border);}
+.aico{font-size:24px;margin-bottom:5px;}
+.anum{font-family:"Nunito",sans-serif;font-size:21px;font-weight:900;color:var(--primary);}
+.albl{font-size:11px;color:var(--text2);font-weight:600;margin-top:2px;}
+.stitle{font-family:"Nunito",sans-serif;font-size:15px;font-weight:800;margin-bottom:9px;}
+.topitem{background:#fff;border-radius:11px;padding:9px 12px;display:flex;align-items:center;gap:9px;border:1.5px solid var(--border);margin-bottom:6px;}
+.toprank{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.topname{font-weight:600;font-size:11px;flex:1;}
+.topcnt{font-weight:800;color:var(--primary);font-family:"Nunito",sans-serif;font-size:12px;}
+.ubar{background:linear-gradient(135deg,var(--accent),#00a880);border-radius:var(--r);padding:12px 15px;color:#fff;margin-bottom:13px;display:flex;align-items:center;gap:11px;}
+/* PRAYS */
+.prays-upload-box{background:#fff;border:2px dashed var(--primary);border-radius:var(--r);padding:20px 16px;text-align:center;margin-bottom:14px;cursor:pointer;transition:all 0.2s;}
+.prays-upload-box:hover{background:#f0f7ff;}
+.prays-firm-input{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:14px;background:#fff;color:var(--text);outline:none;margin-bottom:10px;transition:border-color 0.2s;}
+.prays-firm-input:focus{border-color:var(--primary);}
+.prays-upload-btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;border:none;border-radius:var(--r);font-family:"Outfit",sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:16px;}
+.prays-upload-btn:disabled{opacity:0.4;cursor:not-allowed;}
+.prays-search-box{background:#fff;border-radius:var(--r);padding:14px;margin-bottom:14px;border:1.5px solid var(--border);}
+.prays-srch-wrap{position:relative;}
+.prays-srch-ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;pointer-events:none;}
+.prays-srch{width:100%;padding:11px 14px 11px 38px;border:2px solid var(--border);border-radius:12px;font-family:"Outfit",sans-serif;font-size:14px;background:var(--bg);color:var(--text);outline:none;transition:border-color 0.2s;}
+.prays-srch:focus{border-color:var(--primary);background:#fff;}
+/* PRAYS NATIJA — pastga/tepaga tugmalar bilan */
+.prays-results-wrap{position:relative;}
+.prays-nav-btns{position:fixed;right:16px;bottom:80px;display:flex;flex-direction:column;gap:8px;z-index:300;}
+.prays-nav-btn{width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(26,111,212,0.35);transition:all 0.2s;}
+.prays-nav-btn:hover{background:var(--pdark);}
+.prays-nav-btn.visible{display:flex;}
+.prays-result-item{background:#fff;border-radius:14px;border:1.5px solid var(--border);margin-bottom:10px;overflow:hidden;}
+.prays-result-name{padding:10px 13px 6px;font-weight:800;font-size:13px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#f0f7ff,#fff);}
+.prays-firm-row{display:flex;align-items:center;justify-content:space-between;padding:7px 13px;border-bottom:1px solid #f0f4fb;font-size:12px;}
+.prays-firm-row:last-child{border-bottom:none;}
+.prays-firm-name{color:var(--text2);font-weight:600;flex:1;}
+.prays-firm-price{font-family:"Nunito",sans-serif;font-weight:900;color:var(--primary);font-size:14px;}
+.prays-firm-price.cheapest{color:#00a880;}
+.prays-firm-srok{font-size:10px;color:var(--text2);margin-left:8px;}
+.prays-cheap-badge{background:#e8f9f5;color:#00a880;font-size:9px;font-weight:800;padding:2px 7px;border-radius:20px;margin-left:6px;}
+.firms-list{margin-bottom:14px;}
+.firm-item{background:#fff;border-radius:12px;border:1.5px solid var(--border);padding:10px 13px;margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.firm-ico{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.firm-info{flex:1;}
+.firm-name{font-weight:700;font-size:13px;}
+.firm-meta{font-size:10px;color:var(--text2);margin-top:2px;}
+.firm-del{background:#ffeaea;color:#e74c3c;border:none;border-radius:8px;padding:5px 9px;font-size:11px;font-weight:700;cursor:pointer;}
+.prays-empty{text-align:center;padding:30px 20px;color:var(--text2);}
+.prays-empty .eico{font-size:40px;margin-bottom:8px;}
+.prays-status{padding:10px 14px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:10px;}
+.prays-status.ok{background:#e8f9f5;color:#00a880;}
+.prays-status.err{background:#ffeaea;color:#e74c3c;}
+.prays-status.info{background:#e8f0fe;color:var(--primary);}
+/* COL SELECT */
+.col-select-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+.col-select-item label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;}
+.col-select-item select{width:100%;padding:8px;border:2px solid var(--border);border-radius:10px;font-size:12px;outline:none;font-family:"Outfit",sans-serif;}
+.col-select-item select.required{border-color:var(--primary);}
+/* LOCATION */
+.mapbox{border-radius:var(--r);overflow:hidden;margin-bottom:11px;box-shadow:var(--shadow);border:2px solid var(--border);}
+.mapbox iframe{width:100%;height:240px;display:block;}
+.ccard{background:#fff;border-radius:var(--r);padding:15px;box-shadow:var(--shadow);border:1.5px solid var(--border);margin-bottom:10px;}
+.crow{display:flex;align-items:center;gap:11px;padding:7px 0;border-bottom:1px solid var(--border);}
+.crow:last-child{border-bottom:none;}
+.cico{width:37px;height:37px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--plight));color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.clbl{font-size:10px;color:var(--text2);}
+.cval{font-weight:700;font-size:13px;}
+.hcard{background:linear-gradient(135deg,var(--primary),var(--plight));border-radius:var(--r);padding:15px;color:#fff;margin-bottom:10px;}
+.htitle{font-family:"Nunito",sans-serif;font-weight:800;font-size:14px;margin-bottom:9px;}
+.hrow{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,0.15);}
+.hrow:last-child{border-bottom:none;}
+.hopen{font-weight:700;color:#b3f5e8;}
+/* ABOUT */
+.hero{background:linear-gradient(135deg,var(--pdark),var(--primary),var(--plight));border-radius:var(--r);padding:24px 18px;color:#fff;text-align:center;margin-bottom:11px;position:relative;overflow:hidden;}
+.hero::before{content:"💊";position:absolute;font-size:95px;opacity:0.07;top:-8px;right:-8px;}
+.hero h1{font-family:"Nunito",sans-serif;font-size:23px;font-weight:900;margin-bottom:5px;}
+.hero p{font-size:12px;opacity:0.85;line-height:1.6;}
+.ybadge{display:inline-block;background:rgba(255,255,255,0.2);padding:3px 12px;border-radius:20px;font-size:10px;font-weight:700;margin-bottom:8px;}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:11px;}
+.fcard{background:#fff;border-radius:var(--r);padding:13px 10px;text-align:center;box-shadow:var(--shadow);border:1.5px solid var(--border);}
+.fico{font-size:24px;margin-bottom:6px;}
+.ftitle{font-weight:800;font-size:12px;margin-bottom:3px;font-family:"Nunito",sans-serif;}
+.fdesc{font-size:10px;color:var(--text2);line-height:1.5;}
+.atxt{background:#fff;border-radius:var(--r);padding:15px;box-shadow:var(--shadow);border:1.5px solid var(--border);font-size:12px;line-height:1.8;color:var(--text2);margin-bottom:11px;}
+.srow{display:flex;gap:9px;}
+.sbtn{flex:1;padding:12px;border-radius:var(--r);border:none;font-family:"Outfit",sans-serif;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;}
+.stg{background:linear-gradient(135deg,#229ed9,#1a7ab5);color:#fff;}
+.scall{background:linear-gradient(135deg,var(--accent),#00a880);color:#fff;}
+/* SCROLL TUGMALAR */
+.prays-nav-btn{position:fixed;right:16px;width:44px;height:44px;border-radius:50%;border:none;background:var(--primary);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(26,111,212,0.35);display:none;align-items:center;justify-content:center;z-index:300;transition:all 0.2s;}
+.prays-nav-btn.visible{display:flex;}
+.prays-nav-btn:active{transform:scale(0.92);}
+#btn-scroll-top{bottom:80px;}
+#btn-scroll-bot{bottom:28px;}
+/* USTUN BELGILASH */
+.col-select-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+.col-select-item label{display:block;font-size:11px;font-weight:700;color:var(--text2);margin-bottom:4px;}
+.col-select-item select{width:100%;padding:8px 10px;border:2px solid var(--border);border-radius:10px;font-family:"Outfit",sans-serif;font-size:12px;background:#fff;color:var(--text);outline:none;}
+.col-select-item select:focus{border-color:var(--primary);}
+/* PRAYS STATUS */
+.prays-empty{text-align:center;padding:30px 20px;color:var(--text2);}
+.prays-empty .eico{font-size:40px;margin-bottom:8px;}
+.prays-status{padding:10px 14px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:10px;}
+.prays-status.ok{background:#e8f9f5;color:#00a880;}
+.prays-status.err{background:#ffeaea;color:#e74c3c;}
+.prays-status.info{background:#e8f0fe;color:var(--primary);}
+</style>
+</head>
+<body>
 
-      .header { background: linear-gradient(135deg, var(--pdark) 0%, var(--primary) 60%, var(--plight) 100%); position: sticky; top: 0; z-index: 200; box-shadow: 0 4px 20px rgba(26,111,212,0.25); }
-      .header-top { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 8px; }
-      .logo { display: flex; align-items: center; gap: 10px; }
-      .logo-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-      .logo-text { font-family: "Nunito", sans-serif; font-weight: 900; font-size: 17px; color: #fff; line-height: 1.1; }
-      .logo-text span { display: block; font-size: 10px; font-weight: 500; opacity: 0.8; letter-spacing: 1px; }
-      .header-right { display: flex; align-items: center; gap: 8px; }
-      .htime { background: rgba(255,255,255,0.15); padding: 5px 11px; border-radius: 20px; font-size: 11px; color: #fff; font-weight: 600; }
-      .cart-btn { background: rgba(255,255,255,0.2); border: none; border-radius: 11px; padding: 7px 12px; color: #fff; font-size: 12px; font-weight: 700; cursor: pointer; position: relative; display: flex; align-items: center; gap: 5px; }
-      .cart-badge { background: #ff4757; color: #fff; border-radius: 50%; width: 17px; height: 17px; font-size: 9px; font-weight: 800; display: none; align-items: center; justify-content: center; position: absolute; top: -5px; right: -5px; }
-      .nav { display: flex; padding: 0 8px; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-      .nav::-webkit-scrollbar { display: none; }
-      .nav-btn { padding: 9px 14px; background: transparent; border: none; color: rgba(255,255,255,0.65); font-family: "Outfit", sans-serif; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; border-bottom: 3px solid transparent; transition: all 0.3s; border-radius: 8px 8px 0 0; }
-      .nav-btn.active { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.1); }
-
-      .slider-wrap { overflow: hidden; margin-bottom: 12px; border-radius: var(--r); }
-      .slider-track { display: flex; transition: transform 0.5s ease; }
-      .slide { min-width: 100%; padding: 20px 18px; border-radius: var(--r); position: relative; overflow: hidden; }
-      .s1 { background: linear-gradient(135deg, #1a6fd4, #4a9af5); }
-      .s2 { background: linear-gradient(135deg, #00c9a7, #00a880); }
-      .s3 { background: linear-gradient(135deg, #f5a623, #e07b00); }
-      .slide h2 { color: #fff; font-family: "Nunito", sans-serif; font-size: 18px; font-weight: 900; margin-bottom: 4px; }
-      .slide p { color: rgba(255,255,255,0.85); font-size: 12px; line-height: 1.5; }
-      .slide-icon { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 50px; opacity: 0.12; }
-      .dots { display: flex; gap: 5px; justify-content: center; margin-top: 8px; }
-      .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); cursor: pointer; transition: all 0.3s; }
-      .dot.active { background: var(--primary); width: 18px; border-radius: 3px; }
-
-      .page { display: none; padding: 12px 13px; min-height: calc(100vh - 115px); }
-      .page.active { display: block; animation: fadeIn 0.3s ease; }
-      @keyframes fadeIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
-
-      .srch-wrap { position: relative; margin-bottom: 9px; }
-      .srch-ico { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); font-size: 15px; pointer-events: none; }
-      .srch-input { width: 100%; padding: 12px 13px 12px 40px; border: 2px solid var(--border); border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 14px; background: #fff; color: var(--text); outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
-      .srch-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(26,111,212,0.11); }
-
-      .frow { display: flex; gap: 6px; margin-bottom: 9px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-      .frow::-webkit-scrollbar { display: none; }
-      .fbtn { padding: 6px 12px; border-radius: 20px; border: 2px solid var(--border); background: #fff; font-family: "Outfit", sans-serif; font-size: 11px; font-weight: 600; color: var(--text2); cursor: pointer; white-space: nowrap; transition: all 0.2s; }
-      .fbtn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
-
-      .stats-bar { background: linear-gradient(135deg, var(--primary), var(--plight)); border-radius: var(--r); padding: 11px 15px; color: #fff; display: flex; justify-content: space-between; align-items: center; margin-bottom: 11px; }
-      .si { text-align: center; }
-      .sn { font-size: 19px; font-weight: 800; font-family: "Nunito", sans-serif; }
-      .sl { font-size: 10px; opacity: 0.8; }
-      .sdiv { width: 1px; height: 32px; background: rgba(255,255,255,0.3); }
-
-      #pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
-      @media (min-width: 580px) { #pgrid { grid-template-columns: repeat(3, 1fr); } }
-      @media (min-width: 860px) { #pgrid { grid-template-columns: repeat(4, 1fr); } }
-
-      .card { background: #fff; border-radius: var(--r); padding: 11px; border: 1.5px solid var(--border); display: flex; flex-direction: column; gap: 5px; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; position: relative; overflow: hidden; }
-      .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
-      .card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(26,111,212,0.13); }
-      .cname { font-weight: 700; font-size: 11px; color: var(--text); line-height: 1.4; min-height: 29px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-      .cprice { font-family: "Nunito", sans-serif; font-weight: 900; font-size: 13px; color: var(--primary); }
-      .cdona { font-size: 10px; color: var(--accent); font-weight: 600; margin-top: -3px; }
-      .cstock { font-size: 10px; color: var(--text2); margin-top: -2px; }
-      .cbadges { display: flex; gap: 3px; flex-wrap: wrap; }
-      .badge { padding: 2px 6px; border-radius: 6px; font-size: 9px; font-weight: 700; }
-      .bg { background: #e8f9f5; color: #00a880; }
-      .bb { background: #e8f0fe; color: var(--primary); }
-      .br { background: #ffeaea; color: #e74c3c; }
-      .cinfo { font-size: 9px; color: var(--text2); }
-      .addbtn { background: linear-gradient(135deg, var(--primary), var(--plight)); color: #fff; border: none; border-radius: 8px; padding: 6px 8px; font-size: 10px; font-weight: 700; cursor: pointer; margin-top: 2px; transition: opacity 0.2s; font-family: "Outfit", sans-serif; }
-      .addbtn.added { background: linear-gradient(135deg, var(--accent), #00a880); }
-
-      .loading { grid-column: 1/-1; text-align: center; padding: 48px 20px; color: var(--text2); }
-      .spin { width: 32px; height: 32px; border: 4px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: sp 0.8s linear infinite; margin: 0 auto 11px; }
-      @keyframes sp { to { transform: rotate(360deg); } }
-      .empty { grid-column: 1/-1; text-align: center; padding: 48px 20px; color: var(--text2); }
-
-      .overlay { display: none; position: fixed; inset: 0; background: rgba(10,20,50,0.55); z-index: 500; backdrop-filter: blur(4px); align-items: flex-end; justify-content: center; }
-      .overlay.open { display: flex; }
-      .bsheet { background: #fff; border-radius: 24px 24px 0 0; padding: 17px 17px 28px; width: 100%; max-width: 500px; animation: su 0.3s ease; max-height: 88vh; overflow-y: auto; }
-      @keyframes su { from { transform: translateY(100%); } to { transform: translateY(0); } }
-      .handle { width: 36px; height: 4px; background: var(--border); border-radius: 2px; margin: 0 auto 13px; }
-      .mtitle { font-size: 15px; font-weight: 800; font-family: "Nunito", sans-serif; margin-bottom: 11px; }
-
-      .irow { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-      .irow:last-of-type { border-bottom: none; }
-      .ilbl { color: var(--text2); font-weight: 500; }
-      .ival { font-weight: 700; }
-      .iprice { font-size: 18px; font-weight: 900; color: var(--primary); font-family: "Nunito", sans-serif; }
-      .idona { font-size: 15px; font-weight: 900; color: var(--accent); font-family: "Nunito", sans-serif; }
-
-      .qbox { background: var(--bg); border-radius: 13px; padding: 10px 13px; margin: 10px 0; display: flex; align-items: center; gap: 8px; }
-      .qlbl { font-size: 12px; color: var(--text2); font-weight: 600; flex: 1; }
-      .qctrl { display: flex; align-items: center; gap: 9px; }
-      .qbtn { width: 29px; height: 29px; border-radius: 8px; border: 2px solid var(--border); background: #fff; font-size: 17px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--primary); }
-      .qbtn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-      .qnum-input { font-size: 16px; font-weight: 800; font-family: "Nunito", sans-serif; width: 60px; text-align: center; border: 2px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); outline: none; transition: border-color 0.3s; }
-      .qnum-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,111,212,0.1); }
-      .qsum { text-align: center; font-size: 12px; color: var(--text2); margin-bottom: 8px; }
-      .qsum strong { color: var(--primary); font-size: 15px; font-family: "Nunito", sans-serif; }
-
-      .pbtn { width: 100%; padding: 13px; background: linear-gradient(135deg, var(--primary), var(--plight)); color: #fff; border: none; border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 4px; }
-      .gbtn { width: 100%; padding: 11px; background: var(--bg); color: var(--text2); border: none; border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 7px; }
-      .sendbtn { width: 100%; padding: 13px; background: linear-gradient(135deg, var(--accent), #00a880); color: #fff; border: none; border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; margin-bottom: 8px; }
-
-      .chek { background: #fff; border: 2px dashed var(--border); border-radius: var(--r); padding: 16px 14px; margin-bottom: 13px; }
-      .chek-head { text-align: center; border-bottom: 2px dashed var(--border); padding-bottom: 11px; margin-bottom: 11px; }
-      .chek-logo { font-size: 24px; margin-bottom: 2px; }
-      .chek-name { font-family: "Nunito", sans-serif; font-size: 16px; font-weight: 900; }
-      .chek-sub { font-size: 10px; color: var(--text2); margin-top: 1px; }
-      .chek-item { display: flex; gap: 7px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 11px; }
-      .chek-item:last-child { border-bottom: none; }
-      .chek-iname { flex: 1; font-weight: 600; line-height: 1.4; }
-      .chek-iright { text-align: right; flex-shrink: 0; }
-      .chek-iqty { font-size: 9px; color: var(--text2); }
-      .chek-iprice { font-weight: 700; color: var(--primary); font-family: "Nunito", sans-serif; }
-      .chek-total { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-top: 2px solid var(--text); margin-top: 3px; }
-      .chek-tlbl { font-weight: 700; font-size: 13px; }
-      .chek-tsum { font-family: "Nunito", sans-serif; font-size: 20px; font-weight: 900; color: var(--primary); }
-      .chek-foot { text-align: center; margin-top: 11px; padding-top: 9px; border-top: 2px dashed var(--border); font-size: 10px; color: var(--text2); line-height: 1.8; }
-
-      .cart-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-      .cart-title { font-family: "Nunito", sans-serif; font-size: 18px; font-weight: 900; }
-      .cart-clear { background: #ffeaea; color: #e74c3c; border: none; border-radius: 9px; padding: 5px 10px; font-size: 11px; font-weight: 700; cursor: pointer; }
-      .cirow { display: flex; align-items: center; gap: 7px; padding: 7px 0; border-bottom: 1px solid var(--border); }
-      .cirow:last-child { border-bottom: none; }
-      .ciname { flex: 1; font-size: 11px; font-weight: 600; line-height: 1.4; }
-      .cictrl { display: flex; align-items: center; gap: 6px; }
-      .cibtn { width: 24px; height: 24px; border-radius: 7px; border: 1.5px solid var(--border); background: #fff; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--primary); }
-      .ciamount { font-size: 11px; font-weight: 700; min-width: 16px; text-align: center; }
-      .ciprice { font-size: 11px; font-weight: 700; color: var(--primary); font-family: "Nunito", sans-serif; min-width: 56px; text-align: right; }
-      .cidel { background: none; border: none; cursor: pointer; font-size: 13px; color: #e74c3c; padding: 3px; }
-      .cart-empty { text-align: center; padding: 34px 20px; color: var(--text2); }
-      .edit-title { font-family: "Nunito", sans-serif; font-size: 14px; font-weight: 800; margin: 12px 0 8px; }
-
-      /* ADMIN */
-      .alock { background: #fff; border-radius: var(--r); padding: 26px 18px; text-align: center; box-shadow: var(--shadow); }
-      .pin-row { display: flex; gap: 9px; justify-content: center; margin-bottom: 13px; }
-      .pin-row input { width: 48px; height: 50px; text-align: center; font-size: 21px; font-weight: 800; border: 2px solid var(--border); border-radius: 11px; outline: none; font-family: "Nunito", sans-serif; }
-      .pin-row input:focus { border-color: var(--primary); }
-      .pbtn2 { padding: 11px 26px; background: var(--primary); color: #fff; border: none; border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; }
-      .acontent { display: none; }
-      .acontent.show { display: block; }
-
-      /* ADMIN TABS */
-      .admin-tabs { display: flex; gap: 6px; margin-bottom: 14px; }
-      .atab { flex: 1; padding: 10px 8px; border: 2px solid var(--border); border-radius: 12px; background: #fff; font-family: "Outfit", sans-serif; font-size: 12px; font-weight: 700; color: var(--text2); cursor: pointer; text-align: center; transition: all 0.2s; }
-      .atab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
-
-      .admin-section { display: none; }
-      .admin-section.active { display: block; }
-
-      .agrid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 13px; }
-      @media (min-width: 580px) { .agrid { grid-template-columns: repeat(4, 1fr); } }
-      .acard { background: #fff; border-radius: var(--r); padding: 13px 11px; text-align: center; box-shadow: var(--shadow); border: 1.5px solid var(--border); }
-      .aico { font-size: 24px; margin-bottom: 5px; }
-      .anum { font-family: "Nunito", sans-serif; font-size: 21px; font-weight: 900; color: var(--primary); }
-      .albl { font-size: 11px; color: var(--text2); font-weight: 600; margin-top: 2px; }
-      .stitle { font-family: "Nunito", sans-serif; font-size: 15px; font-weight: 800; margin-bottom: 9px; }
-      .topitem { background: #fff; border-radius: 11px; padding: 9px 12px; display: flex; align-items: center; gap: 9px; border: 1.5px solid var(--border); margin-bottom: 6px; }
-      .toprank { width: 24px; height: 24px; border-radius: 7px; background: linear-gradient(135deg, var(--primary), var(--plight)); color: #fff; font-weight: 800; font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-      .topname { font-weight: 600; font-size: 11px; flex: 1; }
-      .topcnt { font-weight: 800; color: var(--primary); font-family: "Nunito", sans-serif; font-size: 12px; }
-      .ubar { background: linear-gradient(135deg, var(--accent), #00a880); border-radius: var(--r); padding: 12px 15px; color: #fff; margin-bottom: 13px; display: flex; align-items: center; gap: 11px; }
-
-      /* PRAYS BO'LIMI */
-      .prays-upload-box { background: #fff; border: 2px dashed var(--primary); border-radius: var(--r); padding: 20px 16px; text-align: center; margin-bottom: 14px; cursor: pointer; transition: all 0.2s; }
-      .prays-upload-box:hover { background: #f0f7ff; }
-      .prays-upload-box .uico { font-size: 36px; margin-bottom: 8px; }
-      .prays-upload-box .utitle { font-weight: 800; font-size: 14px; margin-bottom: 4px; }
-      .prays-upload-box .udesc { font-size: 11px; color: var(--text2); }
-      .prays-firm-input { width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 14px; background: #fff; color: var(--text); outline: none; margin-bottom: 10px; transition: border-color 0.2s; }
-      .prays-firm-input:focus { border-color: var(--primary); }
-      .prays-upload-btn { width: 100%; padding: 12px; background: linear-gradient(135deg, var(--primary), var(--plight)); color: #fff; border: none; border-radius: var(--r); font-family: "Outfit", sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; }
-      .prays-upload-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-      /* Prays qidiruv */
-      .prays-search-box { background: #fff; border-radius: var(--r); padding: 14px; margin-bottom: 14px; border: 1.5px solid var(--border); }
-      .prays-search-title { font-weight: 800; font-size: 14px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
-      .prays-srch { width: 100%; padding: 11px 14px 11px 38px; border: 2px solid var(--border); border-radius: 12px; font-family: "Outfit", sans-serif; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s; }
-      .prays-srch:focus { border-color: var(--primary); background: #fff; }
-      .prays-srch-wrap { position: relative; }
-      .prays-srch-ico { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 14px; pointer-events: none; }
-
-      /* Prays natijalar */
-      .prays-result-item { background: #fff; border-radius: 14px; border: 1.5px solid var(--border); margin-bottom: 10px; overflow: hidden; }
-      .prays-result-name { padding: 10px 13px 6px; font-weight: 800; font-size: 13px; border-bottom: 1px solid var(--border); background: linear-gradient(135deg, #f0f7ff, #fff); }
-      .prays-firm-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 13px; border-bottom: 1px solid #f0f4fb; font-size: 12px; }
-      .prays-firm-row:last-child { border-bottom: none; }
-      .prays-firm-name { color: var(--text2); font-weight: 600; flex: 1; }
-      .prays-firm-price { font-family: "Nunito", sans-serif; font-weight: 900; color: var(--primary); font-size: 14px; }
-      .prays-firm-price.cheapest { color: #00a880; }
-      .prays-firm-srok { font-size: 10px; color: var(--text2); margin-left: 8px; }
-      .prays-cheap-badge { background: #e8f9f5; color: #00a880; font-size: 9px; font-weight: 800; padding: 2px 7px; border-radius: 20px; margin-left: 6px; }
-
-      /* Firmalar ro'yxati */
-      .firms-list { margin-bottom: 14px; }
-      .firm-item { background: #fff; border-radius: 12px; border: 1.5px solid var(--border); padding: 10px 13px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-      .firm-ico { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--plight)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-      .firm-info { flex: 1; }
-      .firm-name { font-weight: 700; font-size: 13px; }
-      .firm-meta { font-size: 10px; color: var(--text2); margin-top: 2px; }
-      .firm-del { background: #ffeaea; color: #e74c3c; border: none; border-radius: 8px; padding: 5px 9px; font-size: 11px; font-weight: 700; cursor: pointer; }
-
-      .prays-empty { text-align: center; padding: 30px 20px; color: var(--text2); }
-      .prays-empty .eico { font-size: 40px; margin-bottom: 8px; }
-      .prays-status { padding: 10px 14px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
-      .prays-status.ok { background: #e8f9f5; color: #00a880; }
-      .prays-status.err { background: #ffeaea; color: #e74c3c; }
-      .prays-status.info { background: #e8f0fe; color: var(--primary); }
-
-      /* LOCATION */
-      .mapbox { border-radius: var(--r); overflow: hidden; margin-bottom: 11px; box-shadow: var(--shadow); border: 2px solid var(--border); }
-      .mapbox iframe { width: 100%; height: 240px; display: block; }
-      .ccard { background: #fff; border-radius: var(--r); padding: 15px; box-shadow: var(--shadow); border: 1.5px solid var(--border); margin-bottom: 10px; }
-      .crow { display: flex; align-items: center; gap: 11px; padding: 7px 0; border-bottom: 1px solid var(--border); }
-      .crow:last-child { border-bottom: none; }
-      .cico { width: 37px; height: 37px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--plight)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-      .clbl { font-size: 10px; color: var(--text2); }
-      .cval { font-weight: 700; font-size: 13px; }
-      .hcard { background: linear-gradient(135deg, var(--primary), var(--plight)); border-radius: var(--r); padding: 15px; color: #fff; margin-bottom: 10px; }
-      .htitle { font-family: "Nunito", sans-serif; font-weight: 800; font-size: 14px; margin-bottom: 9px; }
-      .hrow { display: flex; justify-content: space-between; padding: 5px 0; font-size: 12px; border-bottom: 1px solid rgba(255,255,255,0.15); }
-      .hrow:last-child { border-bottom: none; }
-      .hopen { font-weight: 700; color: #b3f5e8; }
-
-      /* ABOUT */
-      .hero { background: linear-gradient(135deg, var(--pdark), var(--primary), var(--plight)); border-radius: var(--r); padding: 24px 18px; color: #fff; text-align: center; margin-bottom: 11px; position: relative; overflow: hidden; }
-      .hero::before { content: "💊"; position: absolute; font-size: 95px; opacity: 0.07; top: -8px; right: -8px; }
-      .hero h1 { font-family: "Nunito", sans-serif; font-size: 23px; font-weight: 900; margin-bottom: 5px; }
-      .hero p { font-size: 12px; opacity: 0.85; line-height: 1.6; }
-      .ybadge { display: inline-block; background: rgba(255,255,255,0.2); padding: 3px 12px; border-radius: 20px; font-size: 10px; font-weight: 700; margin-bottom: 8px; }
-      .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 11px; }
-      .fcard { background: #fff; border-radius: var(--r); padding: 13px 10px; text-align: center; box-shadow: var(--shadow); border: 1.5px solid var(--border); }
-      .fico { font-size: 24px; margin-bottom: 6px; }
-      .ftitle { font-weight: 800; font-size: 12px; margin-bottom: 3px; font-family: "Nunito", sans-serif; }
-      .fdesc { font-size: 10px; color: var(--text2); line-height: 1.5; }
-      .atxt { background: #fff; border-radius: var(--r); padding: 15px; box-shadow: var(--shadow); border: 1.5px solid var(--border); font-size: 12px; line-height: 1.8; color: var(--text2); margin-bottom: 11px; }
-      .srow { display: flex; gap: 9px; }
-      .sbtn { flex: 1; padding: 12px; border-radius: var(--r); border: none; font-family: "Outfit", sans-serif; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; }
-      .stg { background: linear-gradient(135deg, #229ed9, #1a7ab5); color: #fff; }
-      .scall { background: linear-gradient(135deg, var(--accent), #00a880); color: #fff; }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-top">
-        <div class="logo">
-          <div class="logo-icon">💊</div>
-          <div class="logo-text">Zuxro Farm <span>2020 • Quva tumani</span></div>
-        </div>
-        <div class="header-right">
-          <div class="htime" id="htime">⏰ --:--</div>
-          <button class="cart-btn" onclick="openCart()">
-            🛒 Savat
-            <span class="cart-badge" id="cbadge">0</span>
-          </button>
-        </div>
-      </div>
-      <nav class="nav">
-        <button class="nav-btn active" onclick="showPage('catalog', this)">💊 Katalog</button>
-        <button class="nav-btn" onclick="showPage('admin', this)">📊 Admin</button>
-        <button class="nav-btn" onclick="showPage('location', this)">📍 Manzil</button>
-        <button class="nav-btn" onclick="showPage('about', this)">🏥 Haqida</button>
-      </nav>
-    </header>
-
-    <!-- CATALOG -->
-    <div class="page active" id="page-catalog">
-      <div class="slider-wrap">
-        <div class="slider-track" id="strack">
-          <div class="slide s1"><h2>💊 Zuxro Farm 2020</h2><p>Quva tumanidagi ishonchli dorixona.<br/>Keng assortiment, sifatli dorilar.</p><div class="slide-icon">💊</div></div>
-          <div class="slide s2"><h2>🕐 Har kuni 08:00–20:00</h2><p>Dam olish kunlari ham ochiq!<br/>Qulay vaqtda xizmatdamiz.</p><div class="slide-icon">🕐</div></div>
-          <div class="slide s3"><h2>✅ Sifat kafolati</h2><p>Faqat sertifikatlangan dorilar.<br/>Malakali farmatsevt maslahati.</p><div class="slide-icon">✅</div></div>
-        </div>
-        <div class="dots">
-          <div class="dot active" onclick="gslide(0)"></div>
-          <div class="dot" onclick="gslide(1)"></div>
-          <div class="dot" onclick="gslide(2)"></div>
-        </div>
-      </div>
-      <div class="srch-wrap">
-        <span class="srch-ico">🔍</span>
-        <input type="text" class="srch-input" id="srch" placeholder="Dori nomini kiriting (o'z/ru)..." oninput="filterP()"/>
-      </div>
-      <div class="frow">
-        <button class="fbtn active" onclick="setF('all',this)">Hammasi</button>
-        <button class="fbtn" onclick="setF('available',this)">✅ Mavjud</button>
-        <button class="fbtn" onclick="setF('pachka',this)">📦 Pachkada</button>
-        <button class="fbtn" onclick="setF('cheap',this)">💰 Arzon</button>
-        <button class="fbtn" onclick="setF('expensive',this)">💎 Qimmat</button>
-      </div>
-      <div class="stats-bar">
-        <div class="si"><div class="sn" id="st-total">0</div><div class="sl">Jami dori</div></div>
-        <div class="sdiv"></div>
-        <div class="si"><div class="sn" id="st-avail">0</div><div class="sl">Mavjud</div></div>
-        <div class="sdiv"></div>
-        <div class="si"><div class="sn" id="st-shown">0</div><div class="sl">Ko'rsatildi</div></div>
-      </div>
-      <div id="pgrid"><div class="loading"><div class="spin"></div><p>Yuklanmoqda...</p></div></div>
+<header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <div class="logo-icon">💊</div>
+      <div class="logo-text">Zuxro Farm <span>2020 • Quva tumani</span></div>
     </div>
-
-    <!-- ADMIN -->
-    <div class="page" id="page-admin">
-      <div class="alock" id="alock">
-        <div style="font-size:48px;margin-bottom:11px">🔐</div>
-        <div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;margin-bottom:7px">Admin Panel</div>
-        <div style="color:var(--text2);font-size:12px;margin-bottom:15px">PIN kodni kiriting</div>
-        <div class="pin-row">
-          <input type="password" maxlength="1" id="p1" oninput="pnext(this,'p2')"/>
-          <input type="password" maxlength="1" id="p2" oninput="pnext(this,'p3')"/>
-          <input type="password" maxlength="1" id="p3" oninput="pnext(this,'p4')"/>
-          <input type="password" maxlength="1" id="p4" oninput="pcheck()"/>
-        </div>
-        <div id="perr" style="color:#e74c3c;font-size:12px;margin-bottom:9px;display:none">❌ Noto'g'ri PIN</div>
-        <button class="pbtn2" onclick="checkPin()">Kirish</button>
-      </div>
-
-      <div class="acontent" id="acontent">
-        <!-- ADMIN TABS -->
-        <div class="admin-tabs">
-          <button class="atab active" onclick="showAdminTab('stats',this)">📊 Statistika</button>
-          <button class="atab" onclick="showAdminTab('prays',this)">💹 Prays</button>
-        </div>
-
-        <!-- STATISTIKA -->
-        <div class="admin-section active" id="asec-stats">
-          <div class="ubar">
-            <div style="font-size:24px">🔄</div>
-            <div>
-              <div style="font-weight:800;font-size:14px">Baza holati</div>
-              <div style="font-size:11px;opacity:0.85" id="lupdate">...</div>
-            </div>
-          </div>
-          <div class="agrid">
-            <div class="acard"><div class="aico">💊</div><div class="anum" id="at">0</div><div class="albl">Jami dori</div></div>
-            <div class="acard"><div class="aico">✅</div><div class="anum" id="aa">0</div><div class="albl">Mavjud</div></div>
-            <div class="acard"><div class="aico">📦</div><div class="anum" id="ap">0</div><div class="albl">Pachkada</div></div>
-            <div class="acard"><div class="aico">🏭</div><div class="anum" id="af">0</div><div class="albl">Ishlab chiq.</div></div>
-          </div>
-          <div class="stitle">🏆 Eng ko'p mavjud dorilar</div>
-          <div id="toplist"></div>
-        </div>
-
-        <!-- PRAYS BO'LIMI -->
-        <div class="admin-section" id="asec-prays">
-
-          <!-- PRAYS QIDIRUV -->
-          <div class="prays-search-box">
-            <div class="prays-search-title">🔍 Prays qidiruv</div>
-            <div class="prays-srch-wrap">
-              <span class="prays-srch-ico">🔍</span>
-              <input type="text" class="prays-srch" id="prays-srch" placeholder="Dori nomini yozing (o'z/ru)..." oninput="searchPrays()"/>
-            </div>
-          </div>
-          <div id="prays-results"></div>
-
-          <!-- PRAYS YUKLASH -->
-          <div class="stitle" style="margin-top:6px">📤 Yangi prays yuklash</div>
-          <div id="prays-status-msg"></div>
-
-          <input type="text" class="prays-firm-input" id="firm-name" placeholder="Firma nomi (masalan: Navqiron Farm)"/>
-
-          <div class="prays-upload-box" onclick="document.getElementById('prays-file').click()">
-            <div class="uico">📊</div>
-            <div class="utitle" id="ufile-title">Excel faylni tanlang</div>
-            <div class="udesc">Firmadan kelgan .xlsx yoki .xls fayl</div>
-          </div>
-          <input type="file" id="prays-file" accept=".xlsx,.xls" style="display:none" onchange="onPraysFileSelect(this)"/>
-
-          <button class="prays-upload-btn" id="prays-upload-btn" onclick="uploadPrays()" disabled>
-            💾 Praysni saqlash
-          </button>
-
-          <!-- YUKLANGAN FIRMALAR -->
-          <div class="stitle">🏢 Yuklangan firmalar</div>
-          <div id="firms-list-wrap"></div>
-        </div>
-      </div>
+    <div class="header-right">
+      <div class="htime" id="htime">⏰ --:--</div>
+      <button class="cart-btn" onclick="openCart()">🛒 Savat<span class="cart-badge" id="cbadge">0</span></button>
     </div>
+  </div>
+  <nav class="nav">
+    <button class="nav-btn active" onclick="showPage('catalog',this)">💊 Katalog</button>
+    <button class="nav-btn" onclick="showPage('admin',this)">📊 Admin</button>
+    <button class="nav-btn" onclick="showPage('location',this)">📍 Manzil</button>
+    <button class="nav-btn" onclick="showPage('about',this)">🏥 Haqida</button>
+  </nav>
+</header>
 
-    <!-- LOCATION -->
-    <div class="page" id="page-location">
-      <div class="mapbox">
-        <iframe src="https://maps.google.com/maps?q=Quva+tumani,+Farg%27ona+viloyati&output=embed&z=14" allowfullscreen loading="lazy"></iframe>
+<!-- CATALOG -->
+<div class="page active" id="page-catalog">
+  <div class="slider-wrap">
+    <div class="slider-track" id="strack">
+      <div class="slide s1"><h2>💊 Zuxro Farm 2020</h2><p>Quva tumanidagi ishonchli dorixona.<br/>Keng assortiment, sifatli dorilar.</p><div class="slide-icon">💊</div></div>
+      <div class="slide s2"><h2>🕐 Har kuni 08:00–20:00</h2><p>Dam olish kunlari ham ochiq!<br/>Qulay vaqtda xizmatdamiz.</p><div class="slide-icon">🕐</div></div>
+      <div class="slide s3"><h2>✅ Sifat kafolati</h2><p>Faqat sertifikatlangan dorilar.<br/>Malakali farmatsevt maslahati.</p><div class="slide-icon">✅</div></div>
+    </div>
+    <div class="dots"><div class="dot active" onclick="gslide(0)"></div><div class="dot" onclick="gslide(1)"></div><div class="dot" onclick="gslide(2)"></div></div>
+  </div>
+  <div class="srch-wrap"><span class="srch-ico">🔍</span><input type="text" class="srch-input" id="srch" placeholder="Dori nomini kiriting (o'z/ru)..." oninput="filterP()"/></div>
+  <div class="frow">
+    <button class="fbtn active" onclick="setF('all',this)">Hammasi</button>
+    <button class="fbtn" onclick="setF('available',this)">✅ Mavjud</button>
+    <button class="fbtn" onclick="setF('pachka',this)">📦 Pachkada</button>
+    <button class="fbtn" onclick="setF('cheap',this)">💰 Arzon</button>
+    <button class="fbtn" onclick="setF('expensive',this)">💎 Qimmat</button>
+  </div>
+  <div class="stats-bar">
+    <div class="si"><div class="sn" id="st-total">0</div><div class="sl">Jami dori</div></div>
+    <div class="sdiv"></div>
+    <div class="si"><div class="sn" id="st-avail">0</div><div class="sl">Mavjud</div></div>
+    <div class="sdiv"></div>
+    <div class="si"><div class="sn" id="st-shown">0</div><div class="sl">Ko'rsatildi</div></div>
+  </div>
+  <div id="pgrid"><div class="loading"><div class="spin"></div><p>Yuklanmoqda...</p></div></div>
+</div>
+
+<!-- ADMIN -->
+<div class="page" id="page-admin">
+  <div class="alock" id="alock">
+    <div style="font-size:48px;margin-bottom:11px">🔐</div>
+    <div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;margin-bottom:7px">Admin Panel</div>
+    <div style="color:var(--text2);font-size:12px;margin-bottom:15px">PIN kodni kiriting</div>
+    <div class="pin-row">
+      <input type="password" maxlength="1" id="p1" oninput="pnext(this,'p2')"/>
+      <input type="password" maxlength="1" id="p2" oninput="pnext(this,'p3')"/>
+      <input type="password" maxlength="1" id="p3" oninput="pnext(this,'p4')"/>
+      <input type="password" maxlength="1" id="p4" oninput="pcheck()"/>
+    </div>
+    <div id="perr" style="color:#e74c3c;font-size:12px;margin-bottom:9px;display:none">❌ Noto'g'ri PIN</div>
+    <button class="pbtn2" onclick="checkPin()">Kirish</button>
+  </div>
+  <div class="acontent" id="acontent">
+    <div class="admin-tabs">
+      <button class="atab active" onclick="showAdminTab('stats',this)">📊 Statistika</button>
+      <button class="atab" onclick="showAdminTab('prays',this)">💹 Prays</button>
+    </div>
+    <!-- STATISTIKA -->
+    <div class="admin-section active" id="asec-stats">
+      <div class="ubar"><div style="font-size:24px">🔄</div><div><div style="font-weight:800;font-size:14px">Baza holati</div><div style="font-size:11px;opacity:0.85" id="lupdate">...</div></div></div>
+      <div class="agrid">
+        <div class="acard"><div class="aico">💊</div><div class="anum" id="at">0</div><div class="albl">Jami dori</div></div>
+        <div class="acard"><div class="aico">✅</div><div class="anum" id="aa">0</div><div class="albl">Mavjud</div></div>
+        <div class="acard"><div class="aico">📦</div><div class="anum" id="ap">0</div><div class="albl">Pachkada</div></div>
+        <div class="acard"><div class="aico">🏭</div><div class="anum" id="af">0</div><div class="albl">Ishlab chiq.</div></div>
       </div>
-      <div class="ccard">
-        <div class="crow"><div class="cico">📍</div><div><div class="clbl">Manzil</div><div class="cval">Quva tumani, A.Yassaviy 133</div></div></div>
-        <a href="tel:+998882052520" style="text-decoration:none;color:inherit">
-          <div class="crow"><div class="cico">📞</div><div><div class="clbl">Telefon</div><div class="cval">+998 88 205 25 20</div></div></div>
-        </a>
-        <div class="crow"><div class="cico">🏙️</div><div><div class="clbl">Viloyat</div><div class="cval">Farg'ona viloyati</div></div></div>
+      <div class="stitle">🏆 Eng ko'p mavjud dorilar</div>
+      <div id="toplist"></div>
+    </div>
+    <!-- PRAYS -->
+    <div class="admin-section" id="asec-prays">
+      <!-- Qidiruv -->
+      <div class="prays-search-box">
+        <div style="font-weight:800;font-size:14px;margin-bottom:10px">🔍 Prays qidiruv</div>
+        <div class="prays-srch-wrap">
+          <span class="prays-srch-ico">🔍</span>
+          <input type="text" class="prays-srch" id="prays-srch" placeholder="Dori nomini yozing (o'z/ru)..." oninput="searchPrays()"/>
+        </div>
       </div>
-      <div class="hcard">
-        <div class="htitle">🕐 Ish vaqti</div>
-        <div class="hrow"><span>Dushanba – Juma</span><span class="hopen">08:00 – 20:00</span></div>
-        <div class="hrow"><span>Shanba</span><span class="hopen">08:00 – 20:00</span></div>
-        <div class="hrow"><span>Yakshanba</span><span class="hopen">08:00 – 20:00</span></div>
+      <!-- Natijalar + pastga/tepaga tugmalar -->
+      <div class="prays-results-wrap">
+        <div id="prays-results"></div>
+      </div>
+      <!-- Float tugmalar -->
+      <button class="prays-nav-btn" id="btn-scroll-top" onclick="scrollPraysTop()" title="Tepaga">⬆️</button>
+      <button class="prays-nav-btn" id="btn-scroll-bot" onclick="scrollPraysBot()" title="Pastga">⬇️</button>
+
+      <!-- Yuklash -->
+      <div class="stitle" style="margin-top:8px">📤 Yangi prays yuklash</div>
+      <div id="prays-status-msg"></div>
+      <input type="text" class="prays-firm-input" id="firm-name" placeholder="Firma nomi (masalan: Navqiron Farm)"/>
+      <div class="prays-upload-box" onclick="document.getElementById('prays-file').click()">
+        <div style="font-size:36px;margin-bottom:8px">📊</div>
+        <div style="font-weight:800;font-size:14px;margin-bottom:4px" id="ufile-title">Excel faylni tanlang</div>
+        <div style="font-size:11px;color:var(--text2)">Firmadan kelgan .xlsx yoki .xls fayl</div>
+      </div>
+      <input type="file" id="prays-file" accept=".xlsx,.xls" style="display:none" onchange="onPraysFileSelect(this)"/>
+      <!-- Ustun belgilash joyi -->
+      <div id="column-selector"></div>
+      <button class="prays-upload-btn" id="prays-upload-btn" onclick="uploadPrays()" disabled>💾 Praysni saqlash</button>
+      <!-- Firmalar -->
+      <div class="stitle">🏢 Yuklangan firmalar</div>
+      <div id="firms-list-wrap"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION -->
+<div class="page" id="page-location">
+  <div class="mapbox"><iframe src="https://maps.google.com/maps?q=Quva+tumani,+Farg%27ona+viloyati&output=embed&z=14" allowfullscreen loading="lazy"></iframe></div>
+  <div class="ccard">
+    <div class="crow"><div class="cico">📍</div><div><div class="clbl">Manzil</div><div class="cval">Quva tumani, A.Yassaviy 133</div></div></div>
+    <a href="tel:+998882052520" style="text-decoration:none;color:inherit"><div class="crow"><div class="cico">📞</div><div><div class="clbl">Telefon</div><div class="cval">+998 88 205 25 20</div></div></div></a>
+    <div class="crow"><div class="cico">🏙️</div><div><div class="clbl">Viloyat</div><div class="cval">Farg'ona viloyati</div></div></div>
+  </div>
+  <div class="hcard">
+    <div class="htitle">🕐 Ish vaqti</div>
+    <div class="hrow"><span>Dushanba – Yakshanba</span><span class="hopen">08:00 – 20:00</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+  <div class="hero"><div class="ybadge">✨ 2020-yildan beri</div><h1>Zuxro Farm</h1><p>Quva tumanidagi ishonchli dorixona.<br/>Sog'ligingiz — bizning ustuvorligimiz.</p></div>
+  <div class="fgrid">
+    <div class="fcard"><div class="fico">💊</div><div class="ftitle">Keng assortiment</div><div class="fdesc">Mingdan ortiq dori va tibbiy mahsulotlar</div></div>
+    <div class="fcard"><div class="fico">✅</div><div class="ftitle">Sifat kafolati</div><div class="fdesc">Faqat sertifikatlangan original dorilar</div></div>
+    <div class="fcard"><div class="fico">🕐</div><div class="ftitle">Qulay vaqt</div><div class="fdesc">Har kuni 08:00 dan 20:00 gacha</div></div>
+    <div class="fcard"><div class="fico">💰</div><div class="ftitle">Qulay narx</div><div class="fdesc">Hamyonbop narxlar va takliflar</div></div>
+  </div>
+  <div class="atxt"><strong>Zuxro Farm 2020</strong> — Farg'ona viloyati, Quva tumanida joylashgan zamonaviy dorixona. Biz 2020-yildan buyon aholi sog'ligini saqlashda ishonchli hamkor bo'lib kelmoqdamiz.</div>
+  <div class="srow">
+    <a href="https://t.me/zuxrofarm" class="sbtn stg">✈️ Telegram</a>
+    <a href="tel:+998882052520" class="sbtn scall">📞 Qo'ng'iroq</a>
+  </div>
+</div>
+
+<!-- DORI MODAL -->
+<div class="overlay" id="dovl" onclick="closeDM(event)">
+  <div class="bsheet">
+    <div class="handle"></div>
+    <div class="mtitle" id="mn"></div>
+    <div id="mb"></div>
+    <div class="qbox">
+      <div class="qlbl">📦 Miqdor (dona):</div>
+      <div class="qctrl">
+        <button class="qbtn" onclick="chQty(-1)">−</button>
+        <input type="number" id="qnum" class="qnum-input" value="1" min="1" max="999" onclick="this.select()" onchange="updateQtyFromInput()"/>
+        <button class="qbtn" onclick="chQty(1)">+</button>
       </div>
     </div>
+    <div class="qsum">Jami: <strong id="qsum">0 so'm</strong></div>
+    <button class="pbtn" onclick="addCart()">🛒 Savatga qo'shish</button>
+    <button class="gbtn" onclick="closeDM()">Yopish</button>
+  </div>
+</div>
 
-    <!-- ABOUT -->
-    <div class="page" id="page-about">
-      <div class="hero">
-        <div class="ybadge">✨ 2020-yildan beri</div>
-        <h1>Zuxro Farm</h1>
-        <p>Quva tumanidagi ishonchli dorixona.<br/>Sog'ligingiz — bizning ustuvorligimiz.</p>
+<!-- SAVAT MODAL -->
+<div class="overlay" id="covl" onclick="closeCM(event)">
+  <div class="bsheet">
+    <div class="handle"></div>
+    <div class="cart-head"><div class="cart-title">🛒 Savat</div><button class="cart-clear" onclick="clearCart()">🗑️ Tozalash</button></div>
+    <div id="cbody"></div>
+  </div>
+</div>
+
+<script>
+if(window.Telegram&&window.Telegram.WebApp){Telegram.WebApp.ready();Telegram.WebApp.expand();}
+function updTime(){const n=new Date(),h=String(n.getHours()).padStart(2,'0'),m=String(n.getMinutes()).padStart(2,'0');const open=n.getHours()>=8&&n.getHours()<20;document.getElementById('htime').textContent=(open?'🟢':'🔴')+' '+h+':'+m;}
+updTime();setInterval(updTime,30000);
+let si=0;
+function gslide(i){si=i;document.getElementById('strack').style.transform='translateX(-'+i*100+'%)';document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===i));}
+setInterval(()=>gslide((si+1)%3),4000);
+function showPage(name,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById('page-'+name).classList.add('active');if(btn)btn.classList.add('active');if(name==='admin'&&document.getElementById('acontent').classList.contains('show'))renderAdmin();}
+function showAdminTab(name,btn){document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.atab').forEach(b=>b.classList.remove('active'));document.getElementById('asec-'+name).classList.add('active');if(btn)btn.classList.add('active');if(name==='prays'){renderFirmsList();updateScrollBtns();}}
+function norm(t){if(!t)return'';t=String(t).toLowerCase();const m={а:'a',б:'b',в:'v',г:'g',д:'d',е:'e',ё:'yo',ж:'j',з:'z',и:'i',й:'y',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'x',ц:'s',ч:'ch',ш:'sh',ъ:'',э:'e',ю:'yu',я:'ya',қ:'q',ғ:'g',ҳ:'h',ў:'o'};for(const[k,v]of Object.entries(m))t=t.replaceAll(k,v);return t.replace(/\s+/g,' ').trim();}
+function fmtSrok(s){if(!s||['nan','none','undefined','null'].includes(String(s).toLowerCase().trim()))return'—';s=String(s).trim();const r=s.match(/^(\d{1,2})\.(\d{4})$/);return r?r[1].padStart(2,'0')+'.'+r[2]:s;}
+function getPkgSize(name){if(!name)return null;const m=String(name).match(/[№#No]\.?\s*(\d+)/i)||String(name).match(/(\d+)\s*(ta|шт|dona|tab|капс|amp|таб)/i);if(m){const size=parseInt(m[1]);if(size<=1)return null;return size;}return null;}
+function calcDonaPrice(p){const pkgSize=getPkgSize(p.Nomi);if(pkgSize&&pkgSize>1&&p.Sotish_narxi>0)return Math.round(p.Sotish_narxi/pkgSize);return null;}
+function stockStr(p){if(!p)return'—';const pachka=p.Pachka||0,dona=p.Dona||0;if(pachka>0&&dona>0)return pachka+' pachka, '+dona+' dona';else if(pachka>0)return pachka+' pachka';else if(dona>0)return dona+' dona';return'Qolmagan';}
+let products=[],curF='all',selP=null,selQty=1,cart={};
+fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{products=d;updStats(d.length);renderP(d);}).catch(()=>{document.getElementById('pgrid').innerHTML='<div class="empty"><p style="font-size:34px">⚠️</p><p style="margin-top:8px">Ma\'lumot yuklanmadi.<br><small>Bot orqali Excel yuboring.</small></p></div>';});
+function updStats(shown){document.getElementById('st-total').textContent=products.length;document.getElementById('st-avail').textContent=products.filter(p=>p.Pachka>0||p.Dona>0).length;document.getElementById('st-shown').textContent=shown;}
+function setF(f,btn){curF=f;document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');filterP();}
+function getList(){const q=norm(document.getElementById('srch').value);const terms=q.split(/\s+/).filter(Boolean);let list=products;if(terms.length)list=list.filter(p=>terms.every(t=>norm(p.Nomi).includes(t)));if(curF==='available')list=list.filter(p=>p.Pachka>0||p.Dona>0);else if(curF==='pachka')list=list.filter(p=>p.Pachka>0);else if(curF==='cheap')list=[...list].sort((a,b)=>a.Sotish_narxi-b.Sotish_narxi);else if(curF==='expensive')list=[...list].sort((a,b)=>b.Sotish_narxi-a.Sotish_narxi);return list;}
+function filterP(){const l=getList();updStats(l.length);renderP(l);}
+function renderP(list){const g=document.getElementById('pgrid');if(!list.length){g.innerHTML='<div class="empty"><p style="font-size:34px">🔍</p><p style="margin-top:8px">Topilmadi</p></div>';return;}g.innerHTML=list.slice(0,200).map(p=>{const pi=products.indexOf(p);const price=Number(p.Sotish_narxi).toLocaleString('ru-RU');const avail=p.Pachka>0||p.Dona>0;const dp=calcDonaPrice(p);const stock=stockStr(p);const inCart=!!cart[p.Nomi];return`<div class="card" onclick="openDM(${pi})"><div class="cname">${p.Nomi||'—'}</div><div class="cprice">${price} so'm</div>${dp?`<div class="cdona">1 dona ≈ ${dp.toLocaleString('ru-RU')} so'm</div>`:''}<div class="cstock">📦 ${stock}</div><div class="cbadges">${avail?'<span class="badge bg">✅ Bor</span>':'<span class="badge br">❌ Yo\'q</span>'}${p.Pachka>0?`<span class="badge bb">${p.Pachka}p</span>`:''}</div><div class="cinfo">⏳ ${fmtSrok(p.Srok)} &nbsp;🏭 ${p.Zavod||'—'}</div><button class="addbtn${inCart?' added':''}" onclick="event.stopPropagation();quickAdd(${pi},this)">${inCart?'✅ Savatda':'🛒 Qo\'shish'}</button></div>`;}).join('');}
+function quickAdd(idx,btn){const p=products[idx];if(!p)return;if(cart[p.Nomi])cart[p.Nomi].qty++;else cart[p.Nomi]={product:p,qty:1};btn.textContent='✅ Savatda';btn.classList.add('added');updBadge();}
+function openDM(idx){const p=products[idx];if(!p)return;selP=p;selQty=cart[p.Nomi]?cart[p.Nomi].qty:1;const price=Number(p.Sotish_narxi).toLocaleString('ru-RU');const dp=calcDonaPrice(p),stock=stockStr(p),pkgSize=getPkgSize(p.Nomi);document.getElementById('mn').textContent=p.Nomi||'—';document.getElementById('mb').innerHTML=`<div class="irow"><span class="ilbl">💰 Pachka narxi</span><span class="iprice">${price} so'm</span></div>${dp?`<div class="irow"><span class="ilbl">💊 1 dona narxi</span><span class="idona">≈ ${dp.toLocaleString('ru-RU')} so'm</span></div>`:''}<div class="irow"><span class="ilbl">📦 Ombordagi miqdor</span><span class="ival">${stock}</span></div>${pkgSize?`<div class="irow"><span class="ilbl">📋 Pachkadagi dona</span><span class="ival">${pkgSize} ta</span></div>`:''}<div class="irow"><span class="ilbl">⏳ Muddati</span><span class="ival">${fmtSrok(p.Srok)}</span></div><div class="irow"><span class="ilbl">🏭 Zavod</span><span class="ival">${p.Zavod||'—'}</span></div><div class="irow"><span class="ilbl">📊 Holat</span><span class="ival">${p.Pachka>0||p.Dona>0?'✅ Mavjud':'❌ Tugagan'}</span></div>`;document.getElementById('qnum').value=selQty;updQSum();document.getElementById('dovl').classList.add('open');}
+function chQty(d){selQty=Math.max(1,selQty+d);document.getElementById('qnum').value=selQty;updQSum();}
+function updateQtyFromInput(){const val=parseInt(document.getElementById('qnum').value)||1;selQty=Math.max(1,Math.min(999,val));document.getElementById('qnum').value=selQty;updQSum();}
+function updQSum(){if(!selP)return;const dp=calcDonaPrice(selP);const unitPrice=dp||selP.Sotish_narxi;document.getElementById('qsum').textContent=(unitPrice*selQty).toLocaleString('ru-RU')+' so\'m';}
+function addCart(){if(!selP)return;cart[selP.Nomi]={product:selP,qty:selQty};updBadge();renderP(getList());document.getElementById('dovl').classList.remove('open');}
+function closeDM(e){if(!e||e.target===document.getElementById('dovl')||e.target.classList.contains('gbtn'))document.getElementById('dovl').classList.remove('open');}
+function updBadge(){const count=Object.keys(cart).length;const b=document.getElementById('cbadge');b.textContent=count;b.style.display=count>0?'flex':'none';}
+function openCart(){renderCart();document.getElementById('covl').classList.add('open');}
+function closeCM(e){if(!e||e.target===document.getElementById('covl')||e.target.classList.contains('gbtn'))document.getElementById('covl').classList.remove('open');}
+function clearCart(){cart={};updBadge();renderCart();renderP(getList());}
+function ciQty(name,d){if(cart[name]){cart[name].qty=Math.max(1,cart[name].qty+d);updBadge();renderCart();}}
+function ciDel(name){delete cart[name];updBadge();renderCart();renderP(getList());}
+function renderCart(){const items=Object.values(cart),body=document.getElementById('cbody');if(!items.length){body.innerHTML='<div class="cart-empty"><p style="font-size:40px">🛒</p><p style="font-weight:700;margin:8px 0 4px">Savat bo\'sh</p></div>';return;}function itemPrice(i){const dp=calcDonaPrice(i.product);return Math.round((dp||i.product.Sotish_narxi)*i.qty);}const total=items.reduce((s,i)=>s+itemPrice(i),0);const now=new Date(),ds=now.toLocaleDateString('uz-UZ')+' '+now.toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});const chekItems=items.map(i=>{const dp=calcDonaPrice(i.product),uPrice=dp||i.product.Sotish_narxi,it=Math.round(uPrice*i.qty);return`<div class="chek-item"><div class="chek-iname">${i.product.Nomi}</div><div class="chek-iright"><div class="chek-iqty">${i.qty} dona x ${uPrice.toLocaleString('ru-RU')} so'm</div><div class="chek-iprice">${it.toLocaleString('ru-RU')} so'm</div></div></div>`;}).join('');const editRows=items.map(i=>{const dp=calcDonaPrice(i.product),uPrice=dp||i.product.Sotish_narxi,it=Math.round(uPrice*i.qty),nk=i.product.Nomi.replace(/\\/g,'\\\\').replace(/'/g,"\\'");return`<div class="cirow"><div class="ciname">${i.product.Nomi}</div><div class="cictrl"><button class="cibtn" onclick="ciQty('${nk}',-1)">−</button><span class="ciamount">${i.qty}</span><button class="cibtn" onclick="ciQty('${nk}',1)">+</button></div><div class="ciprice">${it.toLocaleString('ru-RU')} so'm</div><button class="cidel" onclick="ciDel('${nk}')">✕</button></div>`;}).join('');body.innerHTML=`<div class="chek"><div class="chek-head"><div class="chek-logo">💊</div><div class="chek-name">Zuxro Farm 2020</div><div class="chek-sub">Quva tumani, A.Yassaviy 133</div><div class="chek-sub">Tel: +998 88 205 25 20</div><div class="chek-sub" style="margin-top:4px">📅 ${ds}</div></div>${chekItems}<div class="chek-total"><span class="chek-tlbl">💰 Jami to'lov:</span><span class="chek-tsum">${total.toLocaleString('ru-RU')} so'm</span></div><div class="chek-foot">Rahmat! Sog'lig'ingiz tiklansin 🙏</div></div><div class="edit-title">📝 Miqdorni o'zgartirish</div><div style="background:#fff;border-radius:var(--r);padding:10px;border:1.5px solid var(--border);margin-bottom:12px">${editRows}</div><button class="sendbtn" onclick="sendOrder()">✈️ Telegram orqali yuborish</button><button class="gbtn" onclick="closeCM()">Yopish</button>`;}
+function sendOrder(){const items=Object.values(cart);if(!items.length)return;function itemPrice(i){const dp=calcDonaPrice(i.product);return Math.round((dp||i.product.Sotish_narxi)*i.qty);}const total=items.reduce((s,i)=>s+itemPrice(i),0);const now=new Date(),ds=now.toLocaleDateString('uz-UZ')+' '+now.toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});let msg='🛒 YANGI BUYURTMA\n📅 '+ds+'\n━━━━━━━━━━━━\n';items.forEach((i,idx)=>{const dp=calcDonaPrice(i.product),uPrice=dp||i.product.Sotish_narxi,it=Math.round(uPrice*i.qty);msg+=`${idx+1}. ${i.product.Nomi}\n   ${i.qty} dona x ${uPrice.toLocaleString('ru-RU')} = ${it.toLocaleString('ru-RU')} so'm\n`;});msg+='━━━━━━━━━━━━\n💰 Jami: '+total.toLocaleString('ru-RU')+' so\'m\n📍 Zuxro Farm 2020, Quva tumani';if(window.Telegram&&window.Telegram.WebApp&&typeof Telegram.WebApp.sendData==='function'){try{Telegram.WebApp.sendData(msg);return;}catch(e){}}window.open('https://t.me/share/url?url=https://t.me/ZuxroFarm2020Bot&text='+encodeURIComponent(msg),'_blank');}
+// ADMIN
+const PIN='2520';
+function pnext(el,nid){if(el.value.length===1)document.getElementById(nid)?.focus();}
+function pcheck(){const p=['p1','p2','p3','p4'].map(id=>document.getElementById(id).value).join('');if(p.length===4)checkPin();}
+function checkPin(){const p=['p1','p2','p3','p4'].map(id=>document.getElementById(id).value).join('');if(p===PIN){document.getElementById('alock').style.display='none';document.getElementById('acontent').classList.add('show');renderAdmin();renderFirmsList();}else{document.getElementById('perr').style.display='block';['p1','p2','p3','p4'].forEach(id=>document.getElementById(id).value='');document.getElementById('p1').focus();}}
+function renderAdmin(){if(!products.length)return;const avail=products.filter(p=>p.Pachka>0||p.Dona>0);document.getElementById('at').textContent=products.length;document.getElementById('aa').textContent=avail.length;document.getElementById('ap').textContent=products.filter(p=>p.Pachka>0).length;document.getElementById('af').textContent=[...new Set(products.map(p=>p.Zavod).filter(Boolean))].length;document.getElementById('lupdate').textContent='Faol • '+new Date().toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});const top=[...avail].sort((a,b)=>b.Pachka+b.Dona-(a.Pachka+a.Dona)).slice(0,8);document.getElementById('toplist').innerHTML=top.map((p,i)=>`<div class="topitem"><div class="toprank">${i+1}</div><div class="topname">${p.Nomi}</div><div class="topcnt">${stockStr(p)}</div></div>`).join('');}
+
+// ==========================================
+// PRAYS TIZIMI
+// ==========================================
+function getPraysData(){try{return JSON.parse(localStorage.getItem('prays_db')||'{}');}catch(e){return{};}}
+function savePraysData(data){localStorage.setItem('prays_db',JSON.stringify(data));}
+
+let praysRows=[],selectedPraysItems=null;
+
+function onPraysFileSelect(input){
+  const file=input.files[0];if(!file)return;
+  document.getElementById('ufile-title').textContent='📄 '+file.name;
+  showPraysStatus('info','⏳ Fayl o\'qilmoqda...');
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      const wb=XLSX.read(e.target.result,{type:'array'});
+      const ws=wb.Sheets[wb.SheetNames[0]];
+      praysRows=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
+      showColumnSelector();
+    }catch(err){showPraysStatus('err','❌ Fayl o\'qishda xato: '+err.message);}
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function showColumnSelector(){
+  if(!praysRows.length){showPraysStatus('err','❌ Fayl bo\'sh');return;}
+  // Sarlavha qatorini topish
+  let hRow=0;
+  for(let i=0;i<Math.min(praysRows.length,8);i++){
+    if(praysRows[i].some(c=>String(c||'').trim().length>1)){hRow=i;break;}
+  }
+  const cols=praysRows[hRow]||[];
+  const maxCols=Math.min(cols.length,15);
+  const colOpts=Array.from({length:maxCols},(_,i)=>{
+    const letter=String.fromCharCode(65+i);
+    const label=String(cols[i]||'').trim().substring(0,18)||'(bo\'sh)';
+    return`<option value="${i}">${letter}: ${label}</option>`;
+  }).join('');
+  const noneOpt='<option value="-1">— Yo\'q —</option>';
+
+  // Preview jadval (sarlavha + 4 qator)
+  const prevRows=praysRows.slice(hRow,hRow+5);
+  const maxC=Math.min((prevRows[0]||[]).length,8);
+  const thCells=Array.from({length:maxC},(_,i)=>`<th style="padding:4px 6px;background:#e8f0fe;font-size:10px;border:1px solid #dde6f5">${String.fromCharCode(65+i)}</th>`).join('');
+  const tBodyRows=prevRows.map((r,ri)=>{
+    const cells=Array.from({length:maxC},(_,ci)=>`<td style="padding:3px 6px;border:1px solid #f0f4fb;font-size:10px;max-width:90px;overflow:hidden;white-space:nowrap">${String(r[ci]||'').substring(0,14)}</td>`).join('');
+    return`<tr style="background:${ri===0?'#f0f7ff':'#fff'}">${cells}</tr>`;
+  }).join('');
+
+  document.getElementById('column-selector').innerHTML=`
+    <div style="background:#fff;border-radius:14px;border:1.5px solid var(--border);padding:14px;margin-bottom:12px">
+      <div style="font-weight:800;font-size:13px;margin-bottom:10px">📋 Ustunlarni belgilang</div>
+      <div style="overflow-x:auto;margin-bottom:12px;border-radius:8px;border:1px solid var(--border)">
+        <table style="border-collapse:collapse;min-width:100%"><thead><tr>${thCells}</tr></thead><tbody>${tBodyRows}</tbody></table>
       </div>
-      <div class="fgrid">
-        <div class="fcard"><div class="fico">💊</div><div class="ftitle">Keng assortiment</div><div class="fdesc">Mingdan ortiq dori va tibbiy mahsulotlar</div></div>
-        <div class="fcard"><div class="fico">✅</div><div class="ftitle">Sifat kafolati</div><div class="fdesc">Faqat sertifikatlangan original dorilar</div></div>
-        <div class="fcard"><div class="fico">🕐</div><div class="ftitle">Qulay vaqt</div><div class="fdesc">Har kuni 08:00 dan 20:00 gacha</div></div>
-        <div class="fcard"><div class="fico">💰</div><div class="ftitle">Qulay narx</div><div class="fdesc">Hamyonbop narxlar va takliflar</div></div>
+      <div class="col-select-grid">
+        <div class="col-select-item"><label>🔴 Dori nomi *</label><select id="col-name" class="required">${colOpts}</select></div>
+        <div class="col-select-item"><label>🔴 Narx *</label><select id="col-price" class="required">${colOpts}</select></div>
+        <div class="col-select-item"><label>🟡 Srok</label><select id="col-srok">${noneOpt}${colOpts}</select></div>
+        <div class="col-select-item"><label>🟡 Ishlab chiqaruvchi</label><select id="col-zavod">${noneOpt}${colOpts}</select></div>
       </div>
-      <div class="atxt"><strong>Zuxro Farm 2020</strong> — Farg'ona viloyati, Quva tumanida joylashgan zamonaviy dorixona. Biz 2020-yildan buyon aholi sog'ligini saqlashda ishonchli hamkor bo'lib kelmoqdamiz.</div>
-      <div class="srow">
-        <a href="https://t.me/zuxrofarm" class="sbtn stg">✈️ Telegram</a>
-        <a href="tel:+998882052520" class="sbtn scall">📞 Qo'ng'iroq</a>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span style="font-size:11px;color:var(--text2)">Ma'lumot qaysi qatordan boshlanadi?</span>
+        <input type="number" id="start-row" value="${hRow+2}" min="1" style="width:55px;padding:7px;border:2px solid var(--border);border-radius:10px;font-size:13px;text-align:center;outline:none"/>
+        <span style="font-size:10px;color:var(--text2)">(sarlavhadan keyingi qator)</span>
       </div>
-    </div>
+      <button onclick="previewPrays()" style="width:100%;padding:10px;background:var(--bg);color:var(--primary);border:2px solid var(--primary);border-radius:12px;font-weight:700;font-size:13px;cursor:pointer">👁️ Ko'rish (preview)</button>
+      <div id="prays-preview-result" style="margin-top:10px"></div>
+    </div>`;
 
-    <!-- DORI MODAL -->
-    <div class="overlay" id="dovl" onclick="closeDM(event)">
-      <div class="bsheet">
-        <div class="handle"></div>
-        <div class="mtitle" id="mn"></div>
-        <div id="mb"></div>
-        <div class="qbox">
-          <div class="qlbl">📦 Miqdor (dona):</div>
-          <div class="qctrl">
-            <button class="qbtn" onclick="chQty(-1)">−</button>
-            <input type="number" id="qnum" class="qnum-input" value="1" min="1" max="999" onclick="this.select()" onchange="updateQtyFromInput()"/>
-            <button class="qbtn" onclick="chQty(1)">+</button>
-          </div>
-        </div>
-        <div class="qsum">Jami: <strong id="qsum">0 so'm</strong></div>
-        <button class="pbtn" onclick="addCart()">🛒 Savatga qo'shish</button>
-        <button class="gbtn" onclick="closeDM()">Yopish</button>
-      </div>
-    </div>
+  autoDetectColumns(cols);
+  showPraysStatus('ok','✅ Fayl yuklandi! Ustunlarni belgilab "Ko\'rish" ni bosing.');
+}
 
-    <!-- SAVAT MODAL -->
-    <div class="overlay" id="covl" onclick="closeCM(event)">
-      <div class="bsheet">
-        <div class="handle"></div>
-        <div class="cart-head">
-          <div class="cart-title">🛒 Savat</div>
-          <button class="cart-clear" onclick="clearCart()">🗑️ Tozalash</button>
-        </div>
-        <div id="cbody"></div>
-      </div>
-    </div>
+function autoDetectColumns(cols){
+  cols.forEach((c,i)=>{
+    const v=norm(String(c||''));
+    if(v.includes('tovar')||v.includes('nomi')||v.includes('наимен')||v.includes('препарат')||v.includes('naam')||v.includes('product')){try{document.getElementById('col-name').value=i;}catch(e){}}
+    if(v.includes('narx')||v.includes('cena')||v.includes('цена')||v.includes('price')||v.includes('итого')||v.includes('перечисл')){try{document.getElementById('col-price').value=i;}catch(e){}}
+    if(v.includes('srok')||v.includes('срок')||v.includes('mudd')||v.includes('годен')||v.includes('date')){try{document.getElementById('col-srok').value=i;}catch(e){}}
+    if(v.includes('zavod')||v.includes('произв')||v.includes('ishlab')||v.includes('manufacturer')){try{document.getElementById('col-zavod').value=i;}catch(e){}}
+  });
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script>
-      // TELEGRAM
-      if (window.Telegram && window.Telegram.WebApp) {
-        Telegram.WebApp.ready();
-        Telegram.WebApp.expand();
+function previewPrays(){
+  const nameCol=parseInt(document.getElementById('col-name').value);
+  const priceCol=parseInt(document.getElementById('col-price').value);
+  const srokCol=parseInt(document.getElementById('col-srok').value);
+  const zavodCol=parseInt(document.getElementById('col-zavod').value);
+  const startRow=parseInt(document.getElementById('start-row').value)-1;
+  const items=[];
+  for(let i=startRow;i<praysRows.length;i++){
+    const r=praysRows[i];
+    const name=String(r[nameCol]||'').trim();
+    if(!name||name.length<2)continue;
+    const rawPrice=String(r[priceCol]||'0').replace(/\s/g,'').replace(',','.');
+    const price=parseFloat(rawPrice)||0;
+    const srok=srokCol>=0?String(r[srokCol]||'').trim():'';
+    const zavod=zavodCol>=0?String(r[zavodCol]||'').trim():'';
+    if(price>0)items.push({name,price,srok,zavod});
+  }
+  const el=document.getElementById('prays-preview-result');
+  if(!items.length){el.innerHTML='<div class="prays-status err">❌ Hech narsa topilmadi. Ustunlar yoki boshlang\'ich qatorni tekshiring.</div>';return;}
+  const preview=items.slice(0,5).map(it=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #f0f4fb;font-size:11px"><span style="flex:1;font-weight:600">${it.name.substring(0,28)}</span><span style="color:var(--primary);font-weight:800">${it.price.toLocaleString('ru-RU')} so'm</span></div>`).join('');
+  el.innerHTML=`<div style="background:#fff;border-radius:12px;border:1.5px solid var(--border);padding:12px"><div style="font-weight:800;font-size:12px;margin-bottom:8px;color:var(--accent)">✅ ${items.length} ta dori topildi — preview:</div>${preview}<div style="font-size:10px;color:var(--text2);margin-top:6px">...va yana ${Math.max(0,items.length-5)} ta</div></div>`;
+  selectedPraysItems=items;
+  document.getElementById('prays-upload-btn').disabled=false;
+}
+
+function uploadPrays(){
+  const firmName=document.getElementById('firm-name').value.trim();
+  if(!firmName){showPraysStatus('err','❌ Firma nomini kiriting!');return;}
+  if(!selectedPraysItems||!selectedPraysItems.length){showPraysStatus('err','❌ Avval "Ko\'rish" tugmasini bosing!');return;}
+  const db=getPraysData();
+  db[firmName]={items:selectedPraysItems,date:new Date().toLocaleDateString('uz-UZ'),count:selectedPraysItems.length};
+  savePraysData(db);
+  showPraysStatus('ok','✅ '+firmName+' — '+selectedPraysItems.length+' ta dori saqlandi!');
+  document.getElementById('firm-name').value='';
+  document.getElementById('ufile-title').textContent='Excel faylni tanlang';
+  document.getElementById('prays-file').value='';
+  document.getElementById('column-selector').innerHTML='';
+  document.getElementById('prays-upload-btn').disabled=true;
+  selectedPraysItems=null;
+  renderFirmsList();
+}
+
+function showPraysStatus(type,msg){document.getElementById('prays-status-msg').innerHTML=`<div class="prays-status ${type}">${msg}</div>`;}
+
+function renderFirmsList(){
+  const db=getPraysData(),wrap=document.getElementById('firms-list-wrap'),firms=Object.keys(db);
+  if(!firms.length){wrap.innerHTML='<div class="prays-empty"><div class="eico">🏢</div><p>Hali prays yuklanmagan</p></div>';return;}
+  wrap.innerHTML=firms.map(f=>`<div class="firm-item"><div class="firm-ico">🏢</div><div class="firm-info"><div class="firm-name">${f}</div><div class="firm-meta">${db[f].count} ta dori • ${db[f].date}</div></div><button class="firm-del" onclick="deleteFirm('${f.replace(/'/g,"\\'")}')">🗑️</button></div>`).join('');
+}
+
+function deleteFirm(name){if(!confirm(name+' praysini o\'chirasizmi?'))return;const db=getPraysData();delete db[name];savePraysData(db);renderFirmsList();showPraysStatus('ok','✅ '+name+' o\'chirildi.');}
+
+// PRAYS QIDIRUV
+function searchPrays(){
+  const q=document.getElementById('prays-srch').value.trim();
+  const resultsEl=document.getElementById('prays-results');
+  if(q.length<2){resultsEl.innerHTML='';updateScrollBtns();return;}
+  const db=getPraysData(),firms=Object.keys(db);
+  if(!firms.length){resultsEl.innerHTML='<div class="prays-empty"><div class="eico">📭</div><p>Prays yuklanmagan</p></div>';return;}
+  const terms=norm(q).split(/\s+/).filter(Boolean);
+  const byName={};
+  for(const firm of firms){
+    for(const item of db[firm].items){
+      if(terms.every(t=>norm(item.name).includes(t))){
+        if(!byName[item.name])byName[item.name]=[];
+        byName[item.name].push({firm,price:item.price,srok:item.srok,zavod:item.zavod});
       }
+    }
+  }
+  const keys=Object.keys(byName);
+  if(!keys.length){resultsEl.innerHTML='<div class="prays-empty"><div class="eico">🔍</div><p>Topilmadi</p></div>';updateScrollBtns();return;}
+  resultsEl.innerHTML=keys.slice(0,50).map(name=>{
+    const rows=byName[name].sort((a,b)=>a.price-b.price);
+    return`<div class="prays-result-item"><div class="prays-result-name">💊 ${name}</div>${rows.map((r,i)=>`<div class="prays-firm-row"><span class="prays-firm-name">🏢 ${r.firm}</span><span><span class="prays-firm-price ${i===0?'cheapest':''}">${r.price.toLocaleString('ru-RU')} so'm</span>${i===0&&rows.length>1?'<span class="prays-cheap-badge">✅ Arzon</span>':''}${r.srok?`<span class="prays-firm-srok">⏳${r.srok}</span>`:''}</span></div>`).join('')}</div>`;
+  }).join('');
+  updateScrollBtns();
+}
 
-      // VAQT
-      function updTime() {
-        const n = new Date(), h = String(n.getHours()).padStart(2,'0'), m = String(n.getMinutes()).padStart(2,'0');
-        const open = n.getHours() >= 8 && n.getHours() < 20;
-        document.getElementById('htime').textContent = (open ? '🟢' : '🔴') + ' ' + h + ':' + m;
-      }
-      updTime(); setInterval(updTime, 30000);
-
-      // SLIDER
-      let si = 0;
-      function gslide(i) {
-        si = i;
-        document.getElementById('strack').style.transform = 'translateX(-' + i*100 + '%)';
-        document.querySelectorAll('.dot').forEach((d,j) => d.classList.toggle('active', j===i));
-      }
-      setInterval(() => gslide((si+1)%3), 4000);
-
-      // NAV
-      function showPage(name, btn) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById('page-'+name).classList.add('active');
-        if (btn) btn.classList.add('active');
-        if (name==='admin' && document.getElementById('acontent').classList.contains('show')) renderAdmin();
-      }
-
-      // ADMIN TABS
-      function showAdminTab(name, btn) {
-        document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
-        document.querySelectorAll('.atab').forEach(b => b.classList.remove('active'));
-        document.getElementById('asec-'+name).classList.add('active');
-        if (btn) btn.classList.add('active');
-        if (name === 'prays') renderFirmsList();
-      }
-
-      // NORMALIZATSIYA
-      function norm(t) {
-        if (!t) return '';
-        t = String(t).toLowerCase();
-        const m = {а:'a',б:'b',в:'v',г:'g',д:'d',е:'e',ё:'yo',ж:'j',з:'z',и:'i',й:'y',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'x',ц:'s',ч:'ch',ш:'sh',ъ:'',э:'e',ю:'yu',я:'ya',қ:'q',ғ:'g',ҳ:'h',ў:'o'};
-        for (const [k,v] of Object.entries(m)) t = t.replaceAll(k,v);
-        return t.replace(/\s+/g,' ').trim();
-      }
-
-      function fmtSrok(s) {
-        if (!s || ['nan','none','undefined','null'].includes(String(s).toLowerCase().trim())) return '—';
-        s = String(s).trim();
-        const r = s.match(/^(\d{1,2})\.(\d{4})$/);
-        return r ? r[1].padStart(2,'0')+'.'+r[2] : s;
-      }
-
-      function getPkgSize(name) {
-        if (!name) return null;
-        const m = String(name).match(/[№#No]\.?\s*(\d+)/i) || String(name).match(/(\d+)\s*(ta|шт|dona|tab|капс|amp|таб)/i);
-        if (m) { const size = parseInt(m[1]); if (size <= 1) return null; return size; }
-        return null;
-      }
-
-      function calcDonaPrice(p) {
-        const pkgSize = getPkgSize(p.Nomi);
-        if (pkgSize && pkgSize > 1 && p.Sotish_narxi > 0) return Math.round(p.Sotish_narxi / pkgSize);
-        return null;
-      }
-
-      function stockStr(p) {
-        if (!p) return '—';
-        const pachka = p.Pachka || 0, dona = p.Dona || 0;
-        if (pachka > 0 && dona > 0) return pachka+' pachka, '+dona+' dona';
-        else if (pachka > 0) return pachka+' pachka';
-        else if (dona > 0) return dona+' dona';
-        return 'Qolmagan';
-      }
-
-      // DATA
-      let products = [], curF = 'all', selP = null, selQty = 1, cart = {};
-
-      fetch('data.json?v='+Date.now())
-        .then(r => r.json())
-        .then(d => { products = d; updStats(d.length); renderP(d); })
-        .catch(() => {
-          document.getElementById('pgrid').innerHTML = '<div class="empty"><p style="font-size:34px">⚠️</p><p style="margin-top:8px">Ma\'lumot yuklanmadi.<br><small>Bot orqali Excel yuboring.</small></p></div>';
-        });
-
-      function updStats(shown) {
-        document.getElementById('st-total').textContent = products.length;
-        document.getElementById('st-avail').textContent = products.filter(p => p.Pachka > 0 || p.Dona > 0).length;
-        document.getElementById('st-shown').textContent = shown;
-      }
-
-      function setF(f, btn) {
-        curF = f;
-        document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        filterP();
-      }
-
-      function getList() {
-        const q = norm(document.getElementById('srch').value);
-        const terms = q.split(/\s+/).filter(Boolean);
-        let list = products;
-        if (terms.length) list = list.filter(p => terms.every(t => norm(p.Nomi).includes(t)));
-        if (curF==='available') list = list.filter(p => p.Pachka > 0 || p.Dona > 0);
-        else if (curF==='pachka') list = list.filter(p => p.Pachka > 0);
-        else if (curF==='cheap') list = [...list].sort((a,b) => a.Sotish_narxi - b.Sotish_narxi);
-        else if (curF==='expensive') list = [...list].sort((a,b) => b.Sotish_narxi - a.Sotish_narxi);
-        return list;
-      }
-
-      function filterP() { const l = getList(); updStats(l.length); renderP(l); }
-
-      function renderP(list) {
-        const g = document.getElementById('pgrid');
-        if (!list.length) { g.innerHTML = '<div class="empty"><p style="font-size:34px">🔍</p><p style="margin-top:8px">Topilmadi</p></div>'; return; }
-        g.innerHTML = list.slice(0,200).map(p => {
-          const pi = products.indexOf(p);
-          const price = Number(p.Sotish_narxi).toLocaleString('ru-RU');
-          const avail = p.Pachka > 0 || p.Dona > 0;
-          const dp = calcDonaPrice(p);
-          const stock = stockStr(p);
-          const inCart = !!cart[p.Nomi];
-          return `<div class="card" onclick="openDM(${pi})">
-            <div class="cname">${p.Nomi||'—'}</div>
-            <div class="cprice">${price} so'm</div>
-            ${dp ? `<div class="cdona">1 dona ≈ ${dp.toLocaleString('ru-RU')} so'm</div>` : ''}
-            <div class="cstock">📦 ${stock}</div>
-            <div class="cbadges">
-              ${avail ? '<span class="badge bg">✅ Bor</span>' : '<span class="badge br">❌ Yo\'q</span>'}
-              ${p.Pachka > 0 ? `<span class="badge bb">${p.Pachka}p</span>` : ''}
-            </div>
-            <div class="cinfo">⏳ ${fmtSrok(p.Srok)} &nbsp;🏭 ${p.Zavod||'—'}</div>
-            <button class="addbtn${inCart?' added':''}" onclick="event.stopPropagation();quickAdd(${pi},this)">${inCart?'✅ Savatda':'🛒 Qo\'shish'}</button>
-          </div>`;
-        }).join('');
-      }
-
-      function quickAdd(idx, btn) {
-        const p = products[idx]; if (!p) return;
-        if (cart[p.Nomi]) cart[p.Nomi].qty++;
-        else cart[p.Nomi] = {product:p, qty:1};
-        btn.textContent = '✅ Savatda'; btn.classList.add('added'); updBadge();
-      }
-
-      function openDM(idx) {
-        const p = products[idx]; if (!p) return;
-        selP = p; selQty = cart[p.Nomi] ? cart[p.Nomi].qty : 1;
-        const price = Number(p.Sotish_narxi).toLocaleString('ru-RU');
-        const dp = calcDonaPrice(p), stock = stockStr(p), pkgSize = getPkgSize(p.Nomi);
-        document.getElementById('mn').textContent = p.Nomi||'—';
-        document.getElementById('mb').innerHTML = `
-          <div class="irow"><span class="ilbl">💰 Pachka narxi</span><span class="iprice">${price} so'm</span></div>
-          ${dp ? `<div class="irow"><span class="ilbl">💊 1 dona narxi</span><span class="idona">≈ ${dp.toLocaleString('ru-RU')} so'm</span></div>` : ''}
-          <div class="irow"><span class="ilbl">📦 Ombordagi miqdor</span><span class="ival">${stock}</span></div>
-          ${pkgSize ? `<div class="irow"><span class="ilbl">📋 Pachkadagi dona</span><span class="ival">${pkgSize} ta</span></div>` : ''}
-          <div class="irow"><span class="ilbl">⏳ Muddati</span><span class="ival">${fmtSrok(p.Srok)}</span></div>
-          <div class="irow"><span class="ilbl">🏭 Zavod</span><span class="ival">${p.Zavod||'—'}</span></div>
-          <div class="irow"><span class="ilbl">📊 Holat</span><span class="ival">${p.Pachka>0||p.Dona>0?'✅ Mavjud':'❌ Tugagan'}</span></div>`;
-        document.getElementById('qnum').value = selQty; updQSum();
-        document.getElementById('dovl').classList.add('open');
-      }
-
-      function chQty(d) { selQty = Math.max(1, selQty+d); document.getElementById('qnum').value = selQty; updQSum(); }
-      function updateQtyFromInput() { const val = parseInt(document.getElementById('qnum').value)||1; selQty = Math.max(1,Math.min(999,val)); document.getElementById('qnum').value = selQty; updQSum(); }
-      function updQSum() { if (!selP) return; const dp = calcDonaPrice(selP); const unitPrice = dp||selP.Sotish_narxi; document.getElementById('qsum').textContent = (unitPrice*selQty).toLocaleString('ru-RU')+' so\'m'; }
-      function addCart() { if (!selP) return; cart[selP.Nomi] = {product:selP, qty:selQty}; updBadge(); renderP(getList()); document.getElementById('dovl').classList.remove('open'); }
-      function closeDM(e) { if (!e || e.target===document.getElementById('dovl') || e.target.classList.contains('gbtn')) document.getElementById('dovl').classList.remove('open'); }
-
-      function updBadge() { const count = Object.keys(cart).length; const b = document.getElementById('cbadge'); b.textContent = count; b.style.display = count > 0 ? 'flex' : 'none'; }
-      function openCart() { renderCart(); document.getElementById('covl').classList.add('open'); }
-      function closeCM(e) { if (!e || e.target===document.getElementById('covl') || e.target.classList.contains('gbtn')) document.getElementById('covl').classList.remove('open'); }
-      function clearCart() { cart = {}; updBadge(); renderCart(); renderP(getList()); }
-      function ciQty(name, d) { if (cart[name]) { cart[name].qty = Math.max(1, cart[name].qty+d); updBadge(); renderCart(); } }
-      function ciDel(name) { delete cart[name]; updBadge(); renderCart(); renderP(getList()); }
-
-      function renderCart() {
-        const items = Object.values(cart), body = document.getElementById('cbody');
-        if (!items.length) { body.innerHTML = '<div class="cart-empty"><p style="font-size:40px">🛒</p><p style="font-weight:700;margin:8px 0 4px">Savat bo\'sh</p><p style="font-size:12px;color:var(--text2)">Dorilarni savatga qo\'shing</p></div>'; return; }
-        function itemPrice(i) { const dp = calcDonaPrice(i.product); return Math.round((dp||i.product.Sotish_narxi)*i.qty); }
-        const total = items.reduce((s,i) => s+itemPrice(i), 0);
-        const now = new Date(), ds = now.toLocaleDateString('uz-UZ')+' '+now.toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});
-        const chekItems = items.map(i => { const dp=calcDonaPrice(i.product), uPrice=dp||i.product.Sotish_narxi, it=Math.round(uPrice*i.qty); return `<div class="chek-item"><div class="chek-iname">${i.product.Nomi}</div><div class="chek-iright"><div class="chek-iqty">${i.qty} dona x ${uPrice.toLocaleString('ru-RU')} so'm</div><div class="chek-iprice">${it.toLocaleString('ru-RU')} so'm</div></div></div>`; }).join('');
-        const editRows = items.map(i => { const dp=calcDonaPrice(i.product), uPrice=dp||i.product.Sotish_narxi, it=Math.round(uPrice*i.qty), nk=i.product.Nomi.replace(/\\/g,'\\\\').replace(/'/g,"\\'"); return `<div class="cirow"><div class="ciname">${i.product.Nomi}</div><div class="cictrl"><button class="cibtn" onclick="ciQty('${nk}',-1)">−</button><span class="ciamount">${i.qty}</span><button class="cibtn" onclick="ciQty('${nk}',1)">+</button></div><div class="ciprice">${it.toLocaleString('ru-RU')} so'm</div><button class="cidel" onclick="ciDel('${nk}')">✕</button></div>`; }).join('');
-        body.innerHTML = `
-          <div class="chek">
-            <div class="chek-head"><div class="chek-logo">💊</div><div class="chek-name">Zuxro Farm 2020</div><div class="chek-sub">Quva tumani, A.Yassaviy 133</div><div class="chek-sub">Tel: +998 88 205 25 20</div><div class="chek-sub" style="margin-top:4px">📅 ${ds}</div></div>
-            ${chekItems}
-            <div class="chek-total"><span class="chek-tlbl">💰 Jami to'lov:</span><span class="chek-tsum">${total.toLocaleString('ru-RU')} so'm</span></div>
-            <div class="chek-foot">Rahmat! Sog'lig'ingiz tiklansin 🙏<br>Zuxro Farm 2020 — Quva tumani</div>
-          </div>
-          <div class="edit-title">📝 Miqdorni o'zgartirish</div>
-          <div style="background:#fff;border-radius:var(--r);padding:10px;border:1.5px solid var(--border);margin-bottom:12px">${editRows}</div>
-          <button class="sendbtn" onclick="sendOrder()">✈️ Telegram orqali yuborish</button>
-          <button class="gbtn" onclick="closeCM()">Yopish</button>`;
-      }
-
-      function sendOrder() {
-        const items = Object.values(cart); if (!items.length) return;
-        function itemPrice(i) { const dp = calcDonaPrice(i.product); return Math.round((dp||i.product.Sotish_narxi)*i.qty); }
-        const total = items.reduce((s,i) => s+itemPrice(i), 0);
-        const now = new Date(), ds = now.toLocaleDateString('uz-UZ')+' '+now.toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});
-        let msg = '🛒 YANGI BUYURTMA\n📅 '+ds+'\n━━━━━━━━━━━━\n';
-        items.forEach((i,idx) => { const dp=calcDonaPrice(i.product), uPrice=dp||i.product.Sotish_narxi, it=Math.round(uPrice*i.qty); msg += `${idx+1}. ${i.product.Nomi}\n   ${i.qty} dona x ${uPrice.toLocaleString('ru-RU')} = ${it.toLocaleString('ru-RU')} so'm\n`; });
-        msg += '━━━━━━━━━━━━\n💰 Jami: '+total.toLocaleString('ru-RU')+' so\'m\n📍 Zuxro Farm 2020, Quva tumani';
-        if (window.Telegram && window.Telegram.WebApp && typeof Telegram.WebApp.sendData==='function') { try { Telegram.WebApp.sendData(msg); return; } catch(e) {} }
-        window.open('https://t.me/share/url?url=https://t.me/ZuxroFarm2020Bot&text='+encodeURIComponent(msg), '_blank');
-      }
-
-      // ADMIN
-      const PIN = '2520';
-      function pnext(el, nid) { if (el.value.length===1) document.getElementById(nid)?.focus(); }
-      function pcheck() { const p = ['p1','p2','p3','p4'].map(id => document.getElementById(id).value).join(''); if (p.length===4) checkPin(); }
-      function checkPin() {
-        const p = ['p1','p2','p3','p4'].map(id => document.getElementById(id).value).join('');
-        if (p===PIN) { document.getElementById('alock').style.display='none'; document.getElementById('acontent').classList.add('show'); renderAdmin(); renderFirmsList(); }
-        else { document.getElementById('perr').style.display='block'; ['p1','p2','p3','p4'].forEach(id => document.getElementById(id).value=''); document.getElementById('p1').focus(); }
-      }
-
-      function renderAdmin() {
-        if (!products.length) return;
-        const avail = products.filter(p => p.Pachka > 0 || p.Dona > 0);
-        document.getElementById('at').textContent = products.length;
-        document.getElementById('aa').textContent = avail.length;
-        document.getElementById('ap').textContent = products.filter(p => p.Pachka > 0).length;
-        document.getElementById('af').textContent = [...new Set(products.map(p => p.Zavod).filter(Boolean))].length;
-        document.getElementById('lupdate').textContent = 'Faol • '+new Date().toLocaleTimeString('uz-UZ',{hour:'2-digit',minute:'2-digit'});
-        const top = [...avail].sort((a,b) => b.Pachka+b.Dona-(a.Pachka+a.Dona)).slice(0,8);
-        document.getElementById('toplist').innerHTML = top.map((p,i) => `<div class="topitem"><div class="toprank">${i+1}</div><div class="topname">${p.Nomi}</div><div class="topcnt">${stockStr(p)}</div></div>`).join('');
-      }
-
-      // =====================
-      // PRAYS TIZIMI
-      // =====================
-
-      // Prays ma'lumotlarini localStorage da saqlaymiz
-      // Format: { firmName: [ {name, price, srok, zavod}, ... ], ... }
-
-      function getPraysData() {
-        try { return JSON.parse(localStorage.getItem('prays_db') || '{}'); } catch(e) { return {}; }
-      }
-
-      function savePraysData(data) {
-        localStorage.setItem('prays_db', JSON.stringify(data));
-      }
-
-      let selectedPraysFile = null;
-      let selectedPraysData = null;
-
-      function onPraysFileSelect(input) {
-        const file = input.files[0];
-        if (!file) return;
-        selectedPraysFile = file;
-        document.getElementById('ufile-title').textContent = '📄 ' + file.name;
-        document.getElementById('prays-upload-btn').disabled = false;
-        showPraysStatus('info', '📄 Fayl tanlandi: ' + file.name + '. Firma nomini kiriting va saqlang.');
-      }
-
-      async function uploadPrays() {
-        const firmName = document.getElementById('firm-name').value.trim();
-        if (!firmName) { showPraysStatus('err', '❌ Firma nomini kiriting!'); return; }
-        if (!selectedPraysFile) { showPraysStatus('err', '❌ Excel faylni tanlang!'); return; }
-
-        showPraysStatus('info', '⏳ Fayl o\'qilmoqda...');
-        document.getElementById('prays-upload-btn').disabled = true;
-
-        try {
-          const ab = await selectedPraysFile.arrayBuffer();
-          const wb = XLSX.read(ab, {type:'array'});
-          const ws = wb.Sheets[wb.SheetNames[0]];
-          const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
-
-          // Avtomatik ustun topish
-          let nameCol=-1, priceCol=-1, srokCol=-1, zavodCol=-1;
-
-          // Sarlavha qatorini topish
-          let headerRow = -1;
-          for (let i = 0; i < Math.min(rows.length, 10); i++) {
-            const r = rows[i];
-            for (let j = 0; j < r.length; j++) {
-              const v = norm(String(r[j]||''));
-              if (v.includes('tovar') || v.includes('nomi') || v.includes('наименование') || v.includes('препарат')) { nameCol=j; headerRow=i; }
-              if (v.includes('narx') || v.includes('cena') || v.includes('цена') || v.includes('price')) priceCol=j;
-              if (v.includes('srok') || v.includes('срок') || v.includes('mudd')) srokCol=j;
-              if (v.includes('zavod') || v.includes('произ') || v.includes('ishlab')) zavodCol=j;
-            }
-            if (nameCol >= 0) break;
-          }
-
-          // Agar topilmasa — birinchi 3 ustun: nom, narx, srok
-          if (nameCol < 0) nameCol = 0;
-          if (priceCol < 0) priceCol = 1;
-
-          const items = [];
-          const startRow = headerRow >= 0 ? headerRow+1 : 1;
-
-          for (let i = startRow; i < rows.length; i++) {
-            const r = rows[i];
-            const name = String(r[nameCol]||'').trim();
-            if (!name || name.length < 2) continue;
-            const price = parseFloat(String(r[priceCol]||'0').replace(/\s/g,'').replace(',','.')) || 0;
-            const srok = srokCol >= 0 ? String(r[srokCol]||'').trim() : '';
-            const zavod = zavodCol >= 0 ? String(r[zavodCol]||'').trim() : '';
-            if (price > 0) items.push({name, price, srok, zavod});
-          }
-
-          if (items.length === 0) { showPraysStatus('err', '❌ Faylda ma\'lumot topilmadi. Ustunlarni tekshiring.'); document.getElementById('prays-upload-btn').disabled=false; return; }
-
-          // Saqlash
-          const db = getPraysData();
-          db[firmName] = { items, date: new Date().toLocaleDateString('uz-UZ'), count: items.length };
-          savePraysData(db);
-
-          showPraysStatus('ok', `✅ ${firmName} — ${items.length} ta dori saqlandi!`);
-          document.getElementById('firm-name').value = '';
-          document.getElementById('ufile-title').textContent = 'Excel faylni tanlang';
-          document.getElementById('prays-file').value = '';
-          selectedPraysFile = null;
-          document.getElementById('prays-upload-btn').disabled = true;
-          renderFirmsList();
-
-        } catch(e) {
-          showPraysStatus('err', '❌ Xato: ' + e.message);
-          document.getElementById('prays-upload-btn').disabled = false;
-        }
-      }
-
-      function showPraysStatus(type, msg) {
-        const el = document.getElementById('prays-status-msg');
-        el.innerHTML = `<div class="prays-status ${type}">${msg}</div>`;
-      }
-
-      function renderFirmsList() {
-        const db = getPraysData();
-        const wrap = document.getElementById('firms-list-wrap');
-        const firms = Object.keys(db);
-        if (!firms.length) { wrap.innerHTML = '<div class="prays-empty"><div class="eico">🏢</div><p>Hali prays yuklanmagan</p></div>'; return; }
-        wrap.innerHTML = firms.map(f => `
-          <div class="firm-item">
-            <div class="firm-ico">🏢</div>
-            <div class="firm-info">
-              <div class="firm-name">${f}</div>
-              <div class="firm-meta">${db[f].count} ta dori • ${db[f].date}</div>
-            </div>
-            <button class="firm-del" onclick="deleteFirm('${f.replace(/'/g,"\\'")}')">🗑️</button>
-          </div>`).join('');
-      }
-
-      function deleteFirm(name) {
-        if (!confirm(name + ' praysini o\'chirasizmi?')) return;
-        const db = getPraysData();
-        delete db[name];
-        savePraysData(db);
-        renderFirmsList();
-        showPraysStatus('ok', '✅ ' + name + ' o\'chirildi.');
-      }
-
-      // PRAYS QIDIRUV
-      function searchPrays() {
-        const q = document.getElementById('prays-srch').value.trim();
-        const resultsEl = document.getElementById('prays-results');
-        if (q.length < 2) { resultsEl.innerHTML = ''; return; }
-
-        const db = getPraysData();
-        const firms = Object.keys(db);
-        if (!firms.length) { resultsEl.innerHTML = '<div class="prays-empty"><div class="eico">📭</div><p>Prays yuklanmagan</p></div>'; return; }
-
-        const qn = norm(q);
-        const terms = qn.split(/\s+/).filter(Boolean);
-
-        // Har bir firmadan mos keladigan dorilarni topamiz
-        // Keyin dori nomi bo'yicha guruhlash
-        const byName = {};
-
-        for (const firm of firms) {
-          const firmData = db[firm];
-          for (const item of firmData.items) {
-            const itemNorm = norm(item.name);
-            const match = terms.every(t => itemNorm.includes(t));
-            if (match) {
-              if (!byName[item.name]) byName[item.name] = [];
-              byName[item.name].push({ firm, price: item.price, srok: item.srok, zavod: item.zavod });
-            }
-          }
-        }
-
-        const keys = Object.keys(byName);
-        if (!keys.length) { resultsEl.innerHTML = '<div class="prays-empty"><div class="eico">🔍</div><p>Topilmadi</p></div>'; return; }
-
-        // Eng arzon narxni topish
-        resultsEl.innerHTML = keys.slice(0, 30).map(name => {
-          const rows = byName[name].sort((a,b) => a.price - b.price);
-          const minPrice = rows[0].price;
-          const rowsHtml = rows.map((r, i) => `
-            <div class="prays-firm-row">
-              <span class="prays-firm-name">🏢 ${r.firm}</span>
-              <span>
-                <span class="prays-firm-price ${i===0?'cheapest':''}">${r.price.toLocaleString('ru-RU')} so'm</span>
-                ${i===0 && rows.length > 1 ? '<span class="prays-cheap-badge">✅ Arzon</span>' : ''}
-                ${r.srok ? `<span class="prays-firm-srok">⏳${r.srok}</span>` : ''}
-              </span>
-            </div>`).join('');
-          return `<div class="prays-result-item"><div class="prays-result-name">💊 ${name}</div>${rowsHtml}</div>`;
-        }).join('');
-      }
-    </script>
-  </body>
+// PASTGA / TEPAGA TUGMALAR
+function updateScrollBtns(){
+  const hasResults=document.getElementById('prays-results').children.length>0;
+  document.getElementById('btn-scroll-top').classList.toggle('visible',hasResults);
+  document.getElementById('btn-scroll-bot').classList.toggle('visible',hasResults);
+}
+function scrollPraysTop(){
+  const el=document.getElementById('asec-prays');
+  el.scrollIntoView({behavior:'smooth',block:'start'});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function scrollPraysBot(){
+  const el=document.getElementById('prays-results');
+  const lastItem=el.lastElementChild;
+  if(lastItem)lastItem.scrollIntoView({behavior:'smooth',block:'end'});
+}
+</script>
+</body>
 </html>
